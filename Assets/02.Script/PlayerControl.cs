@@ -1,3 +1,4 @@
+//주석이요ㅋㅋ
 using UnityEngine;
 using System.Collections;
 
@@ -118,9 +119,9 @@ public class PlayerControl : MonoBehaviour {
 					rigidbody2D.AddForce (jumpForce);
 				}
 			}
+		}
 			
-			
-		if(PS == PlayerState.Catched)
+		else if(PS == PlayerState.Catched)
 		{
 			if (Application.platform == RuntimePlatform.Android) 
 			{		
@@ -139,7 +140,6 @@ public class PlayerControl : MonoBehaviour {
 				}
 			}
 		}
-	}
 	}
 
 
