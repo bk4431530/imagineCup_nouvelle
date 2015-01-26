@@ -1,4 +1,4 @@
-//주석이요ㅋㅋ
+//주석이요ㅋㅋ 주석이라고
 using UnityEngine;
 using System.Collections;
 
