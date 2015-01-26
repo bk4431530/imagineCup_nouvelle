@@ -24,6 +24,7 @@ public class GUIcontrol : MonoBehaviour {
 				//Application.LoadLevel(1);
 				Application.LoadLevel(Application.loadedLevel);
 				PlayerControl.life =3;
+				PlayerControl.quilpens=0;
 				Time.timeScale=1;
 			}
 			

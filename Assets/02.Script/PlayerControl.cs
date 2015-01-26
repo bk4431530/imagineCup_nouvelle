@@ -66,17 +66,7 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 
-
-	void OnCollisionEnter2D(Collision2D other)
-	{
-		
-		if (other.gameObject.name == "obstacle") 
-		{
-			Die();
-		}
-
-
-	}
+	
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
@@ -162,7 +152,6 @@ public class PlayerControl : MonoBehaviour {
 
 
 	void StageChange(){
-		//screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
 		//Stage Change
 		if (PS == PlayerState.Normal && screenPosition.x > Screen.width)
