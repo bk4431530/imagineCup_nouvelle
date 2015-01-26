@@ -6,7 +6,7 @@ public enum BirdState
 	Normal,
 	Catch
 }
-
+  //
 public class Bird : MonoBehaviour {
 
 	public BirdState BS = BirdState.Normal;
