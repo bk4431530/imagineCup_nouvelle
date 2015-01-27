@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Bird.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerObstacle.cs">
     <Files>
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Bird.cs" Line="9" Column="5" />
+      <File FileName="Assets\02.Script\PlayerObstacle.cs" Line="36" Column="2" />
+      <File FileName="Assets\02.Script\Generate_Bubble.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

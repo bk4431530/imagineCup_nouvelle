@@ -1,14 +1,18 @@
-//주석이요ㅋㅋ 주석이라고
 using UnityEngine;
 using System.Collections;
 
-public enum PlayerState
-{
-	Normal,
-	Catched
-}
+
 
 public class PlayerControl : MonoBehaviour {
+
+	public enum PlayerState
+	{
+		Normal,
+		Catched,
+		CatchedByCat,
+		CatchedByTree,
+		CatchedByBubble	
+	}
 
 	public static int life = 3;
 	public static int quilpens = 0;
@@ -39,6 +43,8 @@ public class PlayerControl : MonoBehaviour {
 
 	void Start()
 	{
+		PS = PlayerState.Normal;
+
 	}
 	
 	
@@ -126,7 +132,7 @@ public class PlayerControl : MonoBehaviour {
 				if (Input.GetMouseButton(0)) 
 				{
 					rigidbody2D.velocity = Vector2.zero;
-					rigidbody2D.AddForce (jumpForce);
+					rigidbody2D.AddForce (new Vector2(100,0));
 				}
 			}
 		}

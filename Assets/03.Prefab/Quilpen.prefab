@@ -12,7 +12,6 @@ GameObject:
   - 23: {fileID: 2381306}
   - 61: {fileID: 6183772}
   - 61: {fileID: 6181306}
-  - 114: {fileID: 11468200}
   m_Layer: 0
   m_Name: Quilpen
   m_TagString: Untagged
@@ -27,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181306}
   m_LocalRotation: {x: -.121624835, y: .0446914881, z: -.00548189459, w: .991554379}
-  m_LocalPosition: {x: 8.28999996, y: 1.64999998, z: -2.33999991}
-  m_LocalScale: {x: .299999982, y: .300000012, z: .300000012}
+  m_LocalPosition: {x: 3.92999983, y: .680000007, z: -2.00999999}
+  m_LocalScale: {x: .299999952, y: .300000012, z: .300000012}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +60,7 @@ MeshFilter:
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!61 &6181306
 BoxCollider2D:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181306}
@@ -81,17 +80,6 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_Size: {x: 2, y: 2}
   m_Center: {x: 1.90734863e-06, y: -4.76837158e-07}
---- !u!114 &11468200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49e0344b9d655094fa5e7559b9b177dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

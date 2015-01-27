@@ -16,9 +16,7 @@ public class GUIcontrol : MonoBehaviour {
 
 	void OnGUI () {
 		if(PlayerControl.life<1){
-			// Make a background box
-			GUI.Box(new Rect(Screen.width/2-100,Screen.height/2-100,100,90), "Loader Menu");
-			
+
 			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
 			if(GUI.Button(new Rect(Screen.width/2-70,Screen.height/2-80,80,20), "replay")) {
 				//Application.LoadLevel(1);

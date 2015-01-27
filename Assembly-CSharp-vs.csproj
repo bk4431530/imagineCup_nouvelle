@@ -47,16 +47,22 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\02.Script\Bird.cs" />
+     <Compile Include="Assets\02.Script\Bubble.cs" />
+     <Compile Include="Assets\02.Script\Cat.cs" />
      <Compile Include="Assets\02.Script\GUIcontrol.cs" />
+     <Compile Include="Assets\02.Script\Generate.cs" />
+     <Compile Include="Assets\02.Script\Generate_Bubble.cs" />
      <Compile Include="Assets\02.Script\PlayerControl.cs" />
+     <Compile Include="Assets\02.Script\PlayerObstacle.cs" />
      <Compile Include="Assets\02.Script\TouchHandler.cs" />
-     <None Include="Assets\Shaders\SL_StandardShader_PerTexel.shader" />
-     <None Include="Assets\Shaders\SL_PaletteShader_PerTexel.shader" />
-     <None Include="Assets\Shaders\SL_PaletteShader.shader" />
-     <None Include="Assets\Shaders\SL_StandardShader.shader" />
-     <None Include="Assets\Shaders\SL_SpineShader.shader" />
-     <None Include="Assets\Shaders\SL_StandardShader_NoShadows.shader" />
-     <None Include="Assets\Shaders\SL_PaletteShader_NoShadows.shader" />
+     <Compile Include="Assets\02.Script\Tree.cs" />
+     <None Include="Assets\07.Shaders\SL_StandardShader_PerTexel.shader" />
+     <None Include="Assets\07.Shaders\SL_PaletteShader_PerTexel.shader" />
+     <None Include="Assets\07.Shaders\SL_PaletteShader.shader" />
+     <None Include="Assets\07.Shaders\SL_StandardShader.shader" />
+     <None Include="Assets\07.Shaders\SL_SpineShader.shader" />
+     <None Include="Assets\07.Shaders\SL_StandardShader_NoShadows.shader" />
+     <None Include="Assets\07.Shaders\SL_PaletteShader_NoShadows.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
