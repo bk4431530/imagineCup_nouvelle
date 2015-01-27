@@ -65,9 +65,11 @@ public class PlayerControl : MonoBehaviour {
 		Jump();
 
 		StageChange ();
-		Die ();
 
-
+		if(screenPosition.y > Screen.height || screenPosition.y < 0)
+		{
+			Die ();
+		}
 							
 	}
 
@@ -91,6 +93,11 @@ public class PlayerControl : MonoBehaviour {
 			quilpens++;
 			collidedPen =other.gameObject;
 			Destroy(collidedPen);
+		}
+
+		if (other.gameObject.tag == "Obstacle")
+		{
+			Die();
 		}
 	}
 
@@ -146,7 +153,7 @@ public class PlayerControl : MonoBehaviour {
 			scoreReference.text = "dead";
 			Time.timeScale = 0;
 		} 
-		else if (life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) 
+		else if (life > 0) 
 		{
 			stage = new Vector3 (0, 0, 0);
 			stage.x = 12.8f * Stage_Num;
