@@ -80,10 +80,9 @@ public class PlayerObstacle : PlayerControl {
 			catPos = cat.transform.position;
 			catPos.y = catPos.y - 2.0f;
 			this.transform.position = catPos;
-<<<<<<< HEAD
-=======
+
 			//rigidbody2D.isKinematic = true;
->>>>>>> origin/master
+
 		}
 		else if(PS == PlayerState.CatchedByTree)
 		{                                
