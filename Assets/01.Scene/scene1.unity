@@ -452,7 +452,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 10df69c96febce74f91fc9cd230f1445, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9326d3eb0f885aa4689dd083bcc1eff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &276165836
 GameObject:
@@ -722,58 +722,8 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3760309909c11bc4c8be80fce8704378, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 37f4910fc7e8f7d49886321e00bfe307, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &402676492
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 402676494}
-  - 212: {fileID: 402676493}
-  m_Layer: 0
-  m_Name: ob1_shadow
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &402676493
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 402676492}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: 79f2b2ec5911aea4e934c314f254cbe6, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be82f5ba80d397741a009cd18baa0278, type: 3}
-  m_Color: {r: .661764741, g: .661764741, b: .661764741, a: 1}
---- !u!4 &402676494
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 402676492}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.140000001, y: -.200000003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 446139125}
-  m_RootOrder: 0
 --- !u!1 &436908505
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,8 +868,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.92000008, y: -1.85000002, z: 1}
   m_LocalScale: {x: .5, y: .5, z: 1}
-  m_Children:
-  - {fileID: 402676494}
+  m_Children: []
   m_Father: {fileID: 1633189782}
   m_RootOrder: 0
 --- !u!212 &446139126
@@ -942,7 +891,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be82f5ba80d397741a009cd18baa0278, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fd29e7bdba094a14aa08dd66d4113f8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!60 &446139127
 PolygonCollider2D:
@@ -1225,7 +1174,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 17df64294910e734d86bb149caca1ff2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 19756eb0b994caf49a09842bc0c959e6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &706476348
 GameObject:
@@ -1800,7 +1749,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 894c9f73851e0514ab623c61c4cbe966, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 164ce5f90100871448d3ba1337ca6490, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1656268714
 Transform:
@@ -2037,7 +1986,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bf622bcc8b8281a41a76e6266fe63133, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 658a893c5ab8ebd4996aa1edb0559a08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1955430638
 GameObject:
@@ -2087,7 +2036,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7f6c2dd62fc14b444b5990912989dd14, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4b9802df26c9dab4591b356dda30a0e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1957841038
 GameObject:
