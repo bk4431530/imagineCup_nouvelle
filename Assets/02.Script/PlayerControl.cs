@@ -81,7 +81,7 @@ public class PlayerControl : MonoBehaviour {
 			PS = PlayerState.Catched;
 			bonus_cam = new Vector3 (40,7.5f,-10);
 			M_Cam.transform.position = bonus_cam;
-			bonus = new Vector3 (33.6f, 7.5f, 0);
+			bonus = new Vector3 (33.6f, 7.5f, -1);
 			this.transform.position = bonus;
 		}
 
@@ -153,8 +153,8 @@ public class PlayerControl : MonoBehaviour {
 		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
 		{
 			PS = PlayerState.Normal;
-			stage = new Vector3 (0, 0, 0);
-			stage.x = 12.8f * Stage_Num;
+			stage = new Vector3 (0, 0, -1);
+			stage.x = 12.8f * Stage_Num - 6.4f;
 			this.transform.position = stage;
 			life--;
 		}
@@ -177,11 +177,11 @@ public class PlayerControl : MonoBehaviour {
 		{
 			Destroy (bird);
 			Stage_Num++;
-			game_cam = new Vector3(12.8f*Stage_Num-6.4f,0,-10);
+			game_cam = new Vector3(12.8f*Stage_Num,0,-10);
 			M_Cam.transform.position = game_cam;
 			
-			stage = new Vector3 (0, 0, 0);
-			stage.x = 12.8f * Stage_Num;
+			stage = new Vector3 (0, 0, -1);
+			stage.x = 12.8f * Stage_Num -6.4f;
 			this.transform.position = stage;
 			
 			PS = PlayerState.Normal;
