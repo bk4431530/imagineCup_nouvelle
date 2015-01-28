@@ -1,19 +1,8 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\TouchHandler.cs">
-    <Files>
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="24" Column="25" />
-      <File FileName="Assets\02.Script\PlayerObstacle.cs" Line="106" Column="43" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="82" Column="29" />
-      <File FileName="Assets\02.Script\TouchHandler.cs" Line="44" Column="13" />
-      <File FileName="Assets\02.Script\Generate_Bubble.cs" Line="1" Column="1" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerObstacle.cs">
     <Files>
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="18" Column="2" />
->>>>>>> origin/master
+      <File FileName="Assets\02.Script\PlayerObstacle.cs" Line="74" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
