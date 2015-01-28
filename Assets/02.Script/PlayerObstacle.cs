@@ -15,14 +15,15 @@ public class PlayerObstacle : PlayerControl {
 	public float speed = 0.1f;
 	
 	public CircleCollider2D collided_bubble_collider;
-	//private bool isBubble = true;
-	
 	
 	private Vector3 pos;
 	private RaycastHit2D hit;
 
+	private Vector2 catPos;
+	private Vector2 bubblePos;
 
-	// Use this for initialization
+
+
 	void Start () {
 		PS = PlayerState.Normal;
 		bubble = GameObject.Find ("Scripts_bubbles");
@@ -33,6 +34,8 @@ public class PlayerObstacle : PlayerControl {
 
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		hit = Physics2D.Raycast(pos, Vector2.zero);
+
+
 
 		escape ();
 		catched ();
@@ -49,7 +52,6 @@ public class PlayerObstacle : PlayerControl {
 		else if(other.gameObject.name == "tree")
 		{
 			PS = PlayerState.CatchedByTree;
-			//Stop moving
 			Debug.Log ("player state is " + PS + "// Collided with Tree");
 			rigidbody2D.isKinematic = true;
 		}
@@ -60,14 +62,11 @@ public class PlayerObstacle : PlayerControl {
 			Debug.Log ("// Collided with << "+ other.gameObject.name +" >>");
 			
 			PS = PlayerState.CatchedByBubble;
-			
+	
 			Debug.Log ("Player State changed to " + PS);
-			
-			
 			collided_bubble_collider = collided_bubble.GetComponent<CircleCollider2D>();
 			collided_bubble_collider.radius = 6.0f;
 			Debug.Log("collided_bubble_collider.radius = " + collided_bubble_collider.radius);
-			//stop moving
 		}
 		
 	}//trigger
@@ -78,10 +77,9 @@ public class PlayerObstacle : PlayerControl {
 	{
 		if (PS == PlayerState.CatchedByCat)
 		{
-			Vector2 catPos = cat.transform.position;
+			catPos = cat.transform.position;
 			catPos.y = catPos.y - 2.0f;
-			transform.position = catPos;
-			rigidbody2D.isKinematic = true;
+			this.transform.position = catPos;
 		}
 		else if(PS == PlayerState.CatchedByTree)
 		{                                
@@ -91,8 +89,8 @@ public class PlayerObstacle : PlayerControl {
 		}
 		else if(PS == PlayerState.CatchedByBubble) //bubble
 		{
-			Vector2 bubblePos = collided_bubble.transform.position;
-			transform.position = bubblePos;
+			bubblePos = collided_bubble.transform.position;
+			this.transform.position = bubblePos;
 			rigidbody2D.isKinematic = true;
 		}
 	}//void catched

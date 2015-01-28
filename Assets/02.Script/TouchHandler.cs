@@ -12,6 +12,8 @@ public class TouchHandler : MonoBehaviour {
 	
 	public static bool swiped; 
 	public static bool touched;
+	public static Vector2 clickPos;
+
 	
 	private Touch initialTouch = new Touch();
 	
@@ -39,6 +41,7 @@ public class TouchHandler : MonoBehaviour {
 			
 			if(touch.phase == TouchPhase.Began){
 				initialTouch = touch;
+				clickPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
 			}
 
 			else if(touch.phase == TouchPhase.Stationary)
@@ -49,7 +52,7 @@ public class TouchHandler : MonoBehaviour {
 			else if(touch.phase == TouchPhase.Moved)
 			{
 				lineRenderer.SetVertexCount(i+1);
-				Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 15);
+				Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -2);
 				lineRenderer.SetPosition(i, Camera.main.ScreenToWorldPoint(mPosition));
 				i++;
 				

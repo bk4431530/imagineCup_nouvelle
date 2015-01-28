@@ -18,7 +18,7 @@ public class GUIcontrol : MonoBehaviour {
 		if(PlayerControl.life<1){
 
 			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-			if(GUI.Button(new Rect(Screen.width/2-70,Screen.height/2-80,80,20), "replay")) {
+			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2-50,100,50), "replay")) {
 				//Application.LoadLevel(1);
 				Application.LoadLevel(Application.loadedLevel);
 				PlayerControl.life =3;
@@ -27,7 +27,7 @@ public class GUIcontrol : MonoBehaviour {
 			}
 			
 			 
-			if(GUI.Button(new Rect(Screen.width/2-70,Screen.height/2-60,80,20), "Exit")) {
+			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2+20,100,50), "Exit")) {
 				Application.Quit();
 			}
 

@@ -25,9 +25,9 @@ public class Generate_Bubble : MonoBehaviour {
 	
 	void CreateBubble()
 	{
-		//Instantiate (bubble, new Vector3(Random.Range (-8, 8), Random.Range (-2,0),0), Quaternion.identity);
+		//Instantiate (bubble, new Vector3(Random.Range (-8, 8), Random.Range (-2,0),-2), Quaternion.identity);
 
-		GameObject bubble = Instantiate(bubbleR, new Vector3(Random.Range (-8, 8), Random.Range (-7,-6),0), Quaternion.identity) as GameObject;
+		GameObject bubble = Instantiate(bubbleR, new Vector3(Random.Range (12, 18), Random.Range (-7,-6),-2), Quaternion.identity) as GameObject;
 
 	}
 }
