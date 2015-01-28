@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour {
 	public enum PlayerState
 	{
 		Normal,
+		Collided,
 		Catched,
 		CatchedByCat,
 		CatchedByTree,
@@ -65,10 +66,8 @@ public class PlayerControl : MonoBehaviour {
 		Jump();
 
 		StageChange ();
+
 		Die ();
-
-
-							
 	}
 
 
@@ -91,6 +90,11 @@ public class PlayerControl : MonoBehaviour {
 			quilpens++;
 			collidedPen =other.gameObject;
 			Destroy(collidedPen);
+		}
+
+		if (other.gameObject.tag == "Obstacle")
+		{
+			PS = PlayerState.Collided;
 		}
 	}
 
@@ -146,8 +150,9 @@ public class PlayerControl : MonoBehaviour {
 			scoreReference.text = "dead";
 			Time.timeScale = 0;
 		} 
-		else if (life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) 
+		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
 		{
+			PS = PlayerState.Normal;
 			stage = new Vector3 (0, 0, 0);
 			stage.x = 12.8f * Stage_Num;
 			this.transform.position = stage;
