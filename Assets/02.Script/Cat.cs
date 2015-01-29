@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum CatState
+public enum CatStateX
 {
 	Normal,
 	Catch
@@ -9,7 +9,7 @@ public enum CatState
 
 public class Cat : MonoBehaviour {
 
-	public CatState catState = CatState.Normal;
+	public CatStateX catState = CatStateX.Normal;
 
 	public GameObject Player;
 
@@ -25,10 +25,10 @@ public class Cat : MonoBehaviour {
 	}
 
 	void Update(){
-		if(catState == CatState.Normal)
+		if(catState == CatStateX.Normal)
 		{
 			transform.Translate (new Vector2 (cat_speed, 0));
-		} else if (catState == CatState.Catch)
+		} else if (catState == CatStateX.Catch)
 		{
 			///new code
 			transform.Translate (new Vector2 (cat_speed, 0));
@@ -53,7 +53,7 @@ public class Cat : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.name == "player")
 		{
-			catState = CatState.Catch;
+			catState = CatStateX.Catch;
 			Player = other.gameObject;
 	
 		}

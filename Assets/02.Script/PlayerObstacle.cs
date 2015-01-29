@@ -27,27 +27,77 @@ public class PlayerObstacle : PlayerControl {
 	void Start () {
 		PS = PlayerState.Normal;
 		bubble = GameObject.Find ("Scripts_bubbles");
+
+
 	}
 
 
 	void Update () {
 
+
+		if (PS == PlayerState.CatchedByCat)
+		{
+			CatchedByCat();
+		}
+		else if(PS == PlayerState.CatchedByTree)
+		{
+			CatchedByTree();
+		}
+		else if(PS == PlayerState.CatchedByBubble)
+		{
+			CatchedByBubble();
+		}
+
+
 		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		hit = Physics2D.Raycast(pos, Vector2.zero);
+		if(hit != null)
+		{
+			Debug.Log ("변수 hit 값은 NULL이 아님");
+			Debug.Log("hit.collider.name 값은 : " + hit.collider.name);
+		}
+
+		else if (hit != null && hit.collider != null)
+		{
+			Debug.Log ("마우스 + <"+hit.collider.name + "> collider가 위에 있음");
+
+			Escape();
+			if(hit.collider.name == cat.collider2D.name
+			   && Input.GetMouseButtonDown(1)==true
+			   && PS==PlayerState.CatchedByCat)
+				
+			{
+				Debug.Log("EscapeCat() if문 들어옴");
+				EscapeCat();
+			}
 
 
+		}
 
-		escape ();
-		catched ();
+
+		//Escape (); //잡히지도 않았는데 escape계속 되서 주석
+		//Catched (); //여기에 그대로 두면 잡히지 않았는데 catched들어감
+
+
 	
 	}//update
 
-	void OnTriggerEnter2D(Collider2D other)
+
+	// OnTriggerEnger2D Function : Change Player State on Collision
+
+	void OnTriggerEnter2D(Collider2D other) 
 	{
+		///////임시 주석 //////hit = Physics2D.Raycast(pos, Vector2.zero);  ////////////update에서 계속 null에러나서 옮김 여기 놔도 되나?
+		if(hit == null)
+		Debug.Log ("변수 hit 값은 null : " + hit);
+
 		if (other.gameObject.name == "cat") 
 		{
 			PS = PlayerState.CatchedByCat;
 			Debug.Log ("player state is " + PS + "// Collided with Cat");
+			Debug.Log ("고양이 콜라이더 이름 : "+ other.collider2D.name);
+
+
 		}
 		else if(other.gameObject.name == "tree")
 		{
@@ -69,67 +119,77 @@ public class PlayerObstacle : PlayerControl {
 			Debug.Log("collided_bubble_collider.radius = " + collided_bubble_collider.radius);
 		}
 		
-	}//trigger
+	}//OnTriggerEnter2D
 
 
 
-	void catched()
+	void CatchedByCat()
 	{
-		if (PS == PlayerState.CatchedByCat)
-		{
-			catPos = cat.transform.position;
-			catPos.y = catPos.y - 2.0f;
-			this.transform.position = catPos;
-			//rigidbody2D.isKinematic = true;
-		}
-		else if(PS == PlayerState.CatchedByTree)
+		float default_z = -1.0f;
+		Debug.Log("CatchedByCat() 들어옴 ");
+
+		catPos = cat.transform.position;
+		transform.position = new Vector3(catPos.x,catPos.y, -2);
+
+		rigidbody2D.isKinematic = true;
+
+		Debug.Log("고양이 좌표 : " + catPos);
+
+	} 
+	void CatchedByTree()
 		{                                
 			speed = 0.0f;
 			rigidbody2D.isKinematic = true;
 			Debug.Log(rigidbody2D.velocity);
 		}
-		else if(PS == PlayerState.CatchedByBubble) //bubble
-		{
-			bubblePos = collided_bubble.transform.position;
-			this.transform.position = bubblePos;
-			rigidbody2D.isKinematic = true;
-		}
-	}//void catched
-
-
-
-	void escape()
+	void CatchedByBubble() //bubble
 	{
-		if (hit != null && hit.collider != null) {
-			Debug.Log ("Mouse is on + <"+hit.collider.name + "> collider");
+		bubblePos = collided_bubble.transform.position;
+		this.transform.position = bubblePos;
+		rigidbody2D.isKinematic = true;
+	}
 
+
+
+	void Escape()
+	{
+		Debug.Log("void Escape() 들어옴");
 			//Player catched by the obstacle : Cat
 			//&& When touched 5 times, player -> released from the obstacle 
-			if(hit.collider.name == cat.collider2D.name && Input.GetMouseButtonDown(0)==true && PS==PlayerState.CatchedByCat)
+			if(hit.collider.name == cat.collider2D.name
+			   && Input.GetMouseButtonDown(1)==true
+			   && PS==PlayerState.CatchedByCat)
+
 			{
-				escapeCat();
-			}
+				Debug.Log("EscapeCat() if문 들어옴");
+				EscapeCat();
+			} 
 
 			//Player catched by the Tree 
 			//&& When touched 5 times, player -> released from the obstacle 
-			else if(hit.collider.name == tree.collider2D.name && Input.GetMouseButtonDown(0)==true && PS == PlayerState.CatchedByTree)
+			else if(hit.collider.name == tree.collider2D.name 
+			        && Input.GetMouseButtonDown(0)==true
+			        && PS == PlayerState.CatchedByTree)
 			{
-				escapeTree();
+				EscapeTree();
 			}
 			//Player catched by Bubble
 			//&& When touched 5 times, player -> released from the obstacle
-			else if(hit.collider.name == "bubble(Clone)" && Input.GetMouseButtonDown(0)==true && PS == PlayerState.CatchedByBubble)
+			else if(hit.collider.name == "bubble(Clone)"
+			        && Input.GetMouseButtonDown(0)==true
+			        && PS == PlayerState.CatchedByBubble)
 			{
-				escapeBubble();
+				EscapeBubble();
 			}
-		}//hit something
+
 	}//void detection
 	
 
 
 
-	void escapeCat()
+	void EscapeCat()
 	{
+		Debug.Log("EscapeCat() 들어옴");
 			PS = PlayerState.CatchedByCat;
 			Debug.Log ("cat.collider2D.name  is = " + cat.collider2D.name);
 			Debug.Log ("Player is = " + PlayerState.CatchedByCat);
@@ -148,7 +208,7 @@ public class PlayerObstacle : PlayerControl {
 			}//click
 	}//detectCat
 
-	void escapeTree()
+	void EscapeTree()
 	{
 			PS = PlayerState.CatchedByTree;
 			Debug.Log ("tree.collider2D.name  is = " + tree.collider2D.name);
@@ -172,7 +232,7 @@ public class PlayerObstacle : PlayerControl {
 	}//detectTree
 
 
-	void escapeBubble()
+	void EscapeBubble()
 	{
 			PS = PlayerState.CatchedByBubble;
 			Debug.Log ("bubble.collider2D.name  is = " + bubble.collider2D.name);
@@ -195,6 +255,7 @@ public class PlayerObstacle : PlayerControl {
 				////////////Destroy 한 다음에 만들어놔야될거 같은데 ... else if에서 오류나서..
 			}//click 3times
 	}//detectBubble
+
 
 
 }//class
