@@ -16,16 +16,18 @@ public class PlayerControl : MonoBehaviour {
 
 	public static int life = 3;
 	public static int quilpens = 0;
+	public static int puzzles = 0;
 	
 	public Vector2 jumpForce = new Vector2(0, 100);
 	public Vector2 run = new Vector2(5,0);
 	
 
 	private GameObject collidedPen;
-
+	private GameObject collidedPuzzle;
 
 	public GameObject M_Cam;
-	public GameObject bird ;
+	public GameObject bird;
+	public GameObject puzzle;
 
 	public int Stage_Num = 0;
 
@@ -42,15 +44,14 @@ public class PlayerControl : MonoBehaviour {
 	void Start()
 	{
 		PS = PlayerState.Normal;
-
+		bird.gameObject.SetActive (false);
+		puzzle.gameObject.SetActive (false);
 		rigidbody2D.AddForce (jumpForce);
 	}
 	
 	
 	void Update ()
 	{
-		bird = GameObject.Find ("bird");
-
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		
 		rigidbody2D.AddForce (run);
@@ -60,6 +61,11 @@ public class PlayerControl : MonoBehaviour {
 		StageChange ();
 
 		Die ();
+
+		if (Stage_Num == 2) {
+			bird.gameObject.SetActive (true);
+			puzzle.gameObject.SetActive (true);
+		}
 	}
 
 
@@ -67,20 +73,23 @@ public class PlayerControl : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if(other.gameObject == bird){
-
-		}
-
 		if (other.gameObject.name == "Quilpen") 
 		{
 			quilpens++;
-			collidedPen =other.gameObject;
+			collidedPen = other.gameObject;
 			Destroy(collidedPen);
 		}
 
 		if (other.gameObject.tag == "Obstacle")
 		{
 			PS = PlayerState.Collided;
+		}
+
+		if (other.gameObject.name == "puzzle") 
+		{
+			puzzles++;
+			collidedPuzzle = other.gameObject;
+			Destroy (collidedPuzzle);
 		}
 	}
 

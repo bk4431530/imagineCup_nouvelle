@@ -5,18 +5,20 @@ public class GUIcontrol : MonoBehaviour {
 
 	private GUIText scoreReference;
 	private GUIText itemReference;
+	private GUIText puzzleReference;
 
 	// Use this for initialization
 	void Start () {
 		scoreReference = GameObject.Find("life").guiText;
 		itemReference = GameObject.Find ("items").guiText;
-	
+		puzzleReference = GameObject.Find ("puzzles").guiText;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		scoreReference.text = (PlayerControl.life).ToString();
 		itemReference.text =(PlayerControl.quilpens).ToString();
+		puzzleReference.text = (PlayerControl.puzzles).ToString();
 	}
 
 
@@ -32,6 +34,7 @@ public class GUIcontrol : MonoBehaviour {
 				Application.LoadLevel(Application.loadedLevel);
 				PlayerControl.life =3;
 				PlayerControl.quilpens=0;
+				PlayerControl.puzzles=0;
 				Time.timeScale=1;
 			}
 			
