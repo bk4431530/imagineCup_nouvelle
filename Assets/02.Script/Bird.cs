@@ -20,16 +20,19 @@ public class Bird : MonoBehaviour {
 		} 
 		else if (BS == BirdState.Catch)
 		{
-			Vector3 newPos = Player.transform.position;
+			/*Vector3 newPos = Player.transform.position;
 			newPos.y = newPos.y + 1.2f;
 			newPos.z = newPos.z -2;
 			transform.position = newPos;
+			*/
 		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
+		/*
 			BS = BirdState.Catch;
 			Player = other.gameObject;
 			transform.Rotate (0,180,0);
+			*/
 	}
 }

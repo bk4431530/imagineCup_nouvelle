@@ -11,8 +11,7 @@ public class TouchHandler : MonoBehaviour {
 	private int i = 0;
 	
 	public static bool swiped; 
-	public static bool touched;
-	public static Vector2 clickPos;
+
 
 	
 	private Touch initialTouch = new Touch();
@@ -41,12 +40,6 @@ public class TouchHandler : MonoBehaviour {
 			
 			if(touch.phase == TouchPhase.Began){
 				initialTouch = touch;
-				clickPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
-			}
-
-			else if(touch.phase == TouchPhase.Stationary)
-			{
-				touched = true;
 			}
 
 			else if(touch.phase == TouchPhase.Moved)
