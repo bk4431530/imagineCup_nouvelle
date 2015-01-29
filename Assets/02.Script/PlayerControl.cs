@@ -29,6 +29,9 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject bird;
 	public GameObject puzzle;
 
+	public GameObject windEffect;
+
+
 	public int Stage_Num = 0;
 
 	public PlayerState PS = PlayerState.Normal;
@@ -38,7 +41,7 @@ public class PlayerControl : MonoBehaviour {
 	private	Vector3 stage;
 
 
-
+	public Vector3 clickedPos;
 	
 
 	void Start()
@@ -66,11 +69,16 @@ public class PlayerControl : MonoBehaviour {
 			bird.gameObject.SetActive (true);
 			puzzle.gameObject.SetActive (true);
 		}
+
+
+		 
+
+
 	}
-
-
 	
-
+	
+	
+	
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.name == "Quilpen") 
@@ -110,8 +118,14 @@ public class PlayerControl : MonoBehaviour {
 			{
 				if (Input.GetMouseButtonUp(0)) 
 				{
+
+					clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+					clickedPos.z = this.transform.position.z;
+					
+					Instantiate(windEffect, clickedPos, Quaternion.identity);
 					rigidbody2D.velocity = Vector2.zero;
 					rigidbody2D.AddForce (jumpForce);
+
 				}
 			}
 		}
