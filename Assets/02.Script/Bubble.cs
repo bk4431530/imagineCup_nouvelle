@@ -16,7 +16,7 @@ public class Bubble : MonoBehaviour {
 	public Vector2 velocity = new Vector2(-20,0);
 
 	public float bubble_up_speed = 0.05f;
-
+	//dshjkfhjk
 
 
 
