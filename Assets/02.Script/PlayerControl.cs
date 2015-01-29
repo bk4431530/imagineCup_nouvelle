@@ -18,7 +18,8 @@ public class PlayerControl : MonoBehaviour {
 	public static int quilpens = 0;
 	public static int puzzles = 0;
 
-	private bool bp_state = false;
+	private bool stageIs3 = false;
+	private bool stageIs2 = false;
 
 	public Vector2 jumpForce = new Vector2(0, 100);
 	public Vector2 run = new Vector2(5,0);
@@ -30,6 +31,7 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject M_Cam;
 	public GameObject bird;
 	public GameObject puzzle;
+	public GameObject toyFlight;
 
 	public GameObject windEffect;
 
@@ -51,6 +53,7 @@ public class PlayerControl : MonoBehaviour {
 		PS = PlayerState.Normal;
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
+		toyFlight.gameObject.SetActive (false);
 		rigidbody2D.AddForce (jumpForce);
 	}
 	
@@ -67,16 +70,16 @@ public class PlayerControl : MonoBehaviour {
 
 		Die ();
 
-		if (Stage_Num == 2 && !bp_state) {
+		if (Stage_Num == 2 && !stageIs3) {
 			bird.gameObject.SetActive (true);
 			puzzle.gameObject.SetActive (true);
-			bp_state = true;
+			stageIs3 = true;
 		}
 
-
-		 
-
-
+		if (Stage_Num == 1 && !stageIs2) {
+			toyFlight.gameObject.SetActive (true);
+			stageIs2 = true;
+		}
 	}
 	
 	
@@ -128,7 +131,6 @@ public class PlayerControl : MonoBehaviour {
 					Instantiate(windEffect, clickedPos, Quaternion.identity);
 					rigidbody2D.velocity = Vector2.zero;
 					rigidbody2D.AddForce (jumpForce);
-
 				}
 			}
 		}
@@ -150,6 +152,9 @@ public class PlayerControl : MonoBehaviour {
 			stage.x = 12.8f * Stage_Num - 6.4f;
 			this.transform.position = stage;
 			life--;
+
+			Vector3 start_toy = new Vector3(17,2,-2);
+			toyFlight.transform.position = start_toy;
 		}
 	}
 

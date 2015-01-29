@@ -56,6 +56,7 @@
      <Compile Include="Assets\02.Script\PlayerObstacle.cs" />
      <Compile Include="Assets\02.Script\Puzzle.cs" />
      <Compile Include="Assets\02.Script\TouchHandler.cs" />
+     <Compile Include="Assets\02.Script\ToyFlight.cs" />
      <Compile Include="Assets\02.Script\Tree.cs" />
      <None Include="Assets\07.Shaders\SL_StandardShader_PerTexel.shader" />
      <None Include="Assets\07.Shaders\SL_PaletteShader_PerTexel.shader" />
