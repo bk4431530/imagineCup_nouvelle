@@ -17,7 +17,9 @@ public class PlayerControl : MonoBehaviour {
 	public static int life = 3;
 	public static int quilpens = 0;
 	public static int puzzles = 0;
-	
+
+	private bool bp_state = false;
+
 	public Vector2 jumpForce = new Vector2(0, 100);
 	public Vector2 run = new Vector2(5,0);
 	
@@ -62,9 +64,10 @@ public class PlayerControl : MonoBehaviour {
 
 		Die ();
 
-		if (Stage_Num == 2) {
+		if (Stage_Num == 2 && !bp_state) {
 			bird.gameObject.SetActive (true);
 			puzzle.gameObject.SetActive (true);
+			bp_state = true;
 		}
 	}
 
