@@ -87,7 +87,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: paperplane
-  m_Speed: 2
+  m_Speed: 1.79999995
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: 3ecb5c430e02f7e44a628307eff18982, type: 2}

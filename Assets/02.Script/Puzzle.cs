@@ -20,7 +20,7 @@ public class Puzzle : MonoBehaviour {
 			RB = false;
 		}
 
-		if(screenPosition.y < -1)
+		if(screenPosition.y < -12.8)
 		{
 			this.gameObject.SetActive (false);
 		}
