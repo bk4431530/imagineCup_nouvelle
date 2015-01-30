@@ -46,7 +46,8 @@ public class PlayerControl : MonoBehaviour {
 
 
 	public Vector3 clickedPos;
-	
+
+	Animator mAnimator;
 
 	void Start()
 	{
@@ -55,6 +56,7 @@ public class PlayerControl : MonoBehaviour {
 		puzzle.gameObject.SetActive (false);
 		toyFlight.gameObject.SetActive (false);
 		rigidbody2D.AddForce (jumpForce);
+		mAnimator = gameObject.GetComponent<Animator> ();
 	}
 	
 	
@@ -64,7 +66,31 @@ public class PlayerControl : MonoBehaviour {
 		
 		rigidbody2D.AddForce (run);
 
-		Jump();
+		mAnimator.SetBool("normal",true);
+
+		if(PS == PlayerState.Normal)
+		{
+			if (Application.platform == RuntimePlatform.Android) 
+			{
+				if (TouchHandler.swiped) 
+				{
+					Jump();
+				}
+			}
+			else 
+			{
+				if (Input.GetMouseButtonUp(0)) 
+				{
+					
+					//clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+					//clickedPos.z = this.transform.position.z;
+					
+					//Instantiate(windEffect, clickedPos, Quaternion.identity);
+
+					Jump();
+				}
+			}
+		}
 
 		StageChange ();
 
@@ -110,32 +136,10 @@ public class PlayerControl : MonoBehaviour {
 
 	void Jump()
 	{
-		if(PS == PlayerState.Normal)
-		{
-			if (Application.platform == RuntimePlatform.Android) 
-			{
-				if (TouchHandler.swiped) 
-				{
-					rigidbody2D.velocity = Vector2.zero;
-					rigidbody2D.AddForce (jumpForce);
-				}
-			}
-			else 
-			{
-				if (Input.GetMouseButtonUp(0)) 
-				{
-
-					clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-					clickedPos.z = this.transform.position.z;
-					
-					Instantiate(windEffect, clickedPos, Quaternion.identity);
-					rigidbody2D.velocity = Vector2.zero;
-					rigidbody2D.AddForce (jumpForce);
-				}
-			}
-		}
-			
-
+		rigidbody2D.velocity = Vector2.zero;
+		rigidbody2D.AddForce (jumpForce);
+		mAnimator.SetTrigger("jump");
+		mAnimator.SetBool("normal",false);
 	}
 
 
@@ -153,7 +157,7 @@ public class PlayerControl : MonoBehaviour {
 			this.transform.position = stage;
 			life--;
 
-			Vector3 start_toy = new Vector3(17,2,-2);
+			Vector3 start_toy = new Vector3(17,2,-1);
 			toyFlight.transform.position = start_toy;
 		}
 	}
