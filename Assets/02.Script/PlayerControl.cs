@@ -68,33 +68,20 @@ public class PlayerControl : MonoBehaviour {
 
 		mAnimator.SetBool("normal",true);
 
-		if(PS == PlayerState.Normal)
-		{
-			if (Application.platform == RuntimePlatform.Android) 
-			{
-				if (TouchHandler.swiped) 
-				{
-					Jump();
-				}
-			}
-			else 
-			{
-				if (Input.GetMouseButtonUp(0)) 
-				{
-					
-					//clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-					//clickedPos.z = this.transform.position.z;
-					
-					//Instantiate(windEffect, clickedPos, Quaternion.identity);
-
-					Jump();
-				}
-			}
-		}
-
 		StageChange ();
 
 		Die ();
+
+
+
+		if(PS == PlayerState.Normal && TouchHandler.swiped)
+		{
+			Jump();
+			clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+			Instantiate(windEffect, clickedPos, Quaternion.identity);
+		}
+
+		TouchHandler.swiped = false;
 
 		if (Stage_Num == 2 && !stageIs3) {
 			bird.gameObject.SetActive (true);
@@ -134,7 +121,7 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 
-	void Jump()
+	public void Jump()
 	{
 		rigidbody2D.velocity = Vector2.zero;
 		rigidbody2D.AddForce (jumpForce);

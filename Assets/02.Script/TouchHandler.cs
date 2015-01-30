@@ -3,37 +3,39 @@ using System.Collections;
 
 public class TouchHandler : MonoBehaviour {
 
-	public Color c1 = Color.yellow;
-	public Color c2 = Color.red;
-	
-	private GameObject lineGO;
-	private LineRenderer lineRenderer;
-	private int i = 0;
-	
-	public static bool swiped; 
+	public static bool swiped;
 
+	Vector3 point;
 
 	
 	private Touch initialTouch = new Touch();
 	
 	
 	void Start()
-	{
-		//ready for draw line
-		lineGO = new GameObject("Line");
-		lineGO.AddComponent<LineRenderer>();
-		lineRenderer = lineGO.GetComponent<LineRenderer>();
-		lineRenderer.material = new Material(Shader.Find("Mobile/Particles/Additive"));
-		lineRenderer.SetColors(c1, c2);
-		lineRenderer.SetWidth(0.1F, 0);
-		lineRenderer.SetVertexCount(0);
-		
+	{	
 		
 	}
-	
+
+
+
 	void Update()
 	{
+		//PC
+
+		if (Input.GetMouseButtonUp(0)) 
+		{				
+			swiped = true;		
+		}//click
+
+
+
 		
+
+
+
+		//Android
+		if (Application.platform == RuntimePlatform.Android)
+		{
 		if (Input.touchCount > 0)
 		{
 			Touch touch = Input.GetTouch(0);
@@ -44,12 +46,6 @@ public class TouchHandler : MonoBehaviour {
 
 			else if(touch.phase == TouchPhase.Moved)
 			{
-				lineRenderer.SetVertexCount(i+1);
-				Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -2);
-				lineRenderer.SetPosition(i, Camera.main.ScreenToWorldPoint(mPosition));
-				i++;
-				
-				
 				float deltaX = initialTouch.position.x - Input.mousePosition.x;
 				float deltaY = initialTouch.position.y - Input.mousePosition.y;
 				//distanxe fomula
@@ -66,7 +62,7 @@ public class TouchHandler : MonoBehaviour {
 					}
 					else if(swipedSideways && deltaX <=0)
 					{//swiped right
-						swiped = true;
+						swiped =true;
 					}
 					else if(!swipedSideways && deltaY >0)
 					{//swiped down
@@ -75,20 +71,20 @@ public class TouchHandler : MonoBehaviour {
 					{//swiped up
 					}
 					
-				}
-				
-			}
+				}//swipe 100
+			}//moved
 			
 			
 			if(touch.phase == TouchPhase.Ended)
 			{
 				initialTouch = new Touch();
 				swiped = false;
-				lineRenderer.SetVertexCount(0);
-				i = 0;
 				
-			}
+				
+			}//Ended
 			
-		}
-	}
-}
+		}//touch count >0
+	}//android
+}//update
+
+}//class
