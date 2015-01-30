@@ -85,7 +85,6 @@ GameObject:
   - 114: {fileID: 101099502}
   - 212: {fileID: 101099504}
   - 95: {fileID: 101099505}
-  - 58: {fileID: 101099506}
   - 50: {fileID: 101099501}
   - 60: {fileID: 101099507}
   m_Layer: 0
@@ -171,17 +170,6 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!58 &101099506
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 101099500}
-  m_Enabled: 0
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Radius: .899999976
-  m_Center: {x: -.25, y: 0}
 --- !u!60 &101099507
 PolygonCollider2D:
   m_ObjectHideFlags: 0

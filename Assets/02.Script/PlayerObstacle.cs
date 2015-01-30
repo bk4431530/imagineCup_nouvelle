@@ -48,8 +48,8 @@ public class PlayerObstacle : PlayerControl {
 			catPos = cat.transform.position;
 			transform.position = new Vector3(catPos.x-2 ,catPos.y, -1);         
 			rigidbody2D.isKinematic = true;
-			
-			
+
+
 		}
 		
 		//Debug.Log("고양이 좌표 : " + catPos);
@@ -82,6 +82,7 @@ public class PlayerObstacle : PlayerControl {
 			    && Input.GetMouseButtonDown (0) == true
 			    && PS == PlayerState.CatchedByCat)
 			{
+
 				Debug.Log ("EscapeCat() 들어옴");
 				//PS = PlayerState.CatchedByCat;
 				Debug.Log ("cat.collider2D.name  is = " + cat.collider2D.name);
@@ -90,14 +91,23 @@ public class PlayerObstacle : PlayerControl {
 				clickCount ++;
 				Debug.Log ("clickCount = " + clickCount);   
 				
-				if (clickCount == 5)
+				if (clickCount == 3)
 				{
+					
+					//Cat collider is removed
+					Destroy(cat.collider2D);				
+					Debug.Log("cat.collider2D" + cat.collider2D);
+
 					rigidbody2D.isKinematic = false;
 					PS = PlayerState.Normal;
 					
 					clickCount = 0;
 					Debug.Log ("clickCount = " + clickCount + " initiated");
 					Debug.Log ("hit = " + hit);
+
+
+
+
 				}
 			}
 		}
