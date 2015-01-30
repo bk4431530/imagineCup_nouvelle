@@ -22,8 +22,8 @@ public class cat1 : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		Debug.Log ("충돌한 비행기 콜라이더 이름 : " + other.collider2D.name);
-		if(other.gameObject.name == "player")
+		Debug.Log ("고양이는 비행기 콜라이더를 감지함 : " + other.collider2D.name);
+		if(other.collider2D.name == "player")
 		{
 			catState = CatState.Catch;
 			

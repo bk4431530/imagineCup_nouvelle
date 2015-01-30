@@ -25,7 +25,7 @@ public class PlayerControl : MonoBehaviour {
 	public Vector2 run = new Vector2(5,0);
 	
 
-	private GameObject collidedPen;
+	public GameObject collidedPen;
 	private GameObject collidedPuzzle;
 
 	public GameObject M_Cam;
@@ -39,14 +39,11 @@ public class PlayerControl : MonoBehaviour {
 	public int Stage_Num = 0;
 
 	public PlayerState PS = PlayerState.Normal;
-
 	private Vector2 screenPosition;
 	private Vector3 game_cam;
 	private	Vector3 stage;
 
-
 	public Vector3 clickedPos;
-	
 
 	void Start()
 	{
@@ -128,7 +125,7 @@ public class PlayerControl : MonoBehaviour {
 					clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
 					clickedPos.z = this.transform.position.z;
 					
-					Instantiate(windEffect, clickedPos, Quaternion.identity);
+					//Instantiate(windEffect, clickedPos, Quaternion.identity);
 					rigidbody2D.velocity = Vector2.zero;
 					rigidbody2D.AddForce (jumpForce);
 				}
