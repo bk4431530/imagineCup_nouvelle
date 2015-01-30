@@ -5,11 +5,11 @@ using System.Collections;
 public class PlayerObstacle : PlayerControl {
 	
 	public GameObject cat;
-	public GameObject tree;
-	public GameObject bubble;
+	//public GameObject tree;
+	//public GameObject bubble;
 	public GameObject player;
 	
-	private GameObject collided_bubble;
+	//private GameObject collided_bubble;
 	
 	private int clickCount = 0;
 	public float speed = 0.1f;
@@ -17,13 +17,13 @@ public class PlayerObstacle : PlayerControl {
 	private Vector2 pos;
 	private RaycastHit2D hit;
 	
-	public CircleCollider2D collided_bubble_collider;
+	//public CircleCollider2D collided_bubble_collider;
 	
 	//private Vector3 pos;
 	//private RaycastHit2D hit;
 	
 	private Vector2 catPos;
-	private Vector2 bubblePos;
+	//private Vector2 bubblePos;
 	
 	
 	

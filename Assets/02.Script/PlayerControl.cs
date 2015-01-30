@@ -66,28 +66,13 @@ public class PlayerControl : MonoBehaviour {
 		
 		rigidbody2D.AddForce (run);
 		
-		if(PS == PlayerState.Normal)
+		if(PS == PlayerState.Normal && TouchHandler.swiped)
 		{
-			if (Application.platform == RuntimePlatform.Android) 
-			{
-				if (TouchHandler.swiped) 
-				{
-					Jump();
-				}
-			}
-			else 
-			{
-				if (Input.GetMouseButtonUp(0)) 
-				{
-					
-					//clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-					//clickedPos.z = this.transform.position.z;
-					
-					//Instantiate(windEffect, clickedPos, Quaternion.identity);
-					
-					Jump();
-				}
-			}
+			Jump();
+			clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+			Instantiate(windEffect, clickedPos, Quaternion.identity);
+		}else{
+			Destroy(GameObject.Find("wind(Clone)"));
 		}
 		
 		StageChange ();

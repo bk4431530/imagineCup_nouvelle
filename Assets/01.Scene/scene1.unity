@@ -753,7 +753,7 @@ MonoBehaviour:
   bird: {fileID: 194228989}
   puzzle: {fileID: 1222066093}
   toyFlight: {fileID: 1630162961}
-  windEffect: {fileID: 181306, guid: a962af94495466b45959b22361cc68ad, type: 2}
+  windEffect: {fileID: 124996, guid: 46923b1d93558a548a59f9df92494a0a, type: 2}
   Stage_Num: 0
   PS: 0
   clickedPos: {x: 0, y: 0, z: 0}
@@ -816,11 +816,8 @@ MonoBehaviour:
   PS: 0
   clickedPos: {x: 0, y: 0, z: 0}
   cat: {fileID: 101099500}
-  tree: {fileID: 0}
-  bubble: {fileID: 912246560}
   player: {fileID: 436908505}
   speed: .100000001
-  collided_bubble_collider: {fileID: 0}
 --- !u!60 &436908512
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3044,8 +3041,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be74122a0ffb62b43b54eb852800b139, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  c1: {r: 1, g: .921568632, b: .0156862754, a: 1}
-  c2: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2008904027
 GameObject:
   m_ObjectHideFlags: 0
