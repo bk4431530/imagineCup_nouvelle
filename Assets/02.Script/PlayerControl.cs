@@ -4,7 +4,7 @@ using System.Collections;
 
 
 public class PlayerControl : MonoBehaviour {
-
+	
 	public enum PlayerState
 	{
 		Normal,
@@ -13,38 +13,42 @@ public class PlayerControl : MonoBehaviour {
 		CatchedByTree,
 		CatchedByBubble	
 	}
-
+	
 	public static int life = 3;
 	public static int quilpens = 0;
 	public static int puzzles = 0;
-
+	
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
-
+	
 	public Vector2 jumpForce = new Vector2(0, 100);
 	public Vector2 run = new Vector2(5,0);
 	
-
-	public GameObject collidedPen;
+	
+	private GameObject collidedPen;
 	private GameObject collidedPuzzle;
-
+	
 	public GameObject M_Cam;
 	public GameObject bird;
 	public GameObject puzzle;
 	public GameObject toyFlight;
-
+	
 	public GameObject windEffect;
-
-
+	
+	
 	public int Stage_Num = 0;
-
+	
 	public PlayerState PS = PlayerState.Normal;
+	
 	private Vector2 screenPosition;
 	private Vector3 game_cam;
 	private	Vector3 stage;
-
+	
+	
 	public Vector3 clickedPos;
-
+	
+	Animator mAnimator;
+	
 	void Start()
 	{
 		PS = PlayerState.Normal;
@@ -52,6 +56,7 @@ public class PlayerControl : MonoBehaviour {
 		puzzle.gameObject.SetActive (false);
 		toyFlight.gameObject.SetActive (false);
 		rigidbody2D.AddForce (jumpForce);
+		mAnimator = gameObject.GetComponent<Animator> ();
 	}
 	
 	
@@ -60,19 +65,41 @@ public class PlayerControl : MonoBehaviour {
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		
 		rigidbody2D.AddForce (run);
-
-		Jump();
-
+		
+		if(PS == PlayerState.Normal)
+		{
+			if (Application.platform == RuntimePlatform.Android) 
+			{
+				if (TouchHandler.swiped) 
+				{
+					Jump();
+				}
+			}
+			else 
+			{
+				if (Input.GetMouseButtonUp(0)) 
+				{
+					
+					//clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
+					//clickedPos.z = this.transform.position.z;
+					
+					//Instantiate(windEffect, clickedPos, Quaternion.identity);
+					
+					Jump();
+				}
+			}
+		}
+		
 		StageChange ();
-
+		
 		Die ();
-
+		
 		if (Stage_Num == 2 && !stageIs3) {
 			bird.gameObject.SetActive (true);
 			puzzle.gameObject.SetActive (true);
 			stageIs3 = true;
 		}
-
+		
 		if (Stage_Num == 1 && !stageIs2) {
 			toyFlight.gameObject.SetActive (true);
 			stageIs2 = true;
@@ -90,12 +117,12 @@ public class PlayerControl : MonoBehaviour {
 			collidedPen = other.gameObject;
 			Destroy(collidedPen);
 		}
-
+		
 		if (other.gameObject.tag == "Obstacle")
 		{
 			PS = PlayerState.Collided;
 		}
-
+		
 		if (other.gameObject.name == "puzzle") 
 		{
 			puzzles++;
@@ -103,39 +130,16 @@ public class PlayerControl : MonoBehaviour {
 			Destroy (collidedPuzzle);
 		}
 	}
-
-
+	
+	
 	void Jump()
 	{
-		if(PS == PlayerState.Normal)
-		{
-			if (Application.platform == RuntimePlatform.Android) 
-			{
-				if (TouchHandler.swiped) 
-				{
-					rigidbody2D.velocity = Vector2.zero;
-					rigidbody2D.AddForce (jumpForce);
-				}
-			}
-			else 
-			{
-				if (Input.GetMouseButtonUp(0)) 
-				{
-
-					clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-					clickedPos.z = this.transform.position.z;
-					
-					//Instantiate(windEffect, clickedPos, Quaternion.identity);
-					rigidbody2D.velocity = Vector2.zero;
-					rigidbody2D.AddForce (jumpForce);
-				}
-			}
-		}
-			
-
+		rigidbody2D.velocity = Vector2.zero;
+		rigidbody2D.AddForce (jumpForce);
+		mAnimator.SetTrigger("jump");
 	}
-
-
+	
+	
 	void Die()
 	{
 		if (life < 1) 
@@ -149,25 +153,25 @@ public class PlayerControl : MonoBehaviour {
 			stage.x = 12.8f * Stage_Num - 6.4f;
 			this.transform.position = stage;
 			life--;
-
-			Vector3 start_toy = new Vector3(17,2,-2);
+			
+			Vector3 start_toy = new Vector3(17,2,-1);
 			toyFlight.transform.position = start_toy;
 		}
 	}
-
-
-
+	
+	
+	
 	void StageChange(){
-
+		
 		//Stage Change
 		if (PS == PlayerState.Normal && screenPosition.x > Screen.width)
 		{
 			M_Cam.transform.Translate(new Vector3 (12.8f,0,0));
 			Stage_Num++;
 		}
-
+		
 	}
-
-
-
+	
+	
+	
 }
