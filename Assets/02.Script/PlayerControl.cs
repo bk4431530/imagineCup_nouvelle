@@ -128,7 +128,8 @@ public class PlayerControl : MonoBehaviour {
 					clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
 					clickedPos.z = this.transform.position.z;
 					
-					Instantiate(windEffect, clickedPos, Quaternion.identity);
+					//Instantiate(windEffect, clickedPos, Quaternion.identity);
+				
 					rigidbody2D.velocity = Vector2.zero;
 					rigidbody2D.AddForce (jumpForce);
 				}

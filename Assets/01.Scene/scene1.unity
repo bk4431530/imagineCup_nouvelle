@@ -766,7 +766,7 @@ MonoBehaviour:
   bird: {fileID: 194228989}
   puzzle: {fileID: 1222066093}
   toyFlight: {fileID: 1630162961}
-  windEffect: {fileID: 181306, guid: a962af94495466b45959b22361cc68ad, type: 2}
+  windEffect: {fileID: 124996, guid: 46923b1d93558a548a59f9df92494a0a, type: 2}
   Stage_Num: 0
   PS: 0
   clickedPos: {x: 0, y: 0, z: 0}
