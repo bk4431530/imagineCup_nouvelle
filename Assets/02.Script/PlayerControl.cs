@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour {
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
 	
-	public Vector2 jumpForce = new Vector2(0, 100);
+	public Vector2 jumpForce = new Vector2(2, 200);
 	public Vector2 run = new Vector2(5,0);
 	
 	
@@ -65,8 +65,8 @@ public class PlayerControl : MonoBehaviour {
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		
 		rigidbody2D.AddForce (run);
-		
-		if(PS == PlayerState.Normal && TouchHandler.swiped)
+
+		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButtonUp(0))
 		{
 			Jump();
 			clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
@@ -121,7 +121,7 @@ public class PlayerControl : MonoBehaviour {
 	{
 		rigidbody2D.velocity = Vector2.zero;
 		rigidbody2D.AddForce (jumpForce);
-		mAnimator.SetTrigger("jump");
+		mAnimator.SetTrigger("up");
 	}
 	
 	

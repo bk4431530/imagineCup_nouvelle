@@ -28,6 +28,7 @@ public class TouchHandler : MonoBehaviour {
 		
 		
 		//PC
+		/*
 		if (Input.GetMouseButtonDown(0)) 
 		{
 			
@@ -52,7 +53,7 @@ public class TouchHandler : MonoBehaviour {
 			swiped =false;
 		}
 		
-		
+		*/
 		
 		
 		
