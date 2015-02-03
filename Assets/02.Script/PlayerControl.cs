@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour {
 		CatchedByBubble   
 	}
 	
-	public static int life = 3;
+	public static int life = 5;
 	public static int quilpens = 0;
 	public static int puzzles = 0;
 	
