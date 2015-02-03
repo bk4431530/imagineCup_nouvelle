@@ -34,6 +34,9 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject toyFlight;
 	
 	public GameObject windEffect;
+
+	public LineRenderer lineRender;
+	private int numberOfPoints = 0;
 	
 	
 	public int Stage_Num = 0;
@@ -65,13 +68,21 @@ public class PlayerControl : MonoBehaviour {
 		
 		rigidbody2D.AddForce (run);
 
-		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButtonUp(0))
+		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButton(0))
 		{
 			Jump();
-			clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-			Instantiate(windEffect, clickedPos, Quaternion.identity);
+			numberOfPoints++;
+			lineRender.SetVertexCount( numberOfPoints );
+			Vector3 mousePos = new Vector3(0,0,0);
+			mousePos = Input.mousePosition;
+			mousePos.z = 1.0f;
+			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+			lineRender.SetPosition(numberOfPoints - 1, worldPos);
+
 		}else{
-			Destroy(GameObject.Find("wind(Clone)"));
+			numberOfPoints = 0;
+			lineRender.SetVertexCount(0);
+
 		}
 		
 		StageChange ();

@@ -663,6 +663,7 @@ MonoBehaviour:
   puzzle: {fileID: 1222066093}
   toyFlight: {fileID: 1630162961}
   windEffect: {fileID: 124996, guid: 46923b1d93558a548a59f9df92494a0a, type: 2}
+  lineRender: {fileID: 1024166645}
   Stage_Num: 0
   PS: 0
   clickedPos: {x: 0, y: 0, z: 0}
@@ -721,6 +722,7 @@ MonoBehaviour:
   puzzle: {fileID: 1222066093}
   toyFlight: {fileID: 1630162961}
   windEffect: {fileID: 0}
+  lineRender: {fileID: 0}
   Stage_Num: 0
   PS: 0
   clickedPos: {x: 0, y: 0, z: 0}
@@ -1430,6 +1432,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1740058773}
   m_RootOrder: 2
+--- !u!1 &1024166644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1024166646}
+  - 120: {fileID: 1024166645}
+  m_Layer: 0
+  m_Name: lineRenderer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!120 &1024166645
+LineRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024166644}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 1
+    endWidth: 1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294950912
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294957568
+  m_UseWorldSpace: 1
+--- !u!4 &1024166646
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024166644}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.91343594, y: .404166698, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &1222066093
 GameObject:
   m_ObjectHideFlags: 0
