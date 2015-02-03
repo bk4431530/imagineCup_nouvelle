@@ -11,7 +11,7 @@ public class PlayerControl : MonoBehaviour {
 		Collided,
 		CatchedByCat,
 		CatchedByTree,
-		CatchedByBubble	
+		CatchedByBubble   
 	}
 	
 	public static int life = 3;
@@ -34,21 +34,26 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject toyFlight;
 	
 	public int Stage_Num = 0;
-	
+
+	public GameObject line2;
+	public GameObject line3;
+
 	public PlayerState PS = PlayerState.Normal;
 	
 	private Vector2 screenPosition;
 	private Vector3 game_cam;
-	private	Vector3 stage;
+	private   Vector3 stage;
 	
 	public Vector3 clickedPos;
 	
 	public LineRenderer lineRender;
 	private int numberOfPoints = 0;
-
+	
 	
 	Animator mAnimator;
-	
+	Animator line2_Animator;
+	Animator line3_Animator;
+
 	void Start()
 	{
 		M_Cam = GameObject.Find ("Main Camera");
@@ -56,12 +61,18 @@ public class PlayerControl : MonoBehaviour {
 		puzzle = GameObject.Find ("puzzle");
 		toyFlight = GameObject.Find ("toyFlight");
 
+		line2 = GameObject.Find("2nd_line");
+		line3 = GameObject.Find("3rd_line");
+
 		PS = PlayerState.Normal;
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
 		toyFlight.gameObject.SetActive (false);
 		rigidbody2D.AddForce (jumpForce);
+
 		mAnimator = gameObject.GetComponent<Animator> ();
+		line2_Animator = line2.gameObject.GetComponent<Animator> ();
+		line3_Animator = line3.gameObject.GetComponent<Animator> ();
 	}
 	
 	
@@ -69,13 +80,23 @@ public class PlayerControl : MonoBehaviour {
 	{
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		
-		rigidbody2D.AddForce (run);
 
 		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButton(0))
 		{
+			numberOfPoints++;
+			lineRender.SetVertexCount( numberOfPoints );
+			Vector3 mousePos = new Vector3(0,0,0);
+			mousePos = Input.mousePosition;
+			mousePos.z = 1.0f;
+			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+			lineRender.SetPosition(numberOfPoints - 1, worldPos);
+		}else if(PS == PlayerState.Normal && TouchHandler.ended || Input.GetMouseButtonUp(0)) {
 			Jump();
-
-
+		}else{
+			rigidbody2D.AddForce (run);
+			
+			numberOfPoints = 0;
+			lineRender.SetVertexCount(0);
 		}
 		StageChange ();
 		
@@ -91,7 +112,7 @@ public class PlayerControl : MonoBehaviour {
 			toyFlight.gameObject.SetActive (true);
 			stageIs2 = true;
 		}
-
+		
 	}
 	
 	
@@ -124,8 +145,10 @@ public class PlayerControl : MonoBehaviour {
 	{
 		rigidbody2D.velocity = Vector2.zero;
 		rigidbody2D.AddForce (jumpForce);
-
+		
 		mAnimator.SetTrigger("up");
+		line2_Animator.SetTrigger ("up");
+		line3_Animator.SetTrigger ("up");
 	}
 	
 	

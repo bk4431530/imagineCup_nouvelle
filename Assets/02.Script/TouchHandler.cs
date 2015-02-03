@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class TouchHandler : MonoBehaviour {
 	
 	public static bool swiped;
-
+	public static bool ended;
 	
 	private Touch initialTouch = new Touch();
 	private float deltaX;
@@ -74,6 +74,7 @@ public class TouchHandler : MonoBehaviour {
 				
 				if(touch.phase == TouchPhase.Began){
 					initialTouch = touch;
+					ended = false;
 				}
 				
 				else if(touch.phase == TouchPhase.Moved)
@@ -107,7 +108,7 @@ public class TouchHandler : MonoBehaviour {
 				{
 					initialTouch = new Touch();
 					swiped = false;
-					
+					ended = true;
 					
 				}//Ended
 				
