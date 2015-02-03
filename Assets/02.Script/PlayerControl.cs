@@ -33,12 +33,6 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject puzzle;
 	public GameObject toyFlight;
 	
-	public GameObject windEffect;
-
-	public LineRenderer lineRender;
-	private int numberOfPoints = 0;
-	
-	
 	public int Stage_Num = 0;
 	
 	public PlayerState PS = PlayerState.Normal;
@@ -49,10 +43,19 @@ public class PlayerControl : MonoBehaviour {
 	
 	public Vector3 clickedPos;
 	
+	public LineRenderer lineRender;
+	private int numberOfPoints = 0;
+
+	
 	Animator mAnimator;
 	
 	void Start()
 	{
+		M_Cam = GameObject.Find ("Main Camera");
+		bird = GameObject.Find ("bird");
+		puzzle = GameObject.Find ("puzzle");
+		toyFlight = GameObject.Find ("toyFlight");
+
 		PS = PlayerState.Normal;
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
@@ -71,20 +74,9 @@ public class PlayerControl : MonoBehaviour {
 		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButton(0))
 		{
 			Jump();
-			numberOfPoints++;
-			lineRender.SetVertexCount( numberOfPoints );
-			Vector3 mousePos = new Vector3(0,0,0);
-			mousePos = Input.mousePosition;
-			mousePos.z = 1.0f;
-			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-			lineRender.SetPosition(numberOfPoints - 1, worldPos);
 
-		}else{
-			numberOfPoints = 0;
-			lineRender.SetVertexCount(0);
 
 		}
-		
 		StageChange ();
 		
 		Die ();
