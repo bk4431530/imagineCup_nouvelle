@@ -77,37 +77,39 @@ public class PlayerObstacle : PlayerControl {
 			Debug.Log ("마우스 + <" + hit.collider.name + "> collider가 위에 있음");
 			Debug.Log ("부딪 콜라이더 이름 : " + hit.collider.name);
 			
-			
-			if (hit.collider.name == cat.collider2D.name
-			    && Input.GetMouseButtonDown (0) == true
-			    && PS == PlayerState.CatchedByCat)
-			{
+			if(cat.collider2D != null){
 
-				Debug.Log ("EscapeCat() 들어옴");
-				//PS = PlayerState.CatchedByCat;
-				Debug.Log ("cat.collider2D.name  is = " + cat.collider2D.name);
-				Debug.Log ("Player is = " + PlayerState.CatchedByCat);
-				
-				clickCount ++;
-				Debug.Log ("clickCount = " + clickCount);   
-				
-				if (clickCount == 3)
+				if (hit.collider.name == cat.collider2D.name
+				    && Input.GetMouseButtonDown (0) == true
+				    && PS == PlayerState.CatchedByCat)
 				{
+
+					Debug.Log ("EscapeCat() 들어옴");
+					//PS = PlayerState.CatchedByCat;
+					Debug.Log ("cat.collider2D.name  is = " + cat.collider2D.name);
+					Debug.Log ("Player is = " + PlayerState.CatchedByCat);
 					
-					//Cat collider is removed
-					Destroy(cat.collider2D);				
-					Debug.Log("cat.collider2D" + cat.collider2D);
-
-					rigidbody2D.isKinematic = false;
-					PS = PlayerState.Normal;
+					clickCount ++;
+					Debug.Log ("clickCount = " + clickCount);   
 					
-					clickCount = 0;
-					Debug.Log ("clickCount = " + clickCount + " initiated");
-					Debug.Log ("hit = " + hit);
+					if (clickCount == 3)
+					{
+						
+						//Cat collider is removed
+						Destroy(cat.collider2D);				
+						Debug.Log("cat.collider2D" + cat.collider2D);
+
+						rigidbody2D.isKinematic = false;
+						PS = PlayerState.Normal;
+						
+						clickCount = 0;
+						Debug.Log ("clickCount = " + clickCount + " initiated");
+						Debug.Log ("hit = " + hit);
 
 
 
 
+					}
 				}
 			}
 		}

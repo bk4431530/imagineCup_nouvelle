@@ -2,7 +2,12 @@ fileFormatVersion: 2
 guid: 82d92cc68eb29c74692a99e9bf43c83a
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - M_Cam: {instanceID: 0}
+  - bird: {instanceID: 0}
+  - puzzle: {instanceID: 0}
+  - toyFlight: {instanceID: 0}
+  - windEffect: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -70,7 +70,7 @@ public class PlayerControl : MonoBehaviour {
 		{
 			Jump();
 			clickedPos = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z));
-			Instantiate(windEffect, clickedPos, Quaternion.identity);
+//			Instantiate(windEffect, clickedPos, Quaternion.identity);
 		}else{
 			Destroy(GameObject.Find("wind(Clone)"));
 		}
