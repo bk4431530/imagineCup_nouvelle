@@ -44,7 +44,6 @@ public class PlayerControl : MonoBehaviour {
 	private Vector3 game_cam;
 	private	Vector3 stage;
 	
-	
 	public Vector3 clickedPos;
 	
 	Animator mAnimator;
@@ -89,6 +88,7 @@ public class PlayerControl : MonoBehaviour {
 			toyFlight.gameObject.SetActive (true);
 			stageIs2 = true;
 		}
+
 	}
 	
 	
@@ -121,6 +121,7 @@ public class PlayerControl : MonoBehaviour {
 	{
 		rigidbody2D.velocity = Vector2.zero;
 		rigidbody2D.AddForce (jumpForce);
+
 		mAnimator.SetTrigger("up");
 	}
 	
