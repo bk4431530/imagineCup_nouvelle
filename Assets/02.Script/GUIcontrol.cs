@@ -55,7 +55,17 @@ public class GUIcontrol : MonoBehaviour {
 		pens.text = (PlayerControl.quilpens).ToString();
 		posts.text = (PlayerControl.puzzles).ToString();
 
-
+		if (PlayerControl.life == 4) {
+			life1.SetActive(false);
+		}else if(PlayerControl.life == 3){
+			life2.SetActive(false);
+		}else if(PlayerControl.life == 2){
+			life3.SetActive(false);
+		}else if(PlayerControl.life == 1){
+			life4.SetActive(false);
+		}else if(PlayerControl.life == 0){
+			life5.SetActive(false);
+		}
 	
 
 
