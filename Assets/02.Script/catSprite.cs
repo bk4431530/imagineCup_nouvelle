@@ -2,9 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 
+public enum CatState
+{
+	Normal,
+	Catch
+}
 
+public class catSprite : CatchedbyCat {
 
-public class catSprite : MonoBehaviour {
+	public CatState catState = CatState.Normal; //cat state default
 	
 	// Array of images for the snake's animation.
 	// This is loaded in the Inspector.
@@ -85,6 +91,16 @@ public class catSprite : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
+		//////////////////State 변경////////////////
+		if(CatchedbyCat.clickCount == 3)
+		{
+			catState = CatState.Normal;
+			Debug.Log ("CatState : ( " + catState + " ) ");
+
+			//CatchedbyCat.clickCount = 4;
+			Debug.Log ("clickCount = " + CatchedbyCat.clickCount);
+		}
+
 		// if the current frame is different from the frame displayed last update
 		if (curFrame != oldFrame)
 		{
@@ -122,13 +138,44 @@ public class catSprite : MonoBehaviour {
 	{
 		
 		//this.gameObject.GetComponent<PolygonCollider2D>
-		if (oldFrame != -1) {
+		if (oldFrame != -1 && CatchedbyCat.isDestroyed != true) {
 			Debug.Log ("/////////////////////////////////들어옴");
 			// always disable the old collider
 			olFrameColliders [oldFrame].enabled = false;
 		}
-		
-		// enable or disable the current collider as requested
-		olFrameColliders[curFrame].enabled = TrueOrFalse;
+
+		if(CatchedbyCat.clickCount == 3 && CatchedbyCat.isDestroyed == false)
+		{
+			olFrameColliders[curFrame].enabled = !(TrueOrFalse);
+			for(int i =0; i< 8; i++)
+			{
+				Destroy(olFrameColliders[i]);
+			}
+
+		}
+		else if( CatchedbyCat.clickCount != 3 && isDestroyed == false)
+		{
+			Debug.Log ("else 들어왔고 지금 CatchedbyCat.clickCount는 " + CatchedbyCat.clickCount);
+			// enable or disable the current collider as requested
+			olFrameColliders[curFrame].enabled = TrueOrFalse;
+		}
+		else if(CatchedbyCat.isDestroyed == true)
+		{
+			PS_cat =  PlayerState_cat.Free;
+		}
+
+
 	} 
+
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		Debug.Log ("고양이는 비행기 콜라이더를 감지함 : " + other.collider2D.name);
+		if (other.collider2D.name == "player")
+		{
+			catState = CatState.Catch;
+	
+		}
+	}
+
 }

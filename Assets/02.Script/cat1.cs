@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum CatState
-{
-	Normal,
-	Catch
-}
 
-public class cat1 : MonoBehaviour {
+public class cat1 : CatchedbyCat {
 
 	public CatState catState = CatState.Normal; //cat state default
+
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +14,10 @@ public class cat1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if(clickCount == 3)
+		{
+			catState = CatState.Normal;
+		}
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
@@ -28,6 +27,9 @@ public class cat1 : MonoBehaviour {
 			catState = CatState.Catch;
 			
 		}
+
+
+
 	}
 
 

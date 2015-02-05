@@ -8,10 +8,7 @@ public class PlayerControl : MonoBehaviour {
 	public enum PlayerState
 	{
 		Normal,
-		Collided,
-		CatchedByCat,
-		CatchedByTree,
-		CatchedByBubble   
+		Collided
 	}
 	
 	public static int life = 5;
@@ -19,6 +16,7 @@ public class PlayerControl : MonoBehaviour {
 	public static int puzzles = 0;
 
 	public static PlayerState PS;
+	public PlayerState test_PS = PS;
 
 	public int Stage_Num = 0;
 
