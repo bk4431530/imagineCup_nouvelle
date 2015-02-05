@@ -39,7 +39,7 @@ public class CatchedbyCat : MonoBehaviour {
 		if (hit != null && hit.collider != null) 
 		{
 			if (hit.collider.name == cat.collider2D.name
-			    && Input.GetMouseButtonDown (0) == true
+			    && Input.GetMouseButtonDown(0) == true
 			    && PlayerControl.PS == PlayerControl.PlayerState.CatchedByCat)
 			{
 
@@ -51,11 +51,12 @@ public class CatchedbyCat : MonoBehaviour {
 				
 				Instantiate(wind,worldPos1,Quaternion.identity);
 				Destroy(GameObject.Find("wind(Clone)"), 0.1f);
-
-
+				/*
+				if(clickCount < 3){
 				//chanege cat color
-
-
+				cat.GetComponent<SpriteRenderer>().color = Color.red;
+				}
+				*/
 				
 				clickCount ++;
 				Debug.Log ("clickCount = " + clickCount);   

@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\CatchedbyCat.cs">
     <Files>
-      <File FileName="Assets\02.Script\catSprite.cs" Line="23" Column="35" />
-      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="71" Column="14" />
+      <File FileName="Assets\02.Script\catSprite.cs" Line="114" Column="18" />
+      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="56" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
