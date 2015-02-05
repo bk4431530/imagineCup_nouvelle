@@ -896,7 +896,6 @@ MonoBehaviour:
   Stage_Num: 0
   jumpForce: {x: 4, y: 300}
   run: {x: 4, y: 0}
-  start_jump: {x: 50, y: 300}
 --- !u!50 &436908509
 Rigidbody2D:
   m_ObjectHideFlags: 0

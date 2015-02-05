@@ -28,8 +28,7 @@ public class PlayerControl : MonoBehaviour {
 	
 	public Vector2 jumpForce = new Vector2(4, 300);
 	public Vector2 run = new Vector2(4,0);
-	public Vector2 start_jump = new Vector2 (50, 300);
-	
+
 	private GameObject collidedPen;
 	private GameObject collidedPuzzle;
 	
@@ -71,7 +70,7 @@ public class PlayerControl : MonoBehaviour {
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
 		toyFlight.gameObject.SetActive (false);
-		rigidbody2D.AddForce (start_jump);
+		rigidbody2D.AddForce (new Vector2 (60, 300));
 
 		mAnimator = gameObject.GetComponent<Animator> ();
 		line2_Animator = line2.gameObject.GetComponent<Animator> ();
@@ -172,12 +171,15 @@ public class PlayerControl : MonoBehaviour {
 		{
 			PS = PlayerState.Normal;
 			stage = new Vector2 (0, 0);
-			stage.x = 12.8f * Stage_Num - 5.5f;
+			stage.x = 12.8f * Stage_Num;
+			if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 			stage.y = -0.35f;
 			this.transform.position = stage;
 			life--;
 
-			rigidbody2D.AddForce (start_jump);
+			rigidbody2D.isKinematic = true;
+			rigidbody2D.isKinematic = false;
+			rigidbody2D.AddForce (new Vector2 (0, 300));
 
 			toyFlight_Animator.SetTrigger("reset");
 			toyFlight_Animator.SetTrigger("show");
