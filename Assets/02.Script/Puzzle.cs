@@ -11,7 +11,7 @@ public class Puzzle : MonoBehaviour {
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
 		if (this.transform.position.x > 25.6) {
-			transform.Translate (new Vector2 (-0.06f, 0));
+			transform.Translate (new Vector2 (-0.05f, 0));
 		}
 		else if(RB) {
 			rb = this.gameObject.AddComponent("Rigidbody2D") as Rigidbody2D;

@@ -38,6 +38,7 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject line2;
 	public GameObject line3;
 
+
 	public PlayerState PS = PlayerState.Normal;
 	
 	private Vector2 screenPosition;
@@ -53,6 +54,8 @@ public class PlayerControl : MonoBehaviour {
 	Animator mAnimator;
 	Animator line2_Animator;
 	Animator line3_Animator;
+
+	Animator toyFlight_Animator;
 
 	void Start()
 	{
@@ -73,6 +76,7 @@ public class PlayerControl : MonoBehaviour {
 		mAnimator = gameObject.GetComponent<Animator> ();
 		line2_Animator = line2.gameObject.GetComponent<Animator> ();
 		line3_Animator = line3.gameObject.GetComponent<Animator> ();
+		toyFlight_Animator = toyFlight.gameObject.GetComponent<Animator> ();
 	}
 	
 	
@@ -90,6 +94,7 @@ public class PlayerControl : MonoBehaviour {
 			mousePos.z = 1.0f;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 			lineRender.SetPosition(numberOfPoints - 1, worldPos);
+
 		}else if(PS == PlayerState.Normal && TouchHandler.ended || Input.GetMouseButtonUp(0)) {
 			Jump();
 		}else{
@@ -110,6 +115,7 @@ public class PlayerControl : MonoBehaviour {
 		
 		if (Stage_Num == 1 && !stageIs2) {
 			toyFlight.gameObject.SetActive (true);
+			toyFlight_Animator.SetTrigger("show");
 			stageIs2 = true;
 		}
 		
@@ -160,13 +166,16 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
 		{
+
 			PS = PlayerState.Normal;
 			stage = new Vector3 (0, 0, -1);
 			stage.x = 12.8f * Stage_Num - 6.4f;
 			this.transform.position = stage;
 			life--;
-			
-			Vector3 start_toy = new Vector3(17,2,-1);
+
+			toyFlight_Animator.SetTrigger("reset");
+			toyFlight_Animator.SetTrigger("show");
+			Vector3 start_toy = new Vector3(19.2f,3,0);
 			toyFlight.transform.position = start_toy;
 		}
 	}

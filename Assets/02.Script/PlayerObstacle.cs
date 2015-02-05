@@ -50,6 +50,7 @@ public class PlayerObstacle : PlayerControl {
 			rigidbody2D.isKinematic = true;
 
 
+
 		}
 		
 		//Debug.Log("고양이 좌표 : " + catPos);
@@ -87,7 +88,9 @@ public class PlayerObstacle : PlayerControl {
 				//PS = PlayerState.CatchedByCat;
 				Debug.Log ("cat.collider2D.name  is = " + cat.collider2D.name);
 				Debug.Log ("Player is = " + PlayerState.CatchedByCat);
-				
+
+
+
 				clickCount ++;
 				Debug.Log ("clickCount = " + clickCount);   
 				
