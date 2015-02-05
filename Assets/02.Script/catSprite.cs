@@ -96,11 +96,11 @@ public class catSprite : CatchedbyCat {
 		{
 			catState = CatState.Normal;
 			Debug.Log ("CatState : ( " + catState + " ) ");
-
+			
 			//CatchedbyCat.clickCount = 4;
 			Debug.Log ("clickCount = " + CatchedbyCat.clickCount);
 		}
-
+		
 		// if the current frame is different from the frame displayed last update
 		if (curFrame != oldFrame)
 		{
@@ -112,7 +112,7 @@ public class catSprite : CatchedbyCat {
 			// update the old frame to the current frame
 			// so we can detect the next change in the image
 			
-			if(curFrame <8)
+			if(curFrame <16)
 			{
 				// display the current sprite (frame)
 				oSpriteRenderer.sprite = catImages[curFrame];
@@ -127,7 +127,7 @@ public class catSprite : CatchedbyCat {
 			{
 				Debug.Log ("초기화됨 ");
 				curFrame = 0;
-				oldFrame = 7;
+				oldFrame = 15;
 				EnableCollider(true);
 			}
 		}
@@ -143,15 +143,15 @@ public class catSprite : CatchedbyCat {
 			// always disable the old collider
 			olFrameColliders [oldFrame].enabled = false;
 		}
-
+		
 		if(CatchedbyCat.clickCount == 3 && CatchedbyCat.isDestroyed == false)
 		{
 			olFrameColliders[curFrame].enabled = !(TrueOrFalse);
-			for(int i =0; i< 8; i++)
+			for(int i =0; i< 16; i++)
 			{
 				Destroy(olFrameColliders[i]);
 			}
-
+			
 		}
 		else if( CatchedbyCat.clickCount != 3 && isDestroyed == false)
 		{
@@ -163,19 +163,19 @@ public class catSprite : CatchedbyCat {
 		{
 			PS_cat =  PlayerState_cat.Free;
 		}
-
-
+		
+		
 	} 
-
-
+	
+	
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		Debug.Log ("고양이는 비행기 콜라이더를 감지함 : " + other.collider2D.name);
 		if (other.collider2D.name == "player")
 		{
 			catState = CatState.Catch;
-	
+			
 		}
 	}
-
+	
 }
