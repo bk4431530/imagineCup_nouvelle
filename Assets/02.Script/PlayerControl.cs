@@ -26,8 +26,11 @@ public class PlayerControl : MonoBehaviour {
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
 	
-	public Vector2 jumpForce = new Vector2(2, 200);
-	public Vector2 run = new Vector2(5,0);
+	public Vector2 jumpForce = new Vector2(4, 300);
+	public Vector2 run = new Vector2(4,0);
+	public Vector2 start_jump = new Vector2 (50, 300);
+
+	public bool stage_start;
 	
 	private GameObject collidedPen;
 	private GameObject collidedPuzzle;
@@ -70,7 +73,9 @@ public class PlayerControl : MonoBehaviour {
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
 		toyFlight.gameObject.SetActive (false);
-		rigidbody2D.AddForce (jumpForce);
+		rigidbody2D.AddForce (start_jump);
+
+		stage_start = false;
 
 		mAnimator = gameObject.GetComponent<Animator> ();
 		line2_Animator = line2.gameObject.GetComponent<Animator> ();
@@ -85,7 +90,11 @@ public class PlayerControl : MonoBehaviour {
 	void Update ()
 	{
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-		
+
+		if (stage_start) {
+			rigidbody2D.AddForce (start_jump);
+			//stage_start = false;
+		}
 
 		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButton(0))
 		{
@@ -172,9 +181,11 @@ public class PlayerControl : MonoBehaviour {
 		{
 
 			PS = PlayerState.Normal;
-			stage = new Vector3 (0, 0, -1);
-			stage.x = 12.8f * Stage_Num - 6.4f;
+			stage = new Vector2 (0, 0);
+			stage.x = 12.8f * Stage_Num - 5.5f;
+			stage.y = -0.35f;
 			this.transform.position = stage;
+			stage_start = true;
 			life--;
 
 			toyFlight_Animator.SetTrigger("reset");

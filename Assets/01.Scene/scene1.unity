@@ -306,7 +306,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 139003088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -.439999998, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -862,7 +862,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436908505}
   m_LocalRotation: {x: 0, y: 0, z: -.1305262, w: .991444886}
-  m_LocalPosition: {x: -6.50543594, y: .404166728, z: -1}
+  m_LocalPosition: {x: -5.51000023, y: -.349999994, z: -1}
   m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
   m_Children: []
   m_Father: {fileID: 0}
@@ -894,8 +894,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Stage_Num: 0
-  jumpForce: {x: 0, y: 300}
-  run: {x: 5, y: 0}
+  jumpForce: {x: 4, y: 300}
+  run: {x: 4, y: 0}
+  start_jump: {x: 50, y: 300}
 --- !u!50 &436908509
 Rigidbody2D:
   m_ObjectHideFlags: 0
