@@ -8,10 +8,7 @@ public class PlayerControl : MonoBehaviour {
 	public enum PlayerState
 	{
 		Normal,
-		Collided,
-		CatchedByCat,
-		CatchedByTree,
-		CatchedByBubble   
+		Collided
 	}
 	
 	public static int life = 5;
