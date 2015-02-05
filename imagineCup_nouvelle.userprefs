@@ -1,13 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Bird.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\CatchedbyCat.cs">
     <Files>
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="64" Column="3" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Bird.cs" Line="21" Column="44" />
-      <File FileName="Assets\02.Script\PlayerObstacle.cs" Line="95" Column="27" />
-      <File FileName="Assets\02.Script\TouchHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Puzzle.cs" Line="20" Column="4" />
+      <File FileName="Assets\02.Script\catSprite.cs" Line="114" Column="18" />
+      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="56" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

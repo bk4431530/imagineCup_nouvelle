@@ -17,6 +17,11 @@ public class PlayerControl : MonoBehaviour {
 	public static int life = 5;
 	public static int quilpens = 0;
 	public static int puzzles = 0;
+
+	public static PlayerState PS;
+
+	public int Stage_Num = 0;
+
 	
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
@@ -24,30 +29,22 @@ public class PlayerControl : MonoBehaviour {
 	public Vector2 jumpForce = new Vector2(2, 200);
 	public Vector2 run = new Vector2(5,0);
 	
-	
 	private GameObject collidedPen;
 	private GameObject collidedPuzzle;
 	
-	public GameObject M_Cam;
-	public GameObject bird;
-	public GameObject puzzle;
-	public GameObject toyFlight;
-	
-	public int Stage_Num = 0;
+	private GameObject M_Cam;
+	private GameObject bird;
+	private GameObject puzzle;
+	private GameObject toyFlight;
 
-	public GameObject line2;
-	public GameObject line3;
-
-
-	public PlayerState PS = PlayerState.Normal;
+	private GameObject line2;
+	private GameObject line3;
 	
 	private Vector2 screenPosition;
 	private Vector3 game_cam;
-	private   Vector3 stage;
-	
-	public Vector3 clickedPos;
-	
-	public LineRenderer lineRender;
+	private Vector3 stage;
+
+	private LineRenderer lineRender;
 	private int numberOfPoints = 0;
 	
 	
@@ -68,6 +65,8 @@ public class PlayerControl : MonoBehaviour {
 		line3 = GameObject.Find("3rd_line");
 
 		PS = PlayerState.Normal;
+		Debug.Log ("state : " + PS);
+
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
 		toyFlight.gameObject.SetActive (false);
@@ -77,6 +76,9 @@ public class PlayerControl : MonoBehaviour {
 		line2_Animator = line2.gameObject.GetComponent<Animator> ();
 		line3_Animator = line3.gameObject.GetComponent<Animator> ();
 		toyFlight_Animator = toyFlight.gameObject.GetComponent<Animator> ();
+		lineRender = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
+
+		PS = PlayerState.Normal;
 	}
 	
 	
@@ -136,6 +138,8 @@ public class PlayerControl : MonoBehaviour {
 		if (other.gameObject.tag == "Obstacle")
 		{
 			PS = PlayerState.Collided;
+		}else{
+			PS = PlayerState.Normal;
 		}
 		
 		if (other.gameObject.name == "puzzle") 

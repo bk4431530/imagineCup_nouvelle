@@ -87,6 +87,7 @@ GameObject:
   - 95: {fileID: 101099505}
   - 50: {fileID: 101099501}
   - 60: {fileID: 101099507}
+  - 114: {fileID: 101099506}
   m_Layer: 0
   m_Name: cat
   m_TagString: Untagged
@@ -170,6 +171,26 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &101099506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 101099500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e69d2dac1297aa4a8a8af1bc4d71f77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  catImages:
+  - {fileID: 21300000, guid: 9c5daace8976417438c6d47d17258027, type: 3}
+  - {fileID: 21300000, guid: 76f9520ab1fd3bd4da4c0b22e428f356, type: 3}
+  - {fileID: 21300000, guid: 6cd283aa1b3f8614eaf9a2e130ef394b, type: 3}
+  - {fileID: 21300000, guid: fa2bc802b65726c48b84545175efaf66, type: 3}
+  - {fileID: 21300000, guid: b2b374369450a47428917d978ddb422f, type: 3}
+  - {fileID: 21300000, guid: 910b552545e771846baa20ade87d7ae0, type: 3}
+  - {fileID: 21300000, guid: 7c6170c49487b7e4890dc315db591537, type: 3}
+  - {fileID: 21300000, guid: 9fccc71f5b9d6c34397155e0ed768e91, type: 3}
 --- !u!60 &101099507
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -823,10 +844,10 @@ GameObject:
   - 4: {fileID: 436908506}
   - 50: {fileID: 436908509}
   - 114: {fileID: 436908508}
-  - 114: {fileID: 436908511}
   - 60: {fileID: 436908512}
   - 212: {fileID: 436908510}
   - 95: {fileID: 436908507}
+  - 114: {fileID: 436908511}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -872,18 +893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d92cc68eb29c74692a99e9bf43c83a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stage_Num: 0
   jumpForce: {x: 0, y: 300}
   run: {x: 5, y: 0}
-  M_Cam: {fileID: 0}
-  bird: {fileID: 0}
-  puzzle: {fileID: 0}
-  toyFlight: {fileID: 0}
-  Stage_Num: 0
-  line2: {fileID: 0}
-  line3: {fileID: 0}
-  PS: 0
-  clickedPos: {x: 0, y: 0, z: 0}
-  lineRender: {fileID: 1024166645}
 --- !u!50 &436908509
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -929,24 +941,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 436908505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8953bc3a662db4438051a416cf592a3, type: 3}
+  m_Script: {fileID: 11500000, guid: 33d45dc6bdd2dda44a138ee2ee2899d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: {x: 0, y: 300}
-  run: {x: 5, y: 0}
-  M_Cam: {fileID: 1966680219}
-  bird: {fileID: 194228989}
-  puzzle: {fileID: 1222066093}
-  toyFlight: {fileID: 1630162961}
-  Stage_Num: 0
-  line2: {fileID: 0}
-  line3: {fileID: 0}
-  PS: 0
-  clickedPos: {x: 0, y: 0, z: 0}
-  lineRender: {fileID: 0}
-  cat: {fileID: 101099500}
-  player: {fileID: 436908505}
-  speed: .100000001
+  cat: {fileID: 0}
+  player: {fileID: 0}
+  wind: {fileID: 124996, guid: 46923b1d93558a548a59f9df92494a0a, type: 2}
 --- !u!60 &436908512
 PolygonCollider2D:
   m_ObjectHideFlags: 0
