@@ -173,6 +173,7 @@ MonoBehaviour:
   player: {fileID: 436908505}
   wind: {fileID: 0}
   PS_cat: 0
+  catTime: 0
   catState: 0
   catImages:
   - {fileID: 21300000, guid: 9c5daace8976417438c6d47d17258027, type: 3}
@@ -1315,6 +1316,7 @@ MonoBehaviour:
   player: {fileID: 0}
   wind: {fileID: 124996, guid: 46923b1d93558a548a59f9df92494a0a, type: 2}
   PS_cat: 0
+  catTime: 0
 --- !u!60 &436908512
 PolygonCollider2D:
   m_ObjectHideFlags: 0

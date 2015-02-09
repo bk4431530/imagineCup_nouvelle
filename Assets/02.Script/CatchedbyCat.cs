@@ -25,7 +25,15 @@ public class CatchedbyCat : MonoBehaviour{
 	private Vector2 catPos;
 
 	Animator cat_Animator;
-	
+
+	private float startTime;
+	public float catTime;
+
+	void Awake()
+	{
+		startTime = Time.time;
+	}
+
 	void Start()
 	{
 		cat = GameObject.Find ("cat");
@@ -87,8 +95,17 @@ public class CatchedbyCat : MonoBehaviour{
 			rigidbody2D.isKinematic = false;			
 			Debug.Log ("player의 isKinematic상태:  " + rigidbody2D.isKinematic +" 로 바뀜");
 		}
-		
-	}//updarte
+
+		if (PS_cat == PlayerState_cat.CatchedByCat && Time.time - catTime < 5.0f) {
+			Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
+		} else if(PS_cat == PlayerState_cat.CatchedByCat && Time.time - catTime > 5.0f){
+			rigidbody2D.isKinematic = false;
+			PS_cat = PlayerState_cat.Free;
+			this.GetComponent<PlayerControl>().whenDie ();
+			clickCount = 0;
+		}
+
+	}//update
 	
 	
 	
@@ -96,6 +113,13 @@ public class CatchedbyCat : MonoBehaviour{
 	{
 		if (other.gameObject.name == "cat") 
 		{
+
+			if(PS_cat == PlayerState_cat.Free)
+			{
+				catTime = Time.time - startTime;
+				Debug.Log ("잡힌시간은" + catTime);
+			}
+
 			PS_cat =  PlayerState_cat.CatchedByCat;
 		}
 		

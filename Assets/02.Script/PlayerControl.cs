@@ -167,23 +167,28 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
 		{
-			PS = PlayerState.Normal;
-			stage = new Vector2 (0, 0);
-			stage.x = 12.8f * Stage_Num;
-			if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
-			stage.y = -0.35f;
-			this.transform.position = stage;
-			life--;
-
-			rigidbody2D.isKinematic = true;
-			rigidbody2D.isKinematic = false;
-			rigidbody2D.AddForce (new Vector2 (0, 300));
-
-			toyFlight_Animator.SetTrigger("reset");
-			toyFlight_Animator.SetTrigger("show");
-			Vector3 start_toy = new Vector3(19.2f,3,0);
-			toyFlight.transform.position = start_toy;
+			whenDie ();
 		}
+	}
+
+	public void whenDie()
+	{
+		PS = PlayerState.Normal;
+		stage = new Vector2 (0, 0);
+		stage.x = 12.8f * Stage_Num;
+		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
+		stage.y = -0.35f;
+		this.transform.position = stage;
+		life--;
+		
+		rigidbody2D.isKinematic = true;
+		rigidbody2D.isKinematic = false;
+		rigidbody2D.AddForce (new Vector2 (0, 300));
+		
+		toyFlight_Animator.SetTrigger("reset");
+		toyFlight_Animator.SetTrigger("show");
+		Vector3 start_toy = new Vector3(19.2f,3,0);
+		toyFlight.transform.position = start_toy;
 	}
 	
 	
