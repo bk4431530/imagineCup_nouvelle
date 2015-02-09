@@ -80,16 +80,14 @@ public class catSprite : CatchedbyCat {
 		EnableCollider(true);
 		Debug.Log ("EnableCOllider 됨");
 		
-		
-		
 	}
 	// Use this for initialization
 	void Start () {
-		
+		InvokeRepeating("ChangeSprite", 0.08f, 0.08f);
 	}
 	
 	// Update is called once per frame
-	void Update ()
+	void ChangeSprite ()
 	{
 		//////////////////State 변경////////////////
 		if(CatchedbyCat.clickCount == 3)
@@ -177,5 +175,5 @@ public class catSprite : CatchedbyCat {
 			
 		}
 	}
-	
+
 }
