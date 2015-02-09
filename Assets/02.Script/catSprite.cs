@@ -28,7 +28,8 @@ public class catSprite : CatchedbyCat {
 	
 	// a reference to this game object's Sprite Renderer
 	private SpriteRenderer oSpriteRenderer;
-	
+
+	public float d_time = 0.085f;
 	
 	
 	
@@ -83,10 +84,14 @@ public class catSprite : CatchedbyCat {
 	}
 	// Use this for initialization
 	void Start () {
-		InvokeRepeating("ChangeSprite", 0.08f, 0.08f);
+		InvokeRepeating("ChangeSprite", d_time, d_time);
 	}
-	
+
+
 	// Update is called once per frame
+	void Update () {
+	}
+
 	void ChangeSprite ()
 	{
 		//////////////////State 변경////////////////
