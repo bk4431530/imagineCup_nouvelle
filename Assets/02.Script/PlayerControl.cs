@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour {
 
 	public int Stage_Num = 0;
 
+	public GameObject particle;
 	
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
@@ -59,6 +60,13 @@ public class PlayerControl : MonoBehaviour {
 
 	Animator toyFlight_Animator;
 
+	//item
+	public bool revive =false;
+	public bool sheild =true;
+	int sheildCount=3;
+	public static bool MultipleFeather=true;
+	
+
 	void Start()
 	{
 		M_Cam = GameObject.Find ("Main Camera");
@@ -88,6 +96,7 @@ public class PlayerControl : MonoBehaviour {
 
 		PS = PlayerState.Normal;
 		IS = ItemState.Magnetic; // equiped item
+
 
 	}
 	
@@ -119,9 +128,18 @@ public class PlayerControl : MonoBehaviour {
 			stageIs2 = true;
 		}
 
+
+		//item
 		if(IS == ItemState.Magnetic)
 		{
 			magnet.gameObject.SetActive(true);
+		}
+		if(sheild && sheildCount>0){
+			//sheildEffect.SetActive(true);
+		}else{
+			sheild=false;
+			sheildCount=3;
+			//sheildEffect.SetActive(false);
 		}
 	}
 	
@@ -134,16 +152,27 @@ public class PlayerControl : MonoBehaviour {
 		{
 			quilpens++;
 			collidedPen = other.gameObject;
-			collidedPen.renderer.enabled =false;
-			//collidedPen.particleEmitter.Emit(10);
+			Instantiate(particle,collidedPen.transform.position,this.transform.rotation);
 			Destroy(collidedPen);
+			Destroy(GameObject.Find("particle(Clone)"),1.0f);
 		}
 		
 		if (other.gameObject.tag == "Obstacle")
 		{
-			PS = PlayerState.Collided;
+			if(sheild==true){
+				this.renderer.material.color = Color.blue;
+				PS = PlayerState.Normal;
+				sheildCount--;
+				Debug.Log(sheildCount);
+			}else{
+				PS = PlayerState.Collided;
+				this.renderer.material.color = Color.red;
+
+			}
 		}else{
 			PS = PlayerState.Normal;
+			this.renderer.material.color = Color.white;
+
 		}
 		
 		if (other.gameObject.name == "puzzle") 
@@ -175,7 +204,8 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
 		{
-			whenDie ();
+
+				whenDie ();
 		}
 	}
 
@@ -188,6 +218,8 @@ public class PlayerControl : MonoBehaviour {
 		stage.y = -0.35f;
 		this.transform.position = stage;
 		life--;
+		this.renderer.material.color = Color.white;
+
 		
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.isKinematic = false;

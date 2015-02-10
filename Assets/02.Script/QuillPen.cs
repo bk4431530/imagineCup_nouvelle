@@ -16,9 +16,10 @@ public class QuillPen : MonoBehaviour {
 
 	public QuillPenState QS = QuillPenState.Normal;
 
-	void Start(){
+	void Start()
+	{
 		startTime = Time.time;
-		magnet = GameObject.Find ("magnet");
+		magnet = GameObject.Find ("player").transform.FindChild("magnet").gameObject;
 	}
 	
 	void Update(){

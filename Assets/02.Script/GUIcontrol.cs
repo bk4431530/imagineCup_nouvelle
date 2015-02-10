@@ -17,20 +17,8 @@ public class GUIcontrol : MonoBehaviour {
 	public static bool pause =false;
 
 
-	/*
-	private GUIText scoreReference;
-	private GUIText itemReference;
-	private GUIText puzzleReference;
-	*/
 
-	// Use this for initialization
 	void Start () {
-	
-		/*
-		scoreReference = GameObject.Find("life").guiText;
-		itemReference = GameObject.Find ("items").guiText;
-		puzzleReference = GameObject.Find ("puzzles").guiText;
-		*/
 
 		pens = GameObject.Find ("quilpens").GetComponent<Text> ();
 		posts = GameObject.Find ("postcards").GetComponent<Text> ();
@@ -43,14 +31,18 @@ public class GUIcontrol : MonoBehaviour {
 		life5 = GameObject.Find ("life5");
 	}
 	
-	// Update is called once per frame
+
 	void Update () {
-		/*
-		scoreReference.text = (PlayerControl.life).ToString();
-		itemReference.text =(PlayerControl.quilpens).ToString();
-		puzzleReference.text = (PlayerControl.puzzles).ToString();
-		*/
-		pens.text = (PlayerControl.quilpens).ToString();
+
+		
+		if (PlayerControl.MultipleFeather) 
+		{
+			pens.text = (PlayerControl.quilpens*2).ToString();
+			pens.color= Color.red;
+		}else{
+			pens.text = (PlayerControl.quilpens).ToString();
+		}
+
 		posts.text = (PlayerControl.puzzles).ToString();
 
 		if (PlayerControl.life == 4) {
