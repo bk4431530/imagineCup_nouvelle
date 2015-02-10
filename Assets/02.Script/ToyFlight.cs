@@ -13,7 +13,7 @@ public class ToyFlight : MonoBehaviour {
 	void Update(){
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
-		if(screenPosition.x < -1)
+		if(transform.position.x < 0)
 		{
 			mAnimator.SetTrigger("reset");
 			this.gameObject.SetActive(false);

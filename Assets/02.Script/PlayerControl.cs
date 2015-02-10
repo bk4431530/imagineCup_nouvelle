@@ -8,7 +8,13 @@ public class PlayerControl : MonoBehaviour {
 	public enum PlayerState
 	{
 		Normal,
-		Collided
+		Collided,
+	}
+
+	public enum ItemState
+	{
+		None,
+		Magnetic
 	}
 	
 	public static int life = 5;
@@ -17,6 +23,8 @@ public class PlayerControl : MonoBehaviour {
 
 	public static PlayerState PS;
 	public PlayerState test_PS = PS;
+
+	public ItemState IS;
 
 	public int Stage_Num = 0;
 
@@ -34,6 +42,8 @@ public class PlayerControl : MonoBehaviour {
 	private GameObject bird;
 	private GameObject puzzle;
 	private GameObject toyFlight;
+
+	private GameObject magnet;
 
 	private GameObject line2;
 	private GameObject line3;
@@ -56,6 +66,9 @@ public class PlayerControl : MonoBehaviour {
 		puzzle = GameObject.Find ("puzzle");
 		toyFlight = GameObject.Find ("toyFlight");
 
+		magnet = GameObject.Find ("magnet");
+		magnet.gameObject.SetActive(false);
+
 		line2 = GameObject.Find("2nd_line");
 		line3 = GameObject.Find("3rd_line");
 
@@ -74,7 +87,7 @@ public class PlayerControl : MonoBehaviour {
 
 
 		PS = PlayerState.Normal;
-
+		IS = ItemState.Magnetic; // equiped item
 
 	}
 	
@@ -105,7 +118,11 @@ public class PlayerControl : MonoBehaviour {
 			toyFlight_Animator.SetTrigger("show");
 			stageIs2 = true;
 		}
-		
+
+		if(IS == ItemState.Magnetic)
+		{
+			magnet.gameObject.SetActive(true);
+		}
 	}
 	
 	
@@ -118,8 +135,8 @@ public class PlayerControl : MonoBehaviour {
 			quilpens++;
 			collidedPen = other.gameObject;
 			collidedPen.renderer.enabled =false;
-			collidedPen.particleSystem.Emit(10);
-			Destroy(collidedPen,1.0f);
+			//collidedPen.particleEmitter.Emit(10);
+			Destroy(collidedPen);
 		}
 		
 		if (other.gameObject.tag == "Obstacle")
@@ -175,11 +192,12 @@ public class PlayerControl : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.isKinematic = false;
 		rigidbody2D.AddForce (new Vector2 (0, 300));
-		
-		toyFlight_Animator.SetTrigger("reset");
-		toyFlight_Animator.SetTrigger("show");
+
+		toyFlight.gameObject.SetActive (true);
 		Vector3 start_toy = new Vector3(19.2f,3,0);
 		toyFlight.transform.position = start_toy;
+		toyFlight_Animator.SetTrigger("reset");
+		toyFlight_Animator.SetTrigger("show");
 	}
 	
 	
@@ -189,7 +207,7 @@ public class PlayerControl : MonoBehaviour {
 		//Stage Change
 		if (PS == PlayerState.Normal && screenPosition.x > Screen.width)
 		{
-			M_Cam.transform.Translate(new Vector3 (12.8f,0,0));
+			M_Cam.transform.Translate(new Vector3 (12.8f,0,-10));
 			Stage_Num++;
 		}
 		

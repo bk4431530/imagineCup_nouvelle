@@ -54,12 +54,14 @@
      <Compile Include="Assets\02.Script\Generate_Bubble.cs" />
      <Compile Include="Assets\02.Script\PlayerControl.cs" />
      <Compile Include="Assets\02.Script\Puzzle.cs" />
+     <Compile Include="Assets\02.Script\QuillPen.cs" />
      <Compile Include="Assets\02.Script\StartGUI.cs" />
      <Compile Include="Assets\02.Script\TouchHandler.cs" />
      <Compile Include="Assets\02.Script\ToyFlight.cs" />
      <Compile Include="Assets\02.Script\Tree.cs" />
      <Compile Include="Assets\02.Script\cat1.cs" />
      <Compile Include="Assets\02.Script\catSprite.cs" />
+     <Compile Include="Assets\Magnet.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
