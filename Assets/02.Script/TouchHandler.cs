@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 public class TouchHandler : MonoBehaviour {
 	
-	public static bool swiped;
-	public static bool ended;
+	private bool swiped =false;
+	public static bool Mswiped =false;
 	
 	private Touch initialTouch = new Touch();
 	private float deltaX;
@@ -14,10 +14,16 @@ public class TouchHandler : MonoBehaviour {
 	private float distance;
 	private bool swipedSideways;
 	
-	
-	
 	Vector2 initialPos;
 
+	
+	private LineRenderer lineRender;
+	private int numberOfPoints = 0;
+	
+	void Start()
+	{	
+		lineRender = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
+	}
 
 
 	void Update()
@@ -28,35 +34,28 @@ public class TouchHandler : MonoBehaviour {
 		
 		
 		//PC
-		/*
-		if (Input.GetMouseButtonDown(0)) 
-		{
-			
-		}//mouseButton
+
+
 		
-		if (Input.GetMouseButton (0)) 
-		{
-			deltaX = initialPos.x - Input.mousePosition.x;
-			deltaY = initialPos.y - Input.mousePosition.y;
-			
-			if(distance >100f){
-				if(swipedSideways && deltaX <=0)
-				{//swiped right
-					swiped =true;
-				}
-				
-			}
-		}//button pressed
 		
-		if (Input.GetMouseButtonUp(0))
+		if(swiped == true || Input.GetMouseButton(0))
 		{
-			swiped =false;
+			numberOfPoints++;
+			lineRender.SetVertexCount( numberOfPoints );
+			Vector3 mousePos = new Vector3(0,0,0);
+			mousePos = Input.mousePosition;
+			mousePos.z = 1.0f;
+			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
+			lineRender.SetPosition(numberOfPoints - 1, worldPos);
+			
+		}else if(Input.GetMouseButtonUp(0)){
+			Mswiped = true;
 		}
-		
-		*/
-		
-		
-		
+		else{	
+			Mswiped =false;
+			numberOfPoints = 0;
+			lineRender.SetVertexCount(0);
+		}
 		
 		
 		
@@ -74,7 +73,7 @@ public class TouchHandler : MonoBehaviour {
 				
 				if(touch.phase == TouchPhase.Began){
 					initialTouch = touch;
-					ended = false;
+					Mswiped =false;
 				}
 				
 				else if(touch.phase == TouchPhase.Moved)
@@ -92,6 +91,7 @@ public class TouchHandler : MonoBehaviour {
 						else if(swipedSideways && deltaX <=0)
 						{//swiped right
 							swiped =true;
+							Mswiped = false;
 						}
 						else if(!swipedSideways && deltaY >0)
 						{//swiped down
@@ -108,8 +108,7 @@ public class TouchHandler : MonoBehaviour {
 				{
 					initialTouch = new Touch();
 					swiped = false;
-					ended = true;
-					
+					Mswiped =true;
 				}//Ended
 				
 			}//touch count >0

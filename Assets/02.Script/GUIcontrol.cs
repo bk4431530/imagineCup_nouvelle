@@ -13,6 +13,8 @@ public class GUIcontrol : MonoBehaviour {
 	GameObject life4;
 	GameObject life5;
 
+	
+	public static bool pause =false;
 
 
 	/*
@@ -39,10 +41,6 @@ public class GUIcontrol : MonoBehaviour {
 		life3 = GameObject.Find ("life3");
 		life4 = GameObject.Find ("life4");
 		life5 = GameObject.Find ("life5");
-
-
-
-
 	}
 	
 	// Update is called once per frame
@@ -73,15 +71,23 @@ public class GUIcontrol : MonoBehaviour {
 	}
 
 
+	public void setPause()
+	{
+		Time.timeScale = 0;
+		pause = true;
+	}
+
+
 
 	void OnGUI () {
-		if(PlayerControl.life<1){
+		if(pause){
 
 			//scoreReference.text = "dead";
 
 			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
 			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2-50,100,50), "replay")) {
 				//Application.LoadLevel(1);
+				pause =false;
 				Application.LoadLevel(Application.loadedLevel);
 				PlayerControl.life =5;
 				PlayerControl.quilpens=0;

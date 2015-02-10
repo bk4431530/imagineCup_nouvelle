@@ -42,9 +42,6 @@ public class PlayerControl : MonoBehaviour {
 	private Vector3 game_cam;
 	private Vector3 stage;
 
-	private LineRenderer lineRender;
-	private int numberOfPoints = 0;
-	
 	
 	Animator mAnimator;
 	Animator line2_Animator;
@@ -74,9 +71,11 @@ public class PlayerControl : MonoBehaviour {
 		line2_Animator = line2.gameObject.GetComponent<Animator> ();
 		line3_Animator = line3.gameObject.GetComponent<Animator> ();
 		toyFlight_Animator = toyFlight.gameObject.GetComponent<Animator> ();
-		lineRender = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
+
 
 		PS = PlayerState.Normal;
+
+
 	}
 	
 	
@@ -84,24 +83,13 @@ public class PlayerControl : MonoBehaviour {
 	{
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
-		if(PS == PlayerState.Normal && TouchHandler.swiped || Input.GetMouseButton(0))
+		if(PS == PlayerState.Normal && TouchHandler.Mswiped == true)
 		{
-			numberOfPoints++;
-			lineRender.SetVertexCount( numberOfPoints );
-			Vector3 mousePos = new Vector3(0,0,0);
-			mousePos = Input.mousePosition;
-			mousePos.z = 1.0f;
-			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-			lineRender.SetPosition(numberOfPoints - 1, worldPos);
-
-		}else if(PS == PlayerState.Normal && TouchHandler.ended || Input.GetMouseButtonUp(0)) {
 			Jump();
 		}else{
 			rigidbody2D.AddForce (run);
-			
-			numberOfPoints = 0;
-			lineRender.SetVertexCount(0);
 		}
+
 		StageChange ();
 		
 		Die ();
@@ -129,7 +117,9 @@ public class PlayerControl : MonoBehaviour {
 		{
 			quilpens++;
 			collidedPen = other.gameObject;
-			Destroy(collidedPen);
+			collidedPen.renderer.enabled =false;
+			collidedPen.particleSystem.Emit(10);
+			Destroy(collidedPen,1.0f);
 		}
 		
 		if (other.gameObject.tag == "Obstacle")
@@ -164,6 +154,7 @@ public class PlayerControl : MonoBehaviour {
 		if (life < 1) 
 		{
 			Time.timeScale = 0;
+			GUIcontrol.pause = true;
 		} 
 		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
 		{
