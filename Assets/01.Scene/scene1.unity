@@ -169,8 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e69d2dac1297aa4a8a8af1bc4d71f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cat: {fileID: 101099500}
-  player: {fileID: 436908505}
+  cat: {fileID: 0}
+  player: {fileID: 0}
   wind: {fileID: 0}
   PS_cat: 0
   catTime: 0
@@ -192,6 +192,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7c6170c49487b7e4890dc315db591537, type: 3}
   - {fileID: 21300000, guid: 9fccc71f5b9d6c34397155e0ed768e91, type: 3}
   - {fileID: 21300000, guid: 9fccc71f5b9d6c34397155e0ed768e91, type: 3}
+  curFrame: 0
+  oldFrame: 0
   d_time: .0780000016
 --- !u!60 &101099507
 PolygonCollider2D:
@@ -284,7 +286,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 109879314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3478c2d817e752440b4a50f41d01cc83, type: 3}
+  m_Script: {fileID: 11500000, guid: 92863f891ed48b04c8569bef90d2ce21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &109879316
@@ -366,8 +368,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 139003088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.439999998, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.0399999991, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -1695,7 +1697,7 @@ MonoBehaviour:
   jumpForce: {x: 5, y: 300}
   run: {x: 5, y: 0}
   revive: 0
-  sheild: 1
+  shield: 0
 --- !u!50 &436908509
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2035,6 +2037,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!60 &599514864
 PolygonCollider2D:
@@ -2393,6 +2396,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1 &824093636
 GameObject:
@@ -2791,6 +2795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1 &885184383
 GameObject:
@@ -3534,6 +3539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1001 &976726370
 Prefab:
@@ -4429,14 +4435,14 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
-    startWidth: .300000012
+    startWidth: .600000024
     endWidth: 1.5
     m_StartColor:
       serializedVersion: 2
-      rgba: 4291940500
+      rgba: 671088639
     m_EndColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 905969663
   m_UseWorldSpace: 1
 --- !u!4 &1024166646
 Transform:
@@ -4585,7 +4591,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1113702697}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -.00999999978, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1266291789}
@@ -6983,6 +6989,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1001 &1489570642
 Prefab:
@@ -8296,6 +8303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1 &1871217902
 GameObject:
@@ -8882,6 +8890,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1 &1944719483
 GameObject:
@@ -8999,6 +9008,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1 &1955430638
 GameObject:
@@ -9148,7 +9158,7 @@ Transform:
   m_PrefabInternal: {fileID: 2115505884}
   m_GameObject: {fileID: 1957841038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.09000015, y: .529999971, z: 0}
+  m_LocalPosition: {x: 4.09000015, y: .779999971, z: 0}
   m_LocalScale: {x: .400000006, y: .400000006, z: 0}
   m_Children: []
   m_Father: {fileID: 1740058773}
@@ -9166,6 +9176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1 &1965974272
 GameObject:
@@ -9910,6 +9921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
   speed: 1
+  startTime: 0
   QS: 0
 --- !u!1001 &2115505884
 Prefab:
@@ -9924,7 +9936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 481306, guid: a962af94495466b45959b22361cc68ad, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .529999971
+      value: .779999971
       objectReference: {fileID: 0}
     - target: {fileID: 481306, guid: a962af94495466b45959b22361cc68ad, type: 2}
       propertyPath: m_LocalPosition.z

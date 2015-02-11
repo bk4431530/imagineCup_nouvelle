@@ -16,30 +16,30 @@ public class CatchedbyCat : MonoBehaviour{
 	
 	public PlayerState_cat PS_cat = PlayerState_cat.Free;
 	
-	public  static int clickCount = 0;
+	public static int clickCount = 0;
 	public static bool isDestroyed = false;
 	
 	private Vector2 pos;
 	private RaycastHit2D hit;
 	
 	private Vector2 catPos;
-
+	
 	Animator cat_Animator;
-
+	
 	private float startTime;
 	public float catTime;
-
+	
 	void Awake()
 	{
 		startTime = Time.time;
 	}
-
+	
 	void Start()
 	{
 		cat = GameObject.Find ("cat");
 		player = GameObject.Find ("player");
 		PS_cat = PlayerState_cat.Free;
-
+		
 		cat_Animator = cat.gameObject.GetComponent<Animator> ();
 	}
 	
@@ -53,7 +53,7 @@ public class CatchedbyCat : MonoBehaviour{
 			cat_Animator.SetTrigger("catch");
 			catPos = cat.transform.position;
 			transform.position = new Vector3(catPos.x-1 ,catPos.y, -1);         
-			rigidbody2D.isKinematic = true;	
+			rigidbody2D.isKinematic = true;   
 		}
 		
 		
@@ -74,52 +74,80 @@ public class CatchedbyCat : MonoBehaviour{
 		}//hit null
 		
 		if (clickCount == 3)
-		{	
+		{   
+			cat.gameObject.GetComponent<catSprite>().oldFrame = cat.gameObject.GetComponent<catSprite>().curFrame;
+			
 			PS_cat =  PlayerState_cat.Free;
-
+			cat.gameObject.GetComponent<catSprite>().catState= CatState.Normal;
+			
+			Debug.Log("PlayerState : " + PS_cat + "/ CatState : " + cat.gameObject.GetComponent<catSprite>().catState);
+			
 			cat_Animator.SetTrigger("free");
+			
+			rigidbody2D.isKinematic = false;
 			
 			//일단 주석 //catState = CatState.Free;
 			//Cat collider is removed
-			Destroy(cat.collider2D);	
-			Debug.Log("cat.collider2D 제거됨");
+			//Destroy(cat.collider2D);   
+			//Debug.Log("cat.collider2D 제거됨");
 			
-			isDestroyed = true;
-			Debug.Log ("isDestroyed = true됨");
+			//isDestroyed = true;
+			//Debug.Log ("isDestroyed = true됨");
 			
+			
+			for(int index = 0 ; index < cat.gameObject.GetComponent<catSprite>().catImages.Length; index++)
+			{
+				cat.gameObject.GetComponent<catSprite>().olFrameColliders[index].enabled = false;
+				Debug.Log ("disabled" + (index+1) );
+			}
+			
+			
+			clickCount = 0;
+			Debug.Log ("clickCount = " + CatchedbyCat.clickCount + "초기화됨");
+			
+			Invoke ("init_Frames", 1.0f);
 		}//3count
 		
-		if (PS_cat == PlayerState_cat.Free) 
-		{
-			Debug.Log ("PS_Cat: " + PS_cat +" 로 바뀜");
-			rigidbody2D.isKinematic = false;			
-			Debug.Log ("player의 isKinematic상태:  " + rigidbody2D.isKinematic +" 로 바뀜");
-		}
-
+		/*
+      if (PS_cat == PlayerState_cat.Free) 
+      {
+//         Debug.Log ("PS_Cat: " + PS_cat +" 로 바뀜");
+         rigidbody2D.isKinematic = false;         
+//         Debug.Log ("player의 isKinematic상태:  " + rigidbody2D.isKinematic +" 로 바뀜");
+      }*/
+		
 		if (PS_cat == PlayerState_cat.CatchedByCat && Time.time - catTime < 5.0f) {
-			Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
+			//         Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
+			
+			
 		} else if(PS_cat == PlayerState_cat.CatchedByCat && Time.time - catTime > 5.0f){
 			rigidbody2D.isKinematic = false;
 			PS_cat = PlayerState_cat.Free;
+			cat.gameObject.GetComponent<catSprite>().catState= CatState.Normal;
 			this.GetComponent<PlayerControl>().whenDie ();
 			clickCount = 0;
+			Debug.Log ("clickCount = " + CatchedbyCat.clickCount + "초기화됨");
 		}
-
+		
 	}//update
 	
+	void init_Frames(){
+		cat.gameObject.GetComponent<catSprite>().curFrame = 0;
+		cat.gameObject.GetComponent<catSprite>().oldFrame = -1;
+	}
 	
 	
 	void OnTriggerEnter2D(Collider2D other) 
 	{
 		if (other.gameObject.name == "cat") 
 		{
-
+			
 			if(PS_cat == PlayerState_cat.Free)
 			{
 				catTime = Time.time - startTime;
-				Debug.Log ("잡힌시간은" + catTime);
+				//            Debug.Log ("잡힌시간은" + catTime);
 			}
-
+			
 			PS_cat =  PlayerState_cat.CatchedByCat;
 		}
 		

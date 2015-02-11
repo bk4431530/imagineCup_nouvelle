@@ -36,6 +36,8 @@ public class PlayerControl : MonoBehaviour {
 	public Vector2 jumpForce = new Vector2(4, 300);
 	public Vector2 run = new Vector2(4,0);
 
+	private Vector2 diePos;
+
 	private GameObject collidedPen;
 	private GameObject collidedPuzzle;
 	
@@ -61,10 +63,10 @@ public class PlayerControl : MonoBehaviour {
 	Animator toyFlight_Animator;
 
 	//item
-	public bool revive =false;
-	public bool sheild =true;
-	int sheildCount=3;
-	public static bool MultipleFeather=true;
+	public bool revive = false;
+	public bool shield = false;
+	int shieldCount = 3;
+	public static bool MultipleFeather = false;
 	
 
 	void Start()
@@ -105,17 +107,26 @@ public class PlayerControl : MonoBehaviour {
 	{
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 
-		if(PS == PlayerState.Normal && TouchHandler.Mswiped == true)
+		if(PS == PlayerState.Normal)
 		{
-			Jump();
-		}else{
-			rigidbody2D.AddForce (run);
+			if(TouchHandler.Mswiped == true)
+			{
+				Jump();
+			}else{
+				rigidbody2D.AddForce (run);
+			}
+		} 
+
+		else if(PS == PlayerState.Collided)
+		{
+			transform.position = diePos;
 		}
+
 
 		StageChange ();
 		
 		Die ();
-		
+
 		if (Stage_Num == 2 && !stageIs3) {
 			bird.gameObject.SetActive (true);
 			puzzle.gameObject.SetActive (true);
@@ -134,12 +145,15 @@ public class PlayerControl : MonoBehaviour {
 		{
 			magnet.gameObject.SetActive(true);
 		}
-		if(sheild && sheildCount>0){
-			//sheildEffect.SetActive(true);
-		}else{
-			sheild=false;
-			sheildCount=3;
-			//sheildEffect.SetActive(false);
+
+		if(shield)
+		{
+			if(shieldCount>0){
+				//sheildEffect.SetActive(true);
+			}else{
+				//sheildEffect.SetActive(false);
+				shield = false;
+			}
 		}
 	}
 	
@@ -154,20 +168,21 @@ public class PlayerControl : MonoBehaviour {
 			collidedPen = other.gameObject;
 			Instantiate(particle,collidedPen.transform.position,this.transform.rotation);
 			Destroy(collidedPen);
-			Destroy(GameObject.Find("particle(Clone)"),1.0f);
+			Destroy(GameObject.Find("particle(Clone)"),0.5f);
 		}
 		
 		if (other.gameObject.tag == "Obstacle")
 		{
-			if(sheild==true){
+			if(shield){
 				this.renderer.material.color = Color.blue;
 				PS = PlayerState.Normal;
-				sheildCount--;
-				Debug.Log(sheildCount);
+				shieldCount--;
+				Debug.Log(shieldCount);
 			}else{
 				PS = PlayerState.Collided;
-				this.renderer.material.color = Color.red;
-
+				diePos = transform.position;
+				mAnimator.SetTrigger("collid");
+				Invoke("whenDie", 0.8f);
 			}
 		}else{
 			PS = PlayerState.Normal;
@@ -182,7 +197,6 @@ public class PlayerControl : MonoBehaviour {
 			Destroy (collidedPuzzle);
 		}
 	}
-	
 	
 	void Jump()
 	{
@@ -202,9 +216,8 @@ public class PlayerControl : MonoBehaviour {
 			Time.timeScale = 0;
 			GUIcontrol.pause = true;
 		} 
-		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) || (life > 0 && PS == PlayerState.Collided)) 
+		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
-
 				whenDie ();
 		}
 	}
@@ -233,7 +246,8 @@ public class PlayerControl : MonoBehaviour {
 	}
 	
 	
-	
+
+
 	void StageChange(){
 		
 		//Stage Change

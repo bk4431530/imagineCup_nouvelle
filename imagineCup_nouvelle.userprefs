@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\QuillPen.cs">
     <Files>
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="207" Column="4" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="84" Column="27" />
-      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="113" Column="3" />
-      <File FileName="Assets\02.Script\QuillPen.cs" Line="17" Column="49" />
+      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="148" Column="49" />
+      <File FileName="Assets\02.Script\catSprite.cs" Line="132" Column="18" />
+      <File FileName="Assets\02.Script\QuillPen.cs" Line="27" Column="4" />
+      <File FileName="Assets\02.Script\Magnet.cs" Line="10" Column="2" />
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="102" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

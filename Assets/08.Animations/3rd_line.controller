@@ -72,7 +72,7 @@ State:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 3rd_line
-  m_Speed: 2
+  m_Speed: .800000012
   m_CycleOffset: 0
   m_Motions:
   - {fileID: 7400000, guid: c1631b954879daf4ba993ca75c30d083, type: 2}
