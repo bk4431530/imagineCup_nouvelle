@@ -144,6 +144,9 @@ public class PlayerControl : MonoBehaviour {
 		if(IS == ItemState.Magnetic)
 		{
 			magnet.gameObject.SetActive(true);
+		}else{
+			magnet.gameObject.SetActive(false);
+
 		}
 
 		if(shield)
@@ -162,14 +165,6 @@ public class PlayerControl : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.name == "Quilpen") 
-		{
-			quilpens++;
-			collidedPen = other.gameObject;
-			Instantiate(particle,collidedPen.transform.position,this.transform.rotation);
-			Destroy(collidedPen);
-			Destroy(GameObject.Find("particle(Clone)"),0.5f);
-		}
 		
 		if (other.gameObject.tag == "Obstacle")
 		{

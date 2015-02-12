@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 481306}
   - 212: {fileID: 21211504}
   - 60: {fileID: 6011504}
+  - 114: {fileID: 11473578}
   m_Layer: 0
   m_Name: Quilpen
   m_TagString: Untagged
@@ -23,8 +24,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181306}
-  m_LocalRotation: {x: -.121624835, y: .0446914881, z: -.00548189459, w: .991554379}
-  m_LocalPosition: {x: 4.09000015, y: .529999971, z: -.0799999982}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.09000015, y: .779999971, z: 0}
   m_LocalScale: {x: .400000006, y: .400000006, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,6 +79,22 @@ PolygonCollider2D:
       - {x: -.680000007, y: -.964999974}
       - {x: -.600000024, y: -.814999998}
       - {x: -.589999974, y: -.714999974}
+--- !u!114 &11473578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535adab6c8e02c04d9b0ff81176d694f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  magnet: {fileID: 0}
+  speed: 1
+  startTime: 0
+  particle: {fileID: 174490, guid: 85843d6f396e06e48bffc6d2e479643b, type: 2}
+  QS: 0
 --- !u!212 &21211504
 SpriteRenderer:
   m_ObjectHideFlags: 1
