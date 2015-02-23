@@ -34,9 +34,9 @@ public class finishGame : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		pens.text = (GameManger.quilpens).ToString();
-		quilpens.text = (GameManger.quilpens).ToString();
-		posts.text = (GameManger.puzzles).ToString();
+		pens.text = (GameManager.quillPen).ToString();
+		quilpens.text = (GameManager.quillPen).ToString();
+		posts.text = (GameManager.piece).ToString();
 
 		/*
 		if (PlayerControl.life == 4) {
