@@ -1017,6 +1017,7 @@ GameObject:
   - 4: {fileID: 276165838}
   - 114: {fileID: 276165837}
   - 114: {fileID: 276165839}
+  - 114: {fileID: 276165840}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -1059,6 +1060,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleR: {fileID: 100000, guid: f0e3bba8f4f8ffd41a8aca8a63fbb732, type: 2}
+--- !u!114 &276165840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276165836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 181a2233374da614592df0d264f05229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &280442188
 GameObject:
   m_ObjectHideFlags: 0
