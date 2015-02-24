@@ -4,20 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-<<<<<<< HEAD
-  m_Scenes:
-  - enabled: 1
-    path: Assets/01.Scene/LOGO_Scene.unity
-  - enabled: 1
-    path: Assets/01.Scene/Loading_Scene.unity
-  - enabled: 1
-    path: Assets/01.Scene/Select_Scene.unity
-  - enabled: 1
-    path: Assets/01.Scene/Equip_Scene.unity
-  - enabled: 1
-    path: Assets/01.Scene/Monday.unity
-  - enabled: 1
-    path: Assets/01.Scene/finishGame.unity
-=======
   m_Scenes: []
->>>>>>> origin/master
