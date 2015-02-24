@@ -37,23 +37,23 @@ public class GUIcontrol : MonoBehaviour {
 		
 		if (PlayerControl.MultipleFeather) 
 		{
-			pens.text = (PlayerControl.quilpens*2).ToString();
+			pens.text = (GameManager.quillPen*2).ToString();
 			pens.color= Color.red;
 		}else{
-			pens.text = (PlayerControl.quilpens).ToString();
+			pens.text = (GameManager.quillPen).ToString();
 		}
 
-		posts.text = (PlayerControl.puzzles).ToString();
+		posts.text = (GameManager.piece).ToString();
 
-		if (PlayerControl.life == 4) {
+		if (GameManager.life == 4) {
 			life1.SetActive(false);
-		}else if(PlayerControl.life == 3){
+		}else if(GameManager.life == 3){
 			life2.SetActive(false);
-		}else if(PlayerControl.life == 2){
+		}else if(GameManager.life == 2){
 			life3.SetActive(false);
-		}else if(PlayerControl.life == 1){
+		}else if(GameManager.life == 1){
 			life4.SetActive(false);
-		}else if(PlayerControl.life == 0){
+		}else if(GameManager.life == 0){
 			life5.SetActive(false);
 		}
 	
@@ -81,9 +81,9 @@ public class GUIcontrol : MonoBehaviour {
 				//Application.LoadLevel(1);
 				pause =false;
 				Application.LoadLevel(Application.loadedLevel);
-				PlayerControl.life =5;
-				PlayerControl.quilpens=0;
-				PlayerControl.puzzles=0;
+				GameManager.life =5;
+				GameManager.quillPen=0;
+				GameManager.piece=0;
 				Time.timeScale=1;
 			}
 			
