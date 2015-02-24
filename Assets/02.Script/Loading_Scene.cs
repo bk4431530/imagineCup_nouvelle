@@ -12,6 +12,16 @@ public class Loading_Scene : MonoBehaviour {
 	void Start () {
 
 		thiscanvas = GameObject.Find ("Canvas");
+		/*
+		if (PlayerPrefs.HasKey) 
+		{
+
+		}
+		else
+		{
+
+		}
+*/
 	}
 	
 	// Update is called once per frame
@@ -22,6 +32,7 @@ public class Loading_Scene : MonoBehaviour {
 		} else if (Application.GetStreamProgressForLevel ("Select_Scene") < 1 && !started) {
 			Debug.Log ("Loading " + (Application.GetStreamProgressForLevel ("Select_Scene"))*100 + "%");
 		}
+
 	}
 
 	void GoToStart(){

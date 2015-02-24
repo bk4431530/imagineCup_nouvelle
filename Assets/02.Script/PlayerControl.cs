@@ -16,10 +16,6 @@ public class PlayerControl : MonoBehaviour {
 		None,
 		Magnetic
 	}
-	
-	public static int life = 5;
-	public static int quilpens = 0;
-	public static int puzzles = 0;
 
 	public static PlayerState PS;
 	public PlayerState test_PS = PS;
@@ -99,6 +95,9 @@ public class PlayerControl : MonoBehaviour {
 		PS = PlayerState.Normal;
 		IS = ItemState.Magnetic; // equiped item
 
+		finishGame.pass =false;
+
+
 
 	}
 	
@@ -158,6 +157,18 @@ public class PlayerControl : MonoBehaviour {
 				shield = false;
 			}
 		}
+
+
+		//pass
+		if (Stage_Num > 5 && GameManager.life > 0) 
+		{
+			finishGame.pass =true;
+			Time.timeScale = 0;
+			Application.LoadLevel("finishGame");
+
+		}
+
+
 	}
 	
 	
@@ -187,7 +198,7 @@ public class PlayerControl : MonoBehaviour {
 		
 		if (other.gameObject.name == "puzzle") 
 		{
-			puzzles++;
+			GameManager.piece++;
 			collidedPuzzle = other.gameObject;
 			Destroy (collidedPuzzle);
 		}
@@ -206,12 +217,13 @@ public class PlayerControl : MonoBehaviour {
 	
 	void Die()
 	{
-		if (life < 1) 
+		if (GameManager.life < 1) 
 		{
 			Time.timeScale = 0;
-			GUIcontrol.pause = true;
+			Application.LoadLevel("finishGame");
+
 		} 
-		else if ((life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
+		else if ((GameManager.life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
 				whenDie ();
 		}
@@ -225,7 +237,7 @@ public class PlayerControl : MonoBehaviour {
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
 		this.transform.position = stage;
-		life--;
+		GameManager.life--;
 		this.renderer.material.color = Color.white;
 
 		
