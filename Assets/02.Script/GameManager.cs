@@ -2,24 +2,7 @@
 using System.Collections;
 
 public class GameManager : MonoBehaviour {
-	/*
-	private static GameManger instance;
-	private static GameObject container;  
 
-	public static GameManger GetInstance()
-	{
-		if (!instance)  
-		{  
-			container = new GameObject();  
-			container.name = "Logger";  
-			instance = container.AddComponent(typeof(GameManger)) as GameManger;  
-			Debug.Log("gamemanager");
-		}  
-		
-		return instance;   
-	}
-
-*/
 	public static int quillPen = 0;
 	public static int piece = 0;
 	public static int stamp = 0;
@@ -61,10 +44,15 @@ public class GameManager : MonoBehaviour {
 	public static bool shield_equip = false;
 	public static int mysteryBox_equip = 0;
 
+	public static int quillPens = 0;
+	public static int pieces = 0;
+	public static int stamps = 0;
+
+
 
 	//player preference
 
-	void saveData()
+	public static void saveData()
 	{
 		PlayerPrefs.SetInt ("Quilpen", quillPen);
 		PlayerPrefs.SetInt ("Piece", piece);
@@ -109,7 +97,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 
-	public void getData()
+	public static void getData()
 	{
 
 		quillPen = PlayerPrefs.GetInt ("Quilpen");

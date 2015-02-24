@@ -89,6 +89,7 @@ public class GUIcontrol : MonoBehaviour {
 			
 			 
 			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2+20,100,50), "Exit")) {
+				GameManager.saveData();
 				Application.Quit();
 			}
 

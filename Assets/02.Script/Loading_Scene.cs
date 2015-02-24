@@ -12,16 +12,16 @@ public class Loading_Scene : MonoBehaviour {
 	void Start () {
 
 		thiscanvas = GameObject.Find ("Canvas");
-		/*
-		if (PlayerPrefs.HasKey) 
-		{
 
+		if (PlayerPrefs.HasKey("Quilpen")) 
+		{
+			GameManager.getData();
 		}
 		else
 		{
-
+			GameManager.saveData();
 		}
-*/
+
 	}
 	
 	// Update is called once per frame
