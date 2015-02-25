@@ -37,23 +37,23 @@ public class GUIcontrol : MonoBehaviour {
 		
 		if (PlayerControl.MultipleFeather) 
 		{
-			pens.text = (GameManager.quillPen*2).ToString();
+			pens.text = (GameManager.currentQuillPen*2).ToString();
 			pens.color= Color.red;
 		}else{
-			pens.text = (GameManager.quillPen).ToString();
+			pens.text = (GameManager.currentQuillPen).ToString();
 		}
 
-		posts.text = (GameManager.piece).ToString();
+		posts.text = (GameManager.currentPiece).ToString();
 
-		if (GameManager.life == 4) {
+		if (GameManager.currentLife == 4) {
 			life1.SetActive(false);
-		}else if(GameManager.life == 3){
+		}else if(GameManager.currentLife == 3){
 			life2.SetActive(false);
-		}else if(GameManager.life == 2){
+		}else if(GameManager.currentLife == 2){
 			life3.SetActive(false);
-		}else if(GameManager.life == 1){
+		}else if(GameManager.currentLife == 1){
 			life4.SetActive(false);
-		}else if(GameManager.life == 0){
+		}else if(GameManager.currentLife == 0){
 			life5.SetActive(false);
 		}
 	
@@ -81,15 +81,14 @@ public class GUIcontrol : MonoBehaviour {
 				//Application.LoadLevel(1);
 				pause =false;
 				Application.LoadLevel(Application.loadedLevel);
-				GameManager.life =5;
-				GameManager.quillPen=0;
-				GameManager.piece=0;
+				GameManager.currentLife =5;
+				GameManager.currentQuillPen=0;
+				GameManager.currentPiece=0;
 				Time.timeScale=1;
 			}
 			
 			 
 			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2+20,100,50), "Exit")) {
-				GameManager.saveData();
 				Application.Quit();
 			}
 

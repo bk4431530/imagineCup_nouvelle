@@ -19,7 +19,7 @@ public class Loading_Scene : MonoBehaviour {
 		}
 		else
 		{
-			GameManager.saveData();
+			GameManager.initData();
 		}
 
 	}

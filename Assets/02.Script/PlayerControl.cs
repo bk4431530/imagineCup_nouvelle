@@ -160,7 +160,7 @@ public class PlayerControl : MonoBehaviour {
 
 
 		//pass
-		if (Stage_Num > 5 && GameManager.life > 0) 
+		if (Stage_Num > 5 && GameManager.currentLife > 0) 
 		{
 			finishGame.pass =true;
 			Time.timeScale = 0;
@@ -198,7 +198,7 @@ public class PlayerControl : MonoBehaviour {
 		
 		if (other.gameObject.name == "puzzle") 
 		{
-			GameManager.piece++;
+			GameManager.currentPiece++;
 			collidedPuzzle = other.gameObject;
 			Destroy (collidedPuzzle);
 		}
@@ -217,13 +217,13 @@ public class PlayerControl : MonoBehaviour {
 	
 	void Die()
 	{
-		if (GameManager.life < 1) 
+		if (GameManager.currentLife < 1) 
 		{
 			Time.timeScale = 0;
 			Application.LoadLevel("finishGame");
 
 		} 
-		else if ((GameManager.life > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
+		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
 				whenDie ();
 		}
@@ -237,7 +237,7 @@ public class PlayerControl : MonoBehaviour {
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
 		this.transform.position = stage;
-		GameManager.life--;
+		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
 
 		

@@ -17,6 +17,10 @@ public class finishGame : MonoBehaviour {
 
 	void Start () 
 	{
+		GameManager.quillPen = GameManager.quillPen + GameManager.currentQuillPen;
+		PlayerPrefs.SetInt ("Quilpen",GameManager.quillPen);
+		PlayerPrefs.Save ();
+
 		pens = GameObject.Find ("quil").GetComponent<Text> ();
 		quilpens = GameObject.Find ("quilpens").GetComponent<Text> ();
 		posts = GameObject.Find ("posts").GetComponent<Text> ();
@@ -26,8 +30,8 @@ public class finishGame : MonoBehaviour {
 
 
 		pens.text = (GameManager.quillPen).ToString();
-		quilpens.text = (GameManager.quillPen).ToString();
-		posts.text = (GameManager.piece).ToString();
+		quilpens.text = (GameManager.currentQuillPen).ToString();
+		posts.text = (GameManager.currentPiece).ToString();
 
 
 		if (pass) 
@@ -37,7 +41,7 @@ public class finishGame : MonoBehaviour {
 			clear.SetActive(true);
 
 			GameObject.Find("lifes").SetActive(false);
-			for(int i=0; i<GameManager.life; i++)
+			for(int i=0; i<GameManager.currentLife; i++)
 			{
 				lifes[i].SetActive(true);
 			}
@@ -46,6 +50,8 @@ public class finishGame : MonoBehaviour {
 			failed.SetActive (true);
 			clear.SetActive(false);
 		}
+
+
 	
 	}
 
@@ -76,9 +82,9 @@ public class finishGame : MonoBehaviour {
 	public void tryAgainBtn()
 	{
 		Debug.Log ("tryAgain");
-		GameManager.life =5;
-		GameManager.quillPen=0;
-		GameManager.piece=0;
+		GameManager.currentLife =5;
+		GameManager.currentQuillPen=0;
+		GameManager.currentPiece=0;
 		Application.LoadLevel("Monday");
 		Time.timeScale=1;
 	}

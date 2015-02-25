@@ -38,21 +38,22 @@ public class GameManager : MonoBehaviour {
 	public static bool bgm = false;
 
 	//temporary
-	public static int life = 5;
+	public static int currentLife = 5;
+	public static int currentQuillPen = 0;
+	public static int currentPiece = 0;
+	public static int currentEpisode = 0;
+
 	public static bool magnet_equip = false;
 	public static bool booster_equip = false;
 	public static bool shield_equip = false;
 	public static int mysteryBox_equip = 0;
 
-	public static int quillPens = 0;
-	public static int pieces = 0;
-	public static int stamps = 0;
 
 
 
 	//player preference
 
-	public static void saveData()
+	public static void initData()
 	{
 		PlayerPrefs.SetInt ("Quilpen", quillPen);
 		PlayerPrefs.SetInt ("Piece", piece);
@@ -89,11 +90,13 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefsX.SetBool ("BGM", bgm);
 
 		//temporary
-		PlayerPrefs.SetInt ("Life", life);
+		//PlayerPrefs.SetInt ("Life", life);
 		PlayerPrefsX.SetBool ("Magnet_equip", magnet_equip);
 		PlayerPrefsX.SetBool ("Booster_equip", booster_equip);
 		PlayerPrefsX.SetBool ("Shield_equip", shield_equip);
 		PlayerPrefs.SetInt ("MysteryBox_equip", mysteryBox_equip);
+
+		PlayerPrefs.Save ();
 	}
 
 
