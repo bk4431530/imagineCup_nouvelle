@@ -20,6 +20,7 @@ public class finishGame : MonoBehaviour {
 		GameManager.quillPen = GameManager.quillPen + GameManager.currentQuillPen;
 		PlayerPrefs.SetInt ("Quilpen",GameManager.quillPen);
 		PlayerPrefs.Save ();
+		GameManager.getData ();
 
 		pens = GameObject.Find ("quil").GetComponent<Text> ();
 		quilpens = GameObject.Find ("quilpens").GetComponent<Text> ();
