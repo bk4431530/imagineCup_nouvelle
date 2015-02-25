@@ -23,16 +23,16 @@ public class GameManager : MonoBehaviour {
 	public static int shield = 0;
 	public static int mysteryBox = 0;
 
-	public static bool[] postCard1;
-	public static bool[] postCard2;
-	public static bool[] postCard3;
-	public static bool[] postCard4;
-	public static bool[] postCard5;
-	public static bool[] postCard6;
-	public static bool[] postCard7;
-	public static bool[] postCard8;
-	public static bool[] postCard9;
-	public static bool[] postCard10;
+	public static bool[] postCard1 = new bool[6];
+	public static bool[] postCard2 = new bool[6];
+	public static bool[] postCard3 = new bool[6];
+	public static bool[] postCard4 = new bool[6];
+	public static bool[] postCard5 = new bool[6];
+	public static bool[] postCard6 = new bool[6];
+	public static bool[] postCard7 = new bool[6];
+	public static bool[] postCard8 = new bool[6];
+	public static bool[] postCard9 = new bool[6];
+	public static bool[] postCard10 = new bool[6];
 
 	public static bool vibration = false;
 	public static bool bgm = false;
