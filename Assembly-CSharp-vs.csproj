@@ -49,6 +49,7 @@
      <Compile Include="Assets\02.Script\Bird.cs" />
      <Compile Include="Assets\02.Script\Bubble.cs" />
      <Compile Include="Assets\02.Script\CatchedbyCat.cs" />
+     <Compile Include="Assets\02.Script\Collection.cs" />
      <Compile Include="Assets\02.Script\Equip_Scene.cs" />
      <Compile Include="Assets\02.Script\Fading.cs" />
      <Compile Include="Assets\02.Script\GUIcontrol.cs" />
