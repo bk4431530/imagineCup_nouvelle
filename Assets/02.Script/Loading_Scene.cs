@@ -27,7 +27,7 @@ public class Loading_Scene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Application.GetStreamProgressForLevel ("Select_Scene") == 1 && !started) {
-			Invoke ("GoToStart", 1.0f);
+			Invoke ("GoToStart", 2.0f);
 			started = true;
 		} else if (Application.GetStreamProgressForLevel ("Select_Scene") < 1 && !started) {
 			Debug.Log ("Loading " + (Application.GetStreamProgressForLevel ("Select_Scene"))*100 + "%");
