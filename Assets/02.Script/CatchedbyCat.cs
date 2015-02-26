@@ -10,11 +10,14 @@ public enum PlayerState_cat
 
 public class CatchedbyCat : MonoBehaviour{
 	
+	
 	public GameObject cat;
 	public GameObject player;
 	public GameObject wind;
 	
 	public PlayerState_cat PS_cat = PlayerState_cat.Free;
+	
+	
 	
 	public static int clickCount = 0;
 	public static bool isDestroyed = false;
@@ -26,12 +29,11 @@ public class CatchedbyCat : MonoBehaviour{
 	
 	Animator cat_Animator;
 	
-	private float startTime;
 	public float catTime;
 	
 	void Awake()
 	{
-		startTime = Time.time;
+		catTime = 0.0f;
 	}
 	
 	void Start()
@@ -66,6 +68,10 @@ public class CatchedbyCat : MonoBehaviour{
 			    && Input.GetMouseButtonDown(0) == true
 			    &&  PS_cat ==  PlayerState_cat.CatchedByCat)
 			{
+				//Vibration -duration: 1 second
+				//*****************************
+				Handheld.Vibrate ();
+				//*****************************
 				cat_Animator.SetTrigger("tap");
 				clickCount ++;
 				Debug.Log ("clickCount = " + clickCount);   
@@ -98,35 +104,38 @@ public class CatchedbyCat : MonoBehaviour{
 			for(int index = 0 ; index < cat.gameObject.GetComponent<catSprite>().catImages.Length; index++)
 			{
 				cat.gameObject.GetComponent<catSprite>().olFrameColliders[index].enabled = false;
-				Debug.Log ("disabled" + (index+1) );
+				//            Debug.Log ("disabled" + (index+1) );
 			}
 			
-			
+			//clickCount초기화
 			clickCount = 0;
 			Debug.Log ("clickCount = " + CatchedbyCat.clickCount + "초기화됨");
 			
-			Invoke ("init_Frames", 1.0f);
+			//catTime초기화 
+			//         catTime = Time.time;
+			catTime = 0.0f;
+			Debug.Log ("catTime = " + catTime + " 로 초기화됨");
+			
+			//cat에서 비행기 Free되고 나서(catState.Normal) catSprite 2초 후에 다시 생성하기
+			Invoke ("init_Frames", 2.0f);
 		}//3count
 		
-		/*
-      if (PS_cat == PlayerState_cat.Free) 
-      {
-//         Debug.Log ("PS_Cat: " + PS_cat +" 로 바뀜");
-         rigidbody2D.isKinematic = false;         
-//         Debug.Log ("player의 isKinematic상태:  " + rigidbody2D.isKinematic +" 로 바뀜");
-      }*/
-		
-		if (PS_cat == PlayerState_cat.CatchedByCat && Time.time - catTime < 5.0f) {
-			//         Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
+		if (PS_cat == PlayerState_cat.CatchedByCat 
+		    && Time.time - catTime < 3.0f) //3seconds
+		{
+			Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
 			
 			
-		} else if(PS_cat == PlayerState_cat.CatchedByCat && Time.time - catTime > 5.0f){
+		} else if(PS_cat == PlayerState_cat.CatchedByCat 
+		          && Time.time - catTime > 3.0f)
+		{
 			rigidbody2D.isKinematic = false;
 			PS_cat = PlayerState_cat.Free;
 			cat.gameObject.GetComponent<catSprite>().catState= CatState.Normal;
 			this.GetComponent<PlayerControl>().whenDie ();
 			clickCount = 0;
 			Debug.Log ("clickCount = " + CatchedbyCat.clickCount + "초기화됨");
+			
 		}
 		
 	}//update
@@ -144,8 +153,8 @@ public class CatchedbyCat : MonoBehaviour{
 			
 			if(PS_cat == PlayerState_cat.Free)
 			{
-				catTime = Time.time - startTime;
-				//            Debug.Log ("잡힌시간은" + catTime);
+				catTime = Time.time;// - startTime;
+				Debug.Log ("잡힌시간: catTime = " + catTime);
 			}
 			
 			PS_cat =  PlayerState_cat.CatchedByCat;
