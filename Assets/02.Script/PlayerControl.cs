@@ -179,6 +179,10 @@ public class PlayerControl : MonoBehaviour {
 		
 		if (other.gameObject.tag == "Obstacle")
 		{
+			//Vibration -duration: 1 second
+			//*****************************
+			Handheld.Vibrate ();
+			//*****************************
 			if(shield){
 				this.renderer.material.color = Color.blue;
 				PS = PlayerState.Normal;

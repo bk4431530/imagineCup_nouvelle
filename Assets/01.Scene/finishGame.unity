@@ -2681,11 +2681,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifes:
-  - {fileID: 1466327331}
-  - {fileID: 567801949}
-  - {fileID: 1822468971}
-  - {fileID: 1481490997}
   - {fileID: 184583299}
+  - {fileID: 1481490997}
+  - {fileID: 1822468971}
+  - {fileID: 567801949}
+  - {fileID: 1466327331}
 --- !u!4 &1582582014
 Transform:
   m_ObjectHideFlags: 0

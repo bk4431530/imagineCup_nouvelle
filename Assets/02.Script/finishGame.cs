@@ -41,10 +41,9 @@ public class finishGame : MonoBehaviour {
 
 			clear.SetActive(true);
 
-			GameObject.Find("lifes").SetActive(false);
-			for(int i=0; i<GameManager.currentLife; i++)
+			for(int i=0; i<5-GameManager.currentLife; i++)
 			{
-				lifes[i].SetActive(true);
+				lifes[i].SetActive(false);
 			}
 		}
 		else{

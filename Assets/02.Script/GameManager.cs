@@ -34,8 +34,9 @@ public class GameManager : MonoBehaviour {
 	public static bool[] postCard9 = new bool[6];
 	public static bool[] postCard10 = new bool[6];
 
-	public static bool vibration = false;
-	public static bool bgm = false;
+	//option
+	public static bool vibration = true;
+	public static bool bgm = true;
 
 	//temporary
 	public static int currentLife = 5;
