@@ -13,15 +13,29 @@ public class GUIcontrol : MonoBehaviour {
 	GameObject life4;
 	GameObject life5;
 
-	
-	public static bool pause =false;
+	//pause
+	GameObject pauseScreen;
+
+	public Sprite[] soundImg;
+	public static bool sound = true;
+	public GameObject soundBtn;
+
+	public Sprite[] musicImg;
+	public GameObject musicBtn;
+
+	public Sprite[] vibImg;
+	public static bool vib = true;
+	public GameObject vibBtn;
+
+	AudioSource backMusic;
 
 
 
 	void Start () {
 
-		pens = GameObject.Find ("quilpens").GetComponent<Text> ();
-		posts = GameObject.Find ("postcards").GetComponent<Text> ();
+		pens = GameObject.Find ("quilpenQty").GetComponent<Text> ();
+		posts = GameObject.Find ("postcardQty").GetComponent<Text> ();
+		pauseScreen = GameObject.Find ("pausePanel");
 
 
 		life1 = GameObject.Find ("life1");
@@ -29,6 +43,11 @@ public class GUIcontrol : MonoBehaviour {
 		life3 = GameObject.Find ("life3");
 		life4 = GameObject.Find ("life4");
 		life5 = GameObject.Find ("life5");
+
+		backMusic = GameObject.Find ("music").GetComponent<AudioSource>();
+
+		pauseScreen.SetActive (false);
+
 	}
 	
 
@@ -59,18 +78,84 @@ public class GUIcontrol : MonoBehaviour {
 	
 
 
-
 	}
 
 
 	public void setPause()
 	{
 		Time.timeScale = 0;
-		pause = true;
+		pauseScreen.SetActive (true);
+
+	}
+
+	public void continueBtn()
+	{
+		pauseScreen.SetActive (false);
+		Time.timeScale = 1;
+	}
+
+	public void sound_OnOff()
+	{
+		if(sound == true)
+		{
+			soundBtn.GetComponent<Image>().sprite = soundImg[0];
+			sound = false;
+
+		}else
+		{
+			soundBtn.GetComponent<Image>().sprite = soundImg[1];
+			sound = true;
+		}
 	}
 
 
 
+	public void music_OnOff()
+	{
+		if(GameManager.bgm == true)
+		{
+			musicBtn.GetComponent<Image>().sprite = musicImg[0];
+			GameManager.bgm = false;
+			backMusic.Stop();
+
+			
+		}else
+		{
+			musicBtn.GetComponent<Image>().sprite = musicImg[1];
+			GameManager.bgm = true;
+			backMusic.Play();
+
+		}
+	}
+
+
+	public void vib_OnOff()
+	{
+		if(vib == true)
+		{
+			vibBtn.GetComponent<Image>().sprite = vibImg[0];
+			vib = false;
+			
+		}else
+		{
+			vibBtn.GetComponent<Image>().sprite = vibImg[1];
+			vib = true;
+		}
+	}
+
+	public void homeBtn()
+	{
+		Application.LoadLevel ("Select_Scene");
+		Time.timeScale = 1;
+
+	}
+
+
+
+
+
+
+	/*
 	void OnGUI () {
 		if(pause){
 
@@ -94,6 +179,6 @@ public class GUIcontrol : MonoBehaviour {
 
 		}//life<1
 	}//onGUI
-
+**/
 
 }//class

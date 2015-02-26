@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\finishGame.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\GUIcontrol.cs">
     <Files>
-      <File FileName="Assets\02.Script\finishGame.cs" Line="21" Column="55" />
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="185" Column="35" />
+      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="125" Column="19" />
+      <File FileName="Assets\02.Script\finishGame.cs" Line="67" Column="29" />
+      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="153" Column="4" />
+      <File FileName="Assets\02.Script\GameManager.cs" Line="37" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
