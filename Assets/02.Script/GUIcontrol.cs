@@ -130,15 +130,15 @@ public class GUIcontrol : MonoBehaviour {
 
 	public void vib_OnOff()
 	{
-		if(vib == true)
+		if(GameManager.vibration == true)
 		{
 			vibBtn.GetComponent<Image>().sprite = vibImg[0];
-			vib = false;
+			GameManager.vibration = false; //false로 바꿈
 			
 		}else
 		{
 			vibBtn.GetComponent<Image>().sprite = vibImg[1];
-			vib = true;
+			GameManager.vibration = true; //true 로 바꿈 
 		}
 	}
 
