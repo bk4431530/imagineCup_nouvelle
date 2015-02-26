@@ -27,7 +27,7 @@ public class GUIcontrol : MonoBehaviour {
 	public static bool vib = true;
 	public GameObject vibBtn;
 
-	AudioSource backMusic;
+	public AudioSource backMusic;
 
 
 
@@ -44,7 +44,6 @@ public class GUIcontrol : MonoBehaviour {
 		life4 = GameObject.Find ("life4");
 		life5 = GameObject.Find ("life5");
 
-		backMusic = GameObject.Find ("music").GetComponent<AudioSource>();
 
 		pauseScreen.SetActive (false);
 
