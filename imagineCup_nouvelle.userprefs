@@ -1,32 +1,10 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Loading_Scene.cs">
-    <Files>
-      <File FileName="Assets\02.Script\Loading_anim.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Logo_time.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\finishGame.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Loading_Scene.cs" Line="39" Column="43" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Select_Scene.cs" Line="1" Column="1" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Collection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Select_Scene.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="185" Column="35" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="125" Column="19" />
-      <File FileName="Assets\02.Script\finishGame.cs" Line="67" Column="29" />
-      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="153" Column="4" />
-      <File FileName="Assets\02.Script\GameManager.cs" Line="37" Column="10" />
->>>>>>> origin/master
-=======
-      <File FileName="Assets\02.Script\Collection.cs" Line="25" Column="3" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="117" Column="28" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\finishGame.cs" Line="65" Column="3" />
-      <File FileName="Assets\02.Script\GameManager.cs" Line="1" Column="1" />
->>>>>>> 3f9d9aad01ae764a8f81b651b3af384f8f9cfedd
+      <File FileName="Assets\02.Script\GameManager.cs" Line="8" Column="29" />
+      <File FileName="Assets\02.Script\Select_Scene.cs" Line="20" Column="47" />
+      <File FileName="Assets\02.Script\PlayerPrefX.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
