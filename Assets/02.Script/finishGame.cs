@@ -8,12 +8,16 @@ public class finishGame : MonoBehaviour {
 	GameObject clear;
 
 	public GameObject[] lifes;
+	public GameObject[] pieces;
 
-	Text pens;
+
+
 	Text quilpens;
-	Text posts;
+
 
 	public static bool pass;
+
+
 
 	void Start () 
 	{
@@ -22,17 +26,19 @@ public class finishGame : MonoBehaviour {
 		PlayerPrefs.Save ();
 		GameManager.getData ();
 
-		pens = GameObject.Find ("quil").GetComponent<Text> ();
 		quilpens = GameObject.Find ("quilpens").GetComponent<Text> ();
-		posts = GameObject.Find ("posts").GetComponent<Text> ();
 
 		failed = GameObject.Find("failed");
 		clear = GameObject.Find("clear");
 
-
-		pens.text = (GameManager.quillPen).ToString();
+		
 		quilpens.text = (GameManager.currentQuillPen).ToString();
-		posts.text = (GameManager.currentPiece).ToString();
+
+
+		for(int i=0; i<3-GameManager.currentPiece; i++)
+		{	
+			pieces[i].GetComponent<Image>().color = Color.gray;
+		}
 
 
 		if (pass) 
@@ -55,11 +61,17 @@ public class finishGame : MonoBehaviour {
 	
 	}
 
-	
+
+
+
+
 
 	public void homeBtn()
 	{
 		Debug.Log ("click home");
+		GameManager.currentLife =5;
+		GameManager.currentQuillPen=0;
+		GameManager.currentPiece=0;
 		Application.LoadLevel("Select_Scene");
 		Time.timeScale=1;
 	}

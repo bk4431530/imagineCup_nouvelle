@@ -31,6 +31,9 @@ public class GUIcontrol : MonoBehaviour {
 
 
 
+
+
+
 	void Start () {
 
 		pens = GameObject.Find ("quilpenQty").GetComponent<Text> ();
@@ -47,8 +50,12 @@ public class GUIcontrol : MonoBehaviour {
 
 		pauseScreen.SetActive (false);
 
+
 	}
-	
+
+
+
+
 
 	void Update () {
 
