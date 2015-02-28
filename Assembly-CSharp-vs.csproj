@@ -60,6 +60,7 @@
      <Compile Include="Assets\02.Script\Loading_anim.cs" />
      <Compile Include="Assets\02.Script\Logo_time.cs" />
      <Compile Include="Assets\02.Script\Magnet.cs" />
+     <Compile Include="Assets\02.Script\Option.cs" />
      <Compile Include="Assets\02.Script\PlayerControl.cs" />
      <Compile Include="Assets\02.Script\PlayerPrefX.cs" />
      <Compile Include="Assets\02.Script\Puzzle.cs" />
