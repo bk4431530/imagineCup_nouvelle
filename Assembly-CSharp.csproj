@@ -66,6 +66,7 @@
      <Compile Include="Assets\02.Script\QuillPen.cs" />
      <Compile Include="Assets\02.Script\Select_Scene.cs" />
      <Compile Include="Assets\02.Script\StartGUI.cs" />
+     <Compile Include="Assets\02.Script\TopMenu.cs" />
      <Compile Include="Assets\02.Script\TouchHandler.cs" />
      <Compile Include="Assets\02.Script\ToyFlight.cs" />
      <Compile Include="Assets\02.Script\Tree.cs" />
@@ -73,7 +74,6 @@
      <Compile Include="Assets\02.Script\catSprite.cs" />
      <Compile Include="Assets\02.Script\finishGame.cs" />
      <Compile Include="Assets\02.Script\heartGauge.cs" />
-     <Compile Include="Assets\TopMenu.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
