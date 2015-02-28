@@ -1,8 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TopMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Collection.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\TopMenu.cs" Line="1" Column="1" />
+=======
+      <File FileName="Assets\02.Script\Collection.cs" Line="21" Column="12" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

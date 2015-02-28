@@ -50,6 +50,19 @@ public class GUIcontrol : MonoBehaviour {
 
 		pauseScreen.SetActive (false);
 
+		//pause
+		if(GameManager.bgm == true)
+		{
+			musicBtn.GetComponent<Image>().sprite = musicImg[1];
+			backMusic.Play();
+			
+		}
+		else
+		{
+			musicBtn.GetComponent<Image>().sprite = musicImg[0];
+			backMusic.Stop();
+			
+		}
 
 	}
 
@@ -84,6 +97,11 @@ public class GUIcontrol : MonoBehaviour {
 	
 
 
+
+
+
+
+
 	}
 
 
@@ -116,23 +134,29 @@ public class GUIcontrol : MonoBehaviour {
 
 
 
+
+
+
+
 	public void music_OnOff()
 	{
 		if(GameManager.bgm == true)
 		{
-			musicBtn.GetComponent<Image>().sprite = musicImg[0];
 			GameManager.bgm = false;
+			musicBtn.GetComponent<Image>().sprite = musicImg[0];
 			backMusic.Stop();
 
 			
 		}else
 		{
-			musicBtn.GetComponent<Image>().sprite = musicImg[1];
 			GameManager.bgm = true;
+			musicBtn.GetComponent<Image>().sprite = musicImg[1];
 			backMusic.Play();
-
 		}
 	}
+
+
+
 
 
 	public void vib_OnOff()
@@ -148,6 +172,10 @@ public class GUIcontrol : MonoBehaviour {
 			GameManager.vibration = true; //true 로 바꿈 
 		}
 	}
+
+
+
+
 
 	public void homeBtn()
 	{

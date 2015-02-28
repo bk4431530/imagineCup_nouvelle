@@ -15,6 +15,9 @@ public class Collection : MonoBehaviour {
 	public GameObject detailBtn;
 	public GameObject detailMenu;
 
+
+	public int menuSelected;
+
 	void Start () {
 		all = false;
 		detail = false;
