@@ -508,7 +508,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}
@@ -1828,7 +1828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &391012961
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1941,18 +1941,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c9caae99e834dd468dbcb08157966ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allImg:
-  - {fileID: 21300000, guid: 8f5bb3ac7d34fed4f930b774fabd0776, type: 3}
+  menuSelected: 0
+  menus:
+  - {fileID: 268772653}
+  - {fileID: 1281907386}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  buttons:
+  - {fileID: 1491279160}
+  - {fileID: 123801550}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  on_Img:
   - {fileID: 21300000, guid: 89810d91724a18343bb70c87cd80bd89, type: 3}
-  all: 1
-  allBtn: {fileID: 1491279160}
-  allMenu: {fileID: 268772653}
-  detailImg:
-  - {fileID: 21300000, guid: 85d5e44f331eb5b4395ca1072347514b, type: 3}
   - {fileID: 21300000, guid: 423f5b2b845b62e4394a46c3bcdcfb31, type: 3}
-  detail: 1
-  detailBtn: {fileID: 123801550}
-  detailMenu: {fileID: 1281907386}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  off_Img:
+  - {fileID: 21300000, guid: 8f5bb3ac7d34fed4f930b774fabd0776, type: 3}
+  - {fileID: 21300000, guid: 85d5e44f331eb5b4395ca1072347514b, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &404255111
 Transform:
   m_ObjectHideFlags: 0
@@ -4186,7 +4199,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: .960784316, g: .960784316, b: .960784316, a: 1}

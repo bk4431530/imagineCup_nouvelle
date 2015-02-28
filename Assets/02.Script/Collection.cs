@@ -5,52 +5,60 @@ using UnityEngine.UI;
 
 public class Collection : MonoBehaviour {
 
-	public Sprite[] allImg;
-	public bool all;
-	public GameObject allBtn;
-	public GameObject allMenu;
-
-	public Sprite[] detailImg;
-	public bool detail;
-	public GameObject detailBtn;
-	public GameObject detailMenu;
-
-
 	public int menuSelected;
+	public GameObject[] menus;
+	public GameObject[] buttons;
+	public Sprite[] on_Img;
+	public Sprite[] off_Img;
+
+
+	
+
 
 	void Start () {
-		all = false;
-		detail = false;
+		menuSelected = 0;
 	}
 	
 	void Update () {
-		allMenu.SetActive(all);
-		detailMenu.SetActive(detail);
+
+		menus [menuSelected].SetActive (true);
+
+		for (int i =0; i<4; i++) 
+		{
+			if(i != menuSelected){
+				menus[i].SetActive(false);
+				buttons[i].GetComponent<Image>().sprite = off_Img[i];
+			}
+			else
+			{
+				menus [menuSelected].SetActive (true);
+				buttons[i].GetComponent<Image>().sprite = on_Img[i];
+
+			}
+		}//for
+
+
+
+
+
+
+
 
 	}
 
 
-	public void exitBtn()
-	{
-	 	Debug.Log ("Exit");
-	}
+
+
+
+
+
+
+
 
 	public void allclicked()
 	{
 		Debug.Log ("allclick");
-
-		if(all == true)
-		{
-			Debug.Log("all off");
-			allBtn.GetComponent<Image>().sprite = allImg[0];
-			all = false;
-			
-		}else if(all == false)
-		{
-			Debug.Log("all on");
-			allBtn.GetComponent<Image>().sprite = allImg[1];
-			all = true;
-		}
+		menuSelected=0;
 	}
 
 
@@ -58,19 +66,24 @@ public class Collection : MonoBehaviour {
 	public void detailclicked()
 	{
 		Debug.Log ("detail click");
-		
-		if(detail == true)
-		{
-			Debug.Log("detail off");
-			detailBtn.GetComponent<Image>().sprite = detailImg[0];
-			detail = false;
-			
-		}else if(all == false)
-		{
-			Debug.Log("detail on");
-			detailBtn.GetComponent<Image>().sprite = detailImg[1];
-			detail = true;
-		}
+		menuSelected=1;
 	}
+
+
+
+
+
+
+
+	public void exitBtn()
+	{
+		Debug.Log ("Exit");
+	}
+
+
+
+
+
+
 
 }

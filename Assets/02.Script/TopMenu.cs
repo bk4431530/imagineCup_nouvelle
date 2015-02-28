@@ -9,6 +9,8 @@ public class TopMenu : MonoBehaviour {
 
 	public GameObject quill_popup;
 	public GameObject stamp_popup;
+	public GameObject collection_popup;
+	public GameObject setting_popup;
 
 	public string curPopUp;
 
@@ -19,8 +21,12 @@ public class TopMenu : MonoBehaviour {
 
 		quill_popup = GameObject.Find ("Popup_Quill");
 		stamp_popup = GameObject.Find ("Popup_Stamp");
+		collection_popup = GameObject.Find ("Popup_Collection");
+		setting_popup = GameObject.Find ("Popup_Setting");
 		quill_popup.SetActive (false);
 		stamp_popup.SetActive (false);
+		collection_popup.SetActive (false);
+		setting_popup.SetActive (false);
 	}
 	
 	// Update is called once per frame
@@ -36,10 +42,14 @@ public class TopMenu : MonoBehaviour {
 
 	public void ClickedCollection(){
 		Debug.Log ("Collection Button Clicked");
+		collection_popup.SetActive (true);
+		curPopUp = "Popup_Collection";
 	}
 	
 	public void ClickedSetting(){
 		Debug.Log ("Setting Button Clicked");
+		setting_popup.SetActive (true);
+		curPopUp = "Popup_Setting";
 	}
 
 	public void ClickedHome(){
