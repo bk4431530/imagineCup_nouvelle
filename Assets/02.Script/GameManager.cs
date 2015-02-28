@@ -22,7 +22,10 @@ public class GameManager : MonoBehaviour {
 	public static int booster = 0;
 	public static int shield = 0;
 	public static int mysteryBox = 0;
+	
+	public static bool[][] postCard = new bool[10][];
 
+	/*
 	public static bool[] postCard1 = new bool[6];
 	public static bool[] postCard2 = new bool[6];
 	public static bool[] postCard3 = new bool[6];
@@ -33,6 +36,7 @@ public class GameManager : MonoBehaviour {
 	public static bool[] postCard8 = new bool[6];
 	public static bool[] postCard9 = new bool[6];
 	public static bool[] postCard10 = new bool[6];
+`	*/
 
 	//option
 	public static bool vibration = true;
@@ -49,13 +53,64 @@ public class GameManager : MonoBehaviour {
 	public static bool shield_equip = false;
 	public static int mysteryBox_equip = 0;
 
-
-
+	//price
+	public static int openEp_price = 20;
+	public static int booster_price = 150;
+	public static int magnet_price = 50;
+	public static int shield_price = 100;
+	public static int mysteryBox_price = 100;
 
 	//player preference
 
 	public static void initData()
 	{
+		PlayerPrefs.SetInt ("Quilpen", 0);
+		PlayerPrefs.SetInt ("Piece", 0);
+		PlayerPrefs.SetInt ("Stamp", 0);
+		
+		PlayerPrefs.SetInt ("PaperPlaneState", 0);
+		PlayerPrefs.SetInt ("Episode", 0);
+		
+		PlayerPrefs.SetInt ("Heart_ep1", 0);
+		PlayerPrefs.SetInt ("Heart_ep2", 0);
+		PlayerPrefs.SetInt ("Heart_ep3", 0);
+		PlayerPrefs.SetInt ("Heart_ep4", 0);
+		PlayerPrefs.SetInt ("Heart_ep5", 0);
+		
+		PlayerPrefs.SetInt ("Heart_total", 0);
+		
+		PlayerPrefs.SetInt ("Magnet", 0);
+		PlayerPrefs.SetInt ("Booster", 0);
+		PlayerPrefs.SetInt ("Shield", 0);
+		PlayerPrefs.SetInt ("MysteryBox", 0);
+
+
+		//각각 컬렉션마다 5조각
+		for (int i = 0; i < postCard.Length; i++) {
+			postCard[i] = new bool[5];
+		}
+
+		for (int i = 0; i < postCard.Length; i++) {
+			for (int j = 0; j < postCard[i].Length; j++) {
+				postCard[i][j] = false;
+			}
+		}
+
+		PlayerPrefsX.SetBoolArray ("PostCard1", postCard[0]);
+		PlayerPrefsX.SetBoolArray ("PostCard2", postCard[1]);
+		PlayerPrefsX.SetBoolArray ("PostCard3", postCard[2]);
+		PlayerPrefsX.SetBoolArray ("PostCard4", postCard[3]);
+		PlayerPrefsX.SetBoolArray ("PostCard5", postCard[4]);
+		PlayerPrefsX.SetBoolArray ("PostCard6", postCard[5]);
+		PlayerPrefsX.SetBoolArray ("PostCard7", postCard[6]);
+		PlayerPrefsX.SetBoolArray ("PostCard8", postCard[7]);
+		PlayerPrefsX.SetBoolArray ("PostCard9", postCard[8]);
+		PlayerPrefsX.SetBoolArray ("PostCard10", postCard[9]);
+		
+		PlayerPrefsX.SetBool ("Vibration", true);
+		PlayerPrefsX.SetBool ("BGM", true);
+
+		/*
 		PlayerPrefs.SetInt ("Quilpen", quillPen);
 		PlayerPrefs.SetInt ("Piece", piece);
 		PlayerPrefs.SetInt ("Stamp", stamp);
@@ -89,13 +144,7 @@ public class GameManager : MonoBehaviour {
 
 		PlayerPrefsX.SetBool ("Vibration", vibration);
 		PlayerPrefsX.SetBool ("BGM", bgm);
-
-		//temporary
-		//PlayerPrefs.SetInt ("Life", life);
-		PlayerPrefsX.SetBool ("Magnet_equip", magnet_equip);
-		PlayerPrefsX.SetBool ("Booster_equip", booster_equip);
-		PlayerPrefsX.SetBool ("Shield_equip", shield_equip);
-		PlayerPrefs.SetInt ("MysteryBox_equip", mysteryBox_equip);
+		*/
 
 		PlayerPrefs.Save ();
 	}
@@ -124,7 +173,8 @@ public class GameManager : MonoBehaviour {
 		booster = PlayerPrefs.GetInt ("Booster");
 		shield = PlayerPrefs.GetInt ("Shield");
 		mysteryBox = PlayerPrefs.GetInt ("MysteryBox"); 
-		
+
+		/*
 		postCard1 = PlayerPrefsX.GetBoolArray ("Postcard1");
 		postCard2 = PlayerPrefsX.GetBoolArray ("Postcard2");
 		postCard3 = PlayerPrefsX.GetBoolArray ("Postcard3");
@@ -135,11 +185,18 @@ public class GameManager : MonoBehaviour {
 		postCard8 = PlayerPrefsX.GetBoolArray ("Postcard8");
 		postCard9 = PlayerPrefsX.GetBoolArray ("Postcard9");
 		postCard10 = PlayerPrefsX.GetBoolArray ("Postcard10");
+		*/
 
-
-
-
-
+		postCard[0] = PlayerPrefsX.GetBoolArray ("Postcard1");
+		postCard[1] = PlayerPrefsX.GetBoolArray ("Postcard2");
+		postCard[2] = PlayerPrefsX.GetBoolArray ("Postcard3");
+		postCard[3] = PlayerPrefsX.GetBoolArray ("Postcard4");
+		postCard[4] = PlayerPrefsX.GetBoolArray ("Postcard5");
+		postCard[5] = PlayerPrefsX.GetBoolArray ("Postcard6");
+		postCard[6] = PlayerPrefsX.GetBoolArray ("Postcard7");
+		postCard[7] = PlayerPrefsX.GetBoolArray ("Postcard8");
+		postCard[8] = PlayerPrefsX.GetBoolArray ("Postcard9");
+		postCard[9] = PlayerPrefsX.GetBoolArray ("Postcard10");
 		
 		vibration = PlayerPrefsX.GetBool("Vibration");
 		bgm = PlayerPrefsX.GetBool("Bgm");
@@ -157,8 +214,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-	
+		Screen.SetResolution(Screen.width, Screen.width/16*9, true);	
 	}
 	
 	// Update is called once per frame

@@ -8,15 +8,37 @@ public class Select_Scene : MonoBehaviour {
 	public GameObject texts;
 	public GameObject locks;
 
+	public GameObject exit_popup;
+	public GameObject openEp_popup;
+	public GameObject caution_popup;
+
 	// Use this for initialization
 	void Start () {
-		texts = GameObject.Find ("Text");
+		texts = GameObject.Find ("Guide");
 		locks = GameObject.Find ("Lock");
+
+		exit_popup = GameObject.Find ("Popup_Exit");
+		openEp_popup = GameObject.Find ("Popup_OpenEp");
+		caution_popup = GameObject.Find ("Popup_Caution");
+		exit_popup.SetActive (false);
+		openEp_popup.SetActive (false);
+		caution_popup.SetActive (false);
+
+		for(int i = 1; i <= GameManager.episode; i++)
+		{
+			string ep = i.ToString();
+			texts.transform.FindChild(ep).gameObject.SetActive(false);
+			locks.transform.FindChild(ep).gameObject.SetActive(false);
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown(KeyCode.Escape)){
+			openEp_popup.SetActive (false);
+			caution_popup.SetActive (false);
+			exit_popup.SetActive (true);
+		}
 	}
 	
 	void Fadeout () {
@@ -30,15 +52,6 @@ public class Select_Scene : MonoBehaviour {
 		} else if (GameManager.currentEpisode == 6){
 			Invoke ("GoToEnding", fadeTime);
 		}
-	}
-
-	//top_menu
-	public void ClickedCollection(){
-		Debug.Log ("Collection Button Clicked");
-	}
-	
-	public void ClickedSetting(){
-		Debug.Log ("Setting Button Clicked");
 	}
 
 	//episode_select
@@ -86,10 +99,13 @@ public class Select_Scene : MonoBehaviour {
 		GameObject.Find ("Fading").GetComponent<Fading> ().BeginFade (-1);
 		if (GameManager.episode == 0) {
 			GameManager.episode = 1;
+			PlayerPrefs.SetInt ("Episode",GameManager.episode);
+			PlayerPrefs.Save();
+
 			Debug.Log("Episode = " + GameManager.episode);
-			texts.transform.FindChild("1").gameObject.SetActive(false);
-			locks.transform.FindChild("1").gameObject.SetActive(false);
 		}
+		//for Test
+		Application.LoadLevel ("Select_Scene");
 		//Application.LoadLevel ("Intro_Scene");
 	}
 
@@ -105,5 +121,56 @@ public class Select_Scene : MonoBehaviour {
 
 	public void ClickedYes(){
 		Debug.Log ("Yes button is clicked");
+		openEp_popup.SetActive (true);
+	}
+
+	public void ClickedExitYes(){
+		Debug.Log ("ExitYes button is clicked");
+		Application.Quit(); 
+	}
+
+	public void ClickedExitNo(){
+		Debug.Log ("ExitNo button is clicked");
+		exit_popup.SetActive (false);
+	}
+
+	public void ClickedOpenYes(){
+		Debug.Log ("OpenYes button is clicked");
+		if (GameManager.stamp >= GameManager.openEp_price) {
+			GameManager.stamp = GameManager.stamp-GameManager.openEp_price;
+			PlayerPrefs.SetInt("Stamp",GameManager.stamp);
+			GameManager.episode = selectedEp;
+			PlayerPrefs.SetInt ("Episode",GameManager.episode);
+			PlayerPrefs.Save();
+
+			Debug.Log("Stamp = " + GameManager.stamp);
+			Debug.Log("Episode = " + GameManager.episode);
+
+			openEp_popup.SetActive (false);
+
+			string ep = selectedEp.ToString();
+			texts.transform.FindChild(ep).gameObject.SetActive(false);
+			locks.transform.FindChild(ep).gameObject.SetActive(false);
+		} else {
+			openEp_popup.SetActive (false);
+			caution_popup.SetActive (true);
+			Debug.Log("You don't have enough stamps to open the Episode!!");
+		}
+	}
+	
+	public void ClickedOpenNo(){
+		Debug.Log ("OpenNo button is clicked");
+		openEp_popup.SetActive (false);
+		string currentEp = "Ep" + selectedEp.ToString ();
+		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
+	}
+
+
+
+	public void ClickedCautionOk(){
+		Debug.Log ("CautionOk button is clicked");
+		string currentEp = "Ep" + selectedEp.ToString ();
+		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
+		caution_popup.SetActive (false);
 	}
 }
