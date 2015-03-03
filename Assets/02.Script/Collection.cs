@@ -12,8 +12,16 @@ public class Collection : MonoBehaviour {
 	public Sprite[] off_Img;
 
 
-	
 
+
+	//3.write
+	string To_name;
+	string letter_txt;
+	string From_name;
+
+	//4.send
+	string zipCode;
+	string Addr;
 
 	void Start () {
 		menuSelected = 0;
@@ -67,6 +75,19 @@ public class Collection : MonoBehaviour {
 	{
 		Debug.Log ("detail click");
 		menuSelected=1;
+	}
+
+
+	public void Writeclicked()
+	{
+		Debug.Log ("Write click");
+		menuSelected=2;
+	}
+
+	public void Sendclicked()
+	{
+		Debug.Log ("Send click");
+		menuSelected=3;
 	}
 
 
