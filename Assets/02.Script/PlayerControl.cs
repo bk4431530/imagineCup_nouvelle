@@ -181,7 +181,10 @@ public class PlayerControl : MonoBehaviour {
 		{
 			//Vibration -duration: 1 second
 			//*****************************
-			Handheld.Vibrate ();
+			if(GameManager.vibration == true)
+			{
+				Handheld.Vibrate ();
+			}
 			//*****************************
 			if(shield){
 				this.renderer.material.color = Color.blue;

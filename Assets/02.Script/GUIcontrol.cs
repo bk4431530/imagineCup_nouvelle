@@ -189,30 +189,6 @@ public class GUIcontrol : MonoBehaviour {
 
 
 
-	/*
-	void OnGUI () {
-		if(pause){
 
-			//scoreReference.text = "dead";
-
-			// Make the first button. If it is pressed, Application.Loadlevel (1) will be executed
-			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2-50,100,50), "replay")) {
-				//Application.LoadLevel(1);
-				pause =false;
-				Application.LoadLevel(Application.loadedLevel);
-				GameManager.currentLife =5;
-				GameManager.currentQuillPen=0;
-				GameManager.currentPiece=0;
-				Time.timeScale=1;
-			}
-			
-			 
-			if(GUI.Button(new Rect(Screen.width/2-50,Screen.height/2+20,100,50), "Exit")) {
-				Application.Quit();
-			}
-
-		}//life<1
-	}//onGUI
-**/
 
 }//class

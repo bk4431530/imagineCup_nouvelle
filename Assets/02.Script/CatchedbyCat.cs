@@ -70,7 +70,10 @@ public class CatchedbyCat : MonoBehaviour{
 			{
 				//Vibration -duration: 1 second
 				//*****************************
-				Handheld.Vibrate ();
+				if(GameManager.vibration == true)
+				{
+					Handheld.Vibrate ();
+				}
 				//*****************************
 				cat_Animator.SetTrigger("tap");
 				clickCount ++;
@@ -123,7 +126,7 @@ public class CatchedbyCat : MonoBehaviour{
 		if (PS_cat == PlayerState_cat.CatchedByCat 
 		    && Time.time - catTime < 3.0f) //3seconds
 		{
-			Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
+			//			Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
 			
 			
 		} else if(PS_cat == PlayerState_cat.CatchedByCat 
