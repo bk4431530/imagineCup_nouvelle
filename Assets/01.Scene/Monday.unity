@@ -853,6 +853,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f0507e45b05c94b8b217d42f2580d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  failed: {fileID: 964388560}
+  clear: {fileID: 380440958}
   lifes:
   - {fileID: 1687844062}
   - {fileID: 1951493737}
@@ -4405,7 +4407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &964388561
 RectTransform:
   m_ObjectHideFlags: 0

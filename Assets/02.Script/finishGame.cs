@@ -4,8 +4,8 @@ using System.Collections;
 
 public class finishGame : MonoBehaviour {
 
-	GameObject failed;
-	GameObject clear;
+	public GameObject failed;
+	public GameObject clear;
 
 	public GameObject[] lifes;
 	public GameObject[] pieces;
@@ -22,12 +22,6 @@ public class finishGame : MonoBehaviour {
 	{
 		finish_popup.SetActive (false);
 
-
-
-
-
-		failed = GameObject.Find("failed");
-		clear = GameObject.Find("clear");
 	
 	}
 
