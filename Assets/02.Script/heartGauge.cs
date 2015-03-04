@@ -8,44 +8,28 @@ public class heartGauge : MonoBehaviour {
 	//heart gauge
 	public RectTransform barTransform;
 	
-	private float cachedY;
-	private float minXvalue;
-	private float maxXvalue;
+	public float cachedY;
+	public float maxXvalue;
 	
-	private float currentHeart;
-	
-
-	public float per; //1~100
+	public float HeartPer;//0~1
+	public float currentXvalue;
 	public Image heartBar;
-	
 
 
-	private void handlebar()
-	{
-
-		float currentXvalue =(currentHeart/100) * (maxXvalue - minXvalue);
-		
-		barTransform.position = new Vector3 (currentXvalue,cachedY);
-	}
 
 
 	// Use this for initialization
 	void Start () {
 		//heart gauge
 		cachedY = barTransform.position.y;
-		maxXvalue = barTransform.position.x/2;
-		minXvalue = barTransform.position.x - barTransform.rect.width;
+		maxXvalue = barTransform.position.x;
 
 					
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		if(currentHeart < per){
-			currentHeart++; 
-		}
-		handlebar ();
-	
+		currentXvalue = maxXvalue*HeartPer;
+		barTransform.position = new Vector3 (currentXvalue,cachedY);
 	}
 }

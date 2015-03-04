@@ -7,11 +7,11 @@ public class GUIcontrol : MonoBehaviour {
 	Text pens;
 	Text posts;
 
-	GameObject life1;
-	GameObject life2;
-	GameObject life3;
-	GameObject life4;
-	GameObject life5;
+	public GameObject life1;
+	public GameObject life2;
+	public GameObject life3;
+	public GameObject life4;
+	public GameObject life5;
 
 	//pause
 	GameObject pauseScreen;
@@ -34,21 +34,17 @@ public class GUIcontrol : MonoBehaviour {
 
 
 
+
+
 	void Start () {
 
 		pens = GameObject.Find ("quilpenQty").GetComponent<Text> ();
 		posts = GameObject.Find ("postcardQty").GetComponent<Text> ();
-		pauseScreen = GameObject.Find ("pausePanel");
-
-
-		life1 = GameObject.Find ("life1");
-		life2 = GameObject.Find ("life2");
-		life3 = GameObject.Find ("life3");
-		life4 = GameObject.Find ("life4");
-		life5 = GameObject.Find ("life5");
+		pauseScreen = GameObject.Find ("Pause_PopUp");
 
 
 		pauseScreen.SetActive (false);
+
 
 		//pause
 		if(GameManager.bgm == true)
@@ -81,7 +77,10 @@ public class GUIcontrol : MonoBehaviour {
 			pens.text = (GameManager.currentQuillPen).ToString();
 		}
 
+
 		posts.text = (GameManager.currentPiece).ToString();
+
+
 
 		if (GameManager.currentLife == 4) {
 			life1.SetActive(false);
@@ -94,22 +93,19 @@ public class GUIcontrol : MonoBehaviour {
 		}else if(GameManager.currentLife == 0){
 			life5.SetActive(false);
 		}
+
+
 	
 
-
-
-
-
-
-
 	}
+
+
 
 
 	public void setPause()
 	{
 		Time.timeScale = 0;
 		pauseScreen.SetActive (true);
-
 	}
 
 	public void continueBtn()
@@ -117,6 +113,9 @@ public class GUIcontrol : MonoBehaviour {
 		pauseScreen.SetActive (false);
 		Time.timeScale = 1;
 	}
+
+
+
 
 	public void sound_OnOff()
 	{
@@ -131,11 +130,7 @@ public class GUIcontrol : MonoBehaviour {
 			sound = true;
 		}
 	}
-
-
-
-
-
+	
 
 
 	public void music_OnOff()
@@ -179,7 +174,9 @@ public class GUIcontrol : MonoBehaviour {
 
 	public void homeBtn()
 	{
-		Application.LoadLevel ("Select_Scene");
+		pauseScreen.SetActive (false);
+		PlayerControl.finish = true;
+		//Application.LoadLevel ("Select_Scene");
 		Time.timeScale = 1;
 
 	}
