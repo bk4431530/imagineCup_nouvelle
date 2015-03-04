@@ -34,17 +34,28 @@ public class finishGame : MonoBehaviour {
 			finish_popup.SetActive(true);
 			
 			
-			quilpenSave();
-			pieceSave();
-			
+			quilpenQty.text = (GameManager.currentQuillPen).ToString ();
+
+			for(int i=0; i<3-GameManager.currentPiece; i++)
+			{	
+				pieces[i].GetComponent<Image>().sprite = offPiece;
+			}
+
+
+
+
 			
 			//failed && succed
 			if (pass) 
 			{
 				failed.SetActive(false);
 				clear.SetActive(true);
+
+				for(int i=0; i<5-GameManager.currentLife; i++)
+				{
+					lifes[i].SetActive(false);
+				}
 				
-				lifeSave();
 			}
 			else{
 				failed.SetActive (true);
@@ -73,42 +84,25 @@ public class finishGame : MonoBehaviour {
 	
 	
 	
-	void quilpenSave()
+	void Save()
 	{
 		GameManager.quillPen = GameManager.quillPen + GameManager.currentQuillPen;
 		PlayerPrefs.SetInt ("Quilpen",GameManager.quillPen);
 		PlayerPrefs.Save ();
 		//GameManager.getData ();
-		
-		quilpenQty.text = (GameManager.currentQuillPen).ToString ();
-		
-		
-	}
+			
 	
-	void pieceSave()
-	{
 		GameManager.piece = GameManager.piece + GameManager.currentPiece;
 		PlayerPrefs.SetInt ("Piece",GameManager.piece);
 		PlayerPrefs.Save ();
 		
-		for(int i=0; i<3-GameManager.currentPiece; i++)
-		{	
-			pieces[i].GetComponent<Image>().sprite = offPiece;
-		}
-		
-	}
-	
-	void lifeSave()
-	{
+
 		GameManager.heart_ep1 = GameManager.heart_ep1 + GameManager.currentLife;
 		PlayerPrefs.SetInt ("Heart_ep1",GameManager.heart_ep1);
 		PlayerPrefs.Save ();
 		
 		
-		for(int i=0; i<5-GameManager.currentLife; i++)
-		{
-			lifes[i].SetActive(false);
-		}
+
 	}
 	
 	
@@ -118,15 +112,18 @@ public class finishGame : MonoBehaviour {
 	//button
 	public void homeBtn()
 	{
+		Time.timeScale=0;
+
 		PlayerControl.finish = false;
 		finish_popup.SetActive (false);
 
 		Debug.Log ("click home");
+		Save ();
 		GameManager.currentLife =5;
 		GameManager.currentQuillPen=0;
 		GameManager.currentPiece=0;
-
 		Application.LoadLevel("Select_Scene");
+
 		Time.timeScale=1;
 
 	}
