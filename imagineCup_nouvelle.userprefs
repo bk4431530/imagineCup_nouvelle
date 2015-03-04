@@ -1,13 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\GUIcontrol.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Collection.cs">
     <Files>
-      <File FileName="Assets\02.Script\finishGame.cs" Line="153" Column="2" />
-      <File FileName="Assets\02.Script\TopMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Select_Scene.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Fading.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="169" Column="3" />
+      <File FileName="Assets\02.Script\GameManager.cs" Line="55" Column="2" />
+      <File FileName="Assets\02.Script\Collection.cs" Line="71" Column="2" />
+      <File FileName="Assets\02.Script\finishGame.cs" Line="134" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
