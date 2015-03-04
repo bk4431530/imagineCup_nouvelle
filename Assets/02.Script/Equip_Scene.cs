@@ -1,11 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Equip_Scene : MonoBehaviour {
 
+	GameObject booster;
+	GameObject magnet;
+	GameObject shield;
+	GameObject mysteryBox;
+
+	int item_cnt = 0;
+
 	// Use this for initialization
 	void Start () {
-	
+		booster = GameObject.Find ("Booster");
+		magnet = GameObject.Find ("Magnet");
+		shield = GameObject.Find ("Shield");
+		mysteryBox = GameObject.Find ("MysteryBox");
 	}
 	
 	// Update is called once per frame
@@ -43,6 +54,63 @@ public class Equip_Scene : MonoBehaviour {
 		default:
 			Debug.Log("selected Episode = null");
 			break;
+		}
+	}
+
+	public void ClickedBoosterEquip(){
+		if (GameManager.booster_equip == false && item_cnt < 3) {
+			booster.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
+			GameManager.booster_equip = true;
+			item_cnt++;
+			Debug.Log ("Booster equiped" + "  &  item_cnt = " + item_cnt);
+		} else if (GameManager.booster_equip == true){
+			booster.GetComponent<Image> ().color = Color.Lerp (Color.white,Color.white,1.0f);
+			GameManager.booster_equip = false;
+			item_cnt--;
+			Debug.Log ("Booster unequiped" + "  &  item_cnt = " + item_cnt);
+		}
+
+	}
+
+	public void ClickedMagnetEquip(){
+		if (GameManager.magnet_equip == false && item_cnt < 3) {
+			magnet.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
+			GameManager.magnet_equip = true;
+			item_cnt++;
+			Debug.Log ("Magnet equiped" + "  &  item_cnt = " + item_cnt);
+		} else if (GameManager.magnet_equip == true){
+			magnet.GetComponent<Image> ().color = Color.Lerp (Color.white,Color.white,1.0f);
+			GameManager.magnet_equip = false;
+			item_cnt--;
+			Debug.Log ("Magnet unequiped" + "  &  item_cnt = " + item_cnt);
+						}
+	}
+
+	public void ClickedShieldEquip(){
+		if (GameManager.shield_equip == false && item_cnt < 3) {
+			shield.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
+			GameManager.shield_equip = true;
+			item_cnt++;
+			Debug.Log ("Shield equiped" + "  &  item_cnt = " + item_cnt);
+		} else if (GameManager.booster_equip == true){
+			shield.GetComponent<Image> ().color = Color.Lerp (Color.white,Color.white,1.0f);
+			GameManager.shield_equip = false;
+			item_cnt--;
+			Debug.Log ("Shield unequiped" + "  &  item_cnt = " + item_cnt);
+		}
+	}
+
+	public void ClickedMysteryBoxEquip(){
+		if (GameManager.mysteryBox_equip == 0 && item_cnt < 3) {
+			mysteryBox.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
+			GameManager.mysteryBox_equip = 1;
+			item_cnt++;
+			Debug.Log ("MysteryBox equiped" + "  &  item_cnt = " + item_cnt);
+		} else if (GameManager.mysteryBox_equip > 0){
+			mysteryBox.GetComponent<Image> ().color = Color.Lerp (Color.white,Color.white,1.0f);
+			GameManager.mysteryBox_equip = 0;
+			item_cnt--;
+			Debug.Log ("MysteryBox unequiped" + "  &  item_cnt = " + item_cnt);
 		}
 	}
 }

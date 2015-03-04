@@ -1,20 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class Select_Scene : MonoBehaviour {
 	
 	public int selectedEp;
-
-	public GameObject texts;
+	
 	public GameObject locks;
 
 	public GameObject exit_popup;
 	public GameObject openEp_popup;
 	public GameObject caution_popup;
 
+	Text guide_text;
+
 	// Use this for initialization
 	void Start () {
-		texts = GameObject.Find ("Guide");
+		guide_text = GameObject.Find ("Guide").GetComponent<Text>();
 		locks = GameObject.Find ("Lock");
 
 		exit_popup = GameObject.Find ("Popup_Exit");
@@ -27,8 +29,27 @@ public class Select_Scene : MonoBehaviour {
 		for(int i = 1; i <= GameManager.episode; i++)
 		{
 			string ep = i.ToString();
-			texts.transform.FindChild(ep).gameObject.SetActive(false);
 			locks.transform.FindChild(ep).gameObject.SetActive(false);
+		}
+
+		switch (GameManager.episode) {
+		case 0:
+			guide_text.text = "Please watch the story 'Fall in love' to start the game.";
+			break;
+		case 1:
+			guide_text.text = "Clear the episode 'Monday' to unlock 'Tuesday'.";
+			break;
+		case 2:
+			guide_text.text = "Clear the episode 'Tuesday' to unlock 'Wednesday'.";
+			break;
+		case 3:
+			break;
+		case 4:
+			break;
+		case 5:
+			break;
+		case 6:
+			break;
 		}
 	}
 	
@@ -149,7 +170,6 @@ public class Select_Scene : MonoBehaviour {
 			openEp_popup.SetActive (false);
 
 			string ep = selectedEp.ToString();
-			texts.transform.FindChild(ep).gameObject.SetActive(false);
 			locks.transform.FindChild(ep).gameObject.SetActive(false);
 		} else {
 			openEp_popup.SetActive (false);
