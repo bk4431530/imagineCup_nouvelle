@@ -10,43 +10,55 @@ public class finishGame : MonoBehaviour {
 	public GameObject[] lifes;
 	public GameObject[] pieces;
 
+	public Sprite offPiece;
 
-
-	Text quilpens;
-
-
+	
+	public Text quilpenQty;
 	public static bool pass;
-
+	public GameObject finish_popup;
 
 
 	void Start () 
 	{
-		GameManager.quillPen = GameManager.quillPen + GameManager.currentQuillPen;
-		PlayerPrefs.SetInt ("Quilpen",GameManager.quillPen);
-		PlayerPrefs.Save ();
-		GameManager.getData ();
+		finish_popup.SetActive (false);
 
-		quilpens = GameObject.Find ("quilpens").GetComponent<Text> ();
+
+
+
 
 		failed = GameObject.Find("failed");
 		clear = GameObject.Find("clear");
+	
+	}
 
-		
-		quilpens.text = (GameManager.currentQuillPen).ToString();
 
+	void Update()
+	{
+		if (PlayerControl.finish) 
+		{
+			finish_popup.SetActive(true);
+		} 
+
+
+		for(int i =0; i<GameManager.currentQuillPen; i++) 
+		{
+			quilpenQty.text = (i).ToString ();
+		}
 
 		for(int i=0; i<3-GameManager.currentPiece; i++)
 		{	
-			pieces[i].GetComponent<Image>().color = Color.gray;
+			pieces[i].GetComponent<Image>().sprite = offPiece;
 		}
+		
 
 
+
+		//failed && succed
 		if (pass) 
 		{
 			failed.SetActive(false);
-
 			clear.SetActive(true);
-
+			
 			for(int i=0; i<5-GameManager.currentLife; i++)
 			{
 				lifes[i].SetActive(false);
@@ -58,11 +70,33 @@ public class finishGame : MonoBehaviour {
 		}
 
 
-	
+
+		//if pause->home
+
+
+
+
+
 	}
 
 
 
+
+	void quilpenSave()
+	{
+		GameManager.quillPen = GameManager.quillPen + GameManager.currentQuillPen;
+		PlayerPrefs.SetInt ("Quilpen",GameManager.quillPen);
+		PlayerPrefs.Save ();
+		GameManager.getData ();
+	}
+
+	void pieceSave()
+	{
+	}
+
+	void lifeSave()
+	{
+	}
 
 
 
@@ -99,6 +133,9 @@ public class finishGame : MonoBehaviour {
 		GameManager.currentPiece=0;
 		Application.LoadLevel("Monday");
 		Time.timeScale=1;
+
+		finish_popup.SetActive (false);
+
 	}
 
 }

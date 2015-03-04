@@ -11,6 +11,10 @@ public class Collection : MonoBehaviour {
 	public Sprite[] on_Img;
 	public Sprite[] off_Img;
 
+ 	public Text to;
+	public Text letter;
+	public Text from;
+
 
 
 
@@ -47,7 +51,10 @@ public class Collection : MonoBehaviour {
 
 
 
-
+		To_name = to.text;
+		Debug.Log (To_name);
+		letter_txt = letter.text;
+		From_name = from.text;
 
 
 

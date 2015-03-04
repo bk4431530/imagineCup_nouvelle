@@ -58,11 +58,16 @@ public class PlayerControl : MonoBehaviour {
 
 	Animator toyFlight_Animator;
 
+	public static bool finish = false;
+
 	//item
 	public bool revive = false;
 	public bool shield = false;
 	int shieldCount = 3;
 	public static bool MultipleFeather = false;
+
+
+	public GameObject finish_popup;
 	
 
 	void Start()
@@ -96,9 +101,6 @@ public class PlayerControl : MonoBehaviour {
 		IS = ItemState.Magnetic; // equiped item
 
 		finishGame.pass =false;
-
-
-
 	}
 	
 	
@@ -164,7 +166,8 @@ public class PlayerControl : MonoBehaviour {
 		{
 			finishGame.pass =true;
 			Time.timeScale = 0;
-			Application.LoadLevel("finishGame");
+			finish = true;
+			finishGame.pass = true;
 
 		}
 
@@ -227,8 +230,7 @@ public class PlayerControl : MonoBehaviour {
 		if (GameManager.currentLife < 1) 
 		{
 			Time.timeScale = 0;
-			Application.LoadLevel("finishGame");
-
+			finish=true;
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
