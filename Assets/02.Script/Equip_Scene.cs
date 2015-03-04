@@ -11,12 +11,19 @@ public class Equip_Scene : MonoBehaviour {
 
 	int item_cnt = 0;
 
+	public GameObject buyItem_popup;
+	public int items;
+	public Text itemTxt;
+	int price;
+
 	// Use this for initialization
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");
 		shield = GameObject.Find ("Shield");
 		mysteryBox = GameObject.Find ("MysteryBox");
+		buyItem_popup.SetActive (false);
+
 	}
 	
 	// Update is called once per frame
@@ -113,4 +120,71 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log ("MysteryBox unequiped" + "  &  item_cnt = " + item_cnt);
 		}
 	}
+
+
+	public void clickedBuyItems(int i)
+	{
+		buyItem_popup.SetActive (true);
+		items = i;
+		bool lack = false;
+
+		switch (items) 
+		{
+		case 0:
+			if(GameManager.quillPen > GameManager.booster_price)
+			{
+				itemTxt.text = "Do you want to buy booster?";
+				price = GameManager.booster_price;
+			}else{
+				itemTxt.text ="you can't buy booster because lack of money, do you want charge some quilpens?";
+			}
+			break;
+		case 1:
+			if(GameManager.quillPen > GameManager.magnet_price)
+			{
+				itemTxt.text = "Do you want to buy magnet?";
+				price = GameManager.magnet_price;
+
+			}else{
+				itemTxt.text ="you can't buy magnet because lack of money, do you want charge some quilpens?";
+			}
+			break;
+		case 2:
+			if(GameManager.quillPen > GameManager.shield_price)
+			{
+				itemTxt.text = "Do you want to buy booster?";
+				price = GameManager.shield_price;
+
+			}else{
+				itemTxt.text ="you can't buy booster because lack of money, do you want charge some quilpens?";
+			}
+			break;
+		case 3:
+			if(GameManager.quillPen > GameManager.mysteryBox_price)
+			{
+				itemTxt.text = "Do you want to buy booster?";
+				price = GameManager.mysteryBox_price;
+
+			}else{
+				itemTxt.text ="you can't buy booster because lack of money, do you want charge some quilpens?";
+			}
+			break;
+		}
+				
+
+	}
+
+
+	public void clickYes()
+	{
+		GameManager.quillPen = GameManager.quillPen - price;
+	}
+
+	public void clickClose()
+	{
+		buyItem_popup.SetActive (false);
+	}
+
+
+
 }

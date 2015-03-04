@@ -12,7 +12,10 @@ public class TopMenu : MonoBehaviour {
 	public GameObject collection_popup;
 	public GameObject setting_popup;
 
+
 	public string curPopUp;
+
+
 
 	// Use this for initialization
 	void Start () {
@@ -75,6 +78,10 @@ public class TopMenu : MonoBehaviour {
 		Debug.Log ("pop = " + pop);
 		GameObject.Find (pop).SetActive (false);
 	}
+
+
+
+
 
 	void GoToHome(){
 		Application.LoadLevel ("Select_Scene");

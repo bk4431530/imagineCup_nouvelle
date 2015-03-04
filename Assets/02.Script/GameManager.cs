@@ -60,6 +60,9 @@ public class GameManager : MonoBehaviour {
 	public static int shield_price = 100;
 	public static int mysteryBox_price = 100;
 
+
+
+
 	//player preference
 
 	public static void initData()
@@ -84,6 +87,11 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetInt ("Shield", 0);
 		PlayerPrefs.SetInt ("MysteryBox", 0);
 
+
+		//
+		PlayerPrefs.SetString ("To"," ");
+		PlayerPrefs.SetString ("Letter"," ");
+		PlayerPrefs.SetString ("From"," ");
 
 		//각각 컬렉션마다 5조각
 		for (int i = 0; i < postCard.Length; i++) {
@@ -110,6 +118,8 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefsX.SetBool ("Vibration", true);
 		PlayerPrefsX.SetBool ("BGM", true);
 
+
+		
 		/*
 		PlayerPrefs.SetInt ("Quilpen", quillPen);
 		PlayerPrefs.SetInt ("Piece", piece);

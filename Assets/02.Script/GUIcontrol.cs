@@ -29,9 +29,13 @@ public class GUIcontrol : MonoBehaviour {
 	
 	public AudioSource backMusic;
 	
+
+
 	
-	
-	
+	public GameObject booster;
+	public GameObject magnet;
+	public GameObject sheild;
+	public GameObject mysterybox;
 	
 	
 	
@@ -41,8 +45,13 @@ public class GUIcontrol : MonoBehaviour {
 		pens = GameObject.Find ("quilpenQty").GetComponent<Text> ();
 		posts = GameObject.Find ("postcardQty").GetComponent<Text> ();
 		pauseScreen = GameObject.Find ("Pause_PopUp");
-		
-		
+
+		/*
+		booster = GameObject.Find("booster");
+		magnet = GameObject.Find("magnet");
+		sheild = GameObject.Find("sheild");
+		mysterybox = GameObject.Find("mysterybox");
+*/
 		pauseScreen.SetActive (false);
 		
 		
@@ -59,7 +68,11 @@ public class GUIcontrol : MonoBehaviour {
 			backMusic.Stop();
 			
 		}
-		
+
+		booster.SetActive (false);
+		magnet.SetActive (false);
+		sheild.SetActive (false);
+		mysterybox.SetActive (false);
 	}
 	
 	
@@ -93,7 +106,18 @@ public class GUIcontrol : MonoBehaviour {
 		}else if(GameManager.currentLife == 0){
 			life5.SetActive(false);
 		}
-		
+
+	
+		if (GameManager.booster_equip) {
+			booster.SetActive(true);
+		}else if(GameManager.magnet_equip){
+			magnet.SetActive(true);
+		}else if(GameManager.shield_equip){
+			sheild.SetActive(true);
+		}else if(GameManager.mysteryBox > 0){
+			mysterybox.SetActive(true);
+		}
+
 		
 		
 		

@@ -11,30 +11,49 @@ public class Collection : MonoBehaviour {
 	public Sprite[] on_Img;
 	public Sprite[] off_Img;
 
- 	public Text to;
-	public Text letter;
-	public Text from;
+ 	
 
-
+	int letter_equip;
 
 
 	//3.write
+	public Text to;
+	public Text letter;
+	public Text from;
+
 	string To_name;
 	string letter_txt;
 	string From_name;
 
 	//4.send
-	string zipCode;
+	public Text zipcodeR;
+	public Text zipcodeL;
+	public Text address;
+	public Text send_preview;
+
+	string ZipCode;
 	string Addr;
 
 	void Start () {
 		menuSelected = 0;
-	}
-	
-	void Update () {
 
 		menus [menuSelected].SetActive (true);
 
+		
+		
+
+		
+
+		
+
+
+
+	}
+	
+	
+	void Update()
+	{
+		
 		for (int i =0; i<4; i++) 
 		{
 			if(i != menuSelected){
@@ -45,63 +64,49 @@ public class Collection : MonoBehaviour {
 			{
 				menus [menuSelected].SetActive (true);
 				buttons[i].GetComponent<Image>().sprite = on_Img[i];
-
+				
 			}
 		}//for
 
 
-
+		//Write
 		To_name = to.text;
-		Debug.Log (To_name);
 		letter_txt = letter.text;
 		From_name = from.text;
 
-
-
-
+		//Send
+		ZipCode = zipcodeL.text + zipcodeR.text;
+		Addr = address.text;
+		
+		send_preview.text = letter_txt;
 	}
 
 
 
-
-
-
-
-
-
-
-	public void allclicked()
+	public void allClicked()
 	{
 		Debug.Log ("allclick");
 		menuSelected=0;
 	}
 
-
-
-	public void detailclicked()
+	public void detailClicked()
 	{
 		Debug.Log ("detail click");
 		menuSelected=1;
 	}
-
-
-	public void Writeclicked()
+	
+	public void writeClicked()
 	{
 		Debug.Log ("Write click");
 		menuSelected=2;
 	}
 
-	public void Sendclicked()
+	public void sendClicked()
 	{
 		Debug.Log ("Send click");
 		menuSelected=3;
 	}
-
-
-
-
-
-
+	
 
 	public void exitBtn()
 	{
@@ -110,6 +115,34 @@ public class Collection : MonoBehaviour {
 
 
 
+	//1.All
+	public void letterClicked(int i)
+	{
+		letter_equip = i;
+		menuSelected = 1;
+	}
+
+	//2.Detail
+	public void EquipBtn()
+	{
+		Debug.Log ("equip " +letter_equip.ToString()+"th letter");
+	}
+
+	public void WriteBtn()
+	{
+		menuSelected = 2;
+	}
+
+	//3.Write
+	public void nextBtn()
+	{
+		PlayerPrefs.SetString ("To"," ");
+		PlayerPrefs.SetString ("Letter"," ");
+		PlayerPrefs.SetString ("From"," ");
+		PlayerPrefs.Save ();
+
+		menuSelected = 3;
+	} 
 
 
 
