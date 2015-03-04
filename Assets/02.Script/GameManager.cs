@@ -60,11 +60,6 @@ public class GameManager : MonoBehaviour {
 	public static int shield_price = 100;
 	public static int mysteryBox_price = 100;
 
-	public static string to ="";
-	public static string letter ="";
-	public static string from ="";
-
-
 	//player preference
 
 	public static void initData()
@@ -88,15 +83,6 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetInt ("Booster", 0);
 		PlayerPrefs.SetInt ("Shield", 0);
 		PlayerPrefs.SetInt ("MysteryBox", 0);
-
-
-
-		PlayerPrefs.SetString ("To",to);
-		PlayerPrefs.SetString ("Letter",letter);
-		PlayerPrefs.SetString ("From",from);
-
-
-
 
 
 		//각각 컬렉션마다 5조각

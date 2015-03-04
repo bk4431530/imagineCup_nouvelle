@@ -11,24 +11,19 @@ public class Collection : MonoBehaviour {
 	public Sprite[] on_Img;
 	public Sprite[] off_Img;
 
-	//
- 	
+ 	public Text to;
+	public Text letter;
+	public Text from;
+
 
 
 
 	//3.write
-	public Text to;
-	public Text letter;
-	public Text from;
-	public Text preview_write;
-
 	string To_name;
 	string letter_txt;
 	string From_name;
 
 	//4.send
-	public Text preview_send;
-
 	string zipCode;
 	string Addr;
 
@@ -57,13 +52,11 @@ public class Collection : MonoBehaviour {
 
 
 		To_name = to.text;
+		Debug.Log (To_name);
 		letter_txt = letter.text;
 		From_name = from.text;
 
 
-		preview_write.text = letter_txt;
-		PlayerPrefs.GetString("Letter",letter_txt);
-		preview_send.text = letter_txt;
 
 
 	}
@@ -71,14 +64,7 @@ public class Collection : MonoBehaviour {
 
 
 
-	public void nextBtn()
-	{
-		PlayerPrefs.SetString ("To",To_name);
-		PlayerPrefs.SetString ("Letter",letter_txt);
-		PlayerPrefs.SetString ("From",From_name);
-		PlayerPrefs.Save ();
-		menuSelected = 3;
-	}
+
 
 
 
