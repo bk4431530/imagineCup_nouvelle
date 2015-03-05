@@ -11,13 +11,17 @@ public class finishGame : MonoBehaviour {
 	public GameObject[] pieces;
 	
 	public Sprite offPiece;
-	
-	
+		
 	public Text quilpenQty;
 	public static bool pass;
 	public static bool pause2home;
 	public GameObject finish_popup;
-	
+
+	AudioSource backMusic;
+
+	void Awake(){
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+	}
 	
 	void Start () 
 	{
@@ -32,8 +36,7 @@ public class finishGame : MonoBehaviour {
 		if (PlayerControl.finish) 
 		{
 			finish_popup.SetActive(true);
-			
-			
+
 			quilpenQty.text = (GameManager.currentQuillPen).ToString ();
 
 			for(int i=0; i<3-GameManager.currentPiece; i++)
@@ -122,6 +125,7 @@ public class finishGame : MonoBehaviour {
 		GameManager.currentLife =5;
 		GameManager.currentQuillPen=0;
 		GameManager.currentPiece=0;
+		backMusic.GetComponent<AudioSource>().clip = null;
 		Application.LoadLevel("Select_Scene");
 
 		Time.timeScale=1;

@@ -60,8 +60,9 @@ public class GameManager : MonoBehaviour {
 	public static int shield_price = 100;
 	public static int mysteryBox_price = 100;
 
+	//bgm_setting
 
-
+	AudioSource backMusic;
 
 	//player preference
 
@@ -222,9 +223,18 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+	void Awake(){
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+		DontDestroyOnLoad(backMusic.gameObject);
+	}
+
 	// Use this for initialization
 	void Start () {
-		Screen.SetResolution(Screen.width, Screen.width/16*9, true);	
+		Screen.SetResolution(Screen.width, Screen.width/16*9, true);
+		if(backMusic.GetComponent<AudioSource>().clip == null){
+			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
+			backMusic.Play();
+		}
 	}
 	
 	// Update is called once per frame

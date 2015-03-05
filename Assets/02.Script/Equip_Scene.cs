@@ -16,6 +16,8 @@ public class Equip_Scene : MonoBehaviour {
 	public Text itemTxt;
 	int price;
 
+	AudioSource backMusic;
+
 	// Use this for initialization
 	void Start () {
 		booster = GameObject.Find ("Booster");
@@ -24,6 +26,7 @@ public class Equip_Scene : MonoBehaviour {
 		mysteryBox = GameObject.Find ("MysteryBox");
 		buyItem_popup.SetActive (false);
 
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -44,6 +47,7 @@ public class Equip_Scene : MonoBehaviour {
 	void GoToGame(){
 		switch (GameManager.currentEpisode) {
 		case 1:
+			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 			Application.LoadLevel ("Monday");
 			break;
 		case 2:

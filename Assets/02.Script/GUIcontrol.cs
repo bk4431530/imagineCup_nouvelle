@@ -27,7 +27,7 @@ public class GUIcontrol : MonoBehaviour {
 	public static bool vib = true;
 	public GameObject vibBtn;
 	
-	public AudioSource backMusic;
+	AudioSource backMusic;
 	
 
 
@@ -38,7 +38,9 @@ public class GUIcontrol : MonoBehaviour {
 	public GameObject mysterybox;
 	
 	
-	
+	void Awake(){
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+	}
 	
 	void Start () {
 		
