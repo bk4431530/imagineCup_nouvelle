@@ -6472,7 +6472,6 @@ Transform:
   - {fileID: 1330998953}
   - {fileID: 439839787}
   - {fileID: 1096676600}
-  - {fileID: 1688303828}
   m_Father: {fileID: 628351649}
   m_RootOrder: 1
 --- !u!1 &865680925
@@ -8606,9 +8605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a806f3772703f941ac59cf54a6332e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buyItem_popup: {fileID: 361057133}
-  items: 0
-  itemTxt: {fileID: 1421240407}
 --- !u!4 &1060728523
 Transform:
   m_ObjectHideFlags: 0
@@ -14517,11 +14513,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1688303827}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.23329834e-06, y: -7.74898217e-06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 330.584381, y: 280.356995, z: 0}
+  m_LocalScale: {x: .507031262, y: .507031262, z: .507031262}
   m_Children: []
-  m_Father: {fileID: 844033605}
-  m_RootOrder: 8
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!114 &1688303829
 MonoBehaviour:
   m_ObjectHideFlags: 0

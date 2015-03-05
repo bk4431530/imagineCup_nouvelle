@@ -383,7 +383,7 @@ GameObject:
   - 222: {fileID: 33929922}
   - 114: {fileID: 33929921}
   m_Layer: 5
-  m_Name: Text
+  m_Name: to_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1415,10 +1415,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 89127580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.23329834e-06, y: -7.74898217e-06, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 330.584381, y: 280.356995, z: 0}
+  m_LocalScale: {x: .507031262, y: .507031262, z: .507031262}
   m_Children: []
-  m_Father: {fileID: 763594945}
+  m_Father: {fileID: 0}
   m_RootOrder: 8
 --- !u!114 &89127582
 MonoBehaviour:
@@ -1452,13 +1452,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dc287b6578ec62e4ba7bef89119546ea, type: 3}
   - {fileID: 21300000, guid: e2d4738aba50bc84a8166c570565d1f6, type: 3}
   - {fileID: 21300000, guid: 94636f9ac2aa07645925aef29a6a39a0, type: 3}
-  to: {fileID: 33929921}
-  letter: {fileID: 185311170}
-  from: {fileID: 646504849}
-  zipcodeR: {fileID: 1796454084}
-  zipcodeL: {fileID: 1558024844}
-  address: {fileID: 96648827}
-  send_preview: {fileID: 1186559955}
 --- !u!114 &89127583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1474,7 @@ GameObject:
   - 222: {fileID: 96648828}
   - 114: {fileID: 96648827}
   m_Layer: 5
-  m_Name: Text
+  m_Name: addr_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2828,7 +2821,7 @@ GameObject:
   - 222: {fileID: 185311171}
   - 114: {fileID: 185311170}
   m_Layer: 5
-  m_Name: Text
+  m_Name: letter_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3615,7 +3608,7 @@ GameObject:
   m_Component:
   - 224: {fileID: 320313437}
   m_Layer: 5
-  m_Name: 2.DETAIL
+  m_Name: 2.Detail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6598,7 +6591,7 @@ GameObject:
   - 222: {fileID: 646504850}
   - 114: {fileID: 646504849}
   m_Layer: 5
-  m_Name: Text
+  m_Name: from_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7591,7 +7584,6 @@ Transform:
   - {fileID: 320313437}
   - {fileID: 1878719992}
   - {fileID: 1480171665}
-  - {fileID: 89127581}
   m_Father: {fileID: 1085580139}
   m_RootOrder: 1
 --- !u!1 &769943005
@@ -11304,7 +11296,7 @@ GameObject:
   - 222: {fileID: 1181651305}
   - 114: {fileID: 1181651304}
   m_Layer: 5
-  m_Name: Text
+  m_Name: letterFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11370,7 +11362,7 @@ GameObject:
   - 222: {fileID: 1186559956}
   - 114: {fileID: 1186559955}
   m_Layer: 5
-  m_Name: Text
+  m_Name: letterPre_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14031,7 +14023,7 @@ AudioSource:
   m_GameObject: {fileID: 1424998579}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 9a4158f7ba86d154faafed4e7d0d957b, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -15876,7 +15868,7 @@ GameObject:
   - 222: {fileID: 1558024845}
   - 114: {fileID: 1558024844}
   m_Layer: 5
-  m_Name: Text
+  m_Name: zipL_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17157,7 +17149,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1682457397}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 89127582}
+        m_MethodName: writeClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1682457397
@@ -18190,7 +18194,7 @@ GameObject:
   - 222: {fileID: 1796454085}
   - 114: {fileID: 1796454084}
   m_Layer: 5
-  m_Name: Text
+  m_Name: zipR_txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

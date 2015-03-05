@@ -21,7 +21,7 @@ public class Option : MonoBehaviour {
 		VibOn = GameObject.Find ("VibOn").GetComponent<Toggle> ();
 		VibOff = GameObject.Find ("VibOff").GetComponent<Toggle> ();
 
-		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+		backMusic = GameManager.backMusic;
 	}
 	
 	void Start () {

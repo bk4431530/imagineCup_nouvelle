@@ -11,9 +11,9 @@ public class Equip_Scene : MonoBehaviour {
 
 	int item_cnt = 0;
 
-	public GameObject buyItem_popup;
-	public int items;
-	public Text itemTxt;
+	GameObject buyItem_popup;
+	int items;
+	Text itemTxt;
 	int price;
 
 	AudioSource backMusic;
@@ -24,15 +24,17 @@ public class Equip_Scene : MonoBehaviour {
 		magnet = GameObject.Find ("Magnet");
 		shield = GameObject.Find ("Shield");
 		mysteryBox = GameObject.Find ("MysteryBox");
+		buyItem_popup = GameObject.Find ("Popup_buyItem");
+
+		backMusic = GameManager.backMusic;
+		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
+
+
 		buyItem_popup.SetActive (false);
 
-		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 	}
 	
-	// Update is called once per frame
-	void Update () {
 	
-	}
 
 	void Fadeout () {
 		float fadeTime = GameObject.Find ("Fading").GetComponent<Fading>().BeginFade(1);
@@ -67,6 +69,8 @@ public class Equip_Scene : MonoBehaviour {
 			break;
 		}
 	}
+
+
 
 	public void ClickedBoosterEquip(){
 		if (GameManager.booster_equip == false && item_cnt < 3) {
@@ -124,6 +128,12 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log ("MysteryBox unequiped" + "  &  item_cnt = " + item_cnt);
 		}
 	}
+
+
+
+
+
+
 
 
 	public void clickedBuyItems(int i)

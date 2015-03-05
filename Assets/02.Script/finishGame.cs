@@ -4,31 +4,50 @@ using System.Collections;
 
 public class finishGame : MonoBehaviour {
 	
-	public GameObject failed;
-	public GameObject clear;
+	GameObject failed;
+	GameObject clear;
 	
-	public GameObject[] lifes;
-	public GameObject[] pieces;
+	GameObject[] lifes  = new GameObject[5];
+	GameObject[] pieces = new GameObject[3];
 	
-	public Sprite offPiece;
+	Sprite offPiece;
 		
-	public Text quilpenQty;
+	Text quilpenQty;
+	GameObject finish_popup;
+
 	public static bool pass;
 	public static bool pause2home;
-	public GameObject finish_popup;
 
 	AudioSource backMusic;
 
-	void Awake(){
-		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+	void Start(){
+		finish_popup = GameObject.Find ("Finish");
+		finish_popup.SetActive (false);
+
+
+		failed = GameObject.Find ("failed");
+		clear = GameObject.Find ("clear");
+
+		lifes[0] = GameObject.Find ("life1");
+		lifes[1] = GameObject.Find ("life2");
+		lifes[2] = GameObject.Find ("life3");
+		lifes[3] = GameObject.Find ("life4");
+		lifes[4] = GameObject.Find ("life5");
+
+		pieces [0] = GameObject.Find ("postcard1");
+		pieces [1] = GameObject.Find ("postcard2");
+		pieces [2] = GameObject.Find ("postcard3");
+
+		quilpenQty = GameObject.Find ("quilpenQty").GetComponent<Text> ();
+	
+		offPiece = (Sprite) Resources.Load ("post-n");
+
+		backMusic = GameManager.backMusic;
+
+		pass = false;
 	}
 	
-	void Start () 
-	{
-		finish_popup.SetActive (false);
-		pass = false;
 
-	}
 	
 	
 	void Update()

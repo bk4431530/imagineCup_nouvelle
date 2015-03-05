@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 
 	//bgm_setting
 
-	AudioSource backMusic;
+	public static AudioSource backMusic;
 
 	//player preference
 
@@ -223,10 +223,12 @@ public class GameManager : MonoBehaviour {
 
 	}
 
+
 	void Awake(){
 		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 		DontDestroyOnLoad(backMusic.gameObject);
 	}
+
 
 	// Use this for initialization
 	void Start () {

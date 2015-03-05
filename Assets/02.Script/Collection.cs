@@ -5,46 +5,60 @@ using UnityEngine.UI;
 
 public class Collection : MonoBehaviour {
 
-	public int menuSelected;
-	public GameObject[] menus;
-	public GameObject[] buttons;
-	public Sprite[] on_Img;
-	public Sprite[] off_Img;
+	public int menuSelected =0;
+	public GameObject[] menus = new GameObject[4];
+	public GameObject[] buttons = new GameObject[4];
+	public Sprite[] on_Img = new Sprite[4];
+	public Sprite[] off_Img = new Sprite[4];
+	
 
- 	
 
 	int letter_equip;
 
 
 	//3.write
-	public Text to;
-	public Text letter;
-	public Text from;
+	Text to;
+	Text letter;
+	Text from;
 
 	string To_name;
 	string letter_txt;
 	string From_name;
 
 	//4.send
-	public Text zipcodeR;
-	public Text zipcodeL;
-	public Text address;
-	public Text send_preview;
+	Text zipcodeR;
+	Text zipcodeL;
+	Text address;
+	Text send_preview;
 
 	string ZipCode;
 	string Addr;
 
+
+
 	void Start () {
-		menuSelected = 0;
+		/*
+		menus [0] = GameObject.Find ("1.All");
+		menus [1] = GameObject.Find ("2.Detail");
+		menus [2] = GameObject.Find ("3.Write");
+		menus [3] = GameObject.Find ("4.Send");
 
-		menus [menuSelected].SetActive (true);
+		buttons [0] = GameObject.Find ("AllBtn");
+		buttons [1] = GameObject.Find ("DetailBtn");
+		buttons [2] = GameObject.Find ("writeBtn");
+		buttons [3] = GameObject.Find ("sendBtn");
+*/
+		//3.write
+		to = GameObject.Find ("to_txt").GetComponent<Text> ();
+		letter = GameObject.Find ("letter_txt").GetComponent<Text> ();
+		from = GameObject.Find ("from_txt").GetComponent<Text> ();
 
-		
-		
+		//4.send
+		zipcodeR = GameObject.Find ("zipR_txt").GetComponent<Text> ();
+		zipcodeL = GameObject.Find ("zipL_txt").GetComponent<Text> ();
+		address = GameObject.Find ("addr_txt").GetComponent<Text> ();
+		send_preview =GameObject.Find ("letterPre_txt").GetComponent<Text> ();
 
-		
-
-		
 
 
 
