@@ -20,9 +20,8 @@ public class Option : MonoBehaviour {
 		
 		VibOn = GameObject.Find ("VibOn").GetComponent<Toggle> ();
 		VibOff = GameObject.Find ("VibOff").GetComponent<Toggle> ();
-		
-		backMusic = GameObject.Find ("Audio Source").GetComponent<AudioSource> ();
 
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 	}
 	
 	void Start () {
@@ -32,8 +31,10 @@ public class Option : MonoBehaviour {
 			//MusicOn button On
 			MusicOn.isOn = true;
 			MusicOff.isOn = false;
-			backMusic.Play();
-			
+			if(backMusic.GetComponent<AudioSource>().clip == null){
+				backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
+				backMusic.Play();
+			}
 		}
 		else
 		{
