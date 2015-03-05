@@ -7777,7 +7777,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 9a4158f7ba86d154faafed4e7d0d957b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -8825,7 +8825,6 @@ RectTransform:
   - {fileID: 1215242515}
   - {fileID: 602825957}
   - {fileID: 1899620424}
-  - {fileID: 1204011537}
   m_Father: {fileID: 1437304643}
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
@@ -10021,13 +10020,13 @@ RectTransform:
   m_GameObject: {fileID: 1204011536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .701562524, y: .701562524, z: .701562524}
   m_Children: []
-  m_Father: {fileID: 1078973269}
-  m_RootOrder: 5
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 638.999939, y: 356.910858}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1204011538
@@ -10041,8 +10040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96672dc130425dd478b68a26b6ee156f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MusicOn: {fileID: 1313476100}
-  backMusic: {fileID: 962641853}
 --- !u!1 &1215242514
 GameObject:
   m_ObjectHideFlags: 0
@@ -13122,7 +13119,19 @@ MonoBehaviour:
   m_Group: {fileID: 1815093113}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1204011538}
+        m_MethodName: vib_Off
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -13858,7 +13867,19 @@ MonoBehaviour:
   m_Group: {fileID: 1815093113}
   onValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1204011538}
+        m_MethodName: vib_On
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
