@@ -4,15 +4,15 @@ using System.Collections;
 
 public class finishGame : MonoBehaviour {
 	
-	GameObject failed;
-	GameObject clear;
+	public GameObject failed;
+	public GameObject clear;
 	
-	GameObject[] lifes  = new GameObject[5];
-	GameObject[] pieces = new GameObject[3];
+	public GameObject[] lifes  = new GameObject[5];
+	public GameObject[] pieces = new GameObject[3];
 	
-	Sprite offPiece;
+	public Sprite offPiece;
 		
-	Text quilpenQty;
+	public Text quilpenQty;
 	GameObject finish_popup;
 
 	public static bool pass;
@@ -24,7 +24,7 @@ public class finishGame : MonoBehaviour {
 		finish_popup = GameObject.Find ("Finish");
 		finish_popup.SetActive (false);
 
-
+		/*
 		failed = GameObject.Find ("failed");
 		clear = GameObject.Find ("clear");
 
@@ -41,6 +41,7 @@ public class finishGame : MonoBehaviour {
 		quilpenQty = GameObject.Find ("quilpenQty").GetComponent<Text> ();
 	
 		offPiece = (Sprite) Resources.Load ("post-n");
+		*/
 
 		backMusic = GameManager.backMusic;
 
@@ -55,7 +56,6 @@ public class finishGame : MonoBehaviour {
 		if (PlayerControl.finish) 
 		{
 			finish_popup.SetActive(true);
-
 			quilpenQty.text = (GameManager.currentQuillPen).ToString ();
 
 			for(int i=0; i<3-GameManager.currentPiece; i++)
@@ -65,11 +65,11 @@ public class finishGame : MonoBehaviour {
 
 
 
-
-			
 			//failed && succed
 			if (pass) 
 			{
+				Debug.Log("clear");
+
 				failed.SetActive(false);
 				clear.SetActive(true);
 
@@ -80,6 +80,8 @@ public class finishGame : MonoBehaviour {
 				
 			}
 			else{
+				Debug.Log("failed");
+
 				failed.SetActive (true);
 				clear.SetActive(false);
 
@@ -151,20 +153,12 @@ public class finishGame : MonoBehaviour {
 
 	}
 	
-	public void collectionBtn()
+	public void nextEpisodeBtn()
 	{
-		Debug.Log ("click collection");
+		Debug.Log ("click nextEpisode");
 	}
 	
-	public void postcardBtn()
-	{
-		Debug.Log ("click postcard");
-	}
-	
-	public void settingBtn()
-	{
-		Debug.Log ("click setting");
-	}
+
 	
 	public void tryAgainBtn()
 	{

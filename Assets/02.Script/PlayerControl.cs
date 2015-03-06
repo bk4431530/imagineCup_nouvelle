@@ -11,14 +11,16 @@ public class PlayerControl : MonoBehaviour {
 		Collided,
 	}
 
+	public static PlayerState PS;
+	public PlayerState test_PS = PS;
+
+
 	public enum ItemState
 	{
 		None,
 		Magnetic
 	}
 
-	public static PlayerState PS;
-	public PlayerState test_PS = PS;
 
 	public ItemState IS;
 
@@ -124,7 +126,7 @@ public class PlayerControl : MonoBehaviour {
 		}
 
 
-		//StageChange ();
+		StageChange ();
 		
 		Die ();
 
@@ -269,7 +271,7 @@ public class PlayerControl : MonoBehaviour {
 		//Stage Change
 		if (PS == PlayerState.Normal && screenPosition.x > Screen.width)
 		{
-			M_Cam.transform.Translate(new Vector3 (12.8f,0,-10));
+			//M_Cam.transform.Translate(new Vector3 (12.8f,0,-10));
 			Stage_Num++;
 		}
 		

@@ -77,6 +77,7 @@
      <Compile Include="Assets\02.Script\catSprite.cs" />
      <Compile Include="Assets\02.Script\finishGame.cs" />
      <Compile Include="Assets\02.Script\heartGauge.cs" />
+     <Compile Include="Assets\02.Script\pauseGame.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\ClickTouchScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\ABClickScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\AutoInitScript.cs" />
