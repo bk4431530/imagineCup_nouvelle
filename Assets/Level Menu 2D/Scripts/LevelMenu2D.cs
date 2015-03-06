@@ -115,7 +115,7 @@ public class LevelMenu2D : Singleton<LevelMenu2D> {
 	/// <summary>
 	/// Space between items for Horizontal or Vertical Orientations. 
 	/// </summary>
-	public float spacingBetweenItems = 0f;
+	public float spacingBetweenItems = 500.0f;
 
 	/// <summary>
 	/// EaseType of the animation to navigate items.
