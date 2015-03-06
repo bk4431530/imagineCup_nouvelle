@@ -1,15 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Collection.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Option.cs">
     <Files>
-      <File FileName="Assets\02.Script\finishGame.cs" Line="26" Column="3" />
-      <File FileName="Assets\02.Script\GameManager.cs" Line="65" Column="16" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="54" Column="3" />
-      <File FileName="Assets\02.Script\Option.cs" Line="24" Column="3" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="260" Column="42" />
-      <File FileName="Assets\02.Script\Select_Scene.cs" Line="13" Column="34" />
-      <File FileName="Assets\02.Script\TopMenu.cs" Line="47" Column="1" />
-      <File FileName="Assets\02.Script\Collection.cs" Line="27" Column="2" />
+      <File FileName="Assets\02.Script\Option.cs" Line="13" Column="16" />
+      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="247" Column="1" />
+      <File FileName="Assets\02.Script\Select_Scene.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\TopMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\Collection.cs" Line="165" Column="1" />
+      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="205" Column="1" />
+      <File FileName="Assets\02.Script\GameManager.cs" Line="247" Column="1" />
+      <File FileName="Assets\02.Script\Magnet.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\finishGame.cs" Line="184" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
