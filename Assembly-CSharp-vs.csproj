@@ -88,6 +88,7 @@
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\VerticalDemoClicker.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\LevelMenu2D.cs" />
      <Compile Include="Assets\Level Menu 2D\SingletonPerfect\Singleton.cs" />
+     <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>

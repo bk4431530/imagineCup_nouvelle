@@ -5,6 +5,8 @@ Project("{8B970C98-2636-3FC0-65B2-452ABEDF5A9F}") = "imagineCup_nouvelle", "Asse
 EndProject
 Project("{8B970C98-2636-3FC0-65B2-452ABEDF5A9F}") = "imagineCup_nouvelle", "Assembly-CSharp-vs.csproj", "{209D6148-347D-1BDC-3D86-CE5F4BD7B440}"
 EndProject
+Project("{8B970C98-2636-3FC0-65B2-452ABEDF5A9F}") = "imagineCup_nouvelle", "Assembly-CSharp-Editor-vs.csproj", "{DD5D63CA-7121-24AB-84A3-7DDC442527C6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,11 +21,15 @@ Global
 		{209D6148-347D-1BDC-3D86-CE5F4BD7B440}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{209D6148-347D-1BDC-3D86-CE5F4BD7B440}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{209D6148-347D-1BDC-3D86-CE5F4BD7B440}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD5D63CA-7121-24AB-84A3-7DDC442527C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD5D63CA-7121-24AB-84A3-7DDC442527C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD5D63CA-7121-24AB-84A3-7DDC442527C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD5D63CA-7121-24AB-84A3-7DDC442527C6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																								GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																																																																																																																GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
