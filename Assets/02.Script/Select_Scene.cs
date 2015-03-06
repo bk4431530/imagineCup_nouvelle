@@ -125,9 +125,7 @@ public class Select_Scene : MonoBehaviour {
 
 			Debug.Log("Episode = " + GameManager.episode);
 		}
-		//for Test
-		Application.LoadLevel ("Select_Scene");
-		//Application.LoadLevel ("Intro_Scene");
+		Application.LoadLevel ("Intro");
 	}
 
 	void GoToEnding(){
