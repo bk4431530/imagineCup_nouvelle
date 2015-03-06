@@ -120,10 +120,10 @@ MonoBehaviour:
   nextButtonObject: {fileID: 1012339840}
   backButtonObject: {fileID: 1450192927}
   autoOffset: 0
-  itemOffset: {x: 12.6999998, y: 0}
+  itemOffset: {x: 12.8000002, y: 0}
   spacingBetweenItems: .699999988
-  easeType: 9
-  animationTime: .400000006
+  easeType: 10
+  animationTime: 1.5
   isBounded: 0
   minimumBoundIndex: 0
   maximumBoundIndex: 0
@@ -509,7 +509,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 43d0c25990bae3c4a99d9ae4d54655cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 793fbe6f6e59e4242932b00efd1ad883, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
 --- !u!4 &1012339842
 Transform:
@@ -518,8 +518,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012339840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.78999996, y: 0, z: 0}
-  m_LocalScale: {x: .300000012, y: 1, z: 1}
+  m_LocalPosition: {x: 4.11999989, y: .0199999996, z: -1}
+  m_LocalScale: {x: .352637738, y: 1.40408778, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -609,8 +609,8 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 43d0c25990bae3c4a99d9ae4d54655cd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Sprite: {fileID: 21300000, guid: 1800a4032ec561047aead8460eb70cbd, type: 3}
+  m_Color: {r: .768627465, g: .768627465, b: .768627465, a: 0}
 --- !u!4 &1450192929
 Transform:
   m_ObjectHideFlags: 0
@@ -618,8 +618,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1450192927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.11000013, y: 0, z: 0}
-  m_LocalScale: {x: .300000012, y: 1, z: 1}
+  m_LocalPosition: {x: -3.93000007, y: -.0399999991, z: -1}
+  m_LocalScale: {x: .384897828, y: 1.43966937, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 13
@@ -935,7 +935,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
       propertyPath: easeType
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
       propertyPath: initialItemNumber
@@ -963,11 +963,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
       propertyPath: itemOffset.x
-      value: 12.6999998
+      value: 12.8000002
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
       propertyPath: itemOffset.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
+      propertyPath: animationTime
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7d026623ee7d8b429074590b9ed35ad, type: 2}
