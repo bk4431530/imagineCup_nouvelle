@@ -12678,7 +12678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 24b3ddb09341efa4790f5979336f8467, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b6cefe515fd3484faf7e575ccb8baca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14550,13 +14550,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: dc287b6578ec62e4ba7bef89119546ea, type: 3}
   - {fileID: 21300000, guid: e2d4738aba50bc84a8166c570565d1f6, type: 3}
   - {fileID: 21300000, guid: 94636f9ac2aa07645925aef29a6a39a0, type: 3}
-  to: {fileID: 880799690}
-  letter: {fileID: 1542603204}
-  from: {fileID: 1943430656}
-  zipcodeR: {fileID: 122238063}
-  zipcodeL: {fileID: 1950780717}
-  address: {fileID: 1583665791}
-  send_preview: {fileID: 209454461}
 --- !u!114 &1688303830
 MonoBehaviour:
   m_ObjectHideFlags: 0
