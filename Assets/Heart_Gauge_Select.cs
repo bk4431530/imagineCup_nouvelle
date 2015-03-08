@@ -17,11 +17,10 @@ public class Heart_Gauge_Select : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//heart gauge
-		/*
 		this_Ep = this.gameObject.name.ToString();
-		HeartPer = PlayerPrefs.GetFloat ("heart_ep" + this_Ep);
-		Debug.log("heart_ep" + this_Ep + " : " + HeartPer);
-		*/
+		//for Test
+		HeartPer = PlayerPrefs.GetInt ("heart_ep" + this_Ep)*0.01f;
+		Debug.Log("heart_ep" + this_Ep + " : " + HeartPer);
 	}
 	
 	// Update is called once per frame
