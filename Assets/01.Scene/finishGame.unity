@@ -2751,6 +2751,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f0507e45b05c94b8b217d42f2580d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  failed: {fileID: 0}
+  clear: {fileID: 0}
   lifes:
   - {fileID: 184583299}
   - {fileID: 1481490997}
@@ -2761,6 +2763,8 @@ MonoBehaviour:
   - {fileID: 1378716238}
   - {fileID: 1894546367}
   - {fileID: 1972955124}
+  offPiece: {fileID: 0}
+  quilpenQty: {fileID: 0}
 --- !u!4 &1582582014
 Transform:
   m_ObjectHideFlags: 0
