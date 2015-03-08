@@ -7,6 +7,7 @@ public class Select_Scene : MonoBehaviour {
 	public int selectedEp;
 	
 	public GameObject locks;
+	public GameObject gauges;
 
 	public GameObject exit_popup;
 	public GameObject openEp_popup;
@@ -18,6 +19,7 @@ public class Select_Scene : MonoBehaviour {
 	void Start () {
 		guide_text = GameObject.Find ("Guide").GetComponent<Text>();
 		locks = GameObject.Find ("Lock");
+		gauges = GameObject.Find ("Gauge");
 
 		exit_popup = GameObject.Find ("Popup_Exit");
 		openEp_popup = GameObject.Find ("Popup_OpenEp");
@@ -26,10 +28,16 @@ public class Select_Scene : MonoBehaviour {
 		openEp_popup.SetActive (false);
 		caution_popup.SetActive (false);
 
+		for (int i = 1; i <= 6; i++) {
+			string ep = i.ToString();
+			gauges.transform.FindChild(ep).gameObject.SetActive(false);
+		}
+
 		for(int i = 1; i <= GameManager.episode; i++)
 		{
 			string ep = i.ToString();
 			locks.transform.FindChild(ep).gameObject.SetActive(false);
+			gauges.transform.FindChild(ep).gameObject.SetActive(true);
 		}
 
 		switch (GameManager.episode) {
@@ -125,7 +133,7 @@ public class Select_Scene : MonoBehaviour {
 
 			Debug.Log("Episode = " + GameManager.episode);
 		}
-		Application.LoadLevel ("Intro");
+		Application.LoadLevel ("Intro_Scene");
 	}
 
 	void GoToEnding(){
@@ -169,6 +177,7 @@ public class Select_Scene : MonoBehaviour {
 
 			string ep = selectedEp.ToString();
 			locks.transform.FindChild(ep).gameObject.SetActive(false);
+			gauges.transform.FindChild(ep).gameObject.SetActive(true);
 		} else {
 			openEp_popup.SetActive (false);
 			caution_popup.SetActive (true);

@@ -57,6 +57,7 @@
      <Compile Include="Assets\02.Script\GameManager.cs" />
      <Compile Include="Assets\02.Script\Generate.cs" />
      <Compile Include="Assets\02.Script\Generate_Bubble.cs" />
+     <Compile Include="Assets\02.Script\IntroScene.cs" />
      <Compile Include="Assets\02.Script\Loading_Scene.cs" />
      <Compile Include="Assets\02.Script\Loading_anim.cs" />
      <Compile Include="Assets\02.Script\Logo_time.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\02.Script\finishGame.cs" />
      <Compile Include="Assets\02.Script\heartGauge.cs" />
      <Compile Include="Assets\02.Script\pauseGame.cs" />
+     <Compile Include="Assets\Heart_Gauge_Select.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\ClickTouchScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\ABClickScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\AutoInitScript.cs" />

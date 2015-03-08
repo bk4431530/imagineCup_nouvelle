@@ -151,7 +151,7 @@ GameObject:
   - 224: {fileID: 241261388}
   - 222: {fileID: 241261390}
   - 114: {fileID: 241261389}
-  - 114: {fileID: 241261391}
+  - 95: {fileID: 241261392}
   m_Layer: 5
   m_Name: moving
   m_TagString: Untagged
@@ -165,7 +165,7 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241261387}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -.425577879, w: .904921889}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
@@ -173,7 +173,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -688, y: -128}
+  m_AnchoredPosition: {x: -727, y: -293.799988}
   m_SizeDelta: {x: 180, y: 150}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &241261389
@@ -203,13 +203,15 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241261387}
---- !u!114 &241261391
-MonoBehaviour:
+--- !u!95 &241261392
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241261387}
   m_Enabled: 1
+<<<<<<< HEAD
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a0e4c188c91c4f640a5acaaae773489a, type: 3}
   m_Name: 
@@ -356,6 +358,15 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+=======
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 52501d48f7510204b81b0d222cd2f6ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+>>>>>>> origin/master
 --- !u!1 &397695614
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,6 +692,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82ee46323cf4a8f44a2367432d2fcf55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!1 &578132207
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,6 +785,8 @@ MonoBehaviour:
   initialized: 1
   initialName: New Path 1
   pathVisible: 1
+=======
+>>>>>>> origin/master
 --- !u!1 &585912428
 GameObject:
   m_ObjectHideFlags: 0
