@@ -17,5 +17,7 @@ EditorBuildSettings:
     path: Assets/01.Scene/finishGame.unity
   - enabled: 1
     path: Assets/01.Scene/Select_Scene.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/01.Scene/Intro.unity
+  - enabled: 1
+    path: Assets/01.Scene/Intro_Scene.unity

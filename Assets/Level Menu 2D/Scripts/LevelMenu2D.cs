@@ -32,7 +32,7 @@ public class LevelMenu2D : Singleton<LevelMenu2D> {
 	/// <summary>
 	/// Current Displayed Item Index
 	/// </summary>
-	private int _currentItemIndex = 0;
+	public static int _currentItemIndex = 0;
 
 	/// <summary>
 	/// True means LevelMenu2D is moving/animating, false means it is stopped. 
