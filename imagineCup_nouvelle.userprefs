@@ -1,11 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\icon_moving.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\SmoothCamera2D.cs">
     <Files>
-      <File FileName="Assets\02.Script\Select_Scene.cs" Line="142" Column="39" />
-      <File FileName="Assets\Level Menu 2D\Scripts\LevelMenu2D.cs" Line="1" Column="1" />
-      <File FileName="Assets\icon_moving.cs" Line="8" Column="96" />
-      <File FileName="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" Line="97" Column="1" />
+      <File FileName="Assets\02.Script\Loading_Scene.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\SmoothCamera2D.cs" Line="35" Column="41" />
+      <File FileName="Assets\02.Script\finishGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\Loading_anim.cs" Line="17" Column="2" />
+      <File FileName="Assets\02.Script\Select_Scene.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\pauseGame.cs" Line="60" Column="24" />
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="236" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
