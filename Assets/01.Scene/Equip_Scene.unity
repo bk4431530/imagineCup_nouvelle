@@ -516,6 +516,7 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 58919846}
+<<<<<<< HEAD
 --- !u!1 &60689138
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,6 +578,8 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 60689138}
+=======
+>>>>>>> origin/master
 --- !u!1 &100791258
 GameObject:
   m_ObjectHideFlags: 0
@@ -11048,6 +11051,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+<<<<<<< HEAD
 --- !u!1 &1237442010
 GameObject:
   m_ObjectHideFlags: 0
@@ -11140,6 +11144,8 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+>>>>>>> origin/master
 --- !u!1 &1238689724
 GameObject:
   m_ObjectHideFlags: 0

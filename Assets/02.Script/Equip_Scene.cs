@@ -66,8 +66,12 @@ public class Equip_Scene : MonoBehaviour {
 	void GoToGame(){
 		switch (GameManager.currentEpisode) {
 		case 1:
+<<<<<<< HEAD
 			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
 			loading_screen.SetActive (true);
+=======
+			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
+>>>>>>> origin/master
 			Application.LoadLevel ("Monday");
 			break;
 		case 2:

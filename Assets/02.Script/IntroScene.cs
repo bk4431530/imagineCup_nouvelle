@@ -17,7 +17,6 @@ public class IntroScene : MonoBehaviour {
 
 	string letterInput;
 
-	AudioSource backMusic;
 
 	// Use this for initialization
 	void Start ()
@@ -31,11 +30,9 @@ public class IntroScene : MonoBehaviour {
 		letterGuide = GameObject.Find ("Canvas/LetterGuide");
 		letterGuide.SetActive (false);
 
-		backMusic = GameManager.backMusic;
-		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
-		if(GameManager.bgm == true){
-			backMusic.Play ();
-		}
+
+
+
 	//	letterBox = GameObject.Find ("letterInput").GetComponent<Text> ();
 	//	Debug.Log("letterTxt is (" + letterInput + " )");
 
@@ -97,7 +94,6 @@ public class IntroScene : MonoBehaviour {
 		LevelMenu2D._currentItemIndex = 0;
 		Debug.Log("Go to Select Scene");
 
-		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("null");
 		Application.LoadLevel ("Select_Scene");
 
 	}
