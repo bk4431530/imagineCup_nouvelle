@@ -12,9 +12,16 @@ public class Equip_Scene : MonoBehaviour {
 	int item_cnt = 0;
 
 	GameObject buyItem_popup;
+	GameObject loading_screen;
+
 	int items;
 	Text itemTxt;
 	int price;
+
+	Text booster_cnt;
+	Text magnet_cnt;
+	Text shield_cnt;
+	Text mysteryBox_cnt;
 
 	AudioSource backMusic;
 
@@ -25,43 +32,58 @@ public class Equip_Scene : MonoBehaviour {
 		shield = GameObject.Find ("Shield");
 		mysteryBox = GameObject.Find ("MysteryBox");
 		buyItem_popup = GameObject.Find ("Popup_buyItem");
+		loading_screen = GameObject.Find ("Loading_Screen");
 
 		backMusic = GameManager.backMusic;
 		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
 
+		booster_cnt = booster.transform.FindChild("count").GetComponent<Text> ();
+		magnet_cnt = magnet.transform.FindChild("count").GetComponent<Text> ();
+		shield_cnt = shield.transform.FindChild("count").GetComponent<Text> ();
+		mysteryBox_cnt = mysteryBox.transform.FindChild("count").GetComponent<Text> ();
 
 		buyItem_popup.SetActive (false);
-
+		loading_screen.SetActive (false);
 	}
 	
-	
+	void Update(){
+		booster_cnt.text = GameManager.booster.ToString();
+		magnet_cnt.text = GameManager.magnet.ToString();
+		shield_cnt.text = GameManager.shield.ToString();
+		mysteryBox_cnt.text = GameManager.mysteryBox.ToString();
+	}
 
-	void Fadeout () {
-		float fadeTime = GameObject.Find ("Fading").GetComponent<Fading>().BeginFade(1);
-		Invoke ("GoToGame", fadeTime);
+	void LoadingScreen () {
+		loading_screen.SetActive (true);
+		Invoke ("GoToGame", 1.0f);
 	}
 
 	public void StartClicked(){
 		Debug.Log ("Start Button Clicked");
-		Fadeout ();
+		LoadingScreen ();
 	}
 
 	void GoToGame(){
 		switch (GameManager.currentEpisode) {
 		case 1:
 			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
+			loading_screen.SetActive (true);
 			Application.LoadLevel ("Monday");
 			break;
 		case 2:
+			loading_screen.SetActive (true);
 			Application.LoadLevel ("Tuesday");
 			break;
 		case 3:
+			loading_screen.SetActive (true);
 			Application.LoadLevel ("Wednesday");
 			break;
 		case 4:
+			loading_screen.SetActive (true);
 			Application.LoadLevel ("Thursday");
 			break;
 		case 5:
+			loading_screen.SetActive (true);
 			Application.LoadLevel ("Thursday");
 			break;
 		default:
@@ -147,40 +169,40 @@ public class Equip_Scene : MonoBehaviour {
 		case 0:
 			if(GameManager.quillPen > GameManager.booster_price)
 			{
-				itemTxt.text = "Do you want to buy booster?";
+				itemTxt.text = "Do you want to buy a Booster?";
 				price = GameManager.booster_price;
 			}else{
-				itemTxt.text ="you can't buy booster because lack of money, do you want charge some quilpens?";
+				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		case 1:
 			if(GameManager.quillPen > GameManager.magnet_price)
 			{
-				itemTxt.text = "Do you want to buy magnet?";
+				itemTxt.text = "Do you want to buy a Magnet?";
 				price = GameManager.magnet_price;
 
 			}else{
-				itemTxt.text ="you can't buy magnet because lack of money, do you want charge some quilpens?";
+				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		case 2:
 			if(GameManager.quillPen > GameManager.shield_price)
 			{
-				itemTxt.text = "Do you want to buy booster?";
+				itemTxt.text = "Do you want to buy a Shield?";
 				price = GameManager.shield_price;
 
 			}else{
-				itemTxt.text ="you can't buy booster because lack of money, do you want charge some quilpens?";
+				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		case 3:
 			if(GameManager.quillPen > GameManager.mysteryBox_price)
 			{
-				itemTxt.text = "Do you want to buy booster?";
+				itemTxt.text = "Do you want to buy a Mystery Box";
 				price = GameManager.mysteryBox_price;
 
 			}else{
-				itemTxt.text ="you can't buy booster because lack of money, do you want charge some quilpens?";
+				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		}
@@ -192,6 +214,20 @@ public class Equip_Scene : MonoBehaviour {
 	public void clickYes()
 	{
 		GameManager.quillPen = GameManager.quillPen - price;
+		switch (items) {		
+		case 0:
+			GameManager.booster++;
+			break;
+		case 1:
+			GameManager.magnet++;
+			break;
+		case 2:
+			GameManager.shield++;
+			break;
+		case 3:
+			GameManager.mysteryBox++;
+			break;
+		}
 	}
 
 	public void clickClose()

@@ -96,7 +96,7 @@ public class Select_Scene : MonoBehaviour {
 		if (GameManager.episode > 0) 
 		{
 			GameManager.currentEpisode = 1;
-			Fadeout ();
+			GoToEquip();
 		} else {
 			Debug.Log ("Monday is locked");
 		}
@@ -113,6 +113,7 @@ public class Select_Scene : MonoBehaviour {
 			if(GameManager.episode == 1)
 			{
 				selectedEp = 2;
+				locks.transform.FindChild("2").gameObject.SetActive(false);
 				GameObject.Find ("Ep2").transform.FindChild("Back").gameObject.SetActive(true);
 			}
 		}
@@ -143,7 +144,8 @@ public class Select_Scene : MonoBehaviour {
 	public void ClickedNo(){
 		Debug.Log ("No button is clicked");
 		string currentEp = "Ep" + selectedEp.ToString ();
-		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
+		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (true);
+		locks.transform.FindChild(selectedEp.ToString()).gameObject.SetActive(false);
 	}
 
 	public void ClickedYes(){
@@ -181,7 +183,7 @@ public class Select_Scene : MonoBehaviour {
 		} else {
 			openEp_popup.SetActive (false);
 			caution_popup.SetActive (true);
-			Debug.Log("You don't have enough stamps to open the Episode!!");
+			Debug.Log("You don't have enough stamps!!");
 		}
 	}
 	
