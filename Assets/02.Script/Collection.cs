@@ -36,7 +36,7 @@ public class Collection : MonoBehaviour {
 
 
 
-	void Start () {
+	void OnEnable () {
 		/*
 		menus [0] = GameObject.Find ("1.All");
 		menus [1] = GameObject.Find ("2.Detail");

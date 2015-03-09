@@ -25,7 +25,11 @@ public class Equip_Scene : MonoBehaviour {
 
 	AudioSource backMusic;
 
-	// Use this for initialization
+
+	string selectedScene;
+	GameObject thumbnail;
+	public Sprite[] thumbnail_Img;
+
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");
@@ -33,6 +37,7 @@ public class Equip_Scene : MonoBehaviour {
 		mysteryBox = GameObject.Find ("MysteryBox");
 		buyItem_popup = GameObject.Find ("Popup_buyItem");
 		loading_screen = GameObject.Find ("Loading_Screen");
+		thumbnail = GameObject.Find ("Canvas/leftMenu/Image");
 
 		backMusic = GameManager.backMusic;
 		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
@@ -44,6 +49,8 @@ public class Equip_Scene : MonoBehaviour {
 
 		buyItem_popup.SetActive (false);
 		loading_screen.SetActive (false);
+
+
 	}
 	
 	void Update(){
@@ -51,6 +58,35 @@ public class Equip_Scene : MonoBehaviour {
 		magnet_cnt.text = GameManager.magnet.ToString();
 		shield_cnt.text = GameManager.shield.ToString();
 		mysteryBox_cnt.text = GameManager.mysteryBox.ToString();
+
+		switch (GameManager.currentEpisode) {
+		case 1:
+			Debug.Log("monday");
+			selectedScene = "Monday";
+			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
+			break;
+		case 2:
+			selectedScene = "Tuesday";
+			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[1];
+			break;
+		case 3:
+			selectedScene = "Wednesday";
+			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[2];
+			break;
+		case 4:
+			selectedScene = "Thursday";
+			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[3];
+			break;
+		case 5:
+			selectedScene = "Friday";
+			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[4];
+			break;
+		default:
+			Debug.Log("selected Episode = null");
+			break;
+		}
+
+
 	}
 
 	void LoadingScreen () {
@@ -64,38 +100,19 @@ public class Equip_Scene : MonoBehaviour {
 	}
 
 	void GoToGame(){
-		switch (GameManager.currentEpisode) {
-		case 1:
-			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
-			loading_screen.SetActive (true);
-			Application.LoadLevel ("Monday");
-			break;
-		case 2:
-			loading_screen.SetActive (true);
-			Application.LoadLevel ("Tuesday");
-			break;
-		case 3:
-			loading_screen.SetActive (true);
-			Application.LoadLevel ("Wednesday");
-			break;
-		case 4:
-			loading_screen.SetActive (true);
-			Application.LoadLevel ("Thursday");
-			break;
-		case 5:
-			loading_screen.SetActive (true);
-			Application.LoadLevel ("Thursday");
-			break;
-		default:
-			Debug.Log("selected Episode = null");
-			break;
-		}
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
+		loading_screen.SetActive (true);
+		Application.LoadLevel (selectedScene);
+
+
 	}
 
 
 
+	//items
+
 	public void ClickedBoosterEquip(){
-		if (GameManager.booster_equip == false && item_cnt < 3) {
+		if (GameManager.booster_equip == false && item_cnt < 3 && GameManager.booster >0) {
 			booster.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
 			GameManager.booster_equip = true;
 			item_cnt++;
@@ -110,7 +127,7 @@ public class Equip_Scene : MonoBehaviour {
 	}
 
 	public void ClickedMagnetEquip(){
-		if (GameManager.magnet_equip == false && item_cnt < 3) {
+		if (GameManager.magnet_equip == false && item_cnt < 3 && GameManager.magnet >0) {
 			magnet.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
 			GameManager.magnet_equip = true;
 			item_cnt++;
@@ -124,7 +141,7 @@ public class Equip_Scene : MonoBehaviour {
 	}
 
 	public void ClickedShieldEquip(){
-		if (GameManager.shield_equip == false && item_cnt < 3) {
+		if (GameManager.shield_equip == false && item_cnt < 3 && GameManager.shield >0) {
 			shield.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
 			GameManager.shield_equip = true;
 			item_cnt++;
@@ -138,7 +155,7 @@ public class Equip_Scene : MonoBehaviour {
 	}
 
 	public void ClickedMysteryBoxEquip(){
-		if (GameManager.mysteryBox_equip == 0 && item_cnt < 3) {
+		if (GameManager.mysteryBox_equip == 0 && item_cnt < 3 && GameManager.mysteryBox >0) {
 			mysteryBox.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
 			GameManager.mysteryBox_equip = 1;
 			item_cnt++;
@@ -157,7 +174,7 @@ public class Equip_Scene : MonoBehaviour {
 
 
 
-
+	//item popup
 	public void clickedBuyItems(int i)
 	{
 		buyItem_popup.SetActive (true);
