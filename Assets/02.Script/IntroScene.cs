@@ -17,6 +17,7 @@ public class IntroScene : MonoBehaviour {
 
 	string letterInput;
 
+	bool letterbox_ison = false;
 
 	// Use this for initialization
 	void Start ()
@@ -50,18 +51,21 @@ public class IntroScene : MonoBehaviour {
 
 		// Scene5_writing letter Input
 
-		if(LevelMenu2D._currentItemIndex ==4)
+		if(LevelMenu2D._currentItemIndex == 4)
 		{		
-			Invoke ("EnableLetterBox", 1.0f);
-
+			if(letterbox_ison == false){
+				Invoke ("EnableLetterBox", 1.0f);
+				letterbox_ison = true;
+			}
 
 			//letterBox = GameObject.Find ("/Canvas/letter_box/letterInput").GetComponent<Text> ();
 			//Debug.Log("letterTxt is (" + letterInput + " )");
-		}
-		else if(LevelMenu2D._currentItemIndex != 4)
+		} else if(LevelMenu2D._currentItemIndex != 4)
 		{
-			DisableLetterBox();
-
+			if(letterbox_ison == true){
+				DisableLetterBox();
+				letterbox_ison = false;
+			}
 		}
 
 
