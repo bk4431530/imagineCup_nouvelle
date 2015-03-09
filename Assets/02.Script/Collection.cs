@@ -159,6 +159,14 @@ public class Collection : MonoBehaviour {
 	} 
 
 
+	//4.send
+	public void sendBtn()
+	{
+		Debug.Log ("send click");
+
+	}
+
+
 
 
 }
