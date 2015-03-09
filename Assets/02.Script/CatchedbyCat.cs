@@ -22,9 +22,6 @@ public class CatchedbyCat : MonoBehaviour{
 	public static int clickCount = 0;
 	public static bool isDestroyed = false;
 	
-	private Vector2 pos;
-	private RaycastHit2D hit;
-	
 	private Vector2 catPos;
 	
 	Animator cat_Animator;
@@ -54,15 +51,23 @@ public class CatchedbyCat : MonoBehaviour{
 		{
 			cat_Animator.SetTrigger("catch");
 			catPos = cat.transform.position;
-			transform.position = new Vector3(catPos.x-1 ,catPos.y, -1);         
+			transform.position = new Vector3(catPos.x-1 ,catPos.y, 0);         
 			rigidbody2D.isKinematic = true;   
 		}
 		
 		
-		pos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		hit = Physics2D.Raycast(pos, Vector2.zero);
+		Vector3 pos = Input.mousePosition;
+		pos.z = transform.position.z - Camera.main.transform.position.z;
+		RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(pos), Vector2.zero);
 		
-		if (hit != null && hit.collider != null && cat.collider2D != null) 
+		/*
+      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
+      Plane aa = new Plane(new Vector3(0, 1, 0), 0); 
+      float h_len = 0; 
+      aa.Raycast(ray, out h_len);
+*/
+		
+		if ( hit.collider != null && cat.collider2D != null) 
 		{
 			if (hit.collider.name == cat.collider2D.name
 			    && Input.GetMouseButtonDown(0) == true
@@ -126,7 +131,7 @@ public class CatchedbyCat : MonoBehaviour{
 		if (PS_cat == PlayerState_cat.CatchedByCat 
 		    && Time.time - catTime < 3.0f) //3seconds
 		{
-			//			Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
+			//         Debug.Log ("잡힌지" + (Time.time - catTime) + "경과");
 			
 			
 		} else if(PS_cat == PlayerState_cat.CatchedByCat 
