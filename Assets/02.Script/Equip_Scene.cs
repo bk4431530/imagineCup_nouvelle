@@ -1,35 +1,39 @@
-﻿using UnityEngine;
+﻿
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
 public class Equip_Scene : MonoBehaviour {
-
+	
 	GameObject booster;
 	GameObject magnet;
 	GameObject shield;
 	GameObject mysteryBox;
-
+	
 	int item_cnt = 0;
-
+	
 	GameObject buyItem_popup;
 	GameObject loading_screen;
-
+	
 	int items;
 	Text itemTxt;
 	int price;
-
+	
 	Text booster_cnt;
 	Text magnet_cnt;
 	Text shield_cnt;
 	Text mysteryBox_cnt;
-
+	
 	AudioSource backMusic;
-
-
+	
+	
 	string selectedScene;
 	GameObject thumbnail;
 	public Sprite[] thumbnail_Img;
-
+	
+	
+	public int money;
+	
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");
@@ -38,27 +42,32 @@ public class Equip_Scene : MonoBehaviour {
 		buyItem_popup = GameObject.Find ("Popup_buyItem");
 		loading_screen = GameObject.Find ("Loading_Screen");
 		thumbnail = GameObject.Find ("Canvas/leftMenu/Image");
-
+		
 		backMusic = GameManager.backMusic;
 		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
-
+		
 		booster_cnt = booster.transform.FindChild("count").GetComponent<Text> ();
 		magnet_cnt = magnet.transform.FindChild("count").GetComponent<Text> ();
 		shield_cnt = shield.transform.FindChild("count").GetComponent<Text> ();
 		mysteryBox_cnt = mysteryBox.transform.FindChild("count").GetComponent<Text> ();
-
+		
 		buyItem_popup.SetActive (false);
 		loading_screen.SetActive (false);
-
-
+		
+		GameManager.quillPen = money;
+		GameManager.currentEpisode = 1;
+		
+		
 	}
 	
 	void Update(){
+		
+		
 		booster_cnt.text = GameManager.booster.ToString();
 		magnet_cnt.text = GameManager.magnet.ToString();
 		shield_cnt.text = GameManager.shield.ToString();
 		mysteryBox_cnt.text = GameManager.mysteryBox.ToString();
-
+		
 		switch (GameManager.currentEpisode) {
 		case 1:
 			Debug.Log("monday");
@@ -85,32 +94,32 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log("selected Episode = null");
 			break;
 		}
-
-
+		
+		
 	}
-
+	
 	void LoadingScreen () {
 		loading_screen.SetActive (true);
-		Invoke ("GoToGame", 2.0f);
+		Invoke ("GoToGame", 1.0f);
 	}
-
+	
 	public void StartClicked(){
 		Debug.Log ("Start Button Clicked");
 		LoadingScreen ();
 	}
-
+	
 	void GoToGame(){
-		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
+		//backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
 		loading_screen.SetActive (true);
 		Application.LoadLevel (selectedScene);
-
-
+		
+		
 	}
-
-
-
+	
+	
+	
 	//items
-
+	
 	public void ClickedBoosterEquip(){
 		if (GameManager.booster_equip == false && item_cnt < 3 && GameManager.booster >0) {
 			booster.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
@@ -123,9 +132,9 @@ public class Equip_Scene : MonoBehaviour {
 			item_cnt--;
 			Debug.Log ("Booster unequiped" + "  &  item_cnt = " + item_cnt);
 		}
-
+		
 	}
-
+	
 	public void ClickedMagnetEquip(){
 		if (GameManager.magnet_equip == false && item_cnt < 3 && GameManager.magnet >0) {
 			magnet.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
@@ -137,9 +146,9 @@ public class Equip_Scene : MonoBehaviour {
 			GameManager.magnet_equip = false;
 			item_cnt--;
 			Debug.Log ("Magnet unequiped" + "  &  item_cnt = " + item_cnt);
-						}
+		}
 	}
-
+	
 	public void ClickedShieldEquip(){
 		if (GameManager.shield_equip == false && item_cnt < 3 && GameManager.shield >0) {
 			shield.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
@@ -153,7 +162,7 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log ("Shield unequiped" + "  &  item_cnt = " + item_cnt);
 		}
 	}
-
+	
 	public void ClickedMysteryBoxEquip(){
 		if (GameManager.mysteryBox_equip == 0 && item_cnt < 3 && GameManager.mysteryBox >0) {
 			mysteryBox.GetComponent<Image> ().color = Color.Lerp (Color.black,Color.white,0.9f);
@@ -167,20 +176,20 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log ("MysteryBox unequiped" + "  &  item_cnt = " + item_cnt);
 		}
 	}
-
-
-
-
-
-
-
+	
+	
+	
+	
+	
+	
+	
 	//item popup
 	public void clickedBuyItems(int i)
 	{
 		buyItem_popup.SetActive (true);
 		items = i;
 		bool lack = false;
-
+		
 		switch (items) 
 		{
 		case 0:
@@ -197,7 +206,7 @@ public class Equip_Scene : MonoBehaviour {
 			{
 				itemTxt.text = "Do you want to buy a Magnet?";
 				price = GameManager.magnet_price;
-
+				
 			}else{
 				itemTxt.text ="You don't have enough Quilpens!!";
 			}
@@ -207,7 +216,7 @@ public class Equip_Scene : MonoBehaviour {
 			{
 				itemTxt.text = "Do you want to buy a Shield?";
 				price = GameManager.shield_price;
-
+				
 			}else{
 				itemTxt.text ="You don't have enough Quilpens!!";
 			}
@@ -217,17 +226,17 @@ public class Equip_Scene : MonoBehaviour {
 			{
 				itemTxt.text = "Do you want to buy a Mystery Box";
 				price = GameManager.mysteryBox_price;
-
+				
 			}else{
 				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		}
-				
-
+		
+		
 	}
-
-
+	
+	
 	public void clickYes()
 	{
 		GameManager.quillPen = GameManager.quillPen - price;
@@ -245,13 +254,16 @@ public class Equip_Scene : MonoBehaviour {
 			GameManager.mysteryBox++;
 			break;
 		}
+		//itemTxt.text ="You don't have enough Quilpens!!";
+		
+		buyItem_popup.SetActive (false);
 	}
-
+	
 	public void clickClose()
 	{
 		buyItem_popup.SetActive (false);
 	}
-
-
-
+	
+	
+	
 }

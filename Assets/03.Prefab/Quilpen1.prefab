@@ -10,9 +10,9 @@ GameObject:
   - 4: {fileID: 481306}
   - 212: {fileID: 21211504}
   - 60: {fileID: 6011504}
-  - 114: {fileID: 11473578}
+  - 114: {fileID: 11471702}
   m_Layer: 0
-  m_Name: Quilpen
+  m_Name: Quilpen1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ PolygonCollider2D:
       - {x: -.680000007, y: -.964999974}
       - {x: -.600000024, y: -.814999998}
       - {x: -.589999974, y: -.714999974}
---- !u!114 &11473578
+--- !u!114 &11471702
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -115,7 +115,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2936e6e292955374fb2a408350a08a73, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

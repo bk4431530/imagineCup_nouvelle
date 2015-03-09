@@ -8820,6 +8820,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 12d18c50d6c27aa4fa0994b29c616197, type: 3}
   - {fileID: 21300000, guid: 03a3d4fc2e36f9a48a37d2cfdbb8a7f4, type: 3}
   - {fileID: 21300000, guid: d46bce91d5b313b4b8aabdbd899ad7eb, type: 3}
+  money: 1000
 --- !u!4 &1060728523
 Transform:
   m_ObjectHideFlags: 0
@@ -14569,8 +14570,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: ClickedOpenYes
+      - m_Target: {fileID: 1060728522}
+        m_MethodName: clickYes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
