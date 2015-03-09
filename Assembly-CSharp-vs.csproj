@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\02.Script\BGM.cs" />
      <Compile Include="Assets\02.Script\Bird.cs" />
      <Compile Include="Assets\02.Script\Bubble.cs" />
      <Compile Include="Assets\02.Script\CatchedbyCat.cs" />

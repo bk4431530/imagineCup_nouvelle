@@ -234,7 +234,7 @@ public class GameManager : MonoBehaviour {
 	void Start () {
 		Screen.SetResolution(Screen.width, Screen.width/16*9, true);
 		if(backMusic.GetComponent<AudioSource>().clip == null){
-			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
+			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 			backMusic.Play();
 		}
 	}

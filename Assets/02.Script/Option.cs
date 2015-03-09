@@ -32,11 +32,11 @@ public class Option : MonoBehaviour {
 			MusicOn.isOn = true;
 			MusicOff.isOn = false;
 			if(backMusic.GetComponent<AudioSource>().clip == null){
-				backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
+				backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 				backMusic.Play();
 			}
 		}
-		else
+		else if(GameManager.bgm == false)
 		{
 			//MusicOn button off
 			MusicOn.isOn = false;
@@ -51,7 +51,7 @@ public class Option : MonoBehaviour {
 			VibOff.isOn = false; 
 			
 		}
-		else
+		else if(GameManager.vibration == false)
 		{
 			// VibOn button off
 			VibOn.isOn = false;

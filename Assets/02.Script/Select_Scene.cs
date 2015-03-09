@@ -15,6 +15,10 @@ public class Select_Scene : MonoBehaviour {
 
 	Text guide_text;
 
+	//bgm_setting
+	
+	public static AudioSource backMusic;
+
 	// Use this for initialization
 	void Start () {
 		guide_text = GameObject.Find ("Guide").GetComponent<Text>();
@@ -27,6 +31,8 @@ public class Select_Scene : MonoBehaviour {
 		exit_popup.SetActive (false);
 		openEp_popup.SetActive (false);
 		caution_popup.SetActive (false);
+
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 
 		for (int i = 1; i <= 6; i++) {
 			string ep = i.ToString();
@@ -134,6 +140,7 @@ public class Select_Scene : MonoBehaviour {
 
 			Debug.Log("Episode = " + GameManager.episode);
 		}
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
 		Application.LoadLevel ("Intro_Scene");
 	}
 
