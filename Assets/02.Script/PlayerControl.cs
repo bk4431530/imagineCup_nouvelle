@@ -45,9 +45,6 @@ public class PlayerControl : MonoBehaviour {
 	private GameObject toyFlight;
 
 	private GameObject magnet;
-
-	private GameObject line2;
-	private GameObject line3;
 	
 	private Vector2 screenPosition;
 	private Vector3 game_cam;
@@ -55,8 +52,7 @@ public class PlayerControl : MonoBehaviour {
 
 	
 	Animator mAnimator;
-	Animator line2_Animator;
-	Animator line3_Animator;
+
 
 	Animator toyFlight_Animator;
 
@@ -82,8 +78,6 @@ public class PlayerControl : MonoBehaviour {
 		magnet = GameObject.Find ("magnet");
 		magnet.gameObject.SetActive(false);
 
-		line2 = GameObject.Find("2nd_line");
-		line3 = GameObject.Find("3rd_line");
 
 		PS = PlayerState.Normal;
 		Debug.Log ("state : " + PS);
@@ -94,8 +88,6 @@ public class PlayerControl : MonoBehaviour {
 		rigidbody2D.AddForce (new Vector2 (60, 300));
 
 		mAnimator = gameObject.GetComponent<Animator> ();
-		line2_Animator = line2.gameObject.GetComponent<Animator> ();
-		line3_Animator = line3.gameObject.GetComponent<Animator> ();
 		toyFlight_Animator = toyFlight.gameObject.GetComponent<Animator> ();
 
 
@@ -222,8 +214,7 @@ public class PlayerControl : MonoBehaviour {
 		rigidbody2D.AddForce (jumpForce);
 		
 		mAnimator.SetTrigger("up");
-		line2_Animator.SetTrigger ("up");
-		line3_Animator.SetTrigger ("up");
+
 	}
 	
 	
