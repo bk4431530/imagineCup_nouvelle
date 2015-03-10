@@ -40,8 +40,16 @@ public class Equip_Scene : MonoBehaviour {
 	public static AudioSource SFX_itemBuy;
 	
 	public int money;
+<<<<<<< HEAD
 	
 
+=======
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
+>>>>>>> origin/master
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");
