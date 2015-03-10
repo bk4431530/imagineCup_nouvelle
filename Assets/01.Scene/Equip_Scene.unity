@@ -689,7 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: d001112c4a809a5468de38b8a7cfab02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 60d38210807a4164b90d34cdfaba3bfe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5062,7 +5062,7 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
             Culture=neutral, PublicKeyToken=null
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8540,7 +8540,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 12d18c50d6c27aa4fa0994b29c616197, type: 3}
   - {fileID: 21300000, guid: 03a3d4fc2e36f9a48a37d2cfdbb8a7f4, type: 3}
   - {fileID: 21300000, guid: d46bce91d5b313b4b8aabdbd899ad7eb, type: 3}
-  money: 1000
 --- !u!4 &1060728523
 Transform:
   m_ObjectHideFlags: 0

@@ -83,7 +83,7 @@ public class PlayerControl : MonoBehaviour {
 		PS = PlayerState.Normal;
 		finishGame.pass =false;
 		
-		GameManager.booster_equip = true;
+		//GameManager.booster_equip = true;
 		
 	}
 	

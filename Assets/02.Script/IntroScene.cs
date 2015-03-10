@@ -8,6 +8,7 @@ public class IntroScene : MonoBehaviour {
 	public GameObject guide;
 	public GameObject letter;
 	public GameObject letterGuide;
+	public GameObject to;
 
 	public GameObject textview;
 	public GameObject onLetter;
@@ -15,11 +16,11 @@ public class IntroScene : MonoBehaviour {
 	private Vector2 ray;
 	private RaycastHit2D hit;
 
-	Text letterText;
-	Text onletterText;
+	Text viewTxt;
+	Text toTxt;
+	Text letterTxt;
+	string inputMenu;
 
-	string letterInput;
-	string context;
 
 	bool letterbox_ison = false;
 	bool input_isfocused = false;
@@ -35,13 +36,16 @@ public class IntroScene : MonoBehaviour {
 		textview = GameObject.Find("View");
 		letter = GameObject.Find("TextInput");
 		onLetter = GameObject.Find ("LetterText");
+		to = GameObject.Find ("toText");
 
-		letterText = GameObject.Find ("TextView").GetComponent<Text> ();
-		onletterText = GameObject.Find ("LetterText").GetComponent<Text> ();
+		viewTxt = GameObject.Find ("TextView").GetComponent<Text> ();
+		toTxt = GameObject.Find ("toText").GetComponent<Text> ();
+		letterTxt = GameObject.Find ("LetterText").GetComponent<Text> ();
 
 		textview.SetActive (false);
 		letterGuide.SetActive (false);
 		onLetter.SetActive (false);
+		to.SetActive (false);
 
 		guide = GameObject.Find("/Canvas/Panel/Guide");
 		guide.SetActive (false);
@@ -61,8 +65,8 @@ public class IntroScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		letterInput = letterText.text;
-		onletterText.text =letterText.text;
+		toTxt.text = GameManager.To_name;
+		letterTxt.text = GameManager.letter_txt;
 
 		Debug.Log("Script: IntroScene.cs // _currentItemIndex = " + LevelMenu2D._currentItemIndex );
 
@@ -98,6 +102,15 @@ public class IntroScene : MonoBehaviour {
 
 		if (input_isfocused == true) {
 			if (letter.GetComponent<InputField> ().isFocused == false){
+				if (inputMenu == "to") 
+				{
+					GameManager.To_name = viewTxt.text;
+
+				}else if(inputMenu == "letter"){
+					GameManager.letter_txt = viewTxt.text;
+
+				}
+
 				textview.SetActive(false);
 				input_isfocused = false;
 			}
@@ -121,8 +134,11 @@ public class IntroScene : MonoBehaviour {
 		} 	
 	}
 
-	public void clickedWrite(){
+	public void clickedWrite(string i){
 		textview.SetActive (true);
+		letter.GetComponent<InputField>().text 	= " "; 
+		inputMenu = i;
+
 	}
 
 	public void GoToSelectScene()
@@ -146,6 +162,8 @@ public class IntroScene : MonoBehaviour {
 	{
 		letterGuide.SetActive (true);
 		onLetter.SetActive (true);
+		to.SetActive (true);
+
 		//Debug.Log("letterTxt is (" + letterInput + " )");
 
 	}
@@ -156,6 +174,7 @@ public class IntroScene : MonoBehaviour {
 		textview.SetActive (false);
 		letterGuide.SetActive (false);
 		onLetter.SetActive (false);
+		to.SetActive (false);
 	}
 
 

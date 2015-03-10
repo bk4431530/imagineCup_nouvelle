@@ -64,7 +64,14 @@ public class GameManager : MonoBehaviour {
 
 	public static AudioSource backMusic;
 
-	//player preference
+	//input
+	public static string To_name = "nou";
+	public static string letter_txt ="Hi, I'm bell \n I think i love you...<3";
+	public static string From_name ="bell";
+	
+	public static string ZipL ="123";
+	public static string ZipR = "456";
+	public static string Addr = "Seoul, Donjack-gu, Soongsil university";
 
 	public static void initData()
 	{
@@ -90,9 +97,13 @@ public class GameManager : MonoBehaviour {
 
 
 		//
-		PlayerPrefs.SetString ("To"," ");
-		PlayerPrefs.SetString ("Letter"," ");
-		PlayerPrefs.SetString ("From"," ");
+		PlayerPrefs.SetString ("To",To_name);
+		PlayerPrefs.SetString ("Letter",letter_txt);
+		PlayerPrefs.SetString ("From",From_name);
+
+		PlayerPrefs.SetString ("ZipL",ZipL);
+		PlayerPrefs.SetString ("ZipR",ZipR);
+		PlayerPrefs.SetString ("Address",Addr);
 
 		//각각 컬렉션마다 5조각
 		for (int i = 0; i < postCard.Length; i++) {

@@ -30,10 +30,10 @@ public class Equip_Scene : MonoBehaviour {
 	string selectedScene;
 	GameObject thumbnail;
 	public Sprite[] thumbnail_Img;
+
+
 	
-	
-	public int money;
-	
+
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");
@@ -54,7 +54,7 @@ public class Equip_Scene : MonoBehaviour {
 		buyItem_popup.SetActive (false);
 		loading_screen.SetActive (false);
 		
-		GameManager.quillPen = money;
+		GameManager.quillPen = 1000;
 		GameManager.currentEpisode = 1;
 		
 		
@@ -243,21 +243,50 @@ public class Equip_Scene : MonoBehaviour {
 		switch (items) {		
 		case 0:
 			GameManager.booster++;
+			buyItem_popup.SetActive (false);
+
 			break;
 		case 1:
 			GameManager.magnet++;
+			buyItem_popup.SetActive (false);
+
 			break;
 		case 2:
 			GameManager.shield++;
+			buyItem_popup.SetActive (false);
+
 			break;
 		case 3:
-			GameManager.mysteryBox++;
+			mysterybox();
 			break;
 		}
-		//itemTxt.text ="You don't have enough Quilpens!!";
-		
-		buyItem_popup.SetActive (false);
+
 	}
+
+
+	void mysterybox()
+	{
+		string RandomItem ="";
+		int rand = (int)Random.Range(0,4);
+		switch (rand) {		
+			case 0:
+				RandomItem ="booster!";
+				GameManager.booster++;	
+				break;
+			case 1:
+				RandomItem ="magnet!";
+				GameManager.magnet++;
+				break;
+			case 2:
+				RandomItem ="shield!";
+				GameManager.shield++;
+				break;
+		}
+		itemTxt.text = RandomItem;
+		Invoke("clickClose",1.0f);
+
+	}
+
 	
 	public void clickClose()
 	{
