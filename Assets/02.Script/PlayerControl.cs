@@ -31,8 +31,6 @@ public class PlayerControl : MonoBehaviour {
 	private GameObject collidedPuzzle;
 	
 	private GameObject M_Cam;
-	private GameObject bird;
-	private GameObject puzzle;
 	
 	private GameObject magnet;
 	
@@ -62,8 +60,6 @@ public class PlayerControl : MonoBehaviour {
 	void Start()
 	{
 		M_Cam = GameObject.Find ("Main Camera");
-		bird = GameObject.Find ("bird");
-		puzzle = GameObject.Find ("puzzle");
 		
 		magnet = GameObject.Find ("magnet");
 		magnet.gameObject.SetActive(false);
@@ -71,9 +67,7 @@ public class PlayerControl : MonoBehaviour {
 		
 		PS = PlayerState.Normal;
 		Debug.Log ("state : " + PS);
-		
-		bird.gameObject.SetActive (false);
-		puzzle.gameObject.SetActive (false);
+
 		rigidbody2D.AddForce (new Vector2 (60, 300));
 		
 		mAnimator = gameObject.GetComponent<Animator> ();
@@ -83,7 +77,7 @@ public class PlayerControl : MonoBehaviour {
 		PS = PlayerState.Normal;
 		finishGame.pass =false;
 		
-		GameManager.booster_equip = true;
+		//GameManager.booster_equip = true;
 		
 	}
 	
@@ -154,20 +148,11 @@ public class PlayerControl : MonoBehaviour {
 		{
 			transform.position = diePos;
 		}
-		
-		
-		
+
 		
 		StageChange ();
 		
 		Die ();
-		
-		if (Stage_Num == 2 && !stageIs3) {
-			bird.gameObject.SetActive (true);
-			puzzle.gameObject.SetActive (true);
-			stageIs3 = true;
-		}
-
 		
 		//pass
 		if (Stage_Num > 5 && GameManager.currentLife > 0) 
@@ -217,7 +202,7 @@ public class PlayerControl : MonoBehaviour {
 			
 		}
 		
-		if (other.gameObject.name == "puzzle") 
+		if (other.gameObject.tag == "Puzzle") 
 		{
 			GameManager.currentPiece++;
 			collidedPuzzle = other.gameObject;
