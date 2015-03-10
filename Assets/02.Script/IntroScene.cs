@@ -47,10 +47,11 @@ public class IntroScene : MonoBehaviour {
 		guide.SetActive (false);
 
 
-		//backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 
 		if (GameManager.bgm) {
-			//backMusic.Play();		
+			backMusic.volume = 0.6f;
+			backMusic.Play();		
 		}
 	//	letterBox = GameObject.Find ("letterInput").GetComponent<Text> ();
 	//	Debug.Log("letterTxt is (" + letterInput + " )");
@@ -129,7 +130,7 @@ public class IntroScene : MonoBehaviour {
 	{
 		LevelMenu2D._currentItemIndex = 0;
 		Debug.Log("Go to Select Scene");
-		//backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load (null);
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load (null);
 		Application.LoadLevel ("Select_Scene");
 
 	}

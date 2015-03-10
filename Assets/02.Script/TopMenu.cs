@@ -57,6 +57,7 @@ public class TopMenu : MonoBehaviour {
 
 	public void ClickedHome(){
 		Debug.Log ("Home Button Clicked");
+		Application.LoadLevel ("Select_Scene");
 		Fadeout ();
 	}
 
