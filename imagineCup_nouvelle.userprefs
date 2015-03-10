@@ -1,62 +1,9 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl.cs">
     <Files>
-      <File FileName="Assets\02.Script\Puzzle.cs" Line="23" Column="44" />
-      <File FileName="Assets\02.Script\Bird.cs" Line="17" Column="15" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="205" Column="33" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\IntroScene.cs">
-    <Files>
-      <File FileName="Assets\02.Script\IntroScene.cs" Line="16" Column="21" />
-      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Collection.cs" Line="204" Column="4" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Equip_Scene.cs">
-=======
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Puzzle.cs">
-    <Files>
-      <File FileName="Assets\02.Script\Bird.cs" Line="1" Column="1" />
-      <File FileName="imagineCup_nouvelle.sln" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\CatchedbyCat.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Puzzle.cs" Line="23" Column="53" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\GameManager.cs">
->>>>>>> origin/master
-    <Files>
-      <File FileName="Assets\02.Script\GameManager.cs" Line="216" Column="11" />
-      <File FileName="Assets\02.Script\GUIcontrol.cs" Line="1" Column="1" />
-<<<<<<< HEAD
-      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="211" Column="18" />
-      <File FileName="Assets\02.Script\IntroScene.cs" Line="57" Column="26" />
-      <File FileName="Assets\02.Script\Select_Scene.cs" Line="221" Column="1" />
-      <File FileName="Assets\02.Script\Option.cs" Line="100" Column="4" />
-      <File FileName="Assets\02.Script\TopMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\Level Menu 2D\Scripts\ClickTouchScript.cs" Line="49" Column="5" />
-      <File FileName="Assets\Level Menu 2D\Scripts\LevelMenu2D.cs" Line="215" Column="3" />
-      <File FileName="Assets\Heart_Gauge_Select.cs" Line="23" Column="1" />
-      <File FileName="Assets\02.Script\Collection.cs" Line="54" Column="47" />
-=======
-      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="126" Column="36" />
-      <File FileName="Assets\02.Script\IntroScene.cs" Line="133" Column="45" />
-      <File FileName="Assets\02.Script\Select_Scene.cs" Line="223" Column="1" />
-      <File FileName="Assets\02.Script\Option.cs" Line="124" Column="30" />
-      <File FileName="Assets\02.Script\Collection.cs" Line="24" Column="17" />
-      <File FileName="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" Line="110" Column="1" />
-      <File FileName="Assets\02.Script\TopMenu.cs" Line="42" Column="1" />
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
->>>>>>> origin/master
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="250" Column="3" />
+      <File FileName="Assets\02.Script\SmoothCamera2D.cs" Line="27" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

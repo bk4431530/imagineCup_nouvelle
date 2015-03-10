@@ -31,11 +31,6 @@ public class Equip_Scene : MonoBehaviour {
 	GameObject thumbnail;
 	public Sprite[] thumbnail_Img;
 
-<<<<<<< HEAD
-
-	
-
-=======
 	//bgm
 	string audio_name;
 
@@ -45,8 +40,8 @@ public class Equip_Scene : MonoBehaviour {
 	public static AudioSource SFX_itemBuy;
 	
 	public int money;
-	
->>>>>>> origin/master
+
+
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");

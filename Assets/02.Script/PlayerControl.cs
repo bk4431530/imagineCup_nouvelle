@@ -219,7 +219,8 @@ public class PlayerControl : MonoBehaviour {
 		
 	}
 	
-	
+
+
 	void Die()
 	{
 		if (GameManager.currentLife < 1) 
@@ -230,17 +231,24 @@ public class PlayerControl : MonoBehaviour {
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
 			whenDie ();
+
 		}
 	}
-	
+
+	Vector3 diePlanePos;
+
 	public void whenDie()
 	{
+		diePlanePos = transform.position;
 		PS = PlayerState.Normal;
+		/*
 		stage = new Vector2 (0, 0);
 		stage.x = 12.8f * Stage_Num;
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
-		Vector3 repos = new Vector3 (stage.x, stage.y, 5);
+		*/
+
+		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
 		this.transform.position = repos;
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
