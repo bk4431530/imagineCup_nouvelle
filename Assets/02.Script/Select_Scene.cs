@@ -22,6 +22,9 @@ public class Select_Scene : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
+
+
 		guide_text = GameObject.Find ("Guide").GetComponent<Text>();
 		locks = GameObject.Find ("Lock");
 		gauges = GameObject.Find ("Gauge");
@@ -33,9 +36,10 @@ public class Select_Scene : MonoBehaviour {
 		openEp_popup.SetActive (false);
 		caution_popup.SetActive (false);
 
-		//sound init
+		//sound effect
 		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
-		SFX_button = GameObject.Find ("/SFX/button").GetComponent<AudioSource>();
+		SFX_button = GameObject.Find ("/SFX/button").GetComponent<AudioSource>();	
+		SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
 
 		for (int i = 1; i <= 6; i++) {
 			string ep = i.ToString();
@@ -218,7 +222,7 @@ public class Select_Scene : MonoBehaviour {
 	{
 		if(GameManager.sfx)
 		{
-			SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+			//SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
 			SFX_button.Play();
 			Debug.Log("ButtonSound 함수실행");
 

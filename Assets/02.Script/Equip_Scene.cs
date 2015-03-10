@@ -31,8 +31,13 @@ public class Equip_Scene : MonoBehaviour {
 	GameObject thumbnail;
 	public Sprite[] thumbnail_Img;
 
+	//bgm
 	string audio_name;
 
+	//sound effect
+	public static AudioSource SFX_button;
+	public static AudioSource SFX_equipitem;
+	public static AudioSource SFX_itemBuy;
 	
 	public int money;
 	
@@ -58,6 +63,16 @@ public class Equip_Scene : MonoBehaviour {
 		
 		GameManager.quillPen = money;
 		GameManager.currentEpisode = 1;
+
+		//sound effect
+		SFX_button = GameObject.Find ("/SFX/button").GetComponent<AudioSource>();	
+		SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+
+		SFX_equipitem = GameObject.Find ("/SFX/equipItem").GetComponent<AudioSource> ();
+		SFX_equipitem.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("Equip");
+
+		SFX_itemBuy = GameObject.Find ("/SFX/itemBuy").GetComponent<AudioSource> ();
+		SFX_itemBuy.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("ItemBuy");
 		
 		
 	}
@@ -266,7 +281,41 @@ public class Equip_Scene : MonoBehaviour {
 	{
 		buyItem_popup.SetActive (false);
 	}
-	
-	
+
+	public void ButtonSound()
+	{
+		if(GameManager.sfx)
+		{
+			//SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+			SFX_button.Play();
+			Debug.Log("Equip.cs에서 ButtonSound 함수실행");
+			
+		}
+		
+	}
+
+	public void EquipItemSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_equipitem.Play ();
+			Debug.Log("Equip.cs에서 EquipItemSound() 실행");
+
+		}
+
+	}
+
+	public void BuyItemSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_itemBuy.Play ();
+			Debug.Log("Equip.cs에서 BuyItemSound() 실행");
+			
+		}
+		
+	}
+
+
 	
 }

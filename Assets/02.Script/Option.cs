@@ -95,7 +95,9 @@ public class Option : MonoBehaviour {
 		if(GameManager.vibration == false)
 		{
 			GameManager.vibration = true; //true로 바꿈
-			
+			//vibrate once
+			Handheld.Vibrate();
+						
 		}
 	}
 	
