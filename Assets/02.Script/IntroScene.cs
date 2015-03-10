@@ -48,6 +48,7 @@ public class IntroScene : MonoBehaviour {
 
 
 		//backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+
 		if (GameManager.bgm) {
 			//backMusic.Play();		
 		}
