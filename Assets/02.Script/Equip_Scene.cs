@@ -30,7 +30,9 @@ public class Equip_Scene : MonoBehaviour {
 	string selectedScene;
 	GameObject thumbnail;
 	public Sprite[] thumbnail_Img;
-	
+
+	string audio_name;
+
 	
 	public int money;
 	
@@ -73,7 +75,7 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log("monday");
 			selectedScene = "Monday";
 			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
-			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
+			audio_name="BGM_Monday";
 			break;
 		case 2:
 			selectedScene = "Tuesday";
@@ -110,6 +112,7 @@ public class Equip_Scene : MonoBehaviour {
 	}
 	
 	void GoToGame(){
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load (audio_name);
 		loading_screen.SetActive (true);
 		Application.LoadLevel (selectedScene);
 		

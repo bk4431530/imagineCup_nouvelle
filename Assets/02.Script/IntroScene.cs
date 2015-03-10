@@ -28,9 +28,13 @@ public class IntroScene : MonoBehaviour {
 	
 	public static AudioSource backMusic;
 
+
 	// Use this for initialization
 	void OnEnable ()
 	{
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+
+
 		letterGuide = GameObject.Find ("LetterGuide");
 		textview = GameObject.Find("View");
 		letter = GameObject.Find("TextInput");
@@ -47,10 +51,11 @@ public class IntroScene : MonoBehaviour {
 		guide.SetActive (false);
 
 
-		//backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+
 
 		if (GameManager.bgm) {
-			//backMusic.Play();		
+			backMusic.volume = 0.5f;
+			backMusic.Play();		
 		}
 	//	letterBox = GameObject.Find ("letterInput").GetComponent<Text> ();
 	//	Debug.Log("letterTxt is (" + letterInput + " )");
@@ -118,7 +123,11 @@ public class IntroScene : MonoBehaviour {
 				Debug.Log("Level Count Reset : " + LevelMenu2D._currentItemIndex );
 				FadeOut();
 			}*/
-		} 	
+		} 
+		else
+		{
+			guide.SetActive(false);
+		}
 	}
 
 	public void clickedWrite(){
@@ -129,7 +138,7 @@ public class IntroScene : MonoBehaviour {
 	{
 		LevelMenu2D._currentItemIndex = 0;
 		Debug.Log("Go to Select Scene");
-		//backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load (null);
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load (null);
 		Application.LoadLevel ("Select_Scene");
 
 	}
@@ -157,6 +166,7 @@ public class IntroScene : MonoBehaviour {
 		letterGuide.SetActive (false);
 		onLetter.SetActive (false);
 	}
+
 
 
 

@@ -41,6 +41,7 @@ public class GameManager : MonoBehaviour {
 	//option
 	public static bool vibration = true;
 	public static bool bgm = true;
+	public static bool sfx = true;
 
 	//temporary
 	public static int currentLife = 5;
@@ -235,6 +236,7 @@ public class GameManager : MonoBehaviour {
 		Screen.SetResolution(Screen.width, Screen.width/16*9, true);
 		if(backMusic.GetComponent<AudioSource>().clip == null){
 			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
+			backMusic.volume = 0.6f;
 			backMusic.Play();
 		}
 	}

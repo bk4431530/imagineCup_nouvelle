@@ -8,6 +8,11 @@ using System.Collections.Generic;
 /// </summary>
 public class LevelMenu2D : Singleton<LevelMenu2D> {
 
+	//sound effect
+
+	public static AudioSource SFX_pageturn;
+
+	//
 	/// <summary>
 	/// Gets or Sets the only instance of LevelMenu2D.
 	/// Use <c>LevelMenu2D.I</c> to call the methods in this class.
@@ -182,6 +187,9 @@ public class LevelMenu2D : Singleton<LevelMenu2D> {
 		createMenu();
 		gotoItem(initialItemNumber);
         isMenuCreating = false;
+
+		//sound effect
+		SFX_pageturn = GameObject.Find ("/SFX/PageTurn").GetComponent<AudioSource>();
         
 	}
 
@@ -190,6 +198,23 @@ public class LevelMenu2D : Singleton<LevelMenu2D> {
 		if (autoUpdateAtRuntime)
 			createMenu();
 	}
+
+	//sound effect
+
+	public void PageTurnSound()
+	{
+		SFX_pageturn.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("IntroPageTurn");
+		Debug.Log("불러옴");
+		if(GameManager.sfx)
+		{
+			
+			SFX_pageturn.Play();
+			Debug.Log("PageTurnSound 실행됨");
+			
+		}
+	}
+
+
 
 	/// <summary>
 	/// Recreates the LevelMenu2D from scratch.
@@ -414,6 +439,8 @@ public class LevelMenu2D : Singleton<LevelMenu2D> {
 	/// </summary>
 	public void gotoNextItem()
 	{
+			//sound effect
+		PageTurnSound ();
         doScaleTheCenterItem(false);
 		if (CurrentItem == maximumBoundIndex && isBounded) return;
 		if (_currentItemIndex >= itemsList.Count-1 || _isMoving) 
@@ -439,6 +466,9 @@ public class LevelMenu2D : Singleton<LevelMenu2D> {
 	/// </summary>
     public void gotoBackItem()
     {
+			//sound effect
+			PageTurnSound ();
+
         doScaleTheCenterItem(false);
         if (CurrentItem == minimumBoundIndex && isBounded) return;
 
