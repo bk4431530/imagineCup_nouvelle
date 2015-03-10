@@ -8,32 +8,38 @@ public class Bird : MonoBehaviour {
 
 	public bool RB = true;
 
+	public GameObject player;
 	public GameObject puzzle;
 
+	public float player_pos;
+	public float drop_pos;
+
 	void Start(){
-		puzzle = GameObject.Find ("puzzle");
+		player = GameObject.Find ("player");
 	}
 
 	void Update(){
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-
-		if (this.transform.position.x > 26.6) {
-			transform.Translate (new Vector2 (-0.075f, 0));
-		}
-		else if (this.transform.position.x > 25.6) {
-			if(RB){
-				rb = puzzle.gameObject.AddComponent("Rigidbody2D") as Rigidbody2D;
-				rb.gravityScale = 0.5f;
-				RB = false;
+		if (player.transform.position.x > player_pos) {
+			if (this.transform.position.x > drop_pos) {
+				transform.Translate (new Vector3 (-0.12f, 0, 0));
 			}
-			transform.Translate (new Vector2 (-0.075f, 0));
-		} else {
-			transform.Translate (new Vector2 (-0.02f, 0.02f));
+			else if (this.transform.position.x > drop_pos-1) {
+				if(RB){
+					rb = puzzle.gameObject.AddComponent("Rigidbody2D") as Rigidbody2D;
+					rb.gravityScale = 0.5f;
+					RB = false;
+				}
+				transform.Translate (new Vector3 (-0.12f, 0, 0));
+			} else {
+				transform.Translate (new Vector3 (-0.05f, 0.02f, 0));
+			}
+			
+			if(screenPosition.x < 0 || screenPosition.y > Screen.height+3)
+			{
+				this.gameObject.SetActive (false);
+			}
 		}
 
-		if(screenPosition.x < 0 || screenPosition.y > Screen.height+3)
-		{
-			this.gameObject.SetActive (false);
-		}
 	}
 }
