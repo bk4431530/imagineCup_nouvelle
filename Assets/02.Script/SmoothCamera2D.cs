@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SmoothCamera2D : MonoBehaviour {
 	
-	public float dampTime = 0.15f;
+	public float dampTime = 0f;
 	private Vector3 velocity = Vector3.zero;
 	Transform target;
 
