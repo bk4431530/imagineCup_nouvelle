@@ -220,6 +220,7 @@ public class Select_Scene : MonoBehaviour {
 		{
 			SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
 			SFX_button.Play();
+			Debug.Log("ButtonSound 함수실행");
 
 		}
 

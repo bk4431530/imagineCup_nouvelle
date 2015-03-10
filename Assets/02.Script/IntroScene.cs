@@ -27,10 +27,14 @@ public class IntroScene : MonoBehaviour {
 	//bgm_setting
 	
 	public static AudioSource backMusic;
+	public static AudioSource SFX_pageturn;
 
 	// Use this for initialization
 	void OnEnable ()
 	{
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+		SFX_pageturn = GameObject.Find ("/SFX/PageTurn").GetComponent<AudioSource>();
+
 		letterGuide = GameObject.Find ("LetterGuide");
 		textview = GameObject.Find("View");
 		letter = GameObject.Find("TextInput");
@@ -47,7 +51,7 @@ public class IntroScene : MonoBehaviour {
 		guide.SetActive (false);
 
 
-		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+
 
 		if (GameManager.bgm) {
 			backMusic.volume = 0.6f;
@@ -157,6 +161,20 @@ public class IntroScene : MonoBehaviour {
 		textview.SetActive (false);
 		letterGuide.SetActive (false);
 		onLetter.SetActive (false);
+	}
+
+	public void PageTurnSound()
+	{
+		SFX_pageturn.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("IntroPageTurn");
+		Debug.Log("불러옴");
+		if(GameManager.sfx)
+		{
+
+			SFX_pageturn.Play();
+			Debug.Log("PageTurnSound 실행됨");
+			
+		}
+		
 	}
 
 
