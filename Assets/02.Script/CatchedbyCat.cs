@@ -51,7 +51,7 @@ public class CatchedbyCat : MonoBehaviour{
 		{
 			cat_Animator.SetTrigger("catch");
 			catPos = cat.transform.position;
-			transform.position = new Vector3(catPos.x-1 ,catPos.y, 0);         
+			transform.position = new Vector3(catPos.x-1 ,catPos.y, 5);         
 			rigidbody2D.isKinematic = true;   
 		}
 		
