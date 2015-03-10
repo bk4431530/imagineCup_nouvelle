@@ -65,7 +65,7 @@ public class Option : MonoBehaviour {
 		
 	}
 	
-	
+	//setting function
 	
 	public void music_On()
 	{
@@ -95,7 +95,9 @@ public class Option : MonoBehaviour {
 		if(GameManager.vibration == false)
 		{
 			GameManager.vibration = true; //true로 바꿈
-			
+			//vibrate once
+			Handheld.Vibrate();
+						
 		}
 	}
 	
@@ -106,6 +108,26 @@ public class Option : MonoBehaviour {
 			GameManager.vibration = false; //false로 바꿈
 			
 		}
+	}
+
+	///////////////////////////////////
+
+
+	public void SFX_On()
+	{
+		if(GameManager.sfx == false)
+		{
+			GameManager.sfx = true; // true로 바꿈
+		}
+	}
+
+	public void SFX_Off()
+	{
+		if(GameManager.sfx == true)
+		{
+			GameManager.sfx = false; // true로 바꿈
+		}
+
 	}
 	
 	

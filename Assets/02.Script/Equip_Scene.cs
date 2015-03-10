@@ -31,9 +31,22 @@ public class Equip_Scene : MonoBehaviour {
 	GameObject thumbnail;
 	public Sprite[] thumbnail_Img;
 
+<<<<<<< HEAD
 
 	
 
+=======
+	//bgm
+	string audio_name;
+
+	//sound effect
+	public static AudioSource SFX_button;
+	public static AudioSource SFX_equipitem;
+	public static AudioSource SFX_itemBuy;
+	
+	public int money;
+	
+>>>>>>> origin/master
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");
@@ -56,6 +69,16 @@ public class Equip_Scene : MonoBehaviour {
 		
 		GameManager.quillPen = 1000;
 		GameManager.currentEpisode = 1;
+
+		//sound effect
+		SFX_button = GameObject.Find ("/SFX/button").GetComponent<AudioSource>();	
+		SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+
+		SFX_equipitem = GameObject.Find ("/SFX/equipItem").GetComponent<AudioSource> ();
+		SFX_equipitem.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("Equip");
+
+		SFX_itemBuy = GameObject.Find ("/SFX/itemBuy").GetComponent<AudioSource> ();
+		SFX_itemBuy.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("ItemBuy");
 		
 		
 	}
@@ -73,7 +96,7 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log("monday");
 			selectedScene = "Monday";
 			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
-			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("None");
+			audio_name="BGM_Monday";
 			break;
 		case 2:
 			selectedScene = "Tuesday";
@@ -110,6 +133,7 @@ public class Equip_Scene : MonoBehaviour {
 	}
 	
 	void GoToGame(){
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load (audio_name);
 		loading_screen.SetActive (true);
 		Application.LoadLevel (selectedScene);
 		
@@ -292,7 +316,41 @@ public class Equip_Scene : MonoBehaviour {
 	{
 		buyItem_popup.SetActive (false);
 	}
-	
-	
+
+	public void ButtonSound()
+	{
+		if(GameManager.sfx)
+		{
+			//SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+			SFX_button.Play();
+			Debug.Log("Equip.cs에서 ButtonSound 함수실행");
+			
+		}
+		
+	}
+
+	public void EquipItemSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_equipitem.Play ();
+			Debug.Log("Equip.cs에서 EquipItemSound() 실행");
+
+		}
+
+	}
+
+	public void BuyItemSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_itemBuy.Play ();
+			Debug.Log("Equip.cs에서 BuyItemSound() 실행");
+			
+		}
+		
+	}
+
+
 	
 }

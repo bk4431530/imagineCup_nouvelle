@@ -18,9 +18,13 @@ public class Select_Scene : MonoBehaviour {
 	//bgm_setting
 	
 	public static AudioSource backMusic;
+	public static AudioSource SFX_button;
 
 	// Use this for initialization
 	void Start () {
+
+
+
 		guide_text = GameObject.Find ("Guide").GetComponent<Text>();
 		locks = GameObject.Find ("Lock");
 		gauges = GameObject.Find ("Gauge");
@@ -32,7 +36,10 @@ public class Select_Scene : MonoBehaviour {
 		openEp_popup.SetActive (false);
 		caution_popup.SetActive (false);
 
+		//sound effect
 		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
+		SFX_button = GameObject.Find ("/SFX/button").GetComponent<AudioSource>();	
+		SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
 
 		for (int i = 1; i <= 6; i++) {
 			string ep = i.ToString();
@@ -140,7 +147,7 @@ public class Select_Scene : MonoBehaviour {
 
 			Debug.Log("Episode = " + GameManager.episode);
 		}
-		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("intro_CosyLiving");
+		backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("Intro_cosyliving");
 		Application.LoadLevel ("Intro_Scene");
 	}
 
@@ -209,4 +216,18 @@ public class Select_Scene : MonoBehaviour {
 		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
 		caution_popup.SetActive (false);
 	}
+
+	//SFX
+	public void ButtonSound()
+	{
+		if(GameManager.sfx)
+		{
+			//SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+			SFX_button.Play();
+			Debug.Log("ButtonSound 함수실행");
+
+		}
+
+	}
+	
 }
