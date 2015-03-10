@@ -21,9 +21,6 @@ public class Collection : MonoBehaviour {
 	Text letter;
 	Text from;
 
-	string To_name;
-	string letter_txt;
-	string From_name;
 
 	//4.send
 	Text zipcodeR;
@@ -31,30 +28,19 @@ public class Collection : MonoBehaviour {
 	Text address;
 	Text send_preview;
 
-	string ZipL;
-	string ZipR;
-	string Addr;
+
 
 	//text view
 	public GameObject textview;
 	public Text inputTxt;
 	public InputField inputF;
+	bool input_isfocused;
 
 
 
 
 	void OnEnable () {
-		/*
-		menus [0] = GameObject.Find ("1.All");
-		menus [1] = GameObject.Find ("2.Detail");
-		menus [2] = GameObject.Find ("3.Write");
-		menus [3] = GameObject.Find ("4.Send");
 
-		buttons [0] = GameObject.Find ("AllBtn");
-		buttons [1] = GameObject.Find ("DetailBtn");
-		buttons [2] = GameObject.Find ("writeBtn");
-		buttons [3] = GameObject.Find ("sendBtn");
-		*/
 		//3.write
 		to = GameObject.Find ("to_txt").GetComponent<Text> ();
 		letter = GameObject.Find ("letter_txt").GetComponent<Text> ();
@@ -92,25 +78,35 @@ public class Collection : MonoBehaviour {
 		}//for
 
 
-		/*Write
-		To_name = to.text;
-		letter_txt = letter.text;
-		From_name = from.text;
-		*/
-		to.text = To_name;
-		letter.text = letter_txt;
-		from.text = From_name;
+
+		to.text = GameManager.To_name;
+		letter.text = GameManager.letter_txt;
+		from.text = GameManager.From_name;
 
 
-		/*Send
-		ZipCode = zipcodeL.text + zipcodeR.text;
-		Addr = address.text;
-		*/
-		zipcodeL.text = ZipL;
-		zipcodeR.text = ZipR;
-		address.text = Addr;
+
+		zipcodeL.text = GameManager.ZipL;
+		zipcodeR.text = GameManager.ZipR;
+		address.text = GameManager.Addr;
 		
-		send_preview.text = letter_txt;
+		send_preview.text = GameManager.letter_txt;
+
+
+		if (inputF.isFocused) {
+			if(input_isfocused == false)
+			{
+				input_isfocused = true;
+			}
+		}
+		
+		if (input_isfocused == true) {
+			if (inputF.isFocused == false){
+				textview.SetActive(false);
+				input_isfocused = false;
+			}
+		}
+
+
 	}
 
 
@@ -168,9 +164,9 @@ public class Collection : MonoBehaviour {
 	//3.Write
 	public void nextBtn()
 	{
-		PlayerPrefs.SetString ("To"," ");
-		PlayerPrefs.SetString ("Letter"," ");
-		PlayerPrefs.SetString ("From"," ");
+		PlayerPrefs.SetString ("To",GameManager.To_name);
+		PlayerPrefs.SetString ("Letter",GameManager.letter_txt);
+		PlayerPrefs.SetString ("From",GameManager.From_name);
 		PlayerPrefs.Save ();
 
 		menuSelected = 3;
@@ -180,6 +176,13 @@ public class Collection : MonoBehaviour {
 	//4.send
 	public void sendBtn()
 	{
+
+		PlayerPrefs.SetString ("ZipL",GameManager.ZipL);
+		PlayerPrefs.SetString ("ZipR",GameManager.ZipR);
+		PlayerPrefs.SetString ("Address",GameManager.Addr);
+		PlayerPrefs.Save ();
+
+
 		Debug.Log ("send click");
 
 	}
@@ -231,22 +234,22 @@ public class Collection : MonoBehaviour {
 		switch (inputMenu) 
 		{
 		case 1:
-			To_name = inputTxt.text;
+			GameManager.To_name = inputTxt.text;
 			break;
 		case 2:
-			letter_txt = inputTxt.text;
+			GameManager.letter_txt = inputTxt.text;
 			break;
 		case 3:
-			From_name = inputTxt.text;
+			GameManager.From_name = inputTxt.text;
 			break;
 		case 4:
-			ZipL = inputTxt.text;
+			GameManager.ZipL = inputTxt.text;
 			break;
 		case 5:
-			ZipR = inputTxt.text;
+			GameManager.ZipR = inputTxt.text;
 			break;
 		case 6:
-			Addr = inputTxt.text;
+			GameManager.Addr = inputTxt.text;
 			break;
 		}
 
