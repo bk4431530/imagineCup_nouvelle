@@ -31,8 +31,15 @@ public class Collection : MonoBehaviour {
 	Text address;
 	Text send_preview;
 
-	string ZipCode;
+	string ZipL;
+	string ZipR;
 	string Addr;
+
+	//text view
+	public GameObject textview;
+	public Text inputTxt;
+	public InputField inputF;
+
 
 
 
@@ -47,7 +54,7 @@ public class Collection : MonoBehaviour {
 		buttons [1] = GameObject.Find ("DetailBtn");
 		buttons [2] = GameObject.Find ("writeBtn");
 		buttons [3] = GameObject.Find ("sendBtn");
-*/
+		*/
 		//3.write
 		to = GameObject.Find ("to_txt").GetComponent<Text> ();
 		letter = GameObject.Find ("letter_txt").GetComponent<Text> ();
@@ -60,6 +67,8 @@ public class Collection : MonoBehaviour {
 		send_preview =GameObject.Find ("letterPre_txt").GetComponent<Text> ();
 
 
+		textview.SetActive (false);
+
 
 
 	}
@@ -67,7 +76,7 @@ public class Collection : MonoBehaviour {
 	
 	void Update()
 	{
-		
+
 		for (int i =0; i<4; i++) 
 		{
 			if(i != menuSelected){
@@ -83,14 +92,23 @@ public class Collection : MonoBehaviour {
 		}//for
 
 
-		//Write
+		/*Write
 		To_name = to.text;
 		letter_txt = letter.text;
 		From_name = from.text;
+		*/
+		to.text = To_name;
+		letter.text = letter_txt;
+		from.text = From_name;
 
-		//Send
+
+		/*Send
 		ZipCode = zipcodeL.text + zipcodeR.text;
 		Addr = address.text;
+		*/
+		zipcodeL.text = ZipL;
+		zipcodeR.text = ZipR;
+		address.text = Addr;
 		
 		send_preview.text = letter_txt;
 	}
@@ -167,6 +185,75 @@ public class Collection : MonoBehaviour {
 	}
 
 
+
+
+
+
+	int inputMenu = 0;
+
+	//textView
+	public void inputClicked(string input){
+		textview.SetActive (true);
+		inputF.text = " "; 
+		inputF.characterLimit = 0;
+		//3.Write
+		if (input == "to") 
+		{
+			inputMenu = 1;
+		}
+		else if(input == "letter")
+		{
+			inputMenu = 2;
+		}
+		else if(input == "from")
+		{
+			inputMenu = 3;
+		}
+
+		//4.send
+		else if(input == "zipL")
+		{
+			inputMenu = 4;
+			inputF.characterLimit =4;
+		}else if(input == "zipR")
+		{
+			inputMenu = 5;
+			inputF.characterLimit =4;
+
+		}else if(input == "address")
+		{
+			inputMenu = 6;
+		}
+
+	}
+
+	public void complete(){
+		switch (inputMenu) 
+		{
+		case 1:
+			To_name = inputTxt.text;
+			break;
+		case 2:
+			letter_txt = inputTxt.text;
+			break;
+		case 3:
+			From_name = inputTxt.text;
+			break;
+		case 4:
+			ZipL = inputTxt.text;
+			break;
+		case 5:
+			ZipR = inputTxt.text;
+			break;
+		case 6:
+			Addr = inputTxt.text;
+			break;
+		}
+
+
+
+		textview.SetActive (false);
+	}
 
 
 }
