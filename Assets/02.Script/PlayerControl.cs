@@ -9,7 +9,6 @@ public class PlayerControl : MonoBehaviour {
 	{
 		Normal,
 		Collided,
-		Boostered
 	}
 	
 	public static PlayerState PS;
@@ -26,7 +25,7 @@ public class PlayerControl : MonoBehaviour {
 	public Vector2 jumpForce = new Vector2(4, 300);
 	public Vector2 run = new Vector2(4,0);
 	
-	private Vector2 diePos;
+	private Vector3 diePos;
 	
 	private GameObject collidedPen;
 	private GameObject collidedPuzzle;
@@ -34,7 +33,6 @@ public class PlayerControl : MonoBehaviour {
 	private GameObject M_Cam;
 	private GameObject bird;
 	private GameObject puzzle;
-	private GameObject toyFlight;
 	
 	private GameObject magnet;
 	
@@ -44,9 +42,7 @@ public class PlayerControl : MonoBehaviour {
 	
 	
 	Animator mAnimator;
-	
-	
-	Animator toyFlight_Animator;
+
 	
 	public static bool finish = false;
 	
@@ -62,12 +58,12 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject finish_popup;
 	
 	
+	
 	void Start()
 	{
 		M_Cam = GameObject.Find ("Main Camera");
 		bird = GameObject.Find ("bird");
 		puzzle = GameObject.Find ("puzzle");
-		toyFlight = GameObject.Find ("toyFlight");
 		
 		magnet = GameObject.Find ("magnet");
 		magnet.gameObject.SetActive(false);
@@ -78,17 +74,17 @@ public class PlayerControl : MonoBehaviour {
 		
 		bird.gameObject.SetActive (false);
 		puzzle.gameObject.SetActive (false);
-		toyFlight.gameObject.SetActive (false);
 		rigidbody2D.AddForce (new Vector2 (60, 300));
 		
 		mAnimator = gameObject.GetComponent<Animator> ();
-		toyFlight_Animator = toyFlight.gameObject.GetComponent<Animator> ();
 		
 		startPos = this.transform.position;
 		
 		PS = PlayerState.Normal;
 		finishGame.pass =false;
-
+		
+		GameManager.booster_equip = true;
+		
 	}
 	
 	
@@ -96,7 +92,7 @@ public class PlayerControl : MonoBehaviour {
 	{
 		/******************************************************bokyung's fixing part************************************************/
 		
-
+		
 		
 		
 		if(GameManager.magnet_equip)
@@ -120,20 +116,21 @@ public class PlayerControl : MonoBehaviour {
 		
 		if (GameManager.booster_equip) 
 		{
-			if(M_Cam.transform.position.x<40)
+			
+			if(transform.position.x<30)
 			{
 				boosterShield =true;
-				boosterEndPos =  new Vector3(40,startPos.y,startPos.z);
-				transform.position = Vector3.Lerp(startPos,boosterEndPos,Time.time);
+				boosterEndPos =  new Vector3(30,startPos.y,startPos.z);
+				transform.position = Vector3.Lerp(startPos,boosterEndPos,Time.timeSinceLevelLoad);
 				this.renderer.material.color = Color.red;
 				
 			}else{
 				boosterShield =false;
-				this.renderer.material.color = Color.white;		
+				this.renderer.material.color = Color.white;      
 				rigidbody2D.AddForce (new Vector2 (60, 400));
 				GameManager.booster_equip =false;
-
-
+				
+				
 				
 			}
 		}
@@ -170,18 +167,7 @@ public class PlayerControl : MonoBehaviour {
 			puzzle.gameObject.SetActive (true);
 			stageIs3 = true;
 		}
-		
-		if (Stage_Num == 1 && !stageIs2) {
-			toyFlight.gameObject.SetActive (true);
-			toyFlight_Animator.SetTrigger("show");
-			stageIs2 = true;
-		}
-		
-		
-		
-		
-		
-		
+
 		
 		//pass
 		if (Stage_Num > 5 && GameManager.currentLife > 0) 
@@ -217,7 +203,7 @@ public class PlayerControl : MonoBehaviour {
 				shieldCount--;
 				Debug.Log(shieldCount);
 			}else if(boosterShield){
-				PS = PlayerState.Boostered;
+				PS = PlayerState.Normal;
 			}
 			else{
 				PS = PlayerState.Collided;
@@ -269,7 +255,8 @@ public class PlayerControl : MonoBehaviour {
 		stage.x = 12.8f * Stage_Num;
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
-		this.transform.position = stage;
+		Vector3 repos = new Vector3 (stage.x, stage.y, 5);
+		this.transform.position = repos;
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
 		
@@ -277,15 +264,12 @@ public class PlayerControl : MonoBehaviour {
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.isKinematic = false;
 		rigidbody2D.AddForce (new Vector2 (0, 300));
-		
-		toyFlight.gameObject.SetActive (true);
-		Vector3 start_toy = new Vector3(19.2f,3,0);
-		toyFlight.transform.position = start_toy;
-		toyFlight_Animator.SetTrigger("reset");
-		toyFlight_Animator.SetTrigger("show");
+
 	}
 	
-	
+	void Revival(){
+		
+	}
 	
 	
 	void StageChange(){
@@ -302,6 +286,5 @@ public class PlayerControl : MonoBehaviour {
 	
 	
 }
-
 
 
