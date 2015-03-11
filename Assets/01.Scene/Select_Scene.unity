@@ -298,7 +298,7 @@ RectTransform:
   - {fileID: 1422109041}
   - {fileID: 375840742}
   m_Father: {fileID: 320313437}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 394, y: -188.050003}
@@ -3963,6 +3963,7 @@ RectTransform:
   - {fileID: 1169660211}
   - {fileID: 351369109}
   - {fileID: 630766209}
+  - {fileID: 635890108}
   - {fileID: 522692096}
   - {fileID: 1682457395}
   - {fileID: 34659593}
@@ -6325,7 +6326,7 @@ RectTransform:
   m_Children:
   - {fileID: 1499963859}
   m_Father: {fileID: 320313437}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 417.499969, y: 0}
@@ -7467,6 +7468,75 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: .5, y: .5}
+--- !u!1 &635890107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 156454, guid: f8ae0e7f452accd46abf0be6e3f009cf, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 635890108}
+  - 222: {fileID: 635890110}
+  - 114: {fileID: 635890109}
+  m_Layer: 5
+  m_Name: postcardTxt3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &635890108
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22456452, guid: f8ae0e7f452accd46abf0be6e3f009cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 635890107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 320313437}
+  m_RootOrder: 4
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 190.999939, y: -89.0000763}
+  m_SizeDelta: {x: 517, y: -31}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &635890109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11456466, guid: f8ae0e7f452accd46abf0be6e3f009cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 635890107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .514705896, g: .514705896, b: .514705896, a: 1}
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 433a1126d1aa8e84fb043edda3b4fb95, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '"sahdjkhjkahdjklllllllllsjahdjkshdjkahd"'
+--- !u!222 &635890110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 22256444, guid: f8ae0e7f452accd46abf0be6e3f009cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 635890107}
 --- !u!1 &636883346
 GameObject:
   m_ObjectHideFlags: 0
@@ -13275,7 +13345,7 @@ GameObject:
   - 222: {fileID: 1169660213}
   - 114: {fileID: 1169660212}
   m_Layer: 5
-  m_Name: letter_preview
+  m_Name: letter_preview1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19538,7 +19608,7 @@ RectTransform:
   m_Children:
   - {fileID: 1763529744}
   m_Father: {fileID: 320313437}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 412, y: -344}

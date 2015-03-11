@@ -8,8 +8,10 @@ public class finishGame : MonoBehaviour {
 	public GameObject clear;
 	
 	public GameObject[] lifes  = new GameObject[5];
+
 	public GameObject[] pieces = new GameObject[3];
-	GameObject[] postback = new GameObject[3];
+	public GameObject[] postPiecies = new GameObject[3];
+
 	public Sprite[] postcards;
 			
 	public Text quilpenQty;
@@ -26,6 +28,15 @@ public class finishGame : MonoBehaviour {
 	void Start(){
 		finish_popup = GameObject.Find ("Finish");
 		finish_popup.SetActive (false);
+
+		/*
+		postPiecies [0] = GameObject.Find ("postcard1_Img");
+		postPiecies [1] = GameObject.Find ("postcard2_Img");
+		postPiecies [2] = GameObject.Find ("postcard3_Img");
+*/
+		postPiecies [0].SetActive (false);
+		postPiecies [1].SetActive (false);
+		postPiecies [2].SetActive (false);
 
 		/*
 		failed = GameObject.Find ("failed");
@@ -188,9 +199,9 @@ public class finishGame : MonoBehaviour {
 		rand_postcard = (int)Random.Range (0, 11);
 		rand_piece = (int)Random.Range (0, 6);
 		
-		GameManager.postCard [rand_postcard] [rand_piece] = true;
+		//GameManager.postCard [rand_postcard] [rand_piece] = true;
 
-
+		postPiecies [i].SetActive (true);
 
 		/*
 		postback [i].SetActive (true);
