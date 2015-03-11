@@ -66,7 +66,6 @@
      <Compile Include="Assets\02.Script\Option.cs" />
      <Compile Include="Assets\02.Script\PlayerControl.cs" />
      <Compile Include="Assets\02.Script\PlayerPrefX.cs" />
-     <Compile Include="Assets\02.Script\PostcardEffect.cs" />
      <Compile Include="Assets\02.Script\Puzzle.cs" />
      <Compile Include="Assets\02.Script\QuillPen.cs" />
      <Compile Include="Assets\02.Script\Select_Scene.cs" />
