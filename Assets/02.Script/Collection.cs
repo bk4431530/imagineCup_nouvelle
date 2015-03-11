@@ -51,7 +51,7 @@ public class Collection : MonoBehaviour {
 
 
 
-	void Awake () {
+	void Awake () { //원래 awake
 
 		for (int i =0; i<10; i++) 
 		{
