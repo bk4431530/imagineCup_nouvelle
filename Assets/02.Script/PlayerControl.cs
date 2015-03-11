@@ -59,7 +59,7 @@ public class PlayerControl : MonoBehaviour {
 	
 	
 	
-	void Start()
+	void Awake()
 	{
 		M_Cam = GameObject.Find ("Main Camera");
 		
@@ -81,8 +81,9 @@ public class PlayerControl : MonoBehaviour {
 		isClear = false;
 		isOut = false;
 		isRevival = false;
+
 		//GameManager.booster_equip = true;
-		
+		GameManager.paperPlaneState = 8;
 	}
 	
 	

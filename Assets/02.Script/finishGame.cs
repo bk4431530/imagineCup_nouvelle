@@ -55,6 +55,10 @@ public class finishGame : MonoBehaviour {
 	{
 		if (PlayerControl.finish) 
 		{
+			if(GameManager.paperPlaneState == 8){
+				PostcardEffect.flareLayer.enabled = false;
+			}
+
 			finish_popup.SetActive(true);
 			quilpenQty.text = (GameManager.currentQuillPen).ToString ();
 
