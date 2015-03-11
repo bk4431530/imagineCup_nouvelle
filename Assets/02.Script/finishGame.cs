@@ -9,6 +9,10 @@ public class finishGame : MonoBehaviour {
 	
 	public GameObject[] lifes  = new GameObject[5];
 	public GameObject[] pieces = new GameObject[3];
+	GameObject[] postback = new GameObject[3];
+
+
+
 	
 	public Sprite offPiece;
 		
@@ -17,6 +21,9 @@ public class finishGame : MonoBehaviour {
 
 	public static bool pass;
 	public static bool pause2home;
+
+	int rand_postcard;
+	int rand_piece;
 
 	AudioSource backMusic;
 
@@ -55,12 +62,15 @@ public class finishGame : MonoBehaviour {
 	{
 		if (PlayerControl.finish) 
 		{
+			if(GameManager.paperPlaneState == 8){
+				PostcardEffect.flareLayer.enabled = false;
+			}
 			finish_popup.SetActive(true);
 			quilpenQty.text = (GameManager.currentQuillPen).ToString ();
 
 			for(int i=0; i<3-GameManager.currentPiece; i++)
 			{	
-				pieces[i].GetComponent<Image>().sprite = offPiece;
+				pieces[i].SetActive(false);
 			}
 
 
@@ -173,5 +183,19 @@ public class finishGame : MonoBehaviour {
 		finish_popup.SetActive (false);
 		
 	}
+
+
 	
+	public void openPiece(int i)
+	{
+		rand_postcard = (int)Random.Range (0, 11);
+		rand_piece = (int)Random.Range (0, 6);
+		
+		GameManager.postCard [rand_postcard] [rand_piece] = true;
+		/*
+		postback [i].SetActive (true);
+		postback [i].GetComponent<Image> ().sprite = GameManager.postCard_Image [rand_postcard];
+		*/
+		
+	}
 }

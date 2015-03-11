@@ -53,6 +53,10 @@ public class Collection : MonoBehaviour {
 
 	void Awake () {
 
+		for (int i =0; i<10; i++) 
+		{
+			GameManager.postCard_Image [i] = cardImg [i];
+		}
 
 		//2.detail
 		postcard_preview = GameObject.Find ("letter_preview1").GetComponent<Image> ();

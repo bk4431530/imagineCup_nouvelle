@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 	public static int mysteryBox = 0;
 	
 	public static bool[][] postCard = new bool[10][];
+	public static Sprite[] postCard_Image = new Sprite[10];
 
 	/*
 	public static bool[] postCard1 = new bool[6];
