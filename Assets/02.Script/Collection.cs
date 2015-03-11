@@ -10,16 +10,28 @@ public class Collection : MonoBehaviour {
 	public GameObject[] buttons = new GameObject[4];
 	public Sprite[] on_Img = new Sprite[4];
 	public Sprite[] off_Img = new Sprite[4];
-	
 
 
-	int letter_equip;
+
+	//1.All  
+	public Sprite[] cardImg = new Sprite[10];
+	int card_equip;
+
+	//2.Detail
+	Image postcard_preview;
+	Text card_NameTxt;
+	Text card_contTxt;
+	Text card_themeTxt;
+	string[] cardName = new string[10];
+	string[] cardCont = new string[10];
+
 
 
 	//3.write
 	Text to;
 	Text letter;
 	Text from;
+	public Image letterPreview;
 
 
 	//4.send
@@ -40,6 +52,13 @@ public class Collection : MonoBehaviour {
 
 
 	void OnEnable () {
+
+
+		//2.detail
+		postcard_preview = GameObject.Find ("letter_preview1").GetComponent<Image> ();
+		card_NameTxt = GameObject.Find ("postcardTxt1").GetComponent<Text> ();
+		card_themeTxt = GameObject.Find ("postcardTxt3").GetComponent<Text> ();
+		card_contTxt =GameObject.Find ("postcardTxt2").GetComponent<Text> ();
 
 		//3.write
 		to = GameObject.Find ("to_txt").GetComponent<Text> ();
@@ -101,6 +120,30 @@ public class Collection : MonoBehaviour {
 		
 		if (input_isfocused == true) {
 			if (inputF.isFocused == false){
+
+				switch (inputMenu) 
+				{
+				case 1:
+					GameManager.To_name = inputTxt.text;
+					break;
+				case 2:
+					GameManager.letter_txt = inputTxt.text;
+					break;
+				case 3:
+					GameManager.From_name = inputTxt.text;
+					break;
+				case 4:
+					GameManager.ZipL = inputTxt.text;
+					break;
+				case 5:
+					GameManager.ZipR = inputTxt.text;
+					break;
+				case 6:
+					GameManager.Addr = inputTxt.text;
+					break;
+				}
+				
+
 				textview.SetActive(false);
 				input_isfocused = false;
 			}
@@ -146,14 +189,67 @@ public class Collection : MonoBehaviour {
 	//1.All
 	public void letterClicked(int i)
 	{
-		letter_equip = i;
+		postcard_preview.sprite = cardImg[i];
+		letterPreview.sprite = cardImg [i];
+
+		card_equip = i;
+
+		switch (i) 
+		{
+		case 0:
+			card_NameTxt.text ="Basic Pattern PostCard";
+			card_themeTxt.text =" I fall in love when the first time I met you ";
+			card_contTxt.text ="This is the basic card,you can play on the original game map";
+			break;
+		case 1:
+			card_NameTxt.text ="Cat Pattern PostCard";
+			card_themeTxt.text ="We can only learn to love by loving";
+			card_contTxt.text ="If you choose this card, you can play on cat game map";
+			break;
+		case 2:
+			card_NameTxt.text ="Flower Pattern PostCard";
+			card_themeTxt.text ="Love is pressing a flower from bouqet he sent you";
+			card_contTxt.text ="If you choose this card, you can watch blossom effect on game map";
+			break;
+		case 3:
+			card_NameTxt.text ="Heart Pattern PostCard";
+			card_themeTxt.text ="Love is all you need";
+			card_contTxt.text ="If you choose this card, you can watch heart effect on game map";
+			break;
+		case 4:
+			card_NameTxt.text ="Mist Pattern PostCard";
+			card_themeTxt.text ="To love is to recieve glimpse of heaven";
+			card_contTxt.text ="If you choose this card, you can watch Mist effect on game map";
+			break;
+		case 5:
+			card_NameTxt.text ="Rain Pattern PostCard";
+			card_themeTxt.text ="It's not how nuch we give,but how much we put into givig";
+			card_contTxt.text ="If you choose this card, you can watch rain effect on game map";
+			break;
+		case 6:
+			card_NameTxt.text ="Rainbow Pattern PostCard";
+			card_themeTxt.text ="Everybody wants happiness nobody wants pain, but can have rainbow without the little pain";
+			card_contTxt.text ="If you choose this card, you can watch rainbow effect on Paperplane";
+			break;
+		case 7:
+			card_NameTxt.text ="Snowman Pattern PostCard";
+			card_themeTxt.text ="Gravitaion can not be held responsible for people falling in love";
+			card_contTxt.text ="If you choose this card, you can watch snow effect on game map";
+			break;
+		case 8:
+			card_NameTxt.text ="Sunshine Pattern PostCard";
+			card_themeTxt.text ="You are my sunshine, My only sunshine";
+			card_contTxt.text ="If you choose this card,\n you can watch sunshine effect on game map";
+			break;
+		}
+			
 		menuSelected = 1;
 	}
 
 	//2.Detail
 	public void EquipBtn()
 	{
-		Debug.Log ("equip " +letter_equip.ToString()+"th letter");
+		Debug.Log ("equip " +card_equip.ToString()+"th letter");
 	}
 
 	public void WriteBtn()
@@ -230,33 +326,5 @@ public class Collection : MonoBehaviour {
 
 	}
 
-	public void complete(){
-		switch (inputMenu) 
-		{
-		case 1:
-			GameManager.To_name = inputTxt.text;
-			break;
-		case 2:
-			GameManager.letter_txt = inputTxt.text;
-			break;
-		case 3:
-			GameManager.From_name = inputTxt.text;
-			break;
-		case 4:
-			GameManager.ZipL = inputTxt.text;
-			break;
-		case 5:
-			GameManager.ZipR = inputTxt.text;
-			break;
-		case 6:
-			GameManager.Addr = inputTxt.text;
-			break;
-		}
-
-
-
-		textview.SetActive (false);
-	}
-
-
+	
 }

@@ -85,6 +85,7 @@ GameObject:
   - 212: {fileID: 922954}
   - 114: {fileID: 922953}
   - 60: {fileID: 922952}
+  - 123: {fileID: 922955}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -199,6 +200,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &922955
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 265547859}
+  m_GameObject: {fileID: 922950}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &7365319
 Prefab:
   m_ObjectHideFlags: 0
@@ -825,7 +842,7 @@ Transform:
   m_LocalScale: {x: 1.60000002, y: 1.60000002, z: 1}
   m_Children: []
   m_Father: {fileID: 542069937}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!212 &101099504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1222,6 +1239,7 @@ GameObject:
   - 212: {fileID: 114981117}
   - 114: {fileID: 114981116}
   - 60: {fileID: 114981115}
+  - 123: {fileID: 114981118}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -1336,6 +1354,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &114981118
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 193192265}
+  m_GameObject: {fileID: 114981113}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &119353239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,6 +1381,7 @@ GameObject:
   - 212: {fileID: 119353243}
   - 114: {fileID: 119353242}
   - 60: {fileID: 119353241}
+  - 123: {fileID: 119353244}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -1461,6 +1496,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &119353244
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 291647851}
+  m_GameObject: {fileID: 119353239}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &120666192
 GameObject:
   m_ObjectHideFlags: 0
@@ -1619,6 +1670,7 @@ GameObject:
   - 212: {fileID: 125091711}
   - 114: {fileID: 125091710}
   - 60: {fileID: 125091709}
+  - 123: {fileID: 125091712}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -1733,6 +1785,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &125091712
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1377775480}
+  m_GameObject: {fileID: 125091707}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &135089960
 Prefab:
   m_ObjectHideFlags: 0
@@ -2035,6 +2103,7 @@ GameObject:
   - 212: {fileID: 163757726}
   - 114: {fileID: 163757725}
   - 60: {fileID: 163757724}
+  - 123: {fileID: 163757727}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -2149,6 +2218,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &163757727
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1422150879}
+  m_GameObject: {fileID: 163757722}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &164501492
 GameObject:
   m_ObjectHideFlags: 0
@@ -2428,6 +2513,7 @@ GameObject:
   - 212: {fileID: 183527079}
   - 114: {fileID: 183527078}
   - 60: {fileID: 183527077}
+  - 123: {fileID: 183527080}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -2542,6 +2628,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &183527080
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1461807834}
+  m_GameObject: {fileID: 183527075}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &190051772
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,6 +2655,7 @@ GameObject:
   - 212: {fileID: 190051776}
   - 114: {fileID: 190051775}
   - 60: {fileID: 190051774}
+  - 123: {fileID: 190051777}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -2667,6 +2770,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &190051777
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 498958059}
+  m_GameObject: {fileID: 190051772}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &193192265
 Prefab:
   m_ObjectHideFlags: 0
@@ -2870,6 +2989,7 @@ GameObject:
   - 212: {fileID: 200190297}
   - 114: {fileID: 200190296}
   - 60: {fileID: 200190295}
+  - 123: {fileID: 200190298}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -2984,6 +3104,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &200190298
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 135089960}
+  m_GameObject: {fileID: 200190293}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &205154483
 Prefab:
   m_ObjectHideFlags: 0
@@ -3159,6 +3295,7 @@ GameObject:
   - 212: {fileID: 206284574}
   - 114: {fileID: 206284573}
   - 60: {fileID: 206284572}
+  - 123: {fileID: 206284575}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -3273,6 +3410,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &206284575
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1271946494}
+  m_GameObject: {fileID: 206284570}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &208456093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,7 +3476,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 542069937}
-  m_RootOrder: 9
+  m_RootOrder: 8
 --- !u!114 &208456096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3347,6 +3500,7 @@ GameObject:
   - 212: {fileID: 210005924}
   - 114: {fileID: 210005923}
   - 60: {fileID: 210005922}
+  - 123: {fileID: 210005925}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -3461,6 +3615,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &210005925
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 53219157}
+  m_GameObject: {fileID: 210005920}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &210967851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,6 +4004,7 @@ GameObject:
   - 212: {fileID: 227243434}
   - 114: {fileID: 227243433}
   - 60: {fileID: 227243432}
+  - 123: {fileID: 227243435}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -3948,6 +4119,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &227243435
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1553310642}
+  m_GameObject: {fileID: 227243430}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &233545016
 GameObject:
   m_ObjectHideFlags: 0
@@ -4132,7 +4319,7 @@ Transform:
   m_LocalScale: {x: .705468774, y: .705468774, z: .705468774}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &249815977
 GameObject:
   m_ObjectHideFlags: 0
@@ -4472,6 +4659,7 @@ GameObject:
   - 212: {fileID: 255751639}
   - 114: {fileID: 255751638}
   - 60: {fileID: 255751637}
+  - 123: {fileID: 255751640}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -4586,6 +4774,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &255751640
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 510407706}
+  m_GameObject: {fileID: 255751635}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &256259277
 GameObject:
   m_ObjectHideFlags: 0
@@ -4612,10 +4816,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256259277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 320, y: 3.70000005, z: 5}
+  m_LocalPosition: {x: 323.790009, y: 3.70000005, z: 5}
   m_LocalScale: {x: 1.20000005, y: 1.20000005, z: .699999988}
   m_Children: []
-  m_Father: {fileID: 542069937}
+  m_Father: {fileID: 0}
   m_RootOrder: 5
 --- !u!95 &256259279
 Animator:
@@ -5097,6 +5301,7 @@ GameObject:
   - 212: {fileID: 271141933}
   - 114: {fileID: 271141932}
   - 60: {fileID: 271141931}
+  - 123: {fileID: 271141934}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -5211,6 +5416,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &271141934
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1815314090}
+  m_GameObject: {fileID: 271141929}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &272433530
 Prefab:
   m_ObjectHideFlags: 0
@@ -5270,6 +5491,7 @@ GameObject:
   - 212: {fileID: 274471487}
   - 114: {fileID: 274471486}
   - 60: {fileID: 274471485}
+  - 123: {fileID: 274471488}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -5384,6 +5606,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &274471488
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 221099298}
+  m_GameObject: {fileID: 274471483}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &277083909
 Prefab:
   m_ObjectHideFlags: 0
@@ -5443,6 +5681,7 @@ GameObject:
   - 212: {fileID: 288789911}
   - 114: {fileID: 288789910}
   - 60: {fileID: 288789909}
+  - 123: {fileID: 288789912}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -5557,6 +5796,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &288789912
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748178278}
+  m_GameObject: {fileID: 288789907}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &291183253
 GameObject:
   m_ObjectHideFlags: 0
@@ -5568,6 +5823,7 @@ GameObject:
   - 212: {fileID: 291183257}
   - 114: {fileID: 291183256}
   - 60: {fileID: 291183255}
+  - 123: {fileID: 291183258}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -5682,6 +5938,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &291183258
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 578485543}
+  m_GameObject: {fileID: 291183253}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &291647851
 Prefab:
   m_ObjectHideFlags: 0
@@ -5741,6 +6013,7 @@ GameObject:
   - 212: {fileID: 292197145}
   - 114: {fileID: 292197144}
   - 60: {fileID: 292197143}
+  - 123: {fileID: 292197146}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -5855,6 +6128,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &292197146
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1261525923}
+  m_GameObject: {fileID: 292197141}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &298931479
 Prefab:
   m_ObjectHideFlags: 0
@@ -6113,6 +6402,7 @@ GameObject:
   - 212: {fileID: 305886093}
   - 114: {fileID: 305886092}
   - 60: {fileID: 305886091}
+  - 123: {fileID: 305886094}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -6227,6 +6517,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &305886094
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 277083909}
+  m_GameObject: {fileID: 305886089}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &312427127
 Prefab:
   m_ObjectHideFlags: 0
@@ -6427,7 +6733,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 349064981}
-  - 95: {fileID: 349064980}
   m_Layer: 0
   m_Name: Quilpen3
   m_TagString: Untagged
@@ -6435,21 +6740,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &349064980
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 349064979}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b354a7779ee63f14c800099a5f6ef2d9, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!4 &349064981
 Transform:
   m_ObjectHideFlags: 0
@@ -6465,7 +6755,7 @@ Transform:
   - {fileID: 959646849}
   - {fileID: 1722942547}
   m_Father: {fileID: 542069937}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &356304617
 GameObject:
   m_ObjectHideFlags: 0
@@ -6477,6 +6767,7 @@ GameObject:
   - 212: {fileID: 356304621}
   - 114: {fileID: 356304620}
   - 60: {fileID: 356304619}
+  - 123: {fileID: 356304622}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -6591,6 +6882,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &356304622
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1705446151}
+  m_GameObject: {fileID: 356304617}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &359347058
 Prefab:
   m_ObjectHideFlags: 0
@@ -7101,6 +7408,7 @@ GameObject:
   - 212: {fileID: 380361389}
   - 114: {fileID: 380361388}
   - 60: {fileID: 380361387}
+  - 123: {fileID: 380361390}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -7215,6 +7523,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &380361390
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1312992260}
+  m_GameObject: {fileID: 380361385}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &380440958
 GameObject:
   m_ObjectHideFlags: 0
@@ -7474,6 +7798,7 @@ GameObject:
   - 212: {fileID: 397219815}
   - 114: {fileID: 397219814}
   - 60: {fileID: 397219813}
+  - 123: {fileID: 397219816}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -7588,6 +7913,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &397219816
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1025386488}
+  m_GameObject: {fileID: 397219811}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &397504049
 Prefab:
   m_ObjectHideFlags: 0
@@ -7759,6 +8100,7 @@ GameObject:
   - 212: {fileID: 417740903}
   - 114: {fileID: 417740902}
   - 60: {fileID: 417740901}
+  - 123: {fileID: 417740904}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -7873,6 +8215,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &417740904
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1699629730}
+  m_GameObject: {fileID: 417740899}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &417804531
 Prefab:
   m_ObjectHideFlags: 0
@@ -8266,6 +8624,7 @@ GameObject:
   - 212: {fileID: 453194913}
   - 114: {fileID: 453194912}
   - 60: {fileID: 453194911}
+  - 123: {fileID: 453194914}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -8380,6 +8739,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &453194914
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 859626155}
+  m_GameObject: {fileID: 453194909}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &456647659
 Prefab:
   m_ObjectHideFlags: 0
@@ -8469,7 +8844,7 @@ Transform:
   - {fileID: 301574962}
   - {fileID: 1765513108}
   m_Father: {fileID: 542069937}
-  m_RootOrder: 14
+  m_RootOrder: 13
 --- !u!212 &461825582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8633,6 +9008,7 @@ GameObject:
   - 212: {fileID: 481630616}
   - 114: {fileID: 481630615}
   - 60: {fileID: 481630614}
+  - 123: {fileID: 481630617}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -8747,6 +9123,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &481630617
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 376486751}
+  m_GameObject: {fileID: 481630612}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &486543519
 GameObject:
   m_ObjectHideFlags: 0
@@ -8824,6 +9216,7 @@ GameObject:
   - 212: {fileID: 488371996}
   - 114: {fileID: 488371995}
   - 60: {fileID: 488371994}
+  - 123: {fileID: 488371997}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -8938,6 +9331,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &488371997
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1491001134}
+  m_GameObject: {fileID: 488371992}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &490839929
 Prefab:
   m_ObjectHideFlags: 0
@@ -9399,7 +9808,7 @@ Prefab:
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 196304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-  m_PrefabInternal: {fileID: 1183741684}
+  m_PrefabInternal: {fileID: 586366193}
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 511811153}
@@ -9417,7 +9826,7 @@ GameObject:
 Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-  m_PrefabInternal: {fileID: 1183741684}
+  m_PrefabInternal: {fileID: 586366193}
   m_GameObject: {fileID: 511811152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.1300001, y: -.0299999993, z: 5}
@@ -9430,7 +9839,7 @@ PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6096304, guid: 3991c0e7965401d4ba4157cd6a2915cc,
     type: 2}
-  m_PrefabInternal: {fileID: 1183741684}
+  m_PrefabInternal: {fileID: 586366193}
   m_GameObject: {fileID: 511811152}
   m_Enabled: 1
   m_Material: {fileID: 0}
@@ -9485,7 +9894,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11496304, guid: 3991c0e7965401d4ba4157cd6a2915cc,
     type: 2}
-  m_PrefabInternal: {fileID: 1183741684}
+  m_PrefabInternal: {fileID: 586366193}
   m_GameObject: {fileID: 511811152}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -9502,7 +9911,7 @@ SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 21296304, guid: 3991c0e7965401d4ba4157cd6a2915cc,
     type: 2}
-  m_PrefabInternal: {fileID: 1183741684}
+  m_PrefabInternal: {fileID: 586366193}
   m_GameObject: {fileID: 511811152}
   m_Enabled: 1
   m_CastShadows: 0
@@ -9531,6 +9940,7 @@ GameObject:
   - 212: {fileID: 523316418}
   - 114: {fileID: 523316417}
   - 60: {fileID: 523316416}
+  - 123: {fileID: 523316419}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -9645,6 +10055,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &523316419
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 417804531}
+  m_GameObject: {fileID: 523316414}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &527369861
 GameObject:
   m_ObjectHideFlags: 0
@@ -9839,7 +10265,6 @@ Transform:
   - {fileID: 1222066095}
   - {fileID: 1667046670}
   - {fileID: 110499568}
-  - {fileID: 256259278}
   - {fileID: 1011763243}
   - {fileID: 101099503}
   - {fileID: 912246565}
@@ -10014,6 +10439,7 @@ GameObject:
   - 212: {fileID: 557576831}
   - 114: {fileID: 557576830}
   - 60: {fileID: 557576829}
+  - 123: {fileID: 557576832}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -10128,6 +10554,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &557576832
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 139490090}
+  m_GameObject: {fileID: 557576827}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &574683178
 GameObject:
   m_ObjectHideFlags: 0
@@ -10139,6 +10581,7 @@ GameObject:
   - 212: {fileID: 574683182}
   - 114: {fileID: 574683181}
   - 60: {fileID: 574683180}
+  - 123: {fileID: 574683183}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -10253,6 +10696,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &574683183
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1532834600}
+  m_GameObject: {fileID: 574683178}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &578485543
 Prefab:
   m_ObjectHideFlags: 0
@@ -10352,6 +10811,67 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 68d20e762bbc6b64aa77a64d972e3520, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &586366193
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 958694039}
+    m_Modifications:
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 15.1300001
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.0299999993
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: particle
+      value: 
+      objectReference: {fileID: 1202278456}
+    - target: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_Color.r
+      value: .764705896
+      objectReference: {fileID: 0}
+    - target: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_Color.g
+      value: .764705896
+      objectReference: {fileID: 0}
+    - target: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+      propertyPath: m_Color.b
+      value: .764705896
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
+  m_RootGameObject: {fileID: 511811152}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1001 &589729576
 Prefab:
   m_ObjectHideFlags: 0
@@ -10462,6 +10982,7 @@ GameObject:
   - 212: {fileID: 600751388}
   - 114: {fileID: 600751387}
   - 60: {fileID: 600751386}
+  - 123: {fileID: 600751389}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -10576,6 +11097,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &600751389
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1497694520}
+  m_GameObject: {fileID: 600751384}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &608718243
 GameObject:
   m_ObjectHideFlags: 0
@@ -10587,6 +11124,7 @@ GameObject:
   - 212: {fileID: 608718247}
   - 114: {fileID: 608718246}
   - 60: {fileID: 608718245}
+  - 123: {fileID: 608718248}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -10701,6 +11239,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &608718248
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1679966297}
+  m_GameObject: {fileID: 608718243}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &611116896
 Prefab:
   m_ObjectHideFlags: 0
@@ -10992,6 +11546,7 @@ GameObject:
   - 212: {fileID: 618393987}
   - 114: {fileID: 618393986}
   - 60: {fileID: 618393985}
+  - 123: {fileID: 618393988}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -11106,6 +11661,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &618393988
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 946665946}
+  m_GameObject: {fileID: 618393983}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &618455207
 GameObject:
   m_ObjectHideFlags: 0
@@ -11117,6 +11688,7 @@ GameObject:
   - 212: {fileID: 618455211}
   - 114: {fileID: 618455210}
   - 60: {fileID: 618455209}
+  - 123: {fileID: 618455212}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -11231,6 +11803,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &618455212
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 974439566}
+  m_GameObject: {fileID: 618455207}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &622814580
 Prefab:
   m_ObjectHideFlags: 0
@@ -11727,6 +12315,7 @@ GameObject:
   - 212: {fileID: 643387066}
   - 114: {fileID: 643387065}
   - 60: {fileID: 643387064}
+  - 123: {fileID: 643387067}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -11841,6 +12430,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &643387067
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1074187691}
+  m_GameObject: {fileID: 643387062}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &646479300
 GameObject:
   m_ObjectHideFlags: 0
@@ -11869,7 +12474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!95 &646479302
 Animator:
   serializedVersion: 3
@@ -11979,6 +12584,7 @@ GameObject:
   - 212: {fileID: 652847940}
   - 114: {fileID: 652847939}
   - 60: {fileID: 652847938}
+  - 123: {fileID: 652847941}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -12093,6 +12699,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &652847941
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1701164023}
+  m_GameObject: {fileID: 652847936}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &655321471
 Prefab:
   m_ObjectHideFlags: 0
@@ -12483,6 +13105,7 @@ GameObject:
   - 212: {fileID: 665374303}
   - 114: {fileID: 665374302}
   - 60: {fileID: 665374301}
+  - 123: {fileID: 665374304}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -12597,6 +13220,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &665374304
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 199232979}
+  m_GameObject: {fileID: 665374299}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &665542880
 GameObject:
   m_ObjectHideFlags: 0
@@ -12707,6 +13346,7 @@ GameObject:
   - 212: {fileID: 680301171}
   - 114: {fileID: 680301170}
   - 60: {fileID: 680301169}
+  - 123: {fileID: 680301172}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -12821,6 +13461,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &680301172
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 767434445}
+  m_GameObject: {fileID: 680301167}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &681112765
 GameObject:
   m_ObjectHideFlags: 0
@@ -12996,6 +13652,7 @@ GameObject:
   - 212: {fileID: 695560262}
   - 114: {fileID: 695560261}
   - 60: {fileID: 695560260}
+  - 123: {fileID: 695560263}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -13110,6 +13767,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &695560263
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1199595445}
+  m_GameObject: {fileID: 695560258}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &698421985
 GameObject:
   m_ObjectHideFlags: 0
@@ -13172,6 +13845,7 @@ GameObject:
   - 212: {fileID: 700694560}
   - 114: {fileID: 700694559}
   - 60: {fileID: 700694558}
+  - 123: {fileID: 700694561}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -13286,6 +13960,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &700694561
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 303393267}
+  m_GameObject: {fileID: 700694556}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &701899279
 GameObject:
   m_ObjectHideFlags: 0
@@ -13297,6 +13987,7 @@ GameObject:
   - 212: {fileID: 701899283}
   - 114: {fileID: 701899282}
   - 60: {fileID: 701899281}
+  - 123: {fileID: 701899284}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -13411,6 +14102,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &701899284
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 205154483}
+  m_GameObject: {fileID: 701899279}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &706240569
 GameObject:
   m_ObjectHideFlags: 0
@@ -13443,7 +14150,7 @@ Transform:
   - {fileID: 1785691307}
   - {fileID: 1168529570}
   m_Father: {fileID: 542069937}
-  m_RootOrder: 15
+  m_RootOrder: 14
 --- !u!212 &706240571
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13477,6 +14184,7 @@ GameObject:
   - 212: {fileID: 712448589}
   - 114: {fileID: 712448588}
   - 60: {fileID: 712448587}
+  - 123: {fileID: 712448590}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -13591,6 +14299,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &712448590
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1424608623}
+  m_GameObject: {fileID: 712448585}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &712580413
 GameObject:
   m_ObjectHideFlags: 0
@@ -13602,6 +14326,7 @@ GameObject:
   - 212: {fileID: 712580417}
   - 114: {fileID: 712580416}
   - 60: {fileID: 712580415}
+  - 123: {fileID: 712580418}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -13716,6 +14441,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &712580418
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1856913125}
+  m_GameObject: {fileID: 712580413}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &714011867
 GameObject:
   m_ObjectHideFlags: 0
@@ -13727,6 +14468,7 @@ GameObject:
   - 212: {fileID: 714011871}
   - 114: {fileID: 714011870}
   - 60: {fileID: 714011869}
+  - 123: {fileID: 714011872}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -13841,6 +14583,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &714011872
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 383325983}
+  m_GameObject: {fileID: 714011867}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &722519047
 GameObject:
   m_ObjectHideFlags: 0
@@ -13954,6 +14712,7 @@ GameObject:
   - 212: {fileID: 725773215}
   - 114: {fileID: 725773214}
   - 60: {fileID: 725773213}
+  - 123: {fileID: 725773216}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -14068,6 +14827,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &725773216
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 139701231}
+  m_GameObject: {fileID: 725773211}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &729226005
 GameObject:
   m_ObjectHideFlags: 0
@@ -14130,6 +14905,7 @@ GameObject:
   - 212: {fileID: 734888540}
   - 114: {fileID: 734888539}
   - 60: {fileID: 734888538}
+  - 123: {fileID: 734888541}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -14244,6 +15020,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &734888541
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 611116896}
+  m_GameObject: {fileID: 734888536}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &734952896
 GameObject:
   m_ObjectHideFlags: 0
@@ -14255,6 +15047,7 @@ GameObject:
   - 212: {fileID: 734952900}
   - 114: {fileID: 734952899}
   - 60: {fileID: 734952898}
+  - 123: {fileID: 734952901}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -14369,6 +15162,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &734952901
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 655321471}
+  m_GameObject: {fileID: 734952896}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &735940503
 Prefab:
   m_ObjectHideFlags: 0
@@ -15103,6 +15912,7 @@ GameObject:
   - 212: {fileID: 823021929}
   - 114: {fileID: 823021928}
   - 60: {fileID: 823021927}
+  - 123: {fileID: 823021930}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -15217,6 +16027,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &823021930
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 622814580}
+  m_GameObject: {fileID: 823021925}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &824093636
 GameObject:
   m_ObjectHideFlags: 0
@@ -15279,6 +16105,7 @@ GameObject:
   - 212: {fileID: 827484362}
   - 114: {fileID: 827484361}
   - 60: {fileID: 827484360}
+  - 123: {fileID: 827484363}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -15393,6 +16220,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &827484363
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 915200537}
+  m_GameObject: {fileID: 827484358}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &829738902
 GameObject:
   m_ObjectHideFlags: 0
@@ -15633,6 +16476,7 @@ GameObject:
   - 212: {fileID: 841941337}
   - 114: {fileID: 841941336}
   - 60: {fileID: 841941335}
+  - 123: {fileID: 841941338}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -15747,6 +16591,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &841941338
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1911459090}
+  m_GameObject: {fileID: 841941333}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &844443366
 GameObject:
   m_ObjectHideFlags: 0
@@ -15904,6 +16764,7 @@ GameObject:
   - 212: {fileID: 855980899}
   - 114: {fileID: 855980898}
   - 60: {fileID: 855980897}
+  - 123: {fileID: 855980900}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -16018,6 +16879,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &855980900
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 62907469}
+  m_GameObject: {fileID: 855980895}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &856842670
 GameObject:
   m_ObjectHideFlags: 0
@@ -16359,6 +17236,7 @@ GameObject:
   - 212: {fileID: 862280298}
   - 114: {fileID: 862280297}
   - 60: {fileID: 862280296}
+  - 123: {fileID: 862280299}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -16473,6 +17351,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &862280299
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 348967625}
+  m_GameObject: {fileID: 862280294}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &866410569
 GameObject:
   m_ObjectHideFlags: 0
@@ -16535,6 +17429,7 @@ GameObject:
   - 212: {fileID: 866855945}
   - 114: {fileID: 866855944}
   - 60: {fileID: 866855943}
+  - 123: {fileID: 866855946}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -16649,6 +17544,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &866855946
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 589729576}
+  m_GameObject: {fileID: 866855941}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &876775515
 GameObject:
   m_ObjectHideFlags: 0
@@ -16864,6 +17775,7 @@ GameObject:
   - 212: {fileID: 896807462}
   - 114: {fileID: 896807461}
   - 60: {fileID: 896807460}
+  - 123: {fileID: 896807463}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -16978,6 +17890,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &896807463
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2146379914}
+  m_GameObject: {fileID: 896807458}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &899880491
 GameObject:
   m_ObjectHideFlags: 0
@@ -17040,6 +17968,7 @@ GameObject:
   - 212: {fileID: 900064089}
   - 114: {fileID: 900064088}
   - 60: {fileID: 900064087}
+  - 123: {fileID: 900064090}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -17154,6 +18083,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &900064090
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 851730056}
+  m_GameObject: {fileID: 900064085}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &900856269
 GameObject:
   m_ObjectHideFlags: 0
@@ -17165,6 +18110,7 @@ GameObject:
   - 212: {fileID: 900856273}
   - 114: {fileID: 900856272}
   - 60: {fileID: 900856271}
+  - 123: {fileID: 900856274}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -17279,6 +18225,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &900856274
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1393489317}
+  m_GameObject: {fileID: 900856269}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &905044238
 GameObject:
   m_ObjectHideFlags: 0
@@ -17290,6 +18252,7 @@ GameObject:
   - 212: {fileID: 905044242}
   - 114: {fileID: 905044241}
   - 60: {fileID: 905044240}
+  - 123: {fileID: 905044243}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -17404,6 +18367,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &905044243
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 305168633}
+  m_GameObject: {fileID: 905044238}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &906145157
 GameObject:
   m_ObjectHideFlags: 0
@@ -17708,7 +18687,7 @@ Transform:
   m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 542069937}
-  m_RootOrder: 8
+  m_RootOrder: 7
 --- !u!1 &913508157
 GameObject:
   m_ObjectHideFlags: 0
@@ -18030,6 +19009,7 @@ GameObject:
   - 212: {fileID: 919137362}
   - 114: {fileID: 919137361}
   - 60: {fileID: 919137360}
+  - 123: {fileID: 919137363}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -18144,6 +19124,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &919137363
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1182167737}
+  m_GameObject: {fileID: 919137358}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &921317917
 Prefab:
   m_ObjectHideFlags: 0
@@ -18735,7 +19731,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 958694039}
-  - 95: {fileID: 958694040}
   m_Layer: 0
   m_Name: Quilpen1
   m_TagString: Untagged
@@ -18882,22 +19877,7 @@ Transform:
   - {fileID: 288789908}
   - {fileID: 1102762928}
   m_Father: {fileID: 542069937}
-  m_RootOrder: 12
---- !u!95 &958694040
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 958694038}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5200331d2c505de45aaf5dcdfd64a544, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_RootOrder: 11
 --- !u!1 &959646848
 GameObject:
   m_ObjectHideFlags: 0
@@ -19369,6 +20349,7 @@ GameObject:
   - 212: {fileID: 988293368}
   - 114: {fileID: 988293367}
   - 60: {fileID: 988293366}
+  - 123: {fileID: 988293369}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -19483,6 +20464,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &988293369
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 633228364}
+  m_GameObject: {fileID: 988293364}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &989423462
 GameObject:
   m_ObjectHideFlags: 0
@@ -19494,6 +20491,7 @@ GameObject:
   - 212: {fileID: 989423466}
   - 114: {fileID: 989423465}
   - 60: {fileID: 989423464}
+  - 123: {fileID: 989423467}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -19608,6 +20606,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &989423467
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1704606132}
+  m_GameObject: {fileID: 989423462}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &992893268
 GameObject:
   m_ObjectHideFlags: 0
@@ -19782,6 +20796,7 @@ GameObject:
   - 212: {fileID: 998482585}
   - 114: {fileID: 998482584}
   - 60: {fileID: 998482583}
+  - 123: {fileID: 998482586}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -19896,6 +20911,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &998482586
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1578544747}
+  m_GameObject: {fileID: 998482581}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &998620947
 GameObject:
   m_ObjectHideFlags: 0
@@ -19907,6 +20938,7 @@ GameObject:
   - 212: {fileID: 998620951}
   - 114: {fileID: 998620950}
   - 60: {fileID: 998620949}
+  - 123: {fileID: 998620952}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -20021,6 +21053,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &998620952
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 381097615}
+  m_GameObject: {fileID: 998620947}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1004424055
 GameObject:
   m_ObjectHideFlags: 0
@@ -20201,7 +21249,7 @@ Transform:
   m_LocalScale: {x: .428570986, y: .428570986, z: .25}
   m_Children: []
   m_Father: {fileID: 542069937}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!60 &1011763244
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -20542,6 +21590,7 @@ GameObject:
   - 212: {fileID: 1031857813}
   - 114: {fileID: 1031857812}
   - 60: {fileID: 1031857811}
+  - 123: {fileID: 1031857814}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -20656,6 +21705,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1031857814
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 777126956}
+  m_GameObject: {fileID: 1031857809}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1035769756
 GameObject:
   m_ObjectHideFlags: 0
@@ -20798,7 +21863,7 @@ RectTransform:
   m_Children:
   - {fileID: 1697747069}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -20869,6 +21934,7 @@ GameObject:
   - 212: {fileID: 1048599595}
   - 114: {fileID: 1048599594}
   - 60: {fileID: 1048599593}
+  - 123: {fileID: 1048599596}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -20983,6 +22049,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1048599596
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1247383394}
+  m_GameObject: {fileID: 1048599591}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1053405519
 GameObject:
   m_ObjectHideFlags: 0
@@ -20994,6 +22076,7 @@ GameObject:
   - 212: {fileID: 1053405523}
   - 114: {fileID: 1053405522}
   - 60: {fileID: 1053405521}
+  - 123: {fileID: 1053405524}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -21108,6 +22191,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1053405524
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1912798222}
+  m_GameObject: {fileID: 1053405519}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1056549341
 GameObject:
   m_ObjectHideFlags: 0
@@ -21320,6 +22419,7 @@ GameObject:
   - 212: {fileID: 1073443472}
   - 114: {fileID: 1073443471}
   - 60: {fileID: 1073443470}
+  - 123: {fileID: 1073443473}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -21434,6 +22534,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1073443473
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 743588021}
+  m_GameObject: {fileID: 1073443468}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1074187691
 Prefab:
   m_ObjectHideFlags: 0
@@ -21921,6 +23037,7 @@ GameObject:
   - 212: {fileID: 1102762931}
   - 114: {fileID: 1102762930}
   - 60: {fileID: 1102762929}
+  - 123: {fileID: 1102762932}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -22035,6 +23152,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1102762932
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2108944811}
+  m_GameObject: {fileID: 1102762927}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1104540324
 GameObject:
   m_ObjectHideFlags: 0
@@ -22107,6 +23240,7 @@ GameObject:
   - 212: {fileID: 1107849296}
   - 114: {fileID: 1107849295}
   - 60: {fileID: 1107849294}
+  - 123: {fileID: 1107849297}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -22221,6 +23355,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1107849297
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1408987717}
+  m_GameObject: {fileID: 1107849292}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1115471816
 GameObject:
   m_ObjectHideFlags: 0
@@ -22232,6 +23382,7 @@ GameObject:
   - 212: {fileID: 1115471820}
   - 114: {fileID: 1115471819}
   - 60: {fileID: 1115471818}
+  - 123: {fileID: 1115471821}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -22346,6 +23497,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1115471821
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 504345961}
+  m_GameObject: {fileID: 1115471816}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1120389550
 GameObject:
   m_ObjectHideFlags: 0
@@ -23073,6 +24240,7 @@ GameObject:
   - 212: {fileID: 1169767013}
   - 114: {fileID: 1169767012}
   - 60: {fileID: 1169767011}
+  - 123: {fileID: 1169767014}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -23187,6 +24355,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1169767014
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1754499702}
+  m_GameObject: {fileID: 1169767009}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1176419318
 GameObject:
   m_ObjectHideFlags: 0
@@ -23298,54 +24482,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
   m_RootGameObject: {fileID: 919137358}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
---- !u!1001 &1183741684
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 958694039}
-    m_Modifications:
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 15.1300001
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -.0299999993
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11496304, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-      propertyPath: particle
-      value: 
-      objectReference: {fileID: 1202278456}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 3991c0e7965401d4ba4157cd6a2915cc, type: 2}
-  m_RootGameObject: {fileID: 511811152}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &1187678300
@@ -23583,6 +24719,7 @@ GameObject:
   - 212: {fileID: 1195922032}
   - 114: {fileID: 1195922031}
   - 60: {fileID: 1195922030}
+  - 123: {fileID: 1195922033}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -23697,6 +24834,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1195922033
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1333955279}
+  m_GameObject: {fileID: 1195922028}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1197846525
 GameObject:
   m_ObjectHideFlags: 0
@@ -24918,7 +26071,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 542069937}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &1209470629
 GameObject:
   m_ObjectHideFlags: 0
@@ -24930,6 +26083,7 @@ GameObject:
   - 212: {fileID: 1209470633}
   - 114: {fileID: 1209470632}
   - 60: {fileID: 1209470631}
+  - 123: {fileID: 1209470634}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -25044,6 +26198,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1209470634
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 543415530}
+  m_GameObject: {fileID: 1209470629}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1209496228
 GameObject:
   m_ObjectHideFlags: 0
@@ -25055,6 +26225,7 @@ GameObject:
   - 212: {fileID: 1209496232}
   - 114: {fileID: 1209496231}
   - 60: {fileID: 1209496230}
+  - 123: {fileID: 1209496233}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -25169,6 +26340,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1209496233
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2041641145}
+  m_GameObject: {fileID: 1209496228}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1209675922
 GameObject:
   m_ObjectHideFlags: 0
@@ -25347,6 +26534,7 @@ GameObject:
   - 212: {fileID: 1213076864}
   - 114: {fileID: 1213076863}
   - 60: {fileID: 1213076862}
+  - 123: {fileID: 1213076865}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -25461,6 +26649,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1213076865
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1297109019}
+  m_GameObject: {fileID: 1213076860}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1214265004
 GameObject:
   m_ObjectHideFlags: 0
@@ -25707,6 +26911,7 @@ GameObject:
   - 212: {fileID: 1223057205}
   - 114: {fileID: 1223057204}
   - 60: {fileID: 1223057203}
+  - 123: {fileID: 1223057206}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -25821,6 +27026,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1223057206
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1064021511}
+  m_GameObject: {fileID: 1223057201}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1223185836
 GameObject:
   m_ObjectHideFlags: 0
@@ -26057,6 +27278,7 @@ GameObject:
   - 212: {fileID: 1228726951}
   - 114: {fileID: 1228726950}
   - 60: {fileID: 1228726949}
+  - 123: {fileID: 1228726952}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -26171,6 +27393,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1228726952
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 312427127}
+  m_GameObject: {fileID: 1228726947}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1229189792
 Prefab:
   m_ObjectHideFlags: 0
@@ -26627,6 +27865,7 @@ GameObject:
   - 212: {fileID: 1274598987}
   - 114: {fileID: 1274598986}
   - 60: {fileID: 1274598985}
+  - 123: {fileID: 1274598988}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -26741,6 +27980,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1274598988
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 505127807}
+  m_GameObject: {fileID: 1274598983}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1278468902
 Prefab:
   m_ObjectHideFlags: 0
@@ -26800,6 +28055,7 @@ GameObject:
   - 212: {fileID: 1278614316}
   - 114: {fileID: 1278614315}
   - 60: {fileID: 1278614314}
+  - 123: {fileID: 1278614317}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -26914,6 +28170,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1278614317
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 326093247}
+  m_GameObject: {fileID: 1278614312}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1283500662
 Prefab:
   m_ObjectHideFlags: 0
@@ -26973,6 +28245,7 @@ GameObject:
   - 212: {fileID: 1286474829}
   - 114: {fileID: 1286474828}
   - 60: {fileID: 1286474827}
+  - 123: {fileID: 1286474830}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -27087,6 +28360,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1286474830
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 298931479}
+  m_GameObject: {fileID: 1286474825}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1291356200
 GameObject:
   m_ObjectHideFlags: 0
@@ -27098,6 +28387,7 @@ GameObject:
   - 212: {fileID: 1291356204}
   - 114: {fileID: 1291356203}
   - 60: {fileID: 1291356202}
+  - 123: {fileID: 1291356205}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -27212,6 +28502,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1291356205
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1269476334}
+  m_GameObject: {fileID: 1291356200}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1297109019
 Prefab:
   m_ObjectHideFlags: 0
@@ -27271,6 +28577,7 @@ GameObject:
   - 212: {fileID: 1297215630}
   - 114: {fileID: 1297215629}
   - 60: {fileID: 1297215628}
+  - 123: {fileID: 1297215631}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -27385,6 +28692,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1297215631
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1951835805}
+  m_GameObject: {fileID: 1297215626}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1303173992
 Prefab:
   m_ObjectHideFlags: 0
@@ -27495,6 +28818,7 @@ GameObject:
   - 212: {fileID: 1307164240}
   - 114: {fileID: 1307164239}
   - 60: {fileID: 1307164238}
+  - 123: {fileID: 1307164241}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -27609,6 +28933,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1307164241
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 780689966}
+  m_GameObject: {fileID: 1307164236}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1309415184
 Prefab:
   m_ObjectHideFlags: 0
@@ -27734,7 +29074,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!114 &1310993699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27766,6 +29106,7 @@ GameObject:
   - 212: {fileID: 1311535930}
   - 114: {fileID: 1311535929}
   - 60: {fileID: 1311535928}
+  - 123: {fileID: 1311535932}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -27880,6 +29221,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 958694039}
   m_RootOrder: 3
+--- !u!123 &1311535932
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1229189792}
+  m_GameObject: {fileID: 1311535927}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1312992260
 Prefab:
   m_ObjectHideFlags: 0
@@ -28155,6 +29512,7 @@ GameObject:
   - 212: {fileID: 1352074209}
   - 114: {fileID: 1352074208}
   - 60: {fileID: 1352074207}
+  - 123: {fileID: 1352074210}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -28269,6 +29627,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1352074210
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 950392999}
+  m_GameObject: {fileID: 1352074205}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1356913501
 GameObject:
   m_ObjectHideFlags: 0
@@ -29509,6 +30883,7 @@ GameObject:
   - 212: {fileID: 1414123875}
   - 114: {fileID: 1414123874}
   - 60: {fileID: 1414123873}
+  - 123: {fileID: 1414123876}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -29623,6 +30998,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1414123876
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1989284441}
+  m_GameObject: {fileID: 1414123871}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1417748432
 Prefab:
   m_ObjectHideFlags: 0
@@ -29938,6 +31329,7 @@ GameObject:
   - 212: {fileID: 1450384766}
   - 114: {fileID: 1450384765}
   - 60: {fileID: 1450384764}
+  - 123: {fileID: 1450384767}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -30052,6 +31444,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1450384767
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 792373754}
+  m_GameObject: {fileID: 1450384762}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1452581895
 GameObject:
   m_ObjectHideFlags: 0
@@ -30326,6 +31734,7 @@ GameObject:
   - 212: {fileID: 1462481256}
   - 114: {fileID: 1462481255}
   - 60: {fileID: 1462481254}
+  - 123: {fileID: 1462481257}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -30440,6 +31849,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1462481257
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1586414340}
+  m_GameObject: {fileID: 1462481252}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1474397567
 GameObject:
   m_ObjectHideFlags: 0
@@ -30451,6 +31876,7 @@ GameObject:
   - 212: {fileID: 1474397571}
   - 114: {fileID: 1474397570}
   - 60: {fileID: 1474397569}
+  - 123: {fileID: 1474397572}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -30565,6 +31991,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1474397572
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1586409872}
+  m_GameObject: {fileID: 1474397567}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1474966021
 Prefab:
   m_ObjectHideFlags: 0
@@ -30624,6 +32066,7 @@ GameObject:
   - 212: {fileID: 1483424347}
   - 114: {fileID: 1483424346}
   - 60: {fileID: 1483424345}
+  - 123: {fileID: 1483424348}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -30738,6 +32181,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1483424348
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 234814675}
+  m_GameObject: {fileID: 1483424343}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1491001134
 Prefab:
   m_ObjectHideFlags: 0
@@ -30845,6 +32304,7 @@ GameObject:
   - 212: {fileID: 1498208708}
   - 114: {fileID: 1498208707}
   - 60: {fileID: 1498208706}
+  - 123: {fileID: 1498208709}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -30959,6 +32419,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1498208709
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1824322922}
+  m_GameObject: {fileID: 1498208704}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1499835735
 Prefab:
   m_ObjectHideFlags: 0
@@ -31018,6 +32494,7 @@ GameObject:
   - 212: {fileID: 1511349871}
   - 114: {fileID: 1511349870}
   - 60: {fileID: 1511349869}
+  - 123: {fileID: 1511349872}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -31132,6 +32609,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1511349872
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1663381726}
+  m_GameObject: {fileID: 1511349867}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1512802583
 GameObject:
   m_ObjectHideFlags: 0
@@ -31606,6 +33099,7 @@ GameObject:
   - 212: {fileID: 1539859328}
   - 114: {fileID: 1539859327}
   - 60: {fileID: 1539859326}
+  - 123: {fileID: 1539859329}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -31720,6 +33214,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1539859329
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2037765172}
+  m_GameObject: {fileID: 1539859324}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1544806248
 GameObject:
   m_ObjectHideFlags: 0
@@ -32048,6 +33558,7 @@ GameObject:
   - 212: {fileID: 1559591954}
   - 114: {fileID: 1559591953}
   - 60: {fileID: 1559591952}
+  - 123: {fileID: 1559591955}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -32162,6 +33673,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1559591955
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1474966021}
+  m_GameObject: {fileID: 1559591950}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1565057057
 GameObject:
   m_ObjectHideFlags: 0
@@ -32173,6 +33700,7 @@ GameObject:
   - 212: {fileID: 1565057061}
   - 114: {fileID: 1565057060}
   - 60: {fileID: 1565057059}
+  - 123: {fileID: 1565057062}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -32287,6 +33815,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1565057062
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1126215136}
+  m_GameObject: {fileID: 1565057057}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1567587716
 GameObject:
   m_ObjectHideFlags: 0
@@ -32416,6 +33960,7 @@ GameObject:
   - 212: {fileID: 1572534392}
   - 114: {fileID: 1572534391}
   - 60: {fileID: 1572534390}
+  - 123: {fileID: 1572534393}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -32530,6 +34075,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1572534393
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 360328480}
+  m_GameObject: {fileID: 1572534388}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1578544747
 Prefab:
   m_ObjectHideFlags: 0
@@ -32862,6 +34423,7 @@ GameObject:
   - 212: {fileID: 1597382496}
   - 114: {fileID: 1597382495}
   - 60: {fileID: 1597382494}
+  - 123: {fileID: 1597382497}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -32976,6 +34538,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1597382497
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1401601467}
+  m_GameObject: {fileID: 1597382492}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1604364813
 GameObject:
   m_ObjectHideFlags: 0
@@ -33086,6 +34664,7 @@ GameObject:
   - 212: {fileID: 1611003911}
   - 114: {fileID: 1611003910}
   - 60: {fileID: 1611003909}
+  - 123: {fileID: 1611003912}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -33200,6 +34779,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1611003912
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 397504049}
+  m_GameObject: {fileID: 1611003907}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1621300639
 Prefab:
   m_ObjectHideFlags: 0
@@ -33972,6 +35567,7 @@ GameObject:
   - 212: {fileID: 1653157409}
   - 114: {fileID: 1653157408}
   - 60: {fileID: 1653157407}
+  - 123: {fileID: 1653157410}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -34086,6 +35682,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1653157410
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1429961649}
+  m_GameObject: {fileID: 1653157405}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1659877590
 GameObject:
   m_ObjectHideFlags: 0
@@ -34554,6 +36166,7 @@ GameObject:
   - 212: {fileID: 1671006860}
   - 114: {fileID: 1671006859}
   - 60: {fileID: 1671006858}
+  - 123: {fileID: 1671006861}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -34668,6 +36281,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1671006861
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 338634649}
+  m_GameObject: {fileID: 1671006856}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1672612867
 GameObject:
   m_ObjectHideFlags: 0
@@ -34679,6 +36308,7 @@ GameObject:
   - 212: {fileID: 1672612871}
   - 114: {fileID: 1672612870}
   - 60: {fileID: 1672612869}
+  - 123: {fileID: 1672612872}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -34793,6 +36423,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1672612872
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1664594535}
+  m_GameObject: {fileID: 1672612867}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1677274331
 GameObject:
   m_ObjectHideFlags: 0
@@ -34823,7 +36469,7 @@ RectTransform:
   m_Children:
   - {fileID: 1792131294}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -34894,6 +36540,7 @@ GameObject:
   - 212: {fileID: 1678908063}
   - 114: {fileID: 1678908062}
   - 60: {fileID: 1678908061}
+  - 123: {fileID: 1678908064}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -35008,6 +36655,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1678908064
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 123741175}
+  m_GameObject: {fileID: 1678908059}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1679966297
 Prefab:
   m_ObjectHideFlags: 0
@@ -35244,6 +36907,7 @@ GameObject:
   - 212: {fileID: 1688637603}
   - 114: {fileID: 1688637602}
   - 60: {fileID: 1688637601}
+  - 123: {fileID: 1688637604}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -35358,6 +37022,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1688637604
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1908344543}
+  m_GameObject: {fileID: 1688637599}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1690167091
 GameObject:
   m_ObjectHideFlags: 0
@@ -35633,6 +37313,7 @@ GameObject:
   - 212: {fileID: 1703755359}
   - 114: {fileID: 1703755358}
   - 60: {fileID: 1703755357}
+  - 123: {fileID: 1703755360}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -35747,6 +37428,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1703755360
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1653006836}
+  m_GameObject: {fileID: 1703755355}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1704606132
 Prefab:
   m_ObjectHideFlags: 0
@@ -35854,6 +37551,7 @@ GameObject:
   - 212: {fileID: 1710197204}
   - 114: {fileID: 1710197203}
   - 60: {fileID: 1710197202}
+  - 123: {fileID: 1710197205}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -35968,6 +37666,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1710197205
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1226021229}
+  m_GameObject: {fileID: 1710197200}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1712359128
 GameObject:
   m_ObjectHideFlags: 0
@@ -35979,6 +37693,7 @@ GameObject:
   - 212: {fileID: 1712359132}
   - 114: {fileID: 1712359131}
   - 60: {fileID: 1712359130}
+  - 123: {fileID: 1712359133}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -36093,6 +37808,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1712359133
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2011723761}
+  m_GameObject: {fileID: 1712359128}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1715292911
 GameObject:
   m_ObjectHideFlags: 0
@@ -36104,6 +37835,7 @@ GameObject:
   - 212: {fileID: 1715292915}
   - 114: {fileID: 1715292914}
   - 60: {fileID: 1715292913}
+  - 123: {fileID: 1715292916}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -36218,6 +37950,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1715292916
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 272433530}
+  m_GameObject: {fileID: 1715292911}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1715867469
 GameObject:
   m_ObjectHideFlags: 0
@@ -36306,7 +38054,7 @@ RectTransform:
   - {fileID: 1176419319}
   - {fileID: 835375278}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -36552,6 +38300,7 @@ GameObject:
   - 212: {fileID: 1738061484}
   - 114: {fileID: 1738061483}
   - 60: {fileID: 1738061482}
+  - 123: {fileID: 1738061485}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -36666,6 +38415,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1738061485
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1231885822}
+  m_GameObject: {fileID: 1738061480}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1746309018
 GameObject:
   m_ObjectHideFlags: 0
@@ -36728,6 +38493,7 @@ GameObject:
   - 212: {fileID: 1746333852}
   - 114: {fileID: 1746333851}
   - 60: {fileID: 1746333850}
+  - 123: {fileID: 1746333853}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -36842,6 +38608,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1746333853
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 137411740}
+  m_GameObject: {fileID: 1746333848}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1747606983
 GameObject:
   m_ObjectHideFlags: 0
@@ -36853,6 +38635,7 @@ GameObject:
   - 212: {fileID: 1747606987}
   - 114: {fileID: 1747606986}
   - 60: {fileID: 1747606985}
+  - 123: {fileID: 1747606988}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -36967,6 +38750,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1747606988
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1700355237}
+  m_GameObject: {fileID: 1747606983}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1748178278
 Prefab:
   m_ObjectHideFlags: 0
@@ -37026,6 +38825,7 @@ GameObject:
   - 212: {fileID: 1749868864}
   - 114: {fileID: 1749868863}
   - 60: {fileID: 1749868862}
+  - 123: {fileID: 1749868865}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -37140,6 +38940,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1749868865
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 834612926}
+  m_GameObject: {fileID: 1749868860}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1754499702
 Prefab:
   m_ObjectHideFlags: 0
@@ -37723,6 +39539,7 @@ GameObject:
   - 212: {fileID: 1788934566}
   - 114: {fileID: 1788934565}
   - 60: {fileID: 1788934564}
+  - 123: {fileID: 1788934567}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -37837,6 +39654,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1788934567
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1303173992}
+  m_GameObject: {fileID: 1788934562}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1789428292
 GameObject:
   m_ObjectHideFlags: 0
@@ -38169,6 +40002,7 @@ GameObject:
   - 212: {fileID: 1817452980}
   - 114: {fileID: 1817452979}
   - 60: {fileID: 1817452978}
+  - 123: {fileID: 1817452981}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -38283,6 +40117,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1817452981
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 86666112}
+  m_GameObject: {fileID: 1817452976}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1824322922
 Prefab:
   m_ObjectHideFlags: 0
@@ -38464,6 +40314,7 @@ GameObject:
   - 212: {fileID: 1843646413}
   - 114: {fileID: 1843646412}
   - 60: {fileID: 1843646411}
+  - 123: {fileID: 1843646414}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -38578,6 +40429,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1843646414
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1939756304}
+  m_GameObject: {fileID: 1843646409}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1845989518
 GameObject:
   m_ObjectHideFlags: 0
@@ -38690,6 +40557,7 @@ GameObject:
   - 212: {fileID: 1848357068}
   - 114: {fileID: 1848357067}
   - 60: {fileID: 1848357066}
+  - 123: {fileID: 1848357069}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -38804,6 +40672,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1848357069
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1513203301}
+  m_GameObject: {fileID: 1848357064}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1856913125
 Prefab:
   m_ObjectHideFlags: 0
@@ -39146,7 +41030,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1881189049}
-  - 95: {fileID: 1881189050}
   m_Layer: 0
   m_Name: Quilpen2
   m_TagString: Untagged
@@ -39195,22 +41078,7 @@ Transform:
   - {fileID: 661975449}
   - {fileID: 1124789451}
   m_Father: {fileID: 542069937}
-  m_RootOrder: 10
---- !u!95 &1881189050
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1881189048}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0dca0c74e3c6faf46819b38043652dde, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
+  m_RootOrder: 9
 --- !u!1001 &1894114251
 Prefab:
   m_ObjectHideFlags: 0
@@ -39270,6 +41138,7 @@ GameObject:
   - 212: {fileID: 1894298694}
   - 114: {fileID: 1894298693}
   - 60: {fileID: 1894298692}
+  - 123: {fileID: 1894298695}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -39384,6 +41253,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1894298695
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1926548634}
+  m_GameObject: {fileID: 1894298690}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1895180378
 GameObject:
   m_ObjectHideFlags: 0
@@ -39395,6 +41280,7 @@ GameObject:
   - 212: {fileID: 1895180381}
   - 114: {fileID: 1895180380}
   - 60: {fileID: 1895180379}
+  - 123: {fileID: 1895180383}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -39509,6 +41395,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 958694039}
   m_RootOrder: 34
+--- !u!123 &1895180383
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 914315316}
+  m_GameObject: {fileID: 1895180378}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1903643894
 Prefab:
   m_ObjectHideFlags: 0
@@ -39821,6 +41723,7 @@ GameObject:
   - 212: {fileID: 1916465623}
   - 114: {fileID: 1916465622}
   - 60: {fileID: 1916465621}
+  - 123: {fileID: 1916465624}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -39935,6 +41838,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1916465624
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2077533665}
+  m_GameObject: {fileID: 1916465619}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1916529092
 GameObject:
   m_ObjectHideFlags: 0
@@ -39946,6 +41865,7 @@ GameObject:
   - 212: {fileID: 1916529096}
   - 114: {fileID: 1916529095}
   - 60: {fileID: 1916529094}
+  - 123: {fileID: 1916529097}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -40060,6 +41980,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1916529097
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1408773321}
+  m_GameObject: {fileID: 1916529092}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1919554292
 GameObject:
   m_ObjectHideFlags: 0
@@ -40170,6 +42106,7 @@ GameObject:
   - 212: {fileID: 1937881225}
   - 114: {fileID: 1937881224}
   - 60: {fileID: 1937881223}
+  - 123: {fileID: 1937881226}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -40284,6 +42221,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1937881226
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1915459598}
+  m_GameObject: {fileID: 1937881221}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1939756304
 Prefab:
   m_ObjectHideFlags: 0
@@ -40799,6 +42752,7 @@ GameObject:
   - 212: {fileID: 1967755700}
   - 114: {fileID: 1967755699}
   - 60: {fileID: 1967755698}
+  - 123: {fileID: 1967755701}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -40913,6 +42867,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1967755701
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 735940503}
+  m_GameObject: {fileID: 1967755696}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1971024036
 GameObject:
   m_ObjectHideFlags: 0
@@ -40990,6 +42960,7 @@ GameObject:
   - 212: {fileID: 1986828807}
   - 114: {fileID: 1986828806}
   - 60: {fileID: 1986828805}
+  - 123: {fileID: 1986828808}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -41104,6 +43075,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1986828808
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1993009401}
+  m_GameObject: {fileID: 1986828803}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1987753809
 GameObject:
   m_ObjectHideFlags: 0
@@ -41282,6 +43269,7 @@ GameObject:
   - 212: {fileID: 1988316796}
   - 114: {fileID: 1988316795}
   - 60: {fileID: 1988316794}
+  - 123: {fileID: 1988316797}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -41396,6 +43384,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1988316797
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1372209257}
+  m_GameObject: {fileID: 1988316792}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &1989284441
 Prefab:
   m_ObjectHideFlags: 0
@@ -41503,6 +43507,7 @@ GameObject:
   - 212: {fileID: 1993343838}
   - 114: {fileID: 1993343837}
   - 60: {fileID: 1993343836}
+  - 123: {fileID: 1993343839}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -41617,6 +43622,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &1993343839
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 685972898}
+  m_GameObject: {fileID: 1993343834}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &1994404610
 GameObject:
   m_ObjectHideFlags: 0
@@ -41679,6 +43700,7 @@ GameObject:
   - 212: {fileID: 2002076893}
   - 114: {fileID: 2002076892}
   - 60: {fileID: 2002076891}
+  - 123: {fileID: 2002076894}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -41793,6 +43815,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &2002076894
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 861833343}
+  m_GameObject: {fileID: 2002076889}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &2006060889
 GameObject:
   m_ObjectHideFlags: 0
@@ -42548,6 +44586,7 @@ GameObject:
   - 212: {fileID: 2048767965}
   - 114: {fileID: 2048767964}
   - 60: {fileID: 2048767963}
+  - 123: {fileID: 2048767966}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -42662,6 +44701,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &2048767966
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1661591625}
+  m_GameObject: {fileID: 2048767961}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &2068049259
 GameObject:
   m_ObjectHideFlags: 0
@@ -42772,6 +44827,7 @@ GameObject:
   - 212: {fileID: 2079444329}
   - 114: {fileID: 2079444328}
   - 60: {fileID: 2079444327}
+  - 123: {fileID: 2079444330}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -42886,6 +44942,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &2079444330
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1389403936}
+  m_GameObject: {fileID: 2079444325}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &2091085137
 GameObject:
   m_ObjectHideFlags: 0
@@ -43009,6 +45081,7 @@ GameObject:
   - 212: {fileID: 2100436246}
   - 114: {fileID: 2100436245}
   - 60: {fileID: 2100436244}
+  - 123: {fileID: 2100436247}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -43123,6 +45196,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &2100436247
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 359347058}
+  m_GameObject: {fileID: 2100436242}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &2100885936
 GameObject:
   m_ObjectHideFlags: 0
@@ -43514,6 +45603,7 @@ GameObject:
   - 212: {fileID: 2130496543}
   - 114: {fileID: 2130496542}
   - 60: {fileID: 2130496541}
+  - 123: {fileID: 2130496544}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -43628,6 +45718,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &2130496544
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1499835735}
+  m_GameObject: {fileID: 2130496539}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &2131693512
 GameObject:
   m_ObjectHideFlags: 0
@@ -43690,6 +45796,7 @@ GameObject:
   - 212: {fileID: 2134698552}
   - 114: {fileID: 2134698551}
   - 60: {fileID: 2134698550}
+  - 123: {fileID: 2134698553}
   m_Layer: 0
   m_Name: quillpen1
   m_TagString: Untagged
@@ -43804,6 +45911,22 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f7e24c96230123945aef6e1b2c799aa9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!123 &2134698553
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 12329460, guid: 3991c0e7965401d4ba4157cd6a2915cc,
+    type: 2}
+  m_PrefabInternal: {fileID: 2038950152}
+  m_GameObject: {fileID: 2134698548}
+  m_Enabled: 1
+  m_Flare: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 1
+  m_FadeSpeed: 3
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1001 &2146379914
 Prefab:
   m_ObjectHideFlags: 0
