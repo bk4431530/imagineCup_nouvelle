@@ -79,6 +79,12 @@ public class GameManager : MonoBehaviour {
 	public static bool Tutorial_SelectScene = true;
 	public static bool Tutorial_SelectScene_PlayIntro=false;
 
+
+	public static bool Tutorial_EquipScene = true;
+	//public static bool Tutorial_EquipScene = true;
+
+
+
 	public static void initData()
 	{
 		PlayerPrefs.SetInt ("Quilpen", 0);
@@ -140,6 +146,8 @@ public class GameManager : MonoBehaviour {
 		
 		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
 		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", false);
+
+		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
 
 		
 		/*
@@ -234,6 +242,8 @@ public class GameManager : MonoBehaviour {
 		bgm = PlayerPrefsX.GetBool("Bgm");
 		Tutorial_SelectScene = PlayerPrefsX.GetBool ("TutorialSelectScene");
 		Tutorial_SelectScene_PlayIntro = PlayerPrefsX.GetBool ("TutorialSelectScenePlayIntro");
+
+		Tutorial_EquipScene = PlayerPrefsX.GetBool ("TutorialEquipScene");
 
 		
 		/*temporary
