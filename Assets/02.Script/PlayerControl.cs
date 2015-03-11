@@ -150,7 +150,7 @@ public class PlayerControl : MonoBehaviour {
 		}
 
 		
-		StageChange ();
+		//StageChange ();
 		
 		Die ();
 		
@@ -210,6 +210,7 @@ public class PlayerControl : MonoBehaviour {
 
 		if (other.gameObject.name == "finish_collider") 
 		{
+			Debug.Log("finish collided");
 			isClear = true;
 		}
 	}
@@ -234,8 +235,10 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
-			whenDie ();
-
+			PS = PlayerState.Collided;
+			diePos = transform.position;
+			mAnimator.SetTrigger("collid");
+			Invoke("whenDie", 0.8f);
 		}
 	}
 
@@ -256,19 +259,22 @@ public class PlayerControl : MonoBehaviour {
 		this.transform.position = repos;
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
-		
-		
+
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.isKinematic = false;
 		rigidbody2D.AddForce (new Vector2 (0, 300));
 
+		this.GetComponent<PolygonCollider2D> ().enabled = false;
+
+		Invoke ("Revival", 1.5f);
+
 	}
 	
 	void Revival(){
-		
+		this.GetComponent<PolygonCollider2D> ().enabled = true;
 	}
 	
-	
+	/*
 	void StageChange(){
 		
 		//Stage Change
@@ -279,9 +285,9 @@ public class PlayerControl : MonoBehaviour {
 		}
 		
 	}
-	
+	*/
 	void clearGame(){
-		finishGame.pass = true;
+
 	}
 	
 }
