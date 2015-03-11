@@ -21,9 +21,7 @@ public class Select_Scene : MonoBehaviour {
 	public static AudioSource SFX_button;
 
 	// Use this for initialization
-	void Start () {
-
-
+	void Awake () {
 
 		guide_text = GameObject.Find ("Guide").GetComponent<Text>();
 		locks = GameObject.Find ("Lock");

@@ -1214,7 +1214,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  letterPreview: {fileID: 0}
   textview: {fileID: 162974130}
   inputTxt: {fileID: 828368899}
   inputF: {fileID: 1670031059}

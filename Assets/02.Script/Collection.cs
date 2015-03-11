@@ -31,7 +31,7 @@ public class Collection : MonoBehaviour {
 	Text to;
 	Text letter;
 	Text from;
-	public Image letterPreview;
+	Image letterPreview;
 
 
 	//4.send
@@ -51,7 +51,7 @@ public class Collection : MonoBehaviour {
 
 
 
-	void OnEnable () {
+	void Awake () {
 
 
 		//2.detail
@@ -64,6 +64,7 @@ public class Collection : MonoBehaviour {
 		to = GameObject.Find ("to_txt").GetComponent<Text> ();
 		letter = GameObject.Find ("letter_txt").GetComponent<Text> ();
 		from = GameObject.Find ("from_txt").GetComponent<Text> ();
+		letterPreview = GameObject.Find ("letter_preview2").GetComponent<Image> ();
 
 		//4.send
 		zipcodeR = GameObject.Find ("zipR_txt").GetComponent<Text> ();
