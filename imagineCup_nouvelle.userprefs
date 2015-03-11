@@ -1,16 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\IntroScene.cs">
     <Files>
-      <File FileName="Assets\02.Script\IntroScene.cs" Line="35" Column="1" />
+      <File FileName="Assets\02.Script\IntroScene.cs" Line="91" Column="11" />
       <File FileName="Assets\02.Script\pauseGame.cs" Line="118" Column="46" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl.cs">
-    <Files>
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="250" Column="3" />
-      <File FileName="Assets\02.Script\SmoothCamera2D.cs" Line="27" Column="4" />
->>>>>>> origin/master
+      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="351" Column="1" />
+      <File FileName="c:\Unity_Study\imagineCup_nouvelle\Assets\02.Script\Collection.cs" Line="3" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
