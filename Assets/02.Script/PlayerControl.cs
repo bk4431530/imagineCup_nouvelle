@@ -52,7 +52,9 @@ public class PlayerControl : MonoBehaviour {
 	public static bool MultipleFeather = false;
 
 	private bool isClear;
-	
+	private bool isOut;
+	private bool isRevival;
+
 	public GameObject finish_popup;
 	
 	
@@ -77,6 +79,8 @@ public class PlayerControl : MonoBehaviour {
 		PS = PlayerState.Normal;
 		finishGame.pass =false;
 		isClear = false;
+		isOut = false;
+		isRevival = false;
 		//GameManager.booster_equip = true;
 		
 	}
@@ -150,7 +154,7 @@ public class PlayerControl : MonoBehaviour {
 		}
 
 		
-		StageChange ();
+		//StageChange ();
 		
 		Die ();
 		
@@ -161,6 +165,7 @@ public class PlayerControl : MonoBehaviour {
 			Time.timeScale = 0;
 			clearGame();
 			finish = true;
+			isClear = false;
 		}
 		
 		
@@ -172,7 +177,7 @@ public class PlayerControl : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		
-		if (other.gameObject.tag == "Obstacle")
+		if (other.gameObject.tag == "Obstacle" && !isRevival)
 		{
 			//Vibration -duration: 1 second
 			//*****************************
@@ -210,6 +215,7 @@ public class PlayerControl : MonoBehaviour {
 
 		if (other.gameObject.name == "finish_collider") 
 		{
+			Debug.Log("finish collided");
 			isClear = true;
 		}
 	}
@@ -232,10 +238,13 @@ public class PlayerControl : MonoBehaviour {
 			Time.timeScale = 0;
 			finish=true;
 		} 
-		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0))//|| (life > 0 && PS == PlayerState.Collided)) 
+		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) && !isOut)//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
-			whenDie ();
-
+			PS = PlayerState.Collided;
+			diePos = transform.position;
+			mAnimator.SetTrigger("collid");
+			Invoke("whenDie", 0.8f);
+			isOut = true;
 		}
 	}
 
@@ -243,6 +252,7 @@ public class PlayerControl : MonoBehaviour {
 
 	public void whenDie()
 	{
+		isOut = false;
 		diePlanePos = transform.position;
 		PS = PlayerState.Normal;
 		/*
@@ -256,19 +266,23 @@ public class PlayerControl : MonoBehaviour {
 		this.transform.position = repos;
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
-		
-		
+
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.isKinematic = false;
 		rigidbody2D.AddForce (new Vector2 (0, 300));
 
+		//this.GetComponent<PolygonCollider2D> ().enabled = false;
+		isRevival = true;
+
+		Invoke ("Revival", 1.5f);
 	}
 	
 	void Revival(){
-		
+		//this.GetComponent<PolygonCollider2D> ().enabled = true;
+		isRevival = false;
 	}
 	
-	
+	/*
 	void StageChange(){
 		
 		//Stage Change
@@ -279,9 +293,9 @@ public class PlayerControl : MonoBehaviour {
 		}
 		
 	}
-	
+	*/
 	void clearGame(){
-		finishGame.pass = true;
+
 	}
 	
 }

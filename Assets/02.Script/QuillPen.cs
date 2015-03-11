@@ -52,7 +52,7 @@ public class QuillPen : MonoBehaviour {
 	void whenHit()
 	{
 		GameManager.currentQuillPen++;
-		Instantiate (particle, this.transform.position, this.transform.rotation);
+		//Instantiate (particle, this.transform.position, this.transform.rotation);
 
 	}
 
