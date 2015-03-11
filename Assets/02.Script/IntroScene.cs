@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 using UnityEngine.UI;
 
 
@@ -9,6 +10,15 @@ public class IntroScene : MonoBehaviour {
 	public GameObject letter;
 	public GameObject letterGuide;
 	public GameObject to;
+
+	//Totorial
+	public GameObject Tut_bg;
+	public GameObject Tut_girl;
+	public GameObject Tut_text;
+	//public GameManager Tut_girl_button;
+
+	public bool tutorial= true;
+
 
 	public GameObject textview;
 	public GameObject onLetter;
@@ -35,12 +45,23 @@ public class IntroScene : MonoBehaviour {
 	{
 		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 
+		
+		guide = GameObject.Find("/Canvas/Panel/Guide");
+		guide.SetActive (false);
 
-		letterGuide = GameObject.Find ("LetterGuide");
+		letterGuide = GameObject.Find ("/Canvas/LetterGuide");
 		textview = GameObject.Find("View");
-		letter = GameObject.Find("TextInput");
-		onLetter = GameObject.Find ("LetterText");
-		to = GameObject.Find ("toText");
+		letter = GameObject.Find("/Canvas/View/TextInput");
+		onLetter = GameObject.Find ("/Canvas/LetterText");
+		to = GameObject.Find ("/Canvas/toText");
+
+		//Totorial
+		Tut_bg = GameObject.Find ("Tutorial_bg");
+		Tut_girl = GameObject.Find ("TutorialGirl");
+		Tut_text = GameObject.Find ("TutorialText");
+		Debug.Log ("Tutoraial_bg : " + Tut_bg);
+		//Tut_girl_button=GameObject.Find ("/Canvas/Tutorial/TutorialGirl").GetComponent<Button>;
+
 
 		viewTxt = GameObject.Find ("TextView").GetComponent<Text> ();
 		toTxt = GameObject.Find ("toText").GetComponent<Text> ();
@@ -51,8 +72,10 @@ public class IntroScene : MonoBehaviour {
 		onLetter.SetActive (false);
 		to.SetActive (false);
 
-		guide = GameObject.Find("/Canvas/Panel/Guide");
-		guide.SetActive (false);
+		//Tutorial
+		Tut_bg.SetActive (false);
+		Tut_girl.SetActive (false);
+		Tut_text.SetActive (false);
 
 
 
@@ -83,17 +106,28 @@ public class IntroScene : MonoBehaviour {
 
 		if(LevelMenu2D._currentItemIndex == 4)
 		{		
-			if(letterbox_ison == false){
+			if(letterbox_ison == false)
+			{
 				Invoke ("EnableLetterBox", 1.0f);
 				letterbox_ison = true;
 			}
+
+			if(tutorial)
+			{
+
+				Invoke("EnableTutorial",1.0f);
+			}
+
 
 			//letterBox = GameObject.Find ("/Canvas/letter_box/letterInput").GetComponent<Text> ();
 			//Debug.Log("letterTxt is (" + letterInput + " )");
 		} else if(LevelMenu2D._currentItemIndex != 4)
 		{
+			DisableTutorial();
+			//DisableTutorial();
 			if(letterbox_ison == true){
 				DisableLetterBox();
+			
 				letterbox_ison = false;
 			}
 		}
@@ -147,6 +181,7 @@ public class IntroScene : MonoBehaviour {
 		textview.SetActive (true);
 		letter.GetComponent<InputField>().text 	= " "; 
 		inputMenu = i;
+		DisableTutorial ();
 
 	}
 
@@ -184,6 +219,33 @@ public class IntroScene : MonoBehaviour {
 		letterGuide.SetActive (false);
 		onLetter.SetActive (false);
 		to.SetActive (false);
+	}
+
+	public void EnableTutorial()
+	{
+
+		Tut_bg.SetActive (true);
+		Tut_girl.SetActive (true);
+		Tut_text.SetActive (true);
+		tutorial = false;
+		Debug.Log ("enable tutorial됨");
+		Debug.Log ("tutorial boolean is " + tutorial);
+
+	}
+
+	public void DisableTutorial()
+	{
+
+		Tut_bg.SetActive (false);
+		Tut_girl.SetActive (false);
+		Tut_text.SetActive (false);
+		Debug.Log ("disable tutorial 실행됨");
+
+	}
+
+	public void TutorialBoolMakeTrue()
+	{
+		tutorial = true;
 	}
 
 

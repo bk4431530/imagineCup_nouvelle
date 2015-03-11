@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\Cat2.cs">
     <Files>
@@ -12,6 +13,15 @@
       <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\Cat2.cs" Line="5" Column="14" />
       <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\Cat3.cs" Line="23" Column="36" />
       <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\catSprite3.cs" Line="13" Column="40" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\IntroScene.cs">
+    <Files>
+      <File FileName="Assets\02.Script\IntroScene.cs" Line="91" Column="11" />
+      <File FileName="Assets\02.Script\pauseGame.cs" Line="118" Column="46" />
+      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="351" Column="1" />
+      <File FileName="c:\Unity_Study\imagineCup_nouvelle\Assets\02.Script\Collection.cs" Line="3" Column="19" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
