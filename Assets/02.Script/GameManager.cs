@@ -74,6 +74,10 @@ public class GameManager : MonoBehaviour {
 	public static string ZipR = "456";
 	public static string Addr = "Seoul, Donjack-gu, Soongsil university";
 
+	//Tutorial
+	public static bool Tutorial_SelectScene = true;
+	public static bool Tutorial_SelectScene_PlayIntro=false;
+
 	public static void initData()
 	{
 		PlayerPrefs.SetInt ("Quilpen", 0);
@@ -106,6 +110,7 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetString ("ZipR",ZipR);
 		PlayerPrefs.SetString ("Address",Addr);
 
+
 		//각각 컬렉션마다 5조각
 		for (int i = 0; i < postCard.Length; i++) {
 			postCard[i] = new bool[5];
@@ -131,6 +136,9 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefsX.SetBool ("Vibration", true);
 		PlayerPrefsX.SetBool ("BGM", true);
 
+		
+		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
+		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", false);
 
 		
 		/*
@@ -223,6 +231,9 @@ public class GameManager : MonoBehaviour {
 		
 		vibration = PlayerPrefsX.GetBool("Vibration");
 		bgm = PlayerPrefsX.GetBool("Bgm");
+		Tutorial_SelectScene = PlayerPrefsX.GetBool ("TutorialSelectScene");
+		Tutorial_SelectScene_PlayIntro = PlayerPrefsX.GetBool ("TutorialSelectScenePlayIntro");
+
 		
 		/*temporary
 		life = 5;

@@ -69,12 +69,12 @@
      <Compile Include="Assets\02.Script\Puzzle.cs" />
      <Compile Include="Assets\02.Script\QuillPen.cs" />
      <Compile Include="Assets\02.Script\Select_Scene.cs" />
-     <Compile Include="Assets\02.Script\SmoothCamera2D.cs" />
      <Compile Include="Assets\02.Script\StartGUI.cs" />
      <Compile Include="Assets\02.Script\TopMenu.cs" />
      <Compile Include="Assets\02.Script\TouchHandler.cs" />
      <Compile Include="Assets\02.Script\ToyFlight.cs" />
      <Compile Include="Assets\02.Script\Tree.cs" />
+     <Compile Include="Assets\02.Script\Tutorial_SelectScene.cs" />
      <Compile Include="Assets\02.Script\cat1.cs" />
      <Compile Include="Assets\02.Script\cat2.cs" />
      <Compile Include="Assets\02.Script\cat3.cs" />
@@ -96,6 +96,7 @@
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\VerticalDemoClicker.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\LevelMenu2D.cs" />
      <Compile Include="Assets\Level Menu 2D\SingletonPerfect\Singleton.cs" />
+     <Compile Include="Assets\Level Menu 2D\SmoothCamera2D.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <Compile Include="Assets\icon_moving.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />

@@ -12,6 +12,7 @@ public class IntroScene : MonoBehaviour {
 	public GameObject to;
 
 	//Totorial
+	public GameObject Tut_Canvas;
 	public GameObject Tut_bg;
 	public GameObject Tut_girl;
 	public GameObject Tut_text;
@@ -56,9 +57,10 @@ public class IntroScene : MonoBehaviour {
 		to = GameObject.Find ("/Canvas/toText");
 
 		//Totorial
-		Tut_bg = GameObject.Find ("Tutorial_bg");
-		Tut_girl = GameObject.Find ("TutorialGirl");
-		Tut_text = GameObject.Find ("TutorialText");
+		Tut_Canvas = GameObject.Find ("TutorialCanvas");
+		Tut_bg = GameObject.Find ("/TutorialCanvas/Panel/Tutorial_bg");
+		Tut_girl = GameObject.Find ("/TutorialCanvas/Panel/TutorialObj/TutorialGirl");
+		Tut_text = GameObject.Find ("/TutorialCanvas/Panel/TutorialObj/TutorialText");
 		Debug.Log ("Tutoraial_bg : " + Tut_bg);
 		//Tut_girl_button=GameObject.Find ("/Canvas/Tutorial/TutorialGirl").GetComponent<Button>;
 
@@ -73,10 +75,10 @@ public class IntroScene : MonoBehaviour {
 		to.SetActive (false);
 
 		//Tutorial
-		Tut_bg.SetActive (false);
+	/*	Tut_bg.SetActive (false);
 		Tut_girl.SetActive (false);
 		Tut_text.SetActive (false);
-
+	*/
 
 
 
@@ -99,7 +101,7 @@ public class IntroScene : MonoBehaviour {
 		Debug.Log("Script: IntroScene.cs // _currentItemIndex = " + LevelMenu2D._currentItemIndex );
 
 		ray = Camera.main.ScreenToWorldPoint (Input.mousePosition);
-		Debug.Log (ray);
+//		Debug.Log (ray);
 		hit = Physics2D.Raycast (ray, Vector2.zero);
 
 		// Scene5_writing letter Input
@@ -223,7 +225,7 @@ public class IntroScene : MonoBehaviour {
 
 	public void EnableTutorial()
 	{
-
+		Tut_Canvas.SetActive (true);
 		Tut_bg.SetActive (true);
 		Tut_girl.SetActive (true);
 		Tut_text.SetActive (true);
@@ -239,6 +241,7 @@ public class IntroScene : MonoBehaviour {
 		Tut_bg.SetActive (false);
 		Tut_girl.SetActive (false);
 		Tut_text.SetActive (false);
+		Tut_Canvas.SetActive (false);
 		Debug.Log ("disable tutorial 실행됨");
 
 	}
