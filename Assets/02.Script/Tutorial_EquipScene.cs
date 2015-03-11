@@ -167,13 +167,13 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	//help6
 	public void EnableHelp7()
 	{
-		Tut_help6.SetActive (true);
+		Tut_help7.SetActive (true);
 		Debug.Log ("EnableHelp7() 실행");
 	}
 	
 	public void DisableHelp7()
 	{
-		Tut_help6.SetActive (false);
+		Tut_help7.SetActive (false);
 		Debug.Log ("DisableHelp7() 실행");
 		
 	}
