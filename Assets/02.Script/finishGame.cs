@@ -66,10 +66,6 @@ public class finishGame : MonoBehaviour {
 				PostcardEffect.flareLayer.enabled = false;
 			}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 			finish_popup.SetActive(true);
 			quilpenQty.text = (GameManager.currentQuillPen).ToString ();
 
