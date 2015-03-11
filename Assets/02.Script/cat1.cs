@@ -2,35 +2,27 @@
 using System.Collections;
 
 
-public class cat1 : CatchedbyCat {
+public class cat1 : MonoBehaviour{
 
-	public CatState catState = CatState.Normal; //cat state default
+	public GameObject player;
+
+	public float player_pos;
+
+	Animator catAnimator;
 
 
 	// Use this for initialization
 	void Start () {
-	
+		player = GameObject.Find ("player");
+		catAnimator = this.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(clickCount == 3)
-		{
-			catState = CatState.Normal;
+		if (player.transform.position.x > player_pos) {
+			catAnimator.SetTrigger("start");
+			this.GetComponent<catSprite1>().enabled = true;
 		}
 	}
-
-	void OnTriggerEnter2D(Collider2D other){
-		Debug.Log ("고양이는 비행기 콜라이더를 감지함 : " + other.collider2D.name);
-		if(other.collider2D.name == "player")
-		{
-			catState = CatState.Catch;
-			
-		}
-
-
-
-	}
-
 
 }

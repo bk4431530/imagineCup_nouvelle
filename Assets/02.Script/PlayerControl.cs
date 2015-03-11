@@ -37,8 +37,7 @@ public class PlayerControl : MonoBehaviour {
 	private Vector2 screenPosition;
 	private Vector3 game_cam;
 	private Vector3 stage;
-	
-	
+
 	Animator mAnimator;
 
 	
@@ -51,7 +50,8 @@ public class PlayerControl : MonoBehaviour {
 	bool shield;
 	int shieldCount = 3;
 	public static bool MultipleFeather = false;
-	
+
+	private bool isClear;
 	
 	public GameObject finish_popup;
 	
@@ -76,7 +76,7 @@ public class PlayerControl : MonoBehaviour {
 		
 		PS = PlayerState.Normal;
 		finishGame.pass =false;
-		
+		isClear = false;
 		//GameManager.booster_equip = true;
 		
 	}
@@ -155,13 +155,12 @@ public class PlayerControl : MonoBehaviour {
 		Die ();
 		
 		//pass
-		if (Stage_Num > 5 && GameManager.currentLife > 0) 
+		if (isClear && !finish) 
 		{
 			finishGame.pass =true;
 			Time.timeScale = 0;
+			clearGame();
 			finish = true;
-			finishGame.pass = true;
-			
 		}
 		
 		
@@ -207,6 +206,11 @@ public class PlayerControl : MonoBehaviour {
 			GameManager.currentPiece++;
 			collidedPuzzle = other.gameObject;
 			Destroy (collidedPuzzle);
+		}
+
+		if (other.gameObject.name == "finish_collider") 
+		{
+			isClear = true;
 		}
 	}
 	
@@ -276,7 +280,9 @@ public class PlayerControl : MonoBehaviour {
 		
 	}
 	
-	
+	void clearGame(){
+		finishGame.pass = true;
+	}
 	
 }
 

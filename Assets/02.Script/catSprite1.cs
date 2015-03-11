@@ -8,7 +8,7 @@ public enum CatState
 	Catch
 }
 
-public class catSprite : CatchedbyCat {
+public class catSprite1 : CatchedbyCat1 {
 	
 	public CatState catState = CatState.Normal; //cat state default
 	
@@ -103,11 +103,11 @@ public class catSprite : CatchedbyCat {
 	void ChangeSprite ()
 	{
 		//////////////////State 변경////////////////
-		if(CatchedbyCat.clickCount == 3)
+		if(CatchedbyCat1.clickCount == 3)
 		{
 			catState = CatState.Normal;
 			
-			Debug.Log ("clickCount = " + CatchedbyCat.clickCount);
+			Debug.Log ("clickCount = " + CatchedbyCat1.clickCount);
 			
 		}
 		
@@ -115,7 +115,7 @@ public class catSprite : CatchedbyCat {
 		if (curFrame != oldFrame)
 		{
 			
-			if(curFrame <16)
+			if(curFrame < catImages.Length)
 			{
 				// display the current sprite (frame)
 				oSpriteRenderer.sprite = catImages[curFrame];
@@ -129,9 +129,11 @@ public class catSprite : CatchedbyCat {
 			else
 			{
 				//            Debug.Log ("초기화됨 ");
+				/*
 				curFrame = 0;
-				oldFrame = 15;
-				EnableCollider(true);
+				oldFrame = catImages.Length-1;
+				*/
+				curFrame = oldFrame;
 			}
 		}
 		
