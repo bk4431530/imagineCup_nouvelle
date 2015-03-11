@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class cat1 : MonoBehaviour{
+public class cat3 : MonoBehaviour{
 
 	public GameObject player;
 
@@ -21,7 +21,7 @@ public class cat1 : MonoBehaviour{
 	void Update () {
 		if (player.transform.position.x > player_pos) {
 			catAnimator.SetTrigger("start");
-			this.GetComponent<catSprite1>().enabled = true;
+			this.GetComponent<catSprite3>().enabled = true;
 		}
 	}
 

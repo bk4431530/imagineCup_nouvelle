@@ -41,10 +41,6 @@ public class Equip_Scene : MonoBehaviour {
 	
 	public int money;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 	void Start () {
 		booster = GameObject.Find ("Booster");
 		magnet = GameObject.Find ("Magnet");

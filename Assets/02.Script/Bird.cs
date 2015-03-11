@@ -22,17 +22,17 @@ public class Bird : MonoBehaviour {
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		if (player.transform.position.x > player_pos) {
 			if (this.transform.position.x > drop_pos) {
-				transform.Translate (new Vector3 (-0.12f, 0, 0));
+				transform.Translate (new Vector3 (-0.17f, 0, 0));
 			}
-			else if (this.transform.position.x > drop_pos-1) {
+			else if (this.transform.position.x > drop_pos-1.5f) {
 				if(RB){
 					rb = puzzle.gameObject.AddComponent("Rigidbody2D") as Rigidbody2D;
 					rb.gravityScale = 0.5f;
 					RB = false;
 				}
-				transform.Translate (new Vector3 (-0.12f, 0, 0));
+				transform.Translate (new Vector3 (-0.17f, 0, 0));
 			} else {
-				transform.Translate (new Vector3 (-0.05f, 0.02f, 0));
+				transform.Translate (new Vector3 (-0.17f, 0, 0));
 			}
 			
 			if(screenPosition.x < 0 || screenPosition.y > Screen.height+3)

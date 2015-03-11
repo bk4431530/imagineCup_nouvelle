@@ -1,9 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\Cat2.cs">
     <Files>
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="250" Column="3" />
-      <File FileName="Assets\02.Script\SmoothCamera2D.cs" Line="27" Column="4" />
+      <File FileName="Assets\02.Script\Cat1.cs" Line="28" Column="2" />
+      <File FileName="Assets\02.Script\catSprite2.cs" Line="11" Column="39" />
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\cat1.cs" Line="24" Column="51" />
+      <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\CatchedbyCat1.cs" Line="38" Column="31" />
+      <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\CatchedbyCat2.cs" Line="38" Column="3" />
+      <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\CatchedbyCat3.cs" Line="38" Column="31" />
+      <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\Cat2.cs" Line="5" Column="14" />
+      <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\Cat3.cs" Line="23" Column="36" />
+      <File FileName="c:\Users\Sooin\Documents\GitHub\imagineCup_nouvelle\Assets\02.Script\catSprite3.cs" Line="13" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
