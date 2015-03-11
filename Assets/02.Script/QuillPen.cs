@@ -42,8 +42,9 @@ public class QuillPen : MonoBehaviour {
 
 		if (QS == QuillPenState.Normal && other.gameObject.name == "player") 
 		{
-			Instantiate (particle, this.transform.position, this.transform.rotation);
-			Destroy(this.gameObject,0.02f);
+			GameObject clone= (GameObject)Instantiate (particle, this.transform.position, this.transform.rotation);
+			clone.AddComponent(typeof(DestroyMySelf));
+			Destroy(this.gameObject,0.07f);
 			Invoke("whenHit",0.06f);
 		}
 
@@ -53,7 +54,6 @@ public class QuillPen : MonoBehaviour {
 	void whenHit()
 	{
 		GameManager.currentQuillPen++;
-
 	}
 
 

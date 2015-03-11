@@ -21,7 +21,6 @@ public class GUIcontrol : MonoBehaviour {
 
 
 
-
 	void Start()
 	{
 
@@ -57,7 +56,8 @@ public class GUIcontrol : MonoBehaviour {
 	
 	
 	void Update () {
-		
+
+
 		
 		if (PlayerControl.MultipleFeather) 
 		{
@@ -94,6 +94,7 @@ public class GUIcontrol : MonoBehaviour {
 		}else if(GameManager.mysteryBox > 0){
 			mysterybox.SetActive(true);
 		}
+
 
 		
 		

@@ -10,12 +10,8 @@ public class finishGame : MonoBehaviour {
 	public GameObject[] lifes  = new GameObject[5];
 	public GameObject[] pieces = new GameObject[3];
 	GameObject[] postback = new GameObject[3];
-
-
-
-	
-	public Sprite offPiece;
-		
+	public Sprite[] postcards;
+			
 	public Text quilpenQty;
 	GameObject finish_popup;
 
@@ -193,6 +189,9 @@ public class finishGame : MonoBehaviour {
 		rand_piece = (int)Random.Range (0, 6);
 		
 		GameManager.postCard [rand_postcard] [rand_piece] = true;
+
+
+
 		/*
 		postback [i].SetActive (true);
 		postback [i].GetComponent<Image> ().sprite = GameManager.postCard_Image [rand_postcard];
