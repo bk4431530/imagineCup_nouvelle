@@ -19673,58 +19673,10 @@ Transform:
   m_LocalPosition: {x: 194.460007, y: .230000004, z: 0}
   m_LocalScale: {x: .5, y: .5, z: 1}
   m_Children: []
-<<<<<<< HEAD
-  m_Father: {fileID: 1356913502}
-  m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 30.6000004, y: 118.000008}
-  m_SizeDelta: {x: 260, y: 260}
-  m_Pivot: {x: .5, y: .5}
---- !u!1 &1042548083
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 224: {fileID: 1042548084}
-  - 223: {fileID: 1042548087}
-  - 114: {fileID: 1042548086}
-  - 114: {fileID: 1042548085}
-  m_Layer: 5
-  m_Name: Finish
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1042548084
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1042548083}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1697747069}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!114 &1042548085
-MonoBehaviour:
-=======
   m_Father: {fileID: 958694039}
   m_RootOrder: 66
 --- !u!60 &900064087
 PolygonCollider2D:
->>>>>>> origin/master
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6096304, guid: 3991c0e7965401d4ba4157cd6a2915cc,
     type: 2}
