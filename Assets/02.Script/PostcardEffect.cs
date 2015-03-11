@@ -11,7 +11,7 @@ public class PostcardEffect : MonoBehaviour {
 		flareLayer.enabled = false;
 		
 		//for test
-		GameManager.paperPlaneState = 8;
+		//GameManager.paperPlaneState = 8;
 		
 		switch(GameManager.paperPlaneState){
 		case 0 : //basic

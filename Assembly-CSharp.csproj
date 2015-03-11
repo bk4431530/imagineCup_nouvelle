@@ -99,7 +99,6 @@
      <Compile Include="Assets\Level Menu 2D\SingletonPerfect\Singleton.cs" />
      <Compile Include="Assets\Level Menu 2D\SmoothCamera2D.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
-     <Compile Include="Assets\PostcardEffect.cs" />
      <Compile Include="Assets\icon_moving.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
