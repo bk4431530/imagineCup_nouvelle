@@ -39,7 +39,7 @@ public class PlayerControl : MonoBehaviour {
 	private Vector3 stage;
 
 	Animator mAnimator;
-
+	Animator boyAnimator;
 	
 	public static bool finish = false;
 	
@@ -73,7 +73,8 @@ public class PlayerControl : MonoBehaviour {
 		rigidbody2D.AddForce (new Vector2 (60, 300));
 		
 		mAnimator = gameObject.GetComponent<Animator> ();
-		
+		boyAnimator = GameObject.Find ("boy").GetComponent<Animator> ();
+
 		startPos = this.transform.position;
 		
 		PS = PlayerState.Normal;
@@ -83,7 +84,7 @@ public class PlayerControl : MonoBehaviour {
 		isRevival = false;
 
 		//GameManager.booster_equip = true;
-		GameManager.paperPlaneState = 8;
+		//GameManager.paperPlaneState = 0;
 	}
 	
 	
@@ -162,11 +163,11 @@ public class PlayerControl : MonoBehaviour {
 		//pass
 		if (isClear && !finish) 
 		{
-			finishGame.pass =true;
-			Time.timeScale = 0;
-			clearGame();
-			finish = true;
-			isClear = false;
+			transform.position = diePos;
+			gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			gameObject.GetComponent<PolygonCollider2D>().enabled = false;
+			Invoke("clearGame",4.0f);
+			boyAnimator.SetTrigger ("ending");
 		}
 		
 		
@@ -216,6 +217,7 @@ public class PlayerControl : MonoBehaviour {
 
 		if (other.gameObject.name == "finish_collider") 
 		{
+			diePos = transform.position;
 			Debug.Log("finish collided");
 			isClear = true;
 		}
@@ -296,7 +298,10 @@ public class PlayerControl : MonoBehaviour {
 	}
 	*/
 	void clearGame(){
-
+		finishGame.pass =true;
+		Time.timeScale = 0;
+		finish = true;
+		isClear = false;
 	}
 	
 }

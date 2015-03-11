@@ -254,6 +254,9 @@ public class Collection : MonoBehaviour {
 	//2.Detail
 	public void EquipBtn()
 	{
+		if (GameManager.paperPlaneState != card_equip) {
+						GameManager.paperPlaneState = card_equip;
+		}
 		Debug.Log ("equip " +card_equip.ToString()+"th letter");
 	}
 
