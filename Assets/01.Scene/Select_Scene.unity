@@ -10133,7 +10133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: f1b0f4c8b58e69b498e87da8312d26c0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3b6cefe515fd3484faf7e575ccb8baca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13648,7 +13648,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .154411793, g: .154411793, b: .154411793, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 433a1126d1aa8e84fb043edda3b4fb95, type: 3}
+    m_Font: {fileID: 12800000, guid: 920705a27cb3f8d479e4ec09926b18f6, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -20268,7 +20268,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '8/10
+  m_Text: '10/10
 
 '
 --- !u!222 &1662391134

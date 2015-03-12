@@ -37,7 +37,7 @@ public class TouchHandler : MonoBehaviour {
 
 
 		
-		
+		/*
 		if(swiped == true || Input.GetMouseButton(0))
 		{
 			numberOfPoints++;
@@ -57,7 +57,7 @@ public class TouchHandler : MonoBehaviour {
 			lineRender.SetVertexCount(0);
 		}
 		
-		
+		*/
 		
 		
 		

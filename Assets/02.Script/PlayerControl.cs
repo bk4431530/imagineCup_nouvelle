@@ -65,6 +65,9 @@ public class PlayerControl : MonoBehaviour {
 	public static AudioSource SFX_obstacle;
 	public static AudioSource SFX_die;
 
+
+	public GameObject puzzleEffect;
+
 	
 	
 	
@@ -245,6 +248,8 @@ public class PlayerControl : MonoBehaviour {
 		{
 			GameManager.currentPiece++;
 			collidedPuzzle = other.gameObject;
+			Instantiate (particle, collidedPuzzle.transform.position, collidedPuzzle.transform.rotation);
+			Destroy(particle,0.5f);
 			Destroy (collidedPuzzle);
 			PieceSound();
 		}
