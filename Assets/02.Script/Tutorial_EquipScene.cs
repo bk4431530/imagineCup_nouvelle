@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class Tutorial_EquipScene : MonoBehaviour {
-
+	
 	public GameObject Tut_Canvas;
 	public GameObject Tut_bg;
 	public GameObject Tut_help1;
@@ -12,9 +12,9 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	public GameObject Tut_help5;
 	public GameObject Tut_help6;
 	public GameObject Tut_help7;
-
-
-
+	
+	
+	
 	// Use this for initialization
 	void Start ()
 	{
@@ -27,25 +27,25 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Tut_help5 = GameObject.Find ("/TutorialCanvas/Background/Help5");
 		Tut_help6 = GameObject.Find ("/TutorialCanvas/Background/Help6");
 		Tut_help7 = GameObject.Find ("/TutorialCanvas/Background/Help7");
-
+		
 		DisableTutorialCanvas ();
-
+		
 		if(GameManager.Tutorial_EquipScene == true)
-		{	
+		{   
 			StartTutorial();
 			EnableHelp1 ();
 		}
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
-
+	
 	/////////////////////////////////
-	 
-	 public void DisableTutorialCanvas()
+	
+	public void DisableTutorialCanvas()
 	{
 		
 		
@@ -64,7 +64,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableTutorialCanvas() 실행");
 		
 	}
-
+	
 	////////////////////////////////////////////////////
 	
 	public void StartTutorial()
@@ -76,8 +76,8 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	}
 	
 	
-	///////////////////////////////////////////////////	
-
+	///////////////////////////////////////////////////   
+	
 	/// help1
 	public void EnableHelp1()
 	{
@@ -91,7 +91,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableHelp1() 실행");
 		
 	}
-
+	
 	// help2
 	public void EnableHelp2()
 	{
@@ -107,7 +107,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableHelp2() 실행");
 		
 	}
-
+	
 	//help3
 	public void EnableHelp3()
 	{
@@ -121,7 +121,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableHelp3() 실행");
 		
 	}
-
+	
 	//help4
 	public void EnableHelp4()
 	{
@@ -135,7 +135,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableHelp4() 실행");
 		
 	}
-
+	
 	//help5
 	public void EnableHelp5()
 	{
@@ -149,7 +149,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableHelp5() 실행");
 		
 	}
-
+	
 	//help6
 	public void EnableHelp6()
 	{
@@ -163,7 +163,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		Debug.Log ("DisableHelp6() 실행");
 		
 	}
-
+	
 	//help6
 	public void EnableHelp7()
 	{
@@ -174,13 +174,14 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	public void DisableHelp7()
 	{
 		Tut_help7.SetActive (false);
+		GameManager.Tutorial_EquipScene = false;
 		Debug.Log ("DisableHelp7() 실행");
 		
 	}
-
 	
-	////////////////////////////////////////////////////////////////	
-
-
-
+	
+	////////////////////////////////////////////////////////////////   
+	
+	
+	
 }
