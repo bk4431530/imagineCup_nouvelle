@@ -16,6 +16,9 @@ public class QuillPen : MonoBehaviour {
 	private float distance;
 	bool hit;
 
+	//sound
+	public static AudioSource SFX_quillpen;
+
 	public QuillPenState QS = QuillPenState.Normal;
 
 	void Start()
@@ -23,6 +26,14 @@ public class QuillPen : MonoBehaviour {
 		startTime = Time.time;
 		magnet = GameObject.Find ("player").transform.FindChild("magnet").gameObject;
 		hit = false;
+
+		//sound
+		
+		SFX_quillpen = GameObject.Find ("/SFX/quillpen").GetComponent<AudioSource> ();
+		SFX_quillpen.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("QuillpenGet");
+		
+		
+
 	}
 	
 	void Update(){
@@ -42,6 +53,8 @@ public class QuillPen : MonoBehaviour {
 
 		if (QS == QuillPenState.Normal && other.gameObject.name == "player") 
 		{
+			QuillpenSound();
+
 			GameObject clone= (GameObject)Instantiate (particle, this.transform.position, this.transform.rotation);
 			clone.AddComponent(typeof(DestroyMySelf));
 			Destroy(this.gameObject,0.07f);
@@ -56,5 +69,15 @@ public class QuillPen : MonoBehaviour {
 		GameManager.currentQuillPen++;
 	}
 
+	
+	public void QuillpenSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_quillpen.Play();
+			Debug.Log(" QuillpenSound 함수실행");			
+		}
+		
+	}
 
 }

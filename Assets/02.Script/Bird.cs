@@ -14,8 +14,19 @@ public class Bird : MonoBehaviour {
 	public float player_pos;
 	public float drop_pos;
 
+	//sound
+	public static AudioSource SFX_bird;
+
 	void Start(){
 		player = GameObject.Find ("player");
+
+		SFX_bird = GameObject.Find ("/SFX/bird").GetComponent<AudioSource>();	
+		SFX_bird.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("BirdTweet");
+		
+		
+		
+
+
 	}
 
 	void Update(){
@@ -29,6 +40,7 @@ public class Bird : MonoBehaviour {
 					rb = puzzle.gameObject.AddComponent("Rigidbody2D") as Rigidbody2D;
 					rb.gravityScale = 0.5f;
 					RB = false;
+					BirdSound ();
 				}
 				transform.Translate (new Vector3 (-0.12f, 0, 0));
 			} else {
@@ -42,4 +54,20 @@ public class Bird : MonoBehaviour {
 		}
 
 	}
+
+	
+	
+	
+	
+	public void BirdSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_bird.Play();
+			Debug.Log(" BirdSound 함수실행");			
+		}
+		
+	}
+
+
 }

@@ -54,8 +54,17 @@ public class PlayerControl : MonoBehaviour {
 	private bool isClear;
 	private bool isOut;
 	private bool isRevival;
+	private bool isOver;
 
 	public GameObject finish_popup;
+
+	//sound effect
+
+
+	public static AudioSource SFX_piece;
+	public static AudioSource SFX_obstacle;
+	public static AudioSource SFX_die;
+
 	
 	
 	
@@ -82,11 +91,32 @@ public class PlayerControl : MonoBehaviour {
 		isClear = false;
 		isOut = false;
 		isRevival = false;
-
+		isOver = false;
 		//GameManager.booster_equip = true;
 		//GameManager.paperPlaneState = 0;
 	}
+
+	void Start()
+	{
+
+
+		//sound effect
+
+		
 	
+
+		SFX_piece = GameObject.Find ("/SFX/piece").GetComponent<AudioSource> ();
+		SFX_piece.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("PieceGet");
+
+		SFX_obstacle = GameObject.Find ("/SFX/obstacle").GetComponent<AudioSource> ();
+		SFX_obstacle.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("Plane_hit");
+
+		SFX_die = GameObject.Find ("/SFX/die").GetComponent<AudioSource> ();
+		SFX_die.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("GameOver");
+
+	
+
+	}
 	
 	void Update ()
 	{
@@ -186,7 +216,10 @@ public class PlayerControl : MonoBehaviour {
 			if(GameManager.vibration == true)
 			{
 				Handheld.Vibrate ();
+
 			}
+			//sound
+			ObstacleSound();
 			//*****************************
 			if(shield){
 				this.renderer.material.color = Color.blue;
@@ -213,6 +246,7 @@ public class PlayerControl : MonoBehaviour {
 			GameManager.currentPiece++;
 			collidedPuzzle = other.gameObject;
 			Destroy (collidedPuzzle);
+			PieceSound();
 		}
 
 		if (other.gameObject.name == "finish_collider") 
@@ -238,6 +272,10 @@ public class PlayerControl : MonoBehaviour {
 	{
 		if (GameManager.currentLife < 1) 
 		{
+			if(!isOver){
+				DieSound();
+				isOver = true;
+			}
 			Time.timeScale = 0;
 			finish=true;
 		} 
@@ -303,6 +341,57 @@ public class PlayerControl : MonoBehaviour {
 		finish = true;
 		isClear = false;
 	}
+
+	//Soundeffect
+
+	/*
+	 * 
+	 * 	public static AudioSource SFX_bird;
+	public static AudioSource SFX_cat;
+	public static AudioSource SFX_quillpen;
+	public static AudioSource SFX_piece;
+	public static AudioSource SFX_obstacle;
+	public static AudioSource SFX_die;
+	public static AudioSource SFX_popup;
+
+*/
+
+
+
+
+
+
+	public void PieceSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_piece.Play();
+			Debug.Log(" PieceSound 함수실행");			
+		}
+		
+	}
+
+	public void ObstacleSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_obstacle.Play();
+			Debug.Log("서 ObstacleSound 함수실행");			
+		}
+		
+	}
+
+	public void DieSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_die.Play();
+			Debug.Log(" DieSound 함수실행");
+			
+		}
+		
+	}
+
 	
 }
 

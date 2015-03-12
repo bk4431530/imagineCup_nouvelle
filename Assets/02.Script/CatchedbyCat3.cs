@@ -27,6 +27,11 @@ public class CatchedbyCat3 : MonoBehaviour{
 	Animator cat_Animator;
 	
 	public float catTime;
+
+	
+	public static AudioSource SFX_cat;
+	
+
 	
 	void Awake()
 	{
@@ -40,6 +45,13 @@ public class CatchedbyCat3 : MonoBehaviour{
 		PS_cat = PlayerState_cat.Free;
 		
 		cat_Animator = cat.gameObject.GetComponent<Animator> ();
+
+		
+		SFX_cat = GameObject.Find ("/SFX/cat").GetComponent<AudioSource> ();
+		SFX_cat.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("Cat_basic");
+		
+		
+
 	}
 	
 	
@@ -79,6 +91,8 @@ public class CatchedbyCat3 : MonoBehaviour{
 				{
 					Handheld.Vibrate ();
 				}
+
+				CatSound();
 				//*****************************
 				cat_Animator.SetTrigger("tap");
 				clickCount ++;
@@ -158,7 +172,7 @@ public class CatchedbyCat3 : MonoBehaviour{
 	{
 		if (other.gameObject.name == "cat3") 
 		{
-			
+			CatSound();
 			if(PS_cat == PlayerState_cat.Free)
 			{
 				catTime = Time.time;// - startTime;
@@ -170,7 +184,15 @@ public class CatchedbyCat3 : MonoBehaviour{
 		
 	}//OnTriggerEnter2D
 	
-	
+	public void CatSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_cat.Play();
+			Debug.Log(" CatSound 함수실행");			
+		}
+		
+	}
 	
 	
 }//class
