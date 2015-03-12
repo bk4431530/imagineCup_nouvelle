@@ -36,10 +36,14 @@ public class IntroScene : MonoBehaviour {
 	bool letterbox_ison = false;
 	bool input_isfocused = false;
 
+	GameObject back;
+	GameObject next;
+
+	bool isTutorialOn;
+
 	//bgm_setting
 	
 	public static AudioSource backMusic;
-
 
 	// Use this for initialization
 	void OnEnable ()
@@ -64,6 +68,8 @@ public class IntroScene : MonoBehaviour {
 		Debug.Log ("Tutoraial_bg : " + Tut_bg);
 		//Tut_girl_button=GameObject.Find ("/Canvas/Tutorial/TutorialGirl").GetComponent<Button>;
 
+		back = GameObject.Find ("back");
+		next = GameObject.Find ("next");
 
 		viewTxt = GameObject.Find ("TextView").GetComponent<Text> ();
 		toTxt = GameObject.Find ("toText").GetComponent<Text> ();
@@ -80,7 +86,7 @@ public class IntroScene : MonoBehaviour {
 		Tut_text.SetActive (false);
 	*/
 
-
+		isTutorialOn = false;
 
 		if (GameManager.bgm) {
 			backMusic.volume = 0.5f;
@@ -98,7 +104,7 @@ public class IntroScene : MonoBehaviour {
 		toTxt.text = GameManager.To_name;
 		letterTxt.text = GameManager.letter_txt;
 
-		Debug.Log("Script: IntroScene.cs // _currentItemIndex = " + LevelMenu2D._currentItemIndex );
+//		Debug.Log("Script: IntroScene.cs // _currentItemIndex = " + LevelMenu2D._currentItemIndex );
 
 		ray = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 //		Debug.Log (ray);
@@ -114,9 +120,9 @@ public class IntroScene : MonoBehaviour {
 				letterbox_ison = true;
 			}
 
-			if(tutorial)
+			if(tutorial && !isTutorialOn)
 			{
-
+				isTutorialOn = true;
 				Invoke("EnableTutorial",1.0f);
 			}
 
@@ -151,11 +157,11 @@ public class IntroScene : MonoBehaviour {
 					GameManager.letter_txt = viewTxt.text;
 
 				}
-
+				EnableButtons();
 				textview.SetActive(false);
 				input_isfocused = false;
 			}
-		}
+		} 
 
 
 		//Scene8_ guide set activve
@@ -180,6 +186,10 @@ public class IntroScene : MonoBehaviour {
 	}
 
 	public void clickedWrite(string i){
+		back.GetComponent<ClickTouchScript> ().enabled = false;
+		next.GetComponent<ClickTouchScript> ().enabled = false;
+		back.GetComponent<BoxCollider> ().enabled = false;
+		next.GetComponent<BoxCollider> ().enabled = false;
 		textview.SetActive (true);
 		letter.GetComponent<InputField>().text 	= " "; 
 		inputMenu = i;
@@ -225,6 +235,7 @@ public class IntroScene : MonoBehaviour {
 
 	public void EnableTutorial()
 	{
+		DisableButtons ();
 		Tut_Canvas.SetActive (true);
 		Tut_bg.SetActive (true);
 		Tut_girl.SetActive (true);
@@ -237,12 +248,11 @@ public class IntroScene : MonoBehaviour {
 
 	public void DisableTutorial()
 	{
-
 		Tut_bg.SetActive (false);
 		Tut_girl.SetActive (false);
 		Tut_text.SetActive (false);
 		Tut_Canvas.SetActive (false);
-		Debug.Log ("disable tutorial 실행됨");
+//		Debug.Log ("disable tutorial 실행됨");
 
 	}
 
@@ -251,10 +261,20 @@ public class IntroScene : MonoBehaviour {
 		tutorial = true;
 	}
 
+	public void DisableButtons(){
+		back.GetComponent<ClickTouchScript> ().enabled = false;
+		next.GetComponent<ClickTouchScript> ().enabled = false;
+		back.GetComponent<BoxCollider> ().enabled = false;
+		next.GetComponent<BoxCollider> ().enabled = false;
+	}
 
 
-
-
+	public void EnableButtons(){
+		back.GetComponent<ClickTouchScript> ().enabled = true;
+		next.GetComponent<ClickTouchScript> ().enabled = true;
+		back.GetComponent<BoxCollider> ().enabled = true;
+		next.GetComponent<BoxCollider> ().enabled = true;
+	}
 
 
 }
