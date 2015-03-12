@@ -150,7 +150,7 @@ public class Equip_Scene : MonoBehaviour {
 	
 	void LoadingScreen () {
 		loading_screen.SetActive (true);
-		Invoke ("GoToGame", 1.0f);
+		Invoke ("GoToGame", 5.0f);
 	}
 	
 	public void StartClicked(){
