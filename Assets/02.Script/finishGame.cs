@@ -196,12 +196,14 @@ public class finishGame : MonoBehaviour {
 	
 	public void openPiece(int i)
 	{
-		rand_postcard = (int)Random.Range (0, 11);
+		rand_postcard = (int)Random.Range (0, 10);
 		rand_piece = (int)Random.Range (0, 6);
 		
 		//GameManager.postCard [rand_postcard] [rand_piece] = true;
 
 		postPiecies [i].SetActive (true);
+		//postPiecies[i].GetComponent<Image>().sprite = postcards[rand_postcard];
+
 
 		/*
 		postback [i].SetActive (true);
