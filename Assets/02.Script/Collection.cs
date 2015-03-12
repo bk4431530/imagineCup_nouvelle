@@ -52,7 +52,10 @@ public class Collection : MonoBehaviour {
 	bool input_isfocused;
 
 
+	public GameObject equip_popUp;
+	public Text popUp_txt;
 
+	public GameObject equip;
 
 	void Awake () { //원래 awake
 
@@ -62,6 +65,8 @@ public class Collection : MonoBehaviour {
 		card_themeTxt = GameObject.Find ("postcardTxt3").GetComponent<Text> ();
 		card_contTxt =GameObject.Find ("postcardTxt2").GetComponent<Text> ();
 		black_preview = GameObject.Find ("black_preview").GetComponent<Image> ();
+
+		//equip_popUp = GameObject.Find ("Popup_postcardEquip");
 
 		//3.write
 		to = GameObject.Find ("to_txt").GetComponent<Text> ();
@@ -77,6 +82,18 @@ public class Collection : MonoBehaviour {
 
 
 		textview.SetActive (false);
+		equip_popUp.SetActive (false);
+
+		GameManager.postCard [0] = 5;
+		GameManager.postCard [1] = 3;
+		GameManager.postCard [2] = 2;
+		GameManager.postCard [3] = 1;
+		GameManager.postCard [4] = 4;
+		GameManager.postCard [5] = 1;
+		GameManager.postCard [6] = 2;
+		GameManager.postCard [7] = 4;
+		GameManager.postCard [8] = 5;
+		GameManager.postCard [9] = 2;
 
 
 
@@ -86,6 +103,8 @@ public class Collection : MonoBehaviour {
 	
 	void Update()
 	{
+		equip.transform.position = black_all [GameManager.paperPlaneState].transform.position;
+
 		for (int i =0; i<10; i++) 
 		{
 			black_all[i].fillAmount =1- (float)GameManager.postCard[i]*0.2f;
@@ -262,10 +281,24 @@ public class Collection : MonoBehaviour {
 	//2.Detail
 	public void EquipBtn()
 	{
-		if (GameManager.paperPlaneState != card_equip) {
-						GameManager.paperPlaneState = card_equip;
+		if (GameManager.paperPlaneState != card_equip)
+		{
+			GameManager.paperPlaneState = card_equip;
 		}
 		Debug.Log ("equip " +card_equip.ToString()+"th letter");
+
+		if (card_equip < 5) 
+		{
+			popUp_txt.text = "You have to complete this postcard.";
+			equip_popUp.SetActive(true);
+		}
+
+	}
+
+	public void PopupExit()
+	{
+		equip_popUp.SetActive(false);
+
 	}
 
 	public void WriteBtn()
@@ -288,6 +321,8 @@ public class Collection : MonoBehaviour {
 	//4.send
 	public void sendBtn()
 	{
+		popUp_txt.text = "Sending the letter is completed..!";
+		equip_popUp.SetActive(true);
 
 		PlayerPrefs.SetString ("ZipL",GameManager.ZipL);
 		PlayerPrefs.SetString ("ZipR",GameManager.ZipR);
