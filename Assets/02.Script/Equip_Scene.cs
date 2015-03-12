@@ -29,7 +29,9 @@ public class Equip_Scene : MonoBehaviour {
 	
 	string selectedScene;
 	GameObject thumbnail;
+	GameObject effect;
 	public Sprite[] thumbnail_Img;
+	public Sprite[] effect_Img;
 
 	//bgm
 	string audio_name;
@@ -49,7 +51,8 @@ public class Equip_Scene : MonoBehaviour {
 		buyItem_popup = GameObject.Find ("Popup_buyItem");
 		loading_screen = GameObject.Find ("Loading_Screen");
 		thumbnail = GameObject.Find ("Canvas/leftMenu/Image");
-		
+		effect = GameObject.Find ("Canvas/leftMenu/effect");
+
 		backMusic = GameManager.backMusic;
 		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
 		
@@ -112,7 +115,36 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log("selected Episode = null");
 			break;
 		}
-		
+
+		switch (GameManager.paperPlaneState) {
+		case 0: 
+			effect.GetComponent<Image>().sprite = effect_Img[0];
+			break;
+		case 1:
+			effect.GetComponent<Image>().sprite = effect_Img[1];
+			break;
+		case 2:
+			effect.GetComponent<Image>().sprite = effect_Img[2];
+			break;
+		case 3:
+			effect.GetComponent<Image>().sprite = effect_Img[3];
+			break;
+		case 4:
+			effect.GetComponent<Image>().sprite = effect_Img[4];
+			break;
+		case 5:
+			effect.GetComponent<Image>().sprite = effect_Img[5];
+			break;
+		case 6:
+			effect.GetComponent<Image>().sprite = effect_Img[6];
+			break;
+		case 7:
+			effect.GetComponent<Image>().sprite = effect_Img[7];
+			break;
+		case 8:
+			effect.GetComponent<Image>().sprite = effect_Img[8];
+			break;
+		}
 		
 	}
 	
