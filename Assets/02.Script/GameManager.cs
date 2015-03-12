@@ -22,22 +22,7 @@ public class GameManager : MonoBehaviour {
 	public static int booster = 0;
 	public static int shield = 0;
 	public static int mysteryBox = 0;
-	
-	public static bool[][] postCard = new bool[10][];
-	public static Sprite[] postCard_Image = new Sprite[10];
-	
-	/*
-   public static bool[] postCard1 = new bool[6];
-   public static bool[] postCard2 = new bool[6];
-   public static bool[] postCard3 = new bool[6];
-   public static bool[] postCard4 = new bool[6];
-   public static bool[] postCard5 = new bool[6];
-   public static bool[] postCard6 = new bool[6];
-   public static bool[] postCard7 = new bool[6];
-   public static bool[] postCard8 = new bool[6];
-   public static bool[] postCard9 = new bool[6];
-   public static bool[] postCard10 = new bool[6];
-`   */
+
 	
 	//option
 	public static bool vibration = true;
@@ -82,6 +67,8 @@ public class GameManager : MonoBehaviour {
 	
 	public static bool Tutorial_EquipScene = true;
 	//public static bool Tutorial_EquipScene = true;
+
+	public static int[] postCard = new int[10];
 	
 	
 	
@@ -119,36 +106,20 @@ public class GameManager : MonoBehaviour {
 		
 		
 		//각각 컬렉션마다 5조각
-		for (int i = 0; i < postCard.Length; i++) {
-			postCard[i] = new bool[5];
+		for (int i = 0; i < 10; i++) {
+			postCard[i] = 0;
 		}
-		
-		for (int i = 0; i < postCard.Length; i++) {
-			for (int j = 0; j < postCard[i].Length; j++) {
-				postCard[i][j] = false;
-			}
-		}
-		
-		PlayerPrefsX.SetBoolArray ("PostCard1", postCard[0]);
-		PlayerPrefsX.SetBoolArray ("PostCard2", postCard[1]);
-		PlayerPrefsX.SetBoolArray ("PostCard3", postCard[2]);
-		PlayerPrefsX.SetBoolArray ("PostCard4", postCard[3]);
-		PlayerPrefsX.SetBoolArray ("PostCard5", postCard[4]);
-		PlayerPrefsX.SetBoolArray ("PostCard6", postCard[5]);
-		PlayerPrefsX.SetBoolArray ("PostCard7", postCard[6]);
-		PlayerPrefsX.SetBoolArray ("PostCard8", postCard[7]);
-		PlayerPrefsX.SetBoolArray ("PostCard9", postCard[8]);
-		PlayerPrefsX.SetBoolArray ("PostCard10", postCard[9]);
+
 		
 		PlayerPrefsX.SetBool ("Vibration", true);
 		PlayerPrefsX.SetBool ("BGM", true);
 		
-		
+		/*
 		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
 		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", false);
 		
 		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
-		
+		*/
 		
 		/*
       PlayerPrefs.SetInt ("Quilpen", quillPen);
@@ -185,7 +156,8 @@ public class GameManager : MonoBehaviour {
       PlayerPrefsX.SetBool ("Vibration", vibration);
       PlayerPrefsX.SetBool ("BGM", bgm);
       */
-		
+
+
 		PlayerPrefs.Save ();
 	}
 	
@@ -214,45 +186,28 @@ public class GameManager : MonoBehaviour {
 		shield = PlayerPrefs.GetInt ("Shield");
 		mysteryBox = PlayerPrefs.GetInt ("MysteryBox"); 
 		
-		/*
-      postCard1 = PlayerPrefsX.GetBoolArray ("Postcard1");
-      postCard2 = PlayerPrefsX.GetBoolArray ("Postcard2");
-      postCard3 = PlayerPrefsX.GetBoolArray ("Postcard3");
-      postCard4 = PlayerPrefsX.GetBoolArray ("Postcard4");
-      postCard5 = PlayerPrefsX.GetBoolArray ("Postcard5");
-      postCard6 = PlayerPrefsX.GetBoolArray ("Postcard6");
-      postCard7 = PlayerPrefsX.GetBoolArray ("Postcard7");
-      postCard8 = PlayerPrefsX.GetBoolArray ("Postcard8");
-      postCard9 = PlayerPrefsX.GetBoolArray ("Postcard9");
-      postCard10 = PlayerPrefsX.GetBoolArray ("Postcard10");
-      */
+
 		
-		postCard[0] = PlayerPrefsX.GetBoolArray ("Postcard1");
-		postCard[1] = PlayerPrefsX.GetBoolArray ("Postcard2");
-		postCard[2] = PlayerPrefsX.GetBoolArray ("Postcard3");
-		postCard[3] = PlayerPrefsX.GetBoolArray ("Postcard4");
-		postCard[4] = PlayerPrefsX.GetBoolArray ("Postcard5");
-		postCard[5] = PlayerPrefsX.GetBoolArray ("Postcard6");
-		postCard[6] = PlayerPrefsX.GetBoolArray ("Postcard7");
-		postCard[7] = PlayerPrefsX.GetBoolArray ("Postcard8");
-		postCard[8] = PlayerPrefsX.GetBoolArray ("Postcard9");
-		postCard[9] = PlayerPrefsX.GetBoolArray ("Postcard10");
+		postCard[0] = PlayerPrefs.GetInt ("Postcard1");
+		postCard[1] = PlayerPrefs.GetInt ("Postcard2");
+		postCard[2] = PlayerPrefs.GetInt ("Postcard3");
+		postCard[3] = PlayerPrefs.GetInt ("Postcard4");
+		postCard[4] = PlayerPrefs.GetInt ("Postcard5");
+		postCard[5] = PlayerPrefs.GetInt ("Postcard6");
+		postCard[6] = PlayerPrefs.GetInt ("Postcard7");
+		postCard[7] = PlayerPrefs.GetInt ("Postcard8");
+		postCard[8] = PlayerPrefs.GetInt ("Postcard9");
+		postCard[9] = PlayerPrefs.GetInt ("Postcard10");
 		
 		vibration = PlayerPrefsX.GetBool("Vibration");
 		bgm = PlayerPrefsX.GetBool("Bgm");
+		/*
 		Tutorial_SelectScene = PlayerPrefsX.GetBool ("TutorialSelectScene");
 		Tutorial_SelectScene_PlayIntro = PlayerPrefsX.GetBool ("TutorialSelectScenePlayIntro");
 		
 		Tutorial_EquipScene = PlayerPrefsX.GetBool ("TutorialEquipScene");
-		
-		
-		/*temporary
-      life = 5;
-      public static bool magnet_equip = false;
-      public static bool booster_equip = false;
-      public static bool shield_equip = false;
-      public static int mysteryBox_equip = 0;
-      */
+		*/
+
 		
 		
 	}
@@ -264,7 +219,6 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	
-	// Use this for initialization
 	void Start () {
 		Screen.SetResolution(Screen.width, Screen.width/16*9, true);
 		if(backMusic.GetComponent<AudioSource>().clip == null){

@@ -11,6 +11,7 @@ public class Collection : MonoBehaviour {
 	public Sprite[] on_Img = new Sprite[4];
 	public Sprite[] off_Img = new Sprite[4];
 
+	public Image[] black_all = new Image[10];
 
 
 	//1.All  
@@ -19,6 +20,8 @@ public class Collection : MonoBehaviour {
 
 	//2.Detail
 	Image postcard_preview;
+	Image black_preview;
+
 	Text card_NameTxt;
 	Text card_contTxt;
 	Text card_themeTxt;
@@ -53,16 +56,12 @@ public class Collection : MonoBehaviour {
 
 	void Awake () { //원래 awake
 
-		for (int i =0; i<10; i++) 
-		{
-			GameManager.postCard_Image [i] = cardImg [i];
-		}
-
 		//2.detail
 		postcard_preview = GameObject.Find ("letter_preview1").GetComponent<Image> ();
 		card_NameTxt = GameObject.Find ("postcardTxt1").GetComponent<Text> ();
 		card_themeTxt = GameObject.Find ("postcardTxt3").GetComponent<Text> ();
 		card_contTxt =GameObject.Find ("postcardTxt2").GetComponent<Text> ();
+		black_preview = GameObject.Find ("black_preview").GetComponent<Image> ();
 
 		//3.write
 		to = GameObject.Find ("to_txt").GetComponent<Text> ();
@@ -81,11 +80,16 @@ public class Collection : MonoBehaviour {
 
 
 
+
 	}
 	
 	
 	void Update()
 	{
+		for (int i =0; i<10; i++) 
+		{
+			black_all[i].fillAmount =1- (float)GameManager.postCard[i]*0.2f;
+		}
 
 		for (int i =0; i<4; i++) 
 		{
@@ -194,8 +198,13 @@ public class Collection : MonoBehaviour {
 	//1.All
 	public void letterClicked(int i)
 	{
+		black_preview.fillAmount =1 - GameManager.postCard [i] * 0.2f;
+		Debug.Log ("perxent"+GameManager.postCard [i] * 0.2f);
+
+		Debug.Log ("letter"+i+"clickes");
 		postcard_preview.sprite = cardImg[i];
 		letterPreview.sprite = cardImg [i];
+
 
 		card_equip = i;
 
@@ -247,7 +256,6 @@ public class Collection : MonoBehaviour {
 			card_contTxt.text ="If you choose this card,\n you can watch sunshine effect on game map";
 			break;
 		}
-			
 		menuSelected = 1;
 	}
 

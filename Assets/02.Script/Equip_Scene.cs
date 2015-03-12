@@ -77,7 +77,8 @@ public class Equip_Scene : MonoBehaviour {
 		SFX_itemBuy = GameObject.Find ("/SFX/itemBuy").GetComponent<AudioSource> ();
 		SFX_itemBuy.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("ItemBuy");
 		
-		
+
+
 	}
 	
 	void Update(){

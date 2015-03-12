@@ -20,6 +20,10 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	}
 	void Start ()
 	{
+		//GameManager.Tutorial_SelectScene = true;
+		
+		
+		
 		Tut_Canvas = GameObject.Find ("TutorialCanvas");
 		Tut_bg = GameObject.Find ("/TutorialCanvas/Background");
 		Tut_help1 = GameObject.Find ("/TutorialCanvas/Background/Help1");
@@ -27,23 +31,37 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		Tut_help3 = GameObject.Find ("/TutorialCanvas/Background/Help3");
 		
 		DisableTutorialCanvas ();
+		Debug.Log ("Start함수 안에 GameManager.Tutorial_SelectScene 값은  : " + GameManager.Tutorial_SelectScene);
 		
-		if(GameManager.Tutorial_SelectScene) //원래값 : true
-		{
-			//Tutorial Starts
-			
-			if(GameManager.Tutorial_SelectScene_PlayIntro == true)
-			{   
-				StartTutorial();
-				EnableHelp3();
-			}
-			else
-			{
-				StartTutorial();
-				EnableHelp1 ();
-			}
-			
+		if(GameManager.Tutorial_SelectScene==true && GameManager.Tutorial_SelectScene_PlayIntro == true)
+		{   
+			StartTutorial();
+			EnableHelp1();
 		}
+		else if(GameManager.Tutorial_SelectScene == true && GameManager.Tutorial_SelectScene_PlayIntro == false)
+		{
+			StartTutorial();
+			EnableHelp3 ();
+		}
+		
+		/*
+      if(GameManager.Tutorial_SelectScene) //원래값 : true
+      {
+         //Tutorial Starts
+         
+         if(GameManager.Tutorial_SelectScene_PlayIntro == true)
+         {   
+            StartTutorial();
+            EnableHelp3();
+         }
+         else
+         {
+            StartTutorial();
+            EnableHelp1 ();
+         }
+         
+      }
+      */
 	}
 	
 	// Update is called once per frame
@@ -58,6 +76,8 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	{
 		Tut_Canvas.SetActive (true);
 		Tut_bg.SetActive (true);
+		
+		Debug.Log ("GameManager.Tutorial_SelectScene_PlayIntro : " + GameManager.Tutorial_SelectScene_PlayIntro);
 		
 		Debug.Log ("StartTutorial() 실행");
 	}
@@ -81,7 +101,6 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	public void EnableHelp2()
 	{
 		Tut_help2.SetActive (true);
-		GameManager.Tutorial_SelectScene_PlayIntro = true;
 		Debug.Log ("GameManager.Tutorial_SelectScene_PlayIntro 값은 " + GameManager.Tutorial_SelectScene_PlayIntro);
 		Debug.Log ("EnableHelp2() 실행");
 	}
@@ -89,6 +108,8 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	public void DisableHelp2()
 	{
 		Tut_help2.SetActive (false);
+		GameManager.Tutorial_SelectScene_PlayIntro = false;
+		Debug.Log ("GameManager.Tutorial_SelectScene_PlayIntro : " + GameManager.Tutorial_SelectScene_PlayIntro);
 		Debug.Log ("DisableHelp2() 실행");
 		
 	}
@@ -123,13 +144,34 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		Tut_bg.SetActive (false);
 		Tut_Canvas.SetActive (false);
 		
-
 		
 		Debug.Log ("DisableTutorialCanvas() 실행");
 		
 	}
 	
+	//////////////////////////////////////////////////////////
 	
+	
+	public void SkipButtonClicked()
+	{
+		
+		Tut_help1.SetActive (false);
+		Tut_help2.SetActive (false);
+		Tut_help3.SetActive (false);
+		Tut_bg.SetActive (false);
+		Tut_Canvas.SetActive (false);
+		
+		GameManager.Tutorial_SelectScene_PlayIntro = false;
+		//PlayerPrefsX.SetBool ("TutorialSElectScene", GameManager.Tutorial_SelectScene);
+		//PlayerPrefs.Save ();
+		
+		Debug.Log ("Tutorial_SelectScene 값: " + GameManager.Tutorial_SelectScene_PlayIntro + " 으로 바뀜");
+		
+		Debug.Log ("SkipButtonClicked() 실행");
+		
+		
+		
+	}
 	
 	
 	

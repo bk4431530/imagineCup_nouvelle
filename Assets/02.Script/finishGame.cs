@@ -174,6 +174,21 @@ public class finishGame : MonoBehaviour {
 		GameManager.heart_ep1 = GameManager.heart_ep1 + GameManager.currentLife;
 		PlayerPrefs.SetInt ("Heart_ep1",GameManager.heart_ep1);
 		PlayerPrefs.Save ();
+
+
+		PlayerPrefs.SetInt ("Postcard1",GameManager.postCard[0]);
+		PlayerPrefs.SetInt ("Postcard2",GameManager.postCard[1]);
+		PlayerPrefs.SetInt ("Postcard3",GameManager.postCard[2]);
+		PlayerPrefs.SetInt ("Postcard4",GameManager.postCard[3]);
+		PlayerPrefs.SetInt ("Postcard5",GameManager.postCard[4]);
+		PlayerPrefs.SetInt ("Postcard6",GameManager.postCard[5]);
+		PlayerPrefs.SetInt ("Postcard7",GameManager.postCard[6]);
+		PlayerPrefs.SetInt ("Postcard8",GameManager.postCard[7]);
+		PlayerPrefs.SetInt ("Postcard9",GameManager.postCard[8]);
+		PlayerPrefs.SetInt ("Postcard10",GameManager.postCard[9]);
+
+
+		PlayerPrefs.Save ();
 		
 		
 
@@ -229,18 +244,12 @@ public class finishGame : MonoBehaviour {
 	public void openPiece(int i)
 	{
 		rand_postcard = (int)Random.Range (0, 10);
-		rand_piece = (int)Random.Range (0, 6);
-		
-		//GameManager.postCard [rand_postcard] [rand_piece] = true;
+
 
 		postPiecies [i].SetActive (true);
 		postPiecies[i].GetComponent<Image>().sprite = postcards[rand_postcard];
 
-
-		/*
-		postback [i].SetActive (true);
-		postback [i].GetComponent<Image> ().sprite = GameManager.postCard_Image [rand_postcard];
-		*/
+		GameManager.postCard [i] += 1;
 		
 	}
 
