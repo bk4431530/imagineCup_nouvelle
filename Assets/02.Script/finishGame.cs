@@ -286,4 +286,10 @@ public class finishGame : MonoBehaviour {
 		}
 		
 	}
+
+	public void setNew(){
+		GameManager.Tutorial_EquipScene = false;
+		GameManager.Tutorial_SelectScene = false;
+		GameManager.Tutorial_SelectScene_PlayIntro = false;
+	}
 }

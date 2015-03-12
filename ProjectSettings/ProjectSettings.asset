@@ -109,7 +109,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 0}
+    - m_Icon: {fileID: 2800000, guid: d1364d7d7532f3e45a5c1066f7527d94, type: 3}
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: WP8

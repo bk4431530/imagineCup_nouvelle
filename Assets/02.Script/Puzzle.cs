@@ -12,6 +12,8 @@ public class Puzzle : MonoBehaviour {
 	public float player_pos;
 	public float drop_pos;
 
+	public GameObject particle;
+
 	void Start(){
 		player = GameObject.Find ("player");
 	}
@@ -34,6 +36,17 @@ public class Puzzle : MonoBehaviour {
 		if(screenPosition.y < -1)
 		{
 			this.gameObject.SetActive (false);
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.name == "player") {
+			//GameManager.currentPiece++;
+			//GameObject collide=(GameObject)Instantiate (particle, this.transform.position, this.transform.rotation);
+			//Destroy(collide,0.5f);
+			//collidedPuzzle = other.gameObject;
+			//this.SetActive(false);
 		}
 	}
 }

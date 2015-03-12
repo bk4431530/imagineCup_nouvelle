@@ -21,7 +21,7 @@ public class Option : MonoBehaviour {
 		VibOn = GameObject.Find ("VibOn").GetComponent<Toggle> ();
 		VibOff = GameObject.Find ("VibOff").GetComponent<Toggle> ();
 
-		backMusic = GameManager.backMusic;
+		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 	}
 	
 	void Start () {
@@ -66,14 +66,14 @@ public class Option : MonoBehaviour {
 	}
 	
 	//setting function
-	
+	/*
 	public void music_On()
 	{
 		if(GameManager.bgm == false)
 		{
 			GameManager.bgm = true;
 			backMusic.Play();
-			
+			Debug.Log("Music_On");	 
 		}
 	}
 	
@@ -83,10 +83,10 @@ public class Option : MonoBehaviour {
 		{
 			GameManager.bgm = false;
 			backMusic.Stop();
-			
+			Debug.Log("Music_Off");	 
 		}
 	}
-	
+	*/
 	////////////////////////////////////   
 	
 	
@@ -128,6 +128,12 @@ public class Option : MonoBehaviour {
 			GameManager.sfx = false; // true로 바꿈
 		}
 
+	}
+
+	///////////////////////////////////////
+
+	public void clickedInit(){
+		PlayerPrefs.DeleteAll ();
 	}
 	
 	

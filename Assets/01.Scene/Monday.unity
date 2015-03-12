@@ -1599,6 +1599,7 @@ MonoBehaviour:
   RB: 0
   player_pos: 147
   drop_pos: 167
+  particle: {fileID: 1202278456}
 --- !u!212 &110499571
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18514,7 +18515,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 838392388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -100, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23787,6 +23788,7 @@ MonoBehaviour:
   RB: 0
   player_pos: 290
   drop_pos: 307
+  particle: {fileID: 1202278456}
 --- !u!212 &1011763246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -27786,6 +27788,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1310993695}
+        m_MethodName: setNew
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1195462042
@@ -29970,6 +29984,7 @@ MonoBehaviour:
   RB: 1
   player_pos: 20
   drop_pos: 42
+  particle: {fileID: 1202278456}
 --- !u!60 &1222066097
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -35751,7 +35766,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1457786995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -100, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -47849,6 +47864,18 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1310993695}
         m_MethodName: ButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1310993695}
+        m_MethodName: setNew
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

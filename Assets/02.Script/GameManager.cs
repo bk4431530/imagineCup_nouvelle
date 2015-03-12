@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour {
 	
 	public static void initData()
 	{
+		Debug.Log ("init Data");
+
 		PlayerPrefs.SetInt ("Quilpen", 0);
 		PlayerPrefs.SetInt ("Piece", 0);
 		PlayerPrefs.SetInt ("Stamp", 0);
@@ -164,7 +166,7 @@ public class GameManager : MonoBehaviour {
 	
 	public static void getData()
 	{
-		
+		Debug.Log ("getData");
 		quillPen = PlayerPrefs.GetInt ("Quilpen");
 		piece = PlayerPrefs.GetInt ("Piece");
 		stamp = PlayerPrefs.GetInt ("Stamp");
@@ -213,7 +215,7 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	
-	void Awake(){
+	void OnEnable(){
 		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 		DontDestroyOnLoad(backMusic.gameObject);
 	}

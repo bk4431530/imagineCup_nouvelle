@@ -88,9 +88,13 @@ public class IntroScene : MonoBehaviour {
 
 		isTutorialOn = false;
 
+		//for Test
+		GameManager.bgm = true;
+
 		if (GameManager.bgm) {
-			backMusic.volume = 0.5f;
-			backMusic.Play();		
+			//backMusic.volume = 0.5f;
+			backMusic.Play();
+			Debug.Log("BGM played");
 		}
 	//	letterBox = GameObject.Find ("letterInput").GetComponent<Text> ();
 	//	Debug.Log("letterTxt is (" + letterInput + " )");

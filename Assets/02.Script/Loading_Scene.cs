@@ -28,6 +28,7 @@ public class Loading_Scene : MonoBehaviour {
 		else
 		{
 			GameManager.initData();
+			GameManager.getData();
 		}
 		
 	}

@@ -249,8 +249,8 @@ public class PlayerControl : MonoBehaviour {
 			GameManager.currentPiece++;
 			collidedPuzzle = other.gameObject;
 			Instantiate (particle, collidedPuzzle.transform.position, collidedPuzzle.transform.rotation);
-			Destroy(particle,0.5f);
-			Destroy (collidedPuzzle);
+			//Destroy(particle,0.5f);
+			collidedPuzzle.SetActive(false);
 			PieceSound();
 		}
 
@@ -397,7 +397,6 @@ public class PlayerControl : MonoBehaviour {
 		
 	}
 
-	
 }
 
 
