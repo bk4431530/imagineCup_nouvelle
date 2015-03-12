@@ -16,6 +16,8 @@ public class QuillPen : MonoBehaviour {
 	private float distance;
 	bool hit;
 
+	private int kind;
+
 	//sound
 	public static AudioSource SFX_quillpen;
 
@@ -54,6 +56,15 @@ public class QuillPen : MonoBehaviour {
 		if (QS == QuillPenState.Normal && other.gameObject.name == "player") 
 		{
 			QuillpenSound();
+			if(this.gameObject.name == "quillpen1")
+			{
+				kind = 1;
+			} else if(this.gameObject.name == "quillpen2")
+			{
+				kind = 2;
+			} else if(this.gameObject.name == "quillpen3"){
+				kind = 3;
+			}
 
 			GameObject clone= (GameObject)Instantiate (particle, this.transform.position, this.transform.rotation);
 			clone.AddComponent(typeof(DestroyMySelf));
@@ -66,7 +77,17 @@ public class QuillPen : MonoBehaviour {
 
 	void whenHit()
 	{
-		GameManager.currentQuillPen++;
+		switch(kind){
+		case 1:
+			GameManager.currentQuillPen++;
+			break;
+		case 2:
+			GameManager.currentQuillPen+=3;
+			break;
+		case 3:
+			GameManager.currentQuillPen+=5;
+			break;
+		}
 	}
 
 	

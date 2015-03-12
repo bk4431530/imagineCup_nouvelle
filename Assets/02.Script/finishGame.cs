@@ -25,6 +25,15 @@ public class finishGame : MonoBehaviour {
 
 	AudioSource backMusic;
 
+	private bool isClear;
+
+
+
+	//sound
+		public static AudioSource SFX_popup;
+	public static AudioSource SFX_button;
+	public static AudioSource SFX_piece;
+
 	void Start(){
 		finish_popup = GameObject.Find ("Finish");
 		finish_popup.SetActive (false);
@@ -60,6 +69,24 @@ public class finishGame : MonoBehaviour {
 		backMusic = GameManager.backMusic;
 
 		pass = false;
+
+		isClear = true;
+		//sound
+		
+		
+		
+		SFX_popup = GameObject.Find ("/SFX/popup").GetComponent<AudioSource> ();
+		SFX_popup.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("ScorePopup");
+
+		SFX_button = GameObject.Find ("/SFX/Button").GetComponent<AudioSource>();	
+		SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+		
+		
+		SFX_piece = GameObject.Find ("/SFX/piece").GetComponent<AudioSource> ();
+		SFX_piece.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("PieceGet");
+		
+		
+
 	}
 	
 
@@ -86,6 +113,11 @@ public class finishGame : MonoBehaviour {
 			//failed && succed
 			if (pass) 
 			{
+				if(isClear)
+				{
+					PopupSound();
+					isClear = false;
+				}
 				Debug.Log("clear");
 
 				failed.SetActive(false);
@@ -209,6 +241,40 @@ public class finishGame : MonoBehaviour {
 		postback [i].SetActive (true);
 		postback [i].GetComponent<Image> ().sprite = GameManager.postCard_Image [rand_postcard];
 		*/
+		
+	}
+
+	
+	public void PopupSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_popup.Play();
+			Debug.Log(" PopupSound 함수실행");
+			
+		}
+		
+	}
+
+	public void ButtonSound()
+	{
+		if(GameManager.sfx)
+		{
+			//SFX_button.GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("ButtonClick");
+			SFX_button.Play();
+			Debug.Log("Equip.cs에서 ButtonSound 함수실행");
+			
+		}
+		
+	}
+
+	public void PieceSound()
+	{
+		if(GameManager.sfx)
+		{
+			SFX_piece.Play();
+			Debug.Log(" PieceSound 함수실행");			
+		}
 		
 	}
 }
