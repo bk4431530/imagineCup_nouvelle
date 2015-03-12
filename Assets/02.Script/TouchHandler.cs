@@ -63,9 +63,9 @@ public class TouchHandler : MonoBehaviour {
 		
 		
 		
-		
+
 		//Android
-		if (Application.platform == RuntimePlatform.Android)
+		if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WP8Player)
 		{
 			if (Input.touchCount > 0)
 			{

@@ -85,7 +85,7 @@
      <Compile Include="Assets\02.Script\catSprite2.cs" />
      <Compile Include="Assets\02.Script\catSprite3.cs" />
      <Compile Include="Assets\02.Script\finishGame.cs" />
-     <Compile Include="Assets\02.Script\heartGauge.cs" />
+     <Compile Include="Assets\02.Script\heartGauge_finish.cs" />
      <Compile Include="Assets\02.Script\pauseGame.cs" />
      <Compile Include="Assets\Heart_Gauge_Select.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\ClickTouchScript.cs" />
