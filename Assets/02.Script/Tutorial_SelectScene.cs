@@ -103,6 +103,7 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	{
 		Tut_help3.SetActive (false);
 		Debug.Log ("DisableHelp3() 실행");
+		GameManager.Tutorial_SelectScene = false;
 		
 	}
 	
@@ -122,7 +123,7 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		Tut_bg.SetActive (false);
 		Tut_Canvas.SetActive (false);
 		
-		GameManager.Tutorial_SelectScene = false;
+
 		
 		Debug.Log ("DisableTutorialCanvas() 실행");
 		
