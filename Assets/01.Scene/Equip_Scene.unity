@@ -8676,7 +8676,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1688303829}
         m_MethodName: inputClicked
         m_Mode: 5
         m_Arguments:
@@ -8688,7 +8688,7 @@ MonoBehaviour:
           m_StringArgument: zipR
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1060728522}
         m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
@@ -11128,7 +11128,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1688303829}
         m_MethodName: inputClicked
         m_Mode: 5
         m_Arguments:
@@ -11140,7 +11140,7 @@ MonoBehaviour:
           m_StringArgument: zipL
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1060728522}
         m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
@@ -16288,7 +16288,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1688303829}
         m_MethodName: inputClicked
         m_Mode: 5
         m_Arguments:
@@ -16300,7 +16300,7 @@ MonoBehaviour:
           m_StringArgument: letter
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1060728522}
         m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
@@ -19558,7 +19558,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1688303829}
         m_MethodName: inputClicked
         m_Mode: 5
         m_Arguments:
@@ -19570,7 +19570,7 @@ MonoBehaviour:
           m_StringArgument: address
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1060728522}
         m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
@@ -22152,7 +22152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1688303829}
         m_MethodName: inputClicked
         m_Mode: 5
         m_Arguments:
@@ -22164,7 +22164,7 @@ MonoBehaviour:
           m_StringArgument: from
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1060728522}
         m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
@@ -22886,7 +22886,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1688303829}
         m_MethodName: inputClicked
         m_Mode: 5
         m_Arguments:
@@ -22898,7 +22898,7 @@ MonoBehaviour:
           m_StringArgument: to
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1060728522}
         m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
