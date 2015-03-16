@@ -10,6 +10,8 @@ public class QuillPen : MonoBehaviour {
 	}
 
 	public GameObject magnet;
+	public GameObject player;
+
 	public float speed = 1.0f;
 	public float startTime;
 	public GameObject particle;
@@ -26,7 +28,8 @@ public class QuillPen : MonoBehaviour {
 	void Start()
 	{
 		startTime = Time.time;
-		magnet = GameObject.Find ("player").transform.FindChild("magnet").gameObject;
+		player = GameObject.Find ("player");
+		magnet = player.transform.FindChild("magnet").gameObject;
 		hit = false;
 
 		//sound
@@ -42,7 +45,8 @@ public class QuillPen : MonoBehaviour {
 		if(QS == QuillPenState.Magnetic)
 		{
 			transform.LookAt(magnet.transform.position); 
-			transform.position = Vector2.Lerp(transform.position, magnet.transform.position, 0.07f);
+			transform.position = Vector3.Lerp(transform.position, magnet.transform.position, 0.07f);
+			Debug.Log ("magnet position" + magnet.transform.position);
 			Destroy(this.gameObject,0.07f);
 			Invoke("whenHit",0.06f);
 		}

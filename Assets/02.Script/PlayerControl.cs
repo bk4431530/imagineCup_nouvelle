@@ -101,7 +101,7 @@ public class PlayerControl : MonoBehaviour {
 
 	void Start()
 	{
-
+		GameManager.magnet_equip = true;
 
 		//sound effect
 
