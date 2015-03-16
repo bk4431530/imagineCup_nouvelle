@@ -8,7 +8,7 @@ public class Magnet : MonoBehaviour {
 	}
 	
 	void Update () {
-		Collider2D[] hitColliders = Physics2D.OverlapCircleAll (transform.position, 2.0f);
+		Collider2D[] hitColliders = Physics2D.OverlapCircleAll (transform.position, 2.2f);
 		for(int i = 0; i < hitColliders.Length; i++)
 		{
 			if(hitColliders[i].gameObject.tag == "Quillpen")

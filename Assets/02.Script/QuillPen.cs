@@ -44,11 +44,12 @@ public class QuillPen : MonoBehaviour {
 	void Update(){
 		if(QS == QuillPenState.Magnetic)
 		{
-			transform.LookAt(magnet.transform.position); 
-			transform.position = Vector3.Lerp(transform.position, magnet.transform.position, 0.07f);
+			//transform.LookAt(magnet.transform.position); 
+			transform.position = Vector3.Lerp(transform.position, magnet.transform.position, 0.1f);
 			Debug.Log ("magnet position" + magnet.transform.position);
-			Destroy(this.gameObject,0.07f);
-			Invoke("whenHit",0.06f);
+
+			//Destroy(this.gameObject,0.07f);
+			//Invoke("whenHit",0.06f);
 		}
 
 	}
@@ -57,7 +58,7 @@ public class QuillPen : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other)
 	{
 
-		if (QS == QuillPenState.Normal && other.gameObject.name == "player") 
+		if (/*QS == QuillPenState.Normal &&*/ other.gameObject.name == "player") 
 		{
 			QuillpenSound();
 			if(this.gameObject.name == "quillpen1")

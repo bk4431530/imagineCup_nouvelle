@@ -235,6 +235,7 @@ public class PlayerControl : MonoBehaviour {
 			else{
 				PS = PlayerState.Collided;
 				diePos = transform.position;
+				this.GetComponent<PolygonCollider2D> ().enabled = false;
 				mAnimator.SetTrigger("collid");
 				Invoke("whenDie", 0.8f);
 			}
@@ -313,18 +314,17 @@ public class PlayerControl : MonoBehaviour {
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
 
+		this.GetComponent<PolygonCollider2D> ().enabled = true;
+
 		rigidbody2D.isKinematic = true;
 		rigidbody2D.isKinematic = false;
 		rigidbody2D.AddForce (new Vector2 (0, 300));
 
-		//this.GetComponent<PolygonCollider2D> ().enabled = false;
 		isRevival = true;
-
 		Invoke ("Revival", 1.5f);
 	}
 	
 	void Revival(){
-		//this.GetComponent<PolygonCollider2D> ().enabled = true;
 		isRevival = false;
 	}
 	
