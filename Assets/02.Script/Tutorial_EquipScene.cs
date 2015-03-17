@@ -181,7 +181,28 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	
 	
 	////////////////////////////////////////////////////////////////   
-	
+
+	public void SkipButtonClicked()
+	{
+		Tut_Canvas.SetActive(false);
+
+		/*
+		Tut_bg;
+		Tut_help1;
+		Tut_help2;
+		Tut_help3;
+		Tut_help4;
+		Tut_help5;
+		Tut_help6;
+		Tut_help7;
+		*/
+	}
+
+
+
+
+
+
 	
 	
 }
