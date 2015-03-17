@@ -38,7 +38,9 @@ public class Tutorial_SelectScene : MonoBehaviour {
 			StartTutorial();
 			EnableHelp1();
 		}
-		else if(GameManager.Tutorial_SelectScene == true && GameManager.Tutorial_SelectScene_PlayIntro == false)
+		else if(GameManager.Tutorial_SelectScene == true 
+		        && GameManager.Tutorial_SelectScene_PlayIntro == false
+		        && GameManager.Tutorial_SelectScene_Monday == true)
 		{
 			StartTutorial();
 			EnableHelp3 ();
@@ -116,8 +118,12 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	
 	public void EnableHelp3()
 	{
-		Tut_help3.SetActive (true);
-		Debug.Log ("EnableHelp3() 실행");
+		if(GameManager.Tutorial_SelectScene_Monday == true)
+		{
+			Tut_help3.SetActive (true);
+			Debug.Log ("EnableHelp3() 실행");
+		}
+
 	}
 	
 	public void DisableHelp3()
@@ -169,8 +175,15 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		
 		Debug.Log ("SkipButtonClicked() 실행");
 		
-		
-		
+
+	}
+
+	public void MondayClicked()
+	{
+		GameManager.Tutorial_SelectScene_Monday = false;
+		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", GameManager.Tutorial_SelectScene_Monday);
+
+		Debug.Log("GameManager.Tutorial_SelectScene_Monday 바뀜 => " + PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
 	}
 	
 	

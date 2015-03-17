@@ -62,11 +62,11 @@ public class GameManager : MonoBehaviour {
 	
 	//Tutorial
 	public static bool Tutorial_SelectScene = true;
-	public static bool Tutorial_SelectScene_PlayIntro=false;
+	public static bool Tutorial_SelectScene_PlayIntro = false;
+	public static bool Tutorial_SelectScene_Monday = true;
 	
 	
 	public static bool Tutorial_EquipScene = true;
-	//public static bool Tutorial_EquipScene = true;
 
 	public static int[] postCard = new int[10];
 	
@@ -115,13 +115,18 @@ public class GameManager : MonoBehaviour {
 		
 		PlayerPrefsX.SetBool ("Vibration", true);
 		PlayerPrefsX.SetBool ("BGM", true);
+
+
 		
-		/*
+		//이거도 저장해야되나? /////////////////////////
 		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
 		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", false);
 		
 		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
-		*/
+		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", true);
+
+		////////////////////////////////
+
 		
 		/*
       PlayerPrefs.SetInt ("Quilpen", quillPen);
@@ -210,6 +215,8 @@ public class GameManager : MonoBehaviour {
 		Tutorial_EquipScene = PlayerPrefsX.GetBool ("TutorialEquipScene");
 		*/
 
+		//이거도 저장해야되나?
+		Tutorial_SelectScene_Monday = PlayerPrefsX.GetBool ("TutorialSelectSceneMonday");
 		
 		
 	}
