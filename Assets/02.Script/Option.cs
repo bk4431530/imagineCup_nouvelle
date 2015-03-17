@@ -35,6 +35,8 @@ public class Option : MonoBehaviour {
 				backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 				backMusic.Play();
 			}
+
+			Debug.Log("Music_on_start");
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -42,6 +44,7 @@ public class Option : MonoBehaviour {
 			MusicOn.isOn = false;
 			MusicOff.isOn = true;
 			backMusic.Stop();
+			Debug.Log("Music_off_start");
 		}
 		
 		if(GameManager.vibration == true)
@@ -66,7 +69,6 @@ public class Option : MonoBehaviour {
 	}
 	
 	//setting function
-	/*
 	public void music_On()
 	{
 		if(GameManager.bgm == false)
@@ -86,7 +88,6 @@ public class Option : MonoBehaviour {
 			Debug.Log("Music_Off");	 
 		}
 	}
-	*/
 	////////////////////////////////////   
 	
 	
@@ -97,6 +98,7 @@ public class Option : MonoBehaviour {
 			GameManager.vibration = true; //true로 바꿈
 			//vibrate once
 			Handheld.Vibrate();
+			Debug.Log("vib_On");	
 						
 		}
 	}
@@ -106,7 +108,7 @@ public class Option : MonoBehaviour {
 		if(GameManager.vibration == true)
 		{
 			GameManager.vibration = false; //false로 바꿈
-			
+			Debug.Log("vib_Off");	
 		}
 	}
 
@@ -118,6 +120,7 @@ public class Option : MonoBehaviour {
 		if(GameManager.sfx == false)
 		{
 			GameManager.sfx = true; // true로 바꿈
+			Debug.Log("SFX_On");	
 		}
 	}
 
@@ -126,6 +129,7 @@ public class Option : MonoBehaviour {
 		if(GameManager.sfx == true)
 		{
 			GameManager.sfx = false; // true로 바꿈
+			Debug.Log("SFX_Off");
 		}
 
 	}
@@ -134,6 +138,7 @@ public class Option : MonoBehaviour {
 
 	public void clickedInit(){
 		PlayerPrefs.DeleteAll ();
+		Debug.Log ("Init Data");
 	}
 	
 	
