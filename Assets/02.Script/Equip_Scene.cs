@@ -77,17 +77,29 @@ public class Equip_Scene : MonoBehaviour {
 		SFX_itemBuy = GameObject.Find ("/SFX/itemBuy").GetComponent<AudioSource> ();
 		SFX_itemBuy.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("ItemBuy");
 		
+		//수정중
+	/*	
+		booster_cnt.text = GameManager.booster.ToString();
+		Debug.Log ("booster_cnt.text = " + booster_cnt.text);
 
+		magnet_cnt.text = GameManager.magnet.ToString();
+		Debug.Log ("magnet_cnt.text = " + magnet_cnt.text);
+
+		shield_cnt.text = GameManager.shield.ToString();
+		Debug.Log ("shield_cnt.text = " + shield_cnt.text);
+
+		mysteryBox_cnt.text = GameManager.mysteryBox.ToString();
+		Debug.Log ("mysteryBox_cnt.text = " + mysteryBox_cnt.text); */
 
 	}
 	
 	void Update(){
-		
+
 		
 		booster_cnt.text = GameManager.booster.ToString();
 		magnet_cnt.text = GameManager.magnet.ToString();
 		shield_cnt.text = GameManager.shield.ToString();
-		mysteryBox_cnt.text = GameManager.mysteryBox.ToString();
+		mysteryBox_cnt.text = GameManager.mysteryBox.ToString(); 
 		
 		switch (GameManager.currentEpisode) {
 		case 1:
