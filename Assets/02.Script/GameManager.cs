@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour {
 	
 	public static bool Tutorial_EquipScene = true;
 
-	public static int[] postCard = new int[10];
+	
+	public static int[] postCard = {5,0,0,0,0,0,0,0,5,0};
 	
 	
 	
@@ -107,12 +108,19 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetString ("Address",Addr);
 		
 		
-		//각각 컬렉션마다 5조각
-		for (int i = 0; i < 10; i++) {
-			postCard[i] = 0;
-		}
+		//collection
+		PlayerPrefs.SetInt ("Postcard1",postCard[0]);
+		PlayerPrefs.SetInt ("Postcard2",postCard[1]);
+		PlayerPrefs.SetInt ("Postcard3",postCard[2]);
+		PlayerPrefs.SetInt ("Postcard4",postCard[3]);
+		PlayerPrefs.SetInt ("Postcard5",postCard[4]);
+		PlayerPrefs.SetInt ("Postcard6",postCard[5]);
+		PlayerPrefs.SetInt ("Postcard7",postCard[6]);
+		PlayerPrefs.SetInt ("Postcard8",postCard[7]);
+		PlayerPrefs.SetInt ("Postcard9",postCard[8]);
+		PlayerPrefs.SetInt ("Postcard10",postCard[9]);
 
-		
+
 		PlayerPrefsX.SetBool ("Vibration", true);
 		PlayerPrefsX.SetBool ("BGM", true);
 

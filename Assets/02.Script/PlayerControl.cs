@@ -178,8 +178,13 @@ public class PlayerControl : MonoBehaviour {
 		{
 			if(TouchHandler.Mswiped == true)
 			{
-				Jump();
-			}else{
+				//Jump();
+				rigidbody2D.velocity = Vector2.zero;
+				rigidbody2D.AddForce (jumpForce);
+				mAnimator.SetTrigger("up");
+			}
+			else
+			{
 				rigidbody2D.AddForce (run);
 			}
 		} 
@@ -262,7 +267,8 @@ public class PlayerControl : MonoBehaviour {
 			isClear = true;
 		}
 	}
-	
+
+	/*
 	void Jump()
 	{
 		rigidbody2D.velocity = Vector2.zero;
@@ -272,7 +278,7 @@ public class PlayerControl : MonoBehaviour {
 		
 	}
 	
-
+*/
 
 	void Die()
 	{

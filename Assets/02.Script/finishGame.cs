@@ -249,7 +249,7 @@ public class finishGame : MonoBehaviour {
 		postPiecies [i].SetActive (true);
 		postPiecies[i].GetComponent<Image>().sprite = postcards[rand_postcard];
 
-		GameManager.postCard [i] += 1;
+		GameManager.postCard [rand_postcard] += 1;
 		
 	}
 
