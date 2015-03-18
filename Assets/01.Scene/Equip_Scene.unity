@@ -775,7 +775,7 @@ GameObject:
   - 222: {fileID: 60689141}
   - 114: {fileID: 60689140}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: LoadingImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3630,7 +3630,7 @@ GameObject:
   - 114: {fileID: 301779218}
   - 95: {fileID: 301779217}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: ControlTutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12717,6 +12717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181a2233374da614592df0d264f05229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: 80
 --- !u!114 &1060728525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15267,7 +15268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1237442011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20927,6 +20928,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 181a2233374da614592df0d264f05229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: 80
 --- !u!1 &1700673167
 GameObject:
   m_ObjectHideFlags: 0
