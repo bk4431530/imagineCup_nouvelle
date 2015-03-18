@@ -39,10 +39,7 @@ public class Option : MonoBehaviour {
 
 
 			Debug.Log("Music_on_start");
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/master
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -94,15 +91,12 @@ public class Option : MonoBehaviour {
 			backMusic.Stop();
 			Debug.Log("Music_Off");	 
 		}
-<<<<<<< HEAD
 	}
 
-=======
-	}	
 
-	////////////////////////////////////   
+
+
 	
->>>>>>> origin/master
 	
 	public void vib_On()
 	{
