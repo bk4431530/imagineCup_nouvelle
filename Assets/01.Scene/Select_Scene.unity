@@ -4170,6 +4170,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1231257973}
+        m_MethodName: MondayClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &324888352
@@ -10507,6 +10519,7 @@ RectTransform:
   - {fileID: 1507788753}
   - {fileID: 1766637498}
   - {fileID: 103905609}
+  - {fileID: 1310841925}
   m_Father: {fileID: 1853289231}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}
@@ -15993,14 +16006,14 @@ RectTransform:
   m_GameObject: {fileID: 1310841924}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .909090936, y: .909090936, z: 1}
   m_Children:
   - {fileID: 880013644}
-  m_Father: {fileID: 1853289231}
-  m_RootOrder: 1
+  m_Father: {fileID: 805020747}
+  m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 569, y: -312.200012}
+  m_AnchoredPosition: {x: 517.272705, y: -283.818176}
   m_SizeDelta: {x: 199, y: 96}
   m_Pivot: {x: .697546482, y: .5}
 --- !u!114 &1310841926
@@ -16054,8 +16067,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1231257968}
-        m_MethodName: ButtonSound
+      - m_Target: {fileID: 1231257973}
+        m_MethodName: MondayTutorialOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24746,7 +24759,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 805020747}
-  - {fileID: 1310841925}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_AnchorMin: {x: 0, y: 0}

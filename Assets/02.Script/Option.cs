@@ -39,6 +39,10 @@ public class Option : MonoBehaviour {
 
 
 			Debug.Log("Music_on_start");
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/master
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -90,8 +94,15 @@ public class Option : MonoBehaviour {
 			backMusic.Stop();
 			Debug.Log("Music_Off");	 
 		}
+<<<<<<< HEAD
 	}
 
+=======
+	}	
+
+	////////////////////////////////////   
+	
+>>>>>>> origin/master
 	
 	public void vib_On()
 	{
@@ -140,7 +151,19 @@ public class Option : MonoBehaviour {
 
 	public void clickedInit(){
 		PlayerPrefs.DeleteAll ();
+
+		Debug.Log ("초기화 되었습니다.");
+
+		Debug.Log (GameManager.Tutorial_SelectScene);
+		Debug.Log ("PlayerPrefsX.GetBool (TutorialSelectScene) = " + PlayerPrefsX.GetBool ("TutorialSelectScene"));
+		Debug.Log ("PlayerPrefsX.GetBool(TutorialSelectSceneMonday) = " + PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
+
+		Debug.Log ("test = " + PlayerPrefsX.GetBool("TutorialSelectSceneblahblah"));
+
+
+
 		Debug.Log ("Init Data");
+
 	}
 	
 	

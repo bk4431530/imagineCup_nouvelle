@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour {
 	
 	//Tutorial
 	public static bool Tutorial_SelectScene = true;
-	public static bool Tutorial_SelectScene_PlayIntro = false;
+	public static bool Tutorial_SelectScene_PlayIntro = true;
 	public static bool Tutorial_SelectScene_Monday = true;
 	
 	
@@ -128,10 +128,11 @@ public class GameManager : MonoBehaviour {
 		
 		//이거도 저장해야되나? /////////////////////////
 		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
-		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", false);
-		
-		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
+		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", true);
 		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", true);
+
+		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
+
 
 		////////////////////////////////
 
@@ -215,16 +216,19 @@ public class GameManager : MonoBehaviour {
 		postCard[9] = PlayerPrefs.GetInt ("Postcard10");
 		
 		vibration = PlayerPrefsX.GetBool("Vibration");
-		bgm = PlayerPrefsX.GetBool("Bgm");
-		/*
+		bgm = PlayerPrefsX.GetBool("BGM");
+
+
+		//tutorial - selectscene 변수들 
 		Tutorial_SelectScene = PlayerPrefsX.GetBool ("TutorialSelectScene");
 		Tutorial_SelectScene_PlayIntro = PlayerPrefsX.GetBool ("TutorialSelectScenePlayIntro");
-		
-		Tutorial_EquipScene = PlayerPrefsX.GetBool ("TutorialEquipScene");
-		*/
-
-		//이거도 저장해야되나?
 		Tutorial_SelectScene_Monday = PlayerPrefsX.GetBool ("TutorialSelectSceneMonday");
+
+		// tutoriail- equiscene 변수들
+		Tutorial_EquipScene = PlayerPrefsX.GetBool ("TutorialEquipScene");
+
+
+
 		
 		
 	}
