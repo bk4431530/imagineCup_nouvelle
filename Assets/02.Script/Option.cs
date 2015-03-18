@@ -31,10 +31,16 @@ public class Option : MonoBehaviour {
 			//MusicOn button On
 			MusicOn.isOn = true;
 			MusicOff.isOn = false;
+
 			if(backMusic.GetComponent<AudioSource>().clip == null){
 				backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 				backMusic.Play();
 			}
+
+<<<<<<< HEAD
+=======
+			Debug.Log("Music_on_start");
+>>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -42,6 +48,7 @@ public class Option : MonoBehaviour {
 			MusicOn.isOn = false;
 			MusicOff.isOn = true;
 			backMusic.Stop();
+			Debug.Log("Music_off_start");
 		}
 		
 		if(GameManager.vibration == true)
@@ -66,7 +73,10 @@ public class Option : MonoBehaviour {
 	}
 	
 	//setting function
-	/*
+<<<<<<< HEAD
+
+=======
+>>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
 	public void music_On()
 	{
 		if(GameManager.bgm == false)
@@ -86,9 +96,16 @@ public class Option : MonoBehaviour {
 			Debug.Log("Music_Off");	 
 		}
 	}
+<<<<<<< HEAD
 
 	*/
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
+>>>>>>> origin/master
 	////////////////////////////////////   
 	
 	
@@ -99,6 +116,7 @@ public class Option : MonoBehaviour {
 			GameManager.vibration = true; //true로 바꿈
 			//vibrate once
 			Handheld.Vibrate();
+			Debug.Log("vib_On");	
 						
 		}
 	}
@@ -108,7 +126,7 @@ public class Option : MonoBehaviour {
 		if(GameManager.vibration == true)
 		{
 			GameManager.vibration = false; //false로 바꿈
-			
+			Debug.Log("vib_Off");	
 		}
 	}
 
@@ -120,6 +138,7 @@ public class Option : MonoBehaviour {
 		if(GameManager.sfx == false)
 		{
 			GameManager.sfx = true; // true로 바꿈
+			Debug.Log("SFX_On");	
 		}
 	}
 
@@ -128,6 +147,7 @@ public class Option : MonoBehaviour {
 		if(GameManager.sfx == true)
 		{
 			GameManager.sfx = false; // true로 바꿈
+			Debug.Log("SFX_Off");
 		}
 
 	}
@@ -136,10 +156,14 @@ public class Option : MonoBehaviour {
 
 	public void clickedInit(){
 		PlayerPrefs.DeleteAll ();
+<<<<<<< HEAD
 		Debug.Log ("초기화 되었습니다.");
 
 		Debug.Log ("PlayerPrefsX.GetBool (TutorialSelectScene) = " + PlayerPrefsX.GetBool ("TutorialSelectScene"));
 		Debug.Log ("PlayerPrefsX.GetBool(TutorialSelectSceneMonday) = " + PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
+=======
+		Debug.Log ("Init Data");
+>>>>>>> origin/master
 	}
 	
 	

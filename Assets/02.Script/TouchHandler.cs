@@ -5,114 +5,139 @@ using System.Collections.Generic;
 
 public class TouchHandler : MonoBehaviour {
 	
-	private bool swiped =false;
-	public static bool Mswiped =false;
+	//line
+	private LineRenderer lineRenderer;
+	private int i = 0;
 	
+	//touch
+	public static bool swipe =false; 
+	public static bool swiped=false; 
 	private Touch initialTouch = new Touch();
-	private float deltaX;
-	private float deltaY;
-	private float distance;
-	private bool swipedSideways;
 	
-	Vector2 initialPos;
+	
+	
+	public static bool Mswiped =false;
+	public static bool Jumped =false;
 
 	
-	private LineRenderer lineRender;
+	Vector3 initialMPos;
 	private int numberOfPoints = 0;
 	
+	float deltaX;
+	float deltaY;
+	float distance;
+	float jdistance;
+	bool swipedSideways;
+
 	void Start()
 	{	
-		lineRender = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
+		lineRenderer = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
+		lineRenderer.SetVertexCount(0);
+		
 	}
-
-
+	
+	
 	void Update()
 	{
-		//distanxe fomula
-		distance = Mathf.Sqrt((deltaX*deltaX) + (deltaY*deltaY));
-		swipedSideways = Mathf.Abs(deltaX) > Mathf.Abs(deltaY);
 		
-		
-		//PC
-
-
-		
-
-		if(swiped == true || Input.GetMouseButton(0))
+		/*
+		if(Input.GetMouseButton(0))
 		{
 			numberOfPoints++;
-			lineRender.SetVertexCount( numberOfPoints );
-			Vector3 mousePos = new Vector3(0,0,0);
+			lineRenderer.SetVertexCount( numberOfPoints );
+			Vector3 mousePos = new Vector3(0,0,;
 			mousePos = Input.mousePosition;
 			mousePos.z = 1.0f;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-			lineRender.SetPosition(numberOfPoints - 1, worldPos);
-			
-		}else if(Input.GetMouseButtonUp(0)){
-			Mswiped = true;
+			lineRenderer.SetPosition(numberOfPoints - 1, worldPos);	
 		}
-		else{	
+		else if(Input.GetMouseButtonUp(0) && numberOfPoints > 2 && deltaX<0)
+		{
+			Mswiped =true;
+		}
+		else
+		{	
 			Mswiped =false;
 			numberOfPoints = 0;
-			lineRender.SetVertexCount(0);
+			lineRenderer.SetVertexCount(0);
 		}
-		
 
-		
-		
-		
-		
-		
 
-		//Android
-		if (Application.platform == RuntimePlatform.Android || Application.platform == RuntimePlatform.WP8Player)
+		 //PC swipe 
+		 deltaX = initialMPos.x - Input.mousePosition.x;
+		 deltaY = initialMPos.y - Input.mousePosition.y;
+		distance = Mathf.Sqrt((deltaX*deltaX) + (deltaY*deltaY));
+
+		if (numberOfPoints == 0) {
+			initialMPos = Input.mousePosition;
+		} 
+
+	
+		*/
+
+
+
+		//android
+		if (Input.touchCount > 0) 
 		{
-			if (Input.touchCount > 0)
+			Touch touch = Input.GetTouch (0);
+			
+			if (touch.phase == TouchPhase.Began) 
 			{
-				Touch touch = Input.GetTouch(0);
+				Mswiped = false;
+				jdistance =10000;
+				initialTouch = touch;
+
+			} 
+			else if (touch.phase == TouchPhase.Moved) 
+			{
+				lineRenderer.SetVertexCount(i+1);
+				Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+				lineRenderer.SetPosition(i, Camera.main.ScreenToWorldPoint(mPosition));
+				i++;
 				
-				if(touch.phase == TouchPhase.Began){
-					initialTouch = touch;
-					Mswiped =false;
+				
+				deltaX = initialTouch.position.x - Input.mousePosition.x;
+				deltaY = initialTouch.position.y - Input.mousePosition.y;
+				//distanxe fomula
+				distance = Mathf.Sqrt((deltaX*deltaX) + (deltaY*deltaY));
+				
+				
+				swipedSideways = Mathf.Abs(deltaX) > Mathf.Abs(deltaY);
+				
+				if (swipedSideways && deltaX > 0) 
+				{ //swiped left
+				} 
+				else if (swipedSideways && deltaX <= 0 ) 
+				{//swiped right
+					if(distance < jdistance && distance > 50f)
+					{
+						Mswiped = true;
+						jdistance = distance;
+					}else if(distance > jdistance){
+						Mswiped = false;
+					}
+				} 
+				else if (!swipedSideways && deltaY > 0) 
+				{//swiped down
+				} 
+				else if (!swipedSideways && deltaY <= 0) 
+				{//swiped up
 				}
 				
-				else if(touch.phase == TouchPhase.Moved)
-				{
-					deltaX = initialTouch.position.x - Input.mousePosition.x;
-					deltaY = initialTouch.position.y - Input.mousePosition.y;
-					
-					
-					if(distance > 100f)
-					{
-						
-						if(swipedSideways && deltaX > 0)
-						{ //swiped left
-						}
-						else if(swipedSideways && deltaX <=0)
-						{//swiped right
-							swiped =true;
-							Mswiped = false;
-						}
-						else if(!swipedSideways && deltaY >0)
-						{//swiped down
-						}
-						else if(!swipedSideways && deltaY <=0)
-						{//swiped up
-						}
-						
-					}//swipe 100
-				}//moved
 				
+			}
+			
+			if (touch.phase == TouchPhase.Ended) 
+			{
+				Mswiped = false;
+				initialTouch = new Touch ();
+				lineRenderer.SetVertexCount (0);
+				i = 0;
 				
-				if(touch.phase == TouchPhase.Ended)
-				{
-					initialTouch = new Touch();
-					swiped = false;
-					Mswiped =true;
-				}//Ended
-				
-			}//touch count >0
-		}//android
-	}//update
+			}
+		}
+		//andrroid
 	
-}//class
+	}
+}

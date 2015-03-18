@@ -9,7 +9,8 @@ public class Loading_Scene : MonoBehaviour {
 	
 	private bool started = false;
 	float percent;
-	
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -30,7 +31,10 @@ public class Loading_Scene : MonoBehaviour {
 			GameManager.initData();
 			GameManager.getData();
 		}
-		
+
+
+
+
 	}
 	
 	// Update is called once per frame
