@@ -1,19 +1,17 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\TopMenu.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\GameManager.cs">
     <Files>
-      <File FileName="Assets\02.Script\Tutorial_EquipScene.cs" Line="187" Column="30" />
-      <File FileName="Assets\02.Script\QuillPen.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\cat1.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\cat2.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\CatchedbyCat1.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\catSprite1.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\GameManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="87" Column="3" />
-      <File FileName="Assets\02.Script\Magnet.cs" Line="23" Column="1" />
-      <File FileName="Assets\02.Script\Tutorial_SelectScene.cs" Line="155" Column="18" />
-      <File FileName="Assets\02.Script\TopMenu.cs" Line="29" Column="1" />
+      <File FileName="Assets\02.Script\Tutorial_EquipScene.cs" Line="85" Column="1" />
+      <File FileName="Assets\02.Script\GameManager.cs" Line="64" Column="1" />
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="1" Column="11" />
+      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="102" Column="60" />
+      <File FileName="Assets\02.Script\Tutorial_SelectScene.cs" Line="126" Column="53" />
+      <File FileName="Assets\02.Script\Option.cs" Line="142" Column="61" />
+      <File FileName="Assets\02.Script\Select_Scene.cs" Line="21" Column="39" />
+      <File FileName="Assets\02.Script\TopMenu.cs" Line="22" Column="53" />
+      <File FileName="Assets\02.Script\Loading_Scene.cs" Line="23" Column="3" />
+      <File FileName="Assets\02.Script\PlayerPrefX.cs" Line="37" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -9,7 +9,8 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	public GameObject Tut_help1;
 	public GameObject Tut_help2;
 	public GameObject Tut_help3;
-	
+
+	//public bool PlayedMonday;
 	
 	
 	// Use this for initialization
@@ -32,6 +33,10 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		
 		DisableTutorialCanvas ();
 		Debug.Log ("Start함수 안에 GameManager.Tutorial_SelectScene 값은  : " + GameManager.Tutorial_SelectScene);
+		Debug.Log (PlayerPrefsX.GetBool ("TutorialSelectScene"));
+		Debug.Log (PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
+
+
 		
 		if(GameManager.Tutorial_SelectScene==true && GameManager.Tutorial_SelectScene_PlayIntro == true)
 		{   
@@ -40,7 +45,7 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		}
 		else if(GameManager.Tutorial_SelectScene == true 
 		        && GameManager.Tutorial_SelectScene_PlayIntro == false
-		        && GameManager.Tutorial_SelectScene_Monday == true)
+		        && PlayerPrefsX.GetBool("TutorialSelectSceneMonday") == true)
 		{
 			StartTutorial();
 			EnableHelp3 ();
@@ -118,9 +123,10 @@ public class Tutorial_SelectScene : MonoBehaviour {
 	
 	public void EnableHelp3()
 	{
-		if(GameManager.Tutorial_SelectScene_Monday == true)
+		if(PlayerPrefsX.GetBool("TutorialSelectSceneMonday")== true)
 		{
 			Tut_help3.SetActive (true);
+
 			Debug.Log ("EnableHelp3() 실행");
 		}
 
@@ -178,10 +184,12 @@ public class Tutorial_SelectScene : MonoBehaviour {
 
 	}
 
-	public void MondayClicked()
+	public void MondayTutorialOff()
 	{
 		GameManager.Tutorial_SelectScene_Monday = false;
-		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", GameManager.Tutorial_SelectScene_Monday);
+		//PlayedMonday = GameManager.Tutorial_SelectScene_Monday;
+		//ㅅ수정중 
+		//PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", GameManager.Tutorial_SelectScene_Monday);
 
 		Debug.Log("GameManager.Tutorial_SelectScene_Monday 바뀜 => " + PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
 	}

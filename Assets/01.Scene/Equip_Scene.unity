@@ -7413,7 +7413,7 @@ Transform:
   - {fileID: 1734038193}
   - {fileID: 1237442014}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &655303443
 GameObject:
   m_ObjectHideFlags: 0
@@ -13661,7 +13661,7 @@ RectTransform:
   - {fileID: 533582383}
   - {fileID: 1852210827}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -15053,7 +15053,7 @@ RectTransform:
   m_LocalScale: {x: .701562524, y: .701562524, z: .701562524}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 638.999939, y: 356.910858}
@@ -19546,7 +19546,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1 &1629308040
 GameObject:
   m_ObjectHideFlags: 0
@@ -21880,6 +21880,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1153674334}
         m_MethodName: SkipButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1060728522}
+        m_MethodName: ButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
