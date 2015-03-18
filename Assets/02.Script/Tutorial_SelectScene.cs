@@ -38,10 +38,20 @@ public class Tutorial_SelectScene : MonoBehaviour {
 
 
 		//test
+		Debug.Log ("Tutorial_SelecetScene.cs 에서 Start() 함수안에서 ");
 		Debug.Log ("GameManager.Tutorial_SelectScene : " + GameManager.Tutorial_SelectScene);
 		Debug.Log("GameManager.Tutorial_SelectScene_PlayIntro : " + GameManager.Tutorial_SelectScene_PlayIntro);
+		Debug.Log("GameManager.Tutorial_SelectScene_Monday : " + GameManager.Tutorial_SelectScene_Monday);
 
+	/*	PlayerPrefsX.SetBool ("TutorialSelectScene", true);
+		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", true);
+		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", true);
 
+		Debug.Log (PlayerPrefsX.GetBool ("TutorialSelectScene"));
+		Debug.Log(PlayerPrefsX.GetBool ("TutorialSelectScenePlayIntro"));
+		Debug.Log(PlayerPrefsX.GetBool ("TutorialSelectSceneMonday"));
+
+	*/
 
 		
 		if(GameManager.Tutorial_SelectScene==true && GameManager.Tutorial_SelectScene_PlayIntro == true)
@@ -179,11 +189,12 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		Tut_bg.SetActive (false);
 		Tut_Canvas.SetActive (false);
 		
-		GameManager.Tutorial_SelectScene_PlayIntro = false;
+		GameManager.Tutorial_SelectScene = false;
+		PlayerPrefsX.SetBool ("TutorialSelectScene", false);
 		//PlayerPrefsX.SetBool ("TutorialSElectScene", GameManager.Tutorial_SelectScene);
 		//PlayerPrefs.Save ();
 		
-		Debug.Log ("Tutorial_SelectScene 값: " + GameManager.Tutorial_SelectScene_PlayIntro + " 으로 바뀜");
+		Debug.Log ("Skip버튼 눌러서 Tutorial_SelectScene 값: " + GameManager.Tutorial_SelectScene + " 으로 바뀜");
 		
 		Debug.Log ("SkipButtonClicked() 실행");
 		
@@ -199,7 +210,16 @@ public class Tutorial_SelectScene : MonoBehaviour {
 
 		Debug.Log("GameManager.Tutorial_SelectScene_Monday 바뀜 => " + PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
 	}
-	
-	
-	
+
+	public void FallInLoveClicked()
+	{
+		GameManager.Tutorial_SelectScene_PlayIntro = false;
+		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", false);
+
+		Debug.Log ("GameManager.Tutorial_SelectScene_PlayIntro => " + GameManager.Tutorial_SelectScene_PlayIntro + "로 바뀜");
+		Debug.Log ("PlayerPrefsX.SetBool (TutorialSelectScenePlayIntro, false); => " 
+		           + PlayerPrefsX.GetBool("TutorialSelectScenePlayIntro") + "로 바뀜");
+	}
+
+
 }

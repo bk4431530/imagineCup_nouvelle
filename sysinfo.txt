@@ -182,7 +182,7 @@ chrome.exe (2732)
     filedesc: Google Chrome
     filever:  41.0.2272.89
     prodver:  41.0.2272.89
-UnityBugReporter.exe (8668)
+UnityBugReporter.exe (9164)
     path: C:\Program Files (x86)\Unity\Editor\UnityBugReporter.exe
     company:  Unity Technologies ApS
     product:  Unity Bug Reporter

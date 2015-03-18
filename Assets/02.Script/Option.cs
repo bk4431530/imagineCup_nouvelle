@@ -144,6 +144,10 @@ public class Option : MonoBehaviour {
 	public void clickedInit(){
 		PlayerPrefs.DeleteAll ();
 
+		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
+		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", true);
+		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", true);
+
 		Debug.Log ("초기화 되었습니다.");
 
 		Debug.Log (GameManager.Tutorial_SelectScene);
