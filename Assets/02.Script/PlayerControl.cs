@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
 	
-	public Vector2 jumpForce = new Vector2(4, 300);
+	public Vector2 jumpForce = new Vector2(4, 350);
 	public Vector2 run = new Vector2(4,0);
 	
 	private Vector3 diePos;
@@ -67,9 +67,8 @@ public class PlayerControl : MonoBehaviour {
 
 
 	public GameObject puzzleEffect;
-
-
 	
+	public static bool PSpause =false;
 	
 	void Awake()
 	{
@@ -101,11 +100,9 @@ public class PlayerControl : MonoBehaviour {
 
 	void Start()
 	{
-		GameManager.magnet_equip = true;
+		//GameManager.magnet_equip = true;
 
 		//sound effect
-
-		
 	
 
 		SFX_piece = GameObject.Find ("/SFX/piece").GetComponent<AudioSource> ();
@@ -178,6 +175,10 @@ public class PlayerControl : MonoBehaviour {
 			{
 				Jump();
 			}
+			else if(PSpause)
+			{
+				Debug.Log("player pauesd");
+			}
 			else 
 			{
 				rigidbody2D.AddForce (run);
@@ -187,6 +188,7 @@ public class PlayerControl : MonoBehaviour {
 		{
 			transform.position = diePos;
 		}
+
 
 		
 		//StageChange ();
@@ -288,6 +290,7 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) && !isOut)//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
+			PSpause =true;
 			PS = PlayerState.Collided;
 			diePos = transform.position;
 			mAnimator.SetTrigger("collid");
@@ -310,10 +313,14 @@ public class PlayerControl : MonoBehaviour {
 		stage.y = -0.35f;
 		*/
 
+
 		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
 		this.transform.position = repos;
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
+
+	
+
 
 		this.GetComponent<PolygonCollider2D> ().enabled = true;
 
@@ -323,10 +330,13 @@ public class PlayerControl : MonoBehaviour {
 
 		isRevival = true;
 		Invoke ("Revival", 1.5f);
+
+
 	}
 	
 	void Revival(){
 		isRevival = false;
+		PSpause = false;
 	}
 	
 	/*

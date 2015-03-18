@@ -91,9 +91,11 @@ public class Option : MonoBehaviour {
 			backMusic.Stop();
 			Debug.Log("Music_Off");	 
 		}
-	}	
+	}
 
-	////////////////////////////////////   
+
+
+
 	
 	
 	public void vib_On()
