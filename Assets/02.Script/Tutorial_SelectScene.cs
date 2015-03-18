@@ -37,6 +37,12 @@ public class Tutorial_SelectScene : MonoBehaviour {
 		Debug.Log (PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
 
 
+		//test
+		Debug.Log ("GameManager.Tutorial_SelectScene : " + GameManager.Tutorial_SelectScene);
+		Debug.Log("GameManager.Tutorial_SelectScene_PlayIntro : " + GameManager.Tutorial_SelectScene_PlayIntro);
+
+
+
 		
 		if(GameManager.Tutorial_SelectScene==true && GameManager.Tutorial_SelectScene_PlayIntro == true)
 		{   

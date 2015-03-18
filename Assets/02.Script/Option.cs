@@ -37,10 +37,9 @@ public class Option : MonoBehaviour {
 				backMusic.Play();
 			}
 
-<<<<<<< HEAD
-=======
+
 			Debug.Log("Music_on_start");
->>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
+
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -73,10 +72,7 @@ public class Option : MonoBehaviour {
 	}
 	
 	//setting function
-<<<<<<< HEAD
 
-=======
->>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
 	public void music_On()
 	{
 		if(GameManager.bgm == false)
@@ -95,17 +91,8 @@ public class Option : MonoBehaviour {
 			backMusic.Stop();
 			Debug.Log("Music_Off");	 
 		}
-	}
-<<<<<<< HEAD
+	}	
 
-	*/
-
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
->>>>>>> origin/master
 	////////////////////////////////////   
 	
 	
@@ -156,14 +143,19 @@ public class Option : MonoBehaviour {
 
 	public void clickedInit(){
 		PlayerPrefs.DeleteAll ();
-<<<<<<< HEAD
+
 		Debug.Log ("초기화 되었습니다.");
 
+		Debug.Log (GameManager.Tutorial_SelectScene);
 		Debug.Log ("PlayerPrefsX.GetBool (TutorialSelectScene) = " + PlayerPrefsX.GetBool ("TutorialSelectScene"));
 		Debug.Log ("PlayerPrefsX.GetBool(TutorialSelectSceneMonday) = " + PlayerPrefsX.GetBool("TutorialSelectSceneMonday"));
-=======
+
+		Debug.Log ("test = " + PlayerPrefsX.GetBool("TutorialSelectSceneblahblah"));
+
+
+
 		Debug.Log ("Init Data");
->>>>>>> origin/master
+
 	}
 	
 	

@@ -216,7 +216,7 @@ public class GameManager : MonoBehaviour {
 		postCard[9] = PlayerPrefs.GetInt ("Postcard10");
 		
 		vibration = PlayerPrefsX.GetBool("Vibration");
-		bgm = PlayerPrefsX.GetBool("Bgm");
+		bgm = PlayerPrefsX.GetBool("BGM");
 
 
 		//tutorial - selectscene 변수들 
