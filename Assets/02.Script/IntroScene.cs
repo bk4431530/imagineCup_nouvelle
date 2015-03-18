@@ -89,7 +89,7 @@ public class IntroScene : MonoBehaviour {
 		isTutorialOn = false;
 
 		//for Test
-		GameManager.bgm = true;
+		//GameManager.bgm = true;
 
 		if (GameManager.bgm) {
 			//backMusic.volume = 0.5f;

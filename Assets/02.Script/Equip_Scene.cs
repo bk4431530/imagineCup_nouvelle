@@ -91,16 +91,6 @@ public class Equip_Scene : MonoBehaviour {
 		mysteryBox_cnt.text = GameManager.mysteryBox.ToString();
 		Debug.Log ("mysteryBox_cnt.text = " + mysteryBox_cnt.text); */
 
-	}
-	
-	void Update(){
-
-		
-		booster_cnt.text = GameManager.booster.ToString();
-		magnet_cnt.text = GameManager.magnet.ToString();
-		shield_cnt.text = GameManager.shield.ToString();
-		mysteryBox_cnt.text = GameManager.mysteryBox.ToString(); 
-		
 		switch (GameManager.currentEpisode) {
 		case 1:
 			Debug.Log("monday");
@@ -128,6 +118,16 @@ public class Equip_Scene : MonoBehaviour {
 			Debug.Log("selected Episode = null");
 			break;
 		}
+	}
+	
+	void Update(){
+
+		
+		booster_cnt.text = GameManager.booster.ToString();
+		magnet_cnt.text = GameManager.magnet.ToString();
+		shield_cnt.text = GameManager.shield.ToString();
+		mysteryBox_cnt.text = GameManager.mysteryBox.ToString(); 
+	
 
 		switch (GameManager.paperPlaneState) {
 		case 0: 

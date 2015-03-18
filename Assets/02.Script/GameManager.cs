@@ -230,6 +230,8 @@ public class GameManager : MonoBehaviour {
 	}
 	
 	
+	public int target = 80;
+	
 	void OnEnable(){
 		backMusic = GameObject.Find ("BGM").GetComponent<AudioSource> ();
 		DontDestroyOnLoad(backMusic.gameObject);
@@ -238,10 +240,18 @@ public class GameManager : MonoBehaviour {
 	
 	void Start () {
 		Screen.SetResolution(Screen.width, Screen.width/16*9, true);
+		QualitySettings.vSyncCount = 0;
+		
 		if(backMusic.GetComponent<AudioSource>().clip == null){
 			backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 			backMusic.volume = 0.6f;
 			backMusic.Play();
+		}
+	}
+	
+	void Update(){
+		if (target != Application.targetFrameRate) {
+			Application.targetFrameRate = target;
 		}
 	}
 	
