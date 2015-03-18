@@ -68,7 +68,7 @@ public class PlayerControl : MonoBehaviour {
 
 	public GameObject puzzleEffect;
 
-	
+
 	
 	
 	void Awake()
@@ -169,21 +169,16 @@ public class PlayerControl : MonoBehaviour {
 		}
 		
 		
-		/******************************************************bokyung's fixing part************************************************/
-		
-		
+
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		
 		if(PS == PlayerState.Normal)
 		{
 			if(TouchHandler.Mswiped == true)
 			{
-				//Jump();
-				rigidbody2D.velocity = Vector2.zero;
-				rigidbody2D.AddForce (jumpForce);
-				mAnimator.SetTrigger("up");
+				Jump();
 			}
-			else
+			else 
 			{
 				rigidbody2D.AddForce (run);
 			}
@@ -268,17 +263,17 @@ public class PlayerControl : MonoBehaviour {
 		}
 	}
 
-	/*
+
 	void Jump()
 	{
 		rigidbody2D.velocity = Vector2.zero;
 		rigidbody2D.AddForce (jumpForce);
 		
 		mAnimator.SetTrigger("up");
-		
+
 	}
 	
-*/
+
 
 	void Die()
 	{

@@ -46,7 +46,7 @@ public class QuillPen : MonoBehaviour {
 		{
 			//transform.LookAt(magnet.transform.position); 
 			transform.position = Vector3.Lerp(transform.position, magnet.transform.position, 0.1f);
-			Debug.Log ("magnet position" + magnet.transform.position);
+			//Debug.Log ("magnet position" + magnet.transform.position);
 
 			//Destroy(this.gameObject,0.07f);
 			//Invoke("whenHit",0.06f);

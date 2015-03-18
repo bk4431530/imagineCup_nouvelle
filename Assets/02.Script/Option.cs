@@ -31,10 +31,12 @@ public class Option : MonoBehaviour {
 			//MusicOn button On
 			MusicOn.isOn = true;
 			MusicOff.isOn = false;
+
 			if(backMusic.GetComponent<AudioSource>().clip == null){
 				backMusic.GetComponent<AudioSource>().clip = (AudioClip) Resources.Load ("main_sunnyday");
 				backMusic.Play();
 			}
+
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -66,7 +68,7 @@ public class Option : MonoBehaviour {
 	}
 	
 	//setting function
-	/*
+
 	public void music_On()
 	{
 		if(GameManager.bgm == false)
@@ -86,7 +88,7 @@ public class Option : MonoBehaviour {
 			Debug.Log("Music_Off");	 
 		}
 	}
-	*/
+
 	////////////////////////////////////   
 	
 	

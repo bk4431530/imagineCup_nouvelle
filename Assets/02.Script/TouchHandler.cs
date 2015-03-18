@@ -17,6 +17,8 @@ public class TouchHandler : MonoBehaviour {
 	
 	
 	public static bool Mswiped =false;
+	public static bool Jumped =false;
+
 	
 	Vector3 initialMPos;
 	private int numberOfPoints = 0;
@@ -24,8 +26,9 @@ public class TouchHandler : MonoBehaviour {
 	float deltaX;
 	float deltaY;
 	float distance;
+	float jdistance;
 	bool swipedSideways;
-	
+
 	void Start()
 	{	
 		lineRenderer = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
@@ -42,15 +45,15 @@ public class TouchHandler : MonoBehaviour {
 		{
 			numberOfPoints++;
 			lineRenderer.SetVertexCount( numberOfPoints );
-			Vector3 mousePos = new Vector3(0,0,0);
+			Vector3 mousePos = new Vector3(0,0,;
 			mousePos = Input.mousePosition;
 			mousePos.z = 1.0f;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-			lineRenderer.SetPosition(numberOfPoints - 1, worldPos);
-			
-		}else if(Input.GetMouseButtonUp(0))
+			lineRenderer.SetPosition(numberOfPoints - 1, worldPos);	
+		}
+		else if(Input.GetMouseButtonUp(0) && numberOfPoints > 2 && deltaX<0)
 		{
-			Mswiped=true;
+			Mswiped =true;
 		}
 		else
 		{	
@@ -63,17 +66,16 @@ public class TouchHandler : MonoBehaviour {
 		 //PC swipe 
 		 deltaX = initialMPos.x - Input.mousePosition.x;
 		 deltaY = initialMPos.y - Input.mousePosition.y;
+		distance = Mathf.Sqrt((deltaX*deltaX) + (deltaY*deltaY));
 
 		if (numberOfPoints == 0) {
 			initialMPos = Input.mousePosition;
-		} else if (numberOfPoints == 1 && deltaX<0) {
-			Mswiped = true;
-		} else {
-			Mswiped = false;
-		}
+		} 
 
-
+	
 		*/
+
+
 
 		//android
 		if (Input.touchCount > 0) 
@@ -83,12 +85,14 @@ public class TouchHandler : MonoBehaviour {
 			if (touch.phase == TouchPhase.Began) 
 			{
 				Mswiped = false;
+				jdistance =10000;
 				initialTouch = touch;
+
 			} 
 			else if (touch.phase == TouchPhase.Moved) 
 			{
 				lineRenderer.SetVertexCount(i+1);
-				Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 15);
+				Vector3 mPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
 				lineRenderer.SetPosition(i, Camera.main.ScreenToWorldPoint(mPosition));
 				i++;
 				
@@ -104,11 +108,14 @@ public class TouchHandler : MonoBehaviour {
 				if (swipedSideways && deltaX > 0) 
 				{ //swiped left
 				} 
-				else if (swipedSideways && deltaX <= 0) 
+				else if (swipedSideways && deltaX <= 0 ) 
 				{//swiped right
-					if(distance > 100f)
+					if(distance < jdistance && distance > 50f)
 					{
 						Mswiped = true;
+						jdistance = distance;
+					}else if(distance > jdistance){
+						Mswiped = false;
 					}
 				} 
 				else if (!swipedSideways && deltaY > 0) 
@@ -131,5 +138,6 @@ public class TouchHandler : MonoBehaviour {
 			}
 		}
 		//andrroid
+	
 	}
 }
