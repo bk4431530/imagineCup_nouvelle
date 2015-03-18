@@ -59,8 +59,10 @@ public class pauseGame : MonoBehaviour {
 	
 	public void setPause()
 	{
+		PlayerControl.PSpause = true;
 		Time.timeScale = 0;
 		pauseScreen.SetActive (true);
+
 	}
 
 	
@@ -68,6 +70,9 @@ public class pauseGame : MonoBehaviour {
 	{
 		pauseScreen.SetActive (false);
 		Time.timeScale = 1;
+		PlayerControl.PSpause = false;
+
+
 	}
 	
 	

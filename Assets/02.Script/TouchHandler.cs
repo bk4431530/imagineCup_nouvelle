@@ -17,7 +17,6 @@ public class TouchHandler : MonoBehaviour {
 	
 	
 	public static bool Mswiped =false;
-	public static bool Jumped =false;
 
 	
 	Vector3 initialMPos;
@@ -36,24 +35,23 @@ public class TouchHandler : MonoBehaviour {
 		
 	}
 	
-	
+
 	void Update()
 	{
-		
-		/*
+
 		if(Input.GetMouseButton(0))
 		{
 			numberOfPoints++;
 			lineRenderer.SetVertexCount( numberOfPoints );
-			Vector3 mousePos = new Vector3(0,0,;
+			Vector3 mousePos = new Vector3(0,0,0);
 			mousePos = Input.mousePosition;
 			mousePos.z = 1.0f;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
-			lineRenderer.SetPosition(numberOfPoints - 1, worldPos);	
-		}
-		else if(Input.GetMouseButtonUp(0) && numberOfPoints > 2 && deltaX<0)
+			lineRenderer.SetPosition(numberOfPoints - 1, worldPos);
+			
+		}else if(Input.GetMouseButtonUp(0))
 		{
-			Mswiped =true;
+			Mswiped=true;
 		}
 		else
 		{	
@@ -63,6 +61,7 @@ public class TouchHandler : MonoBehaviour {
 		}
 
 
+		/*
 		 //PC swipe 
 		 deltaX = initialMPos.x - Input.mousePosition.x;
 		 deltaY = initialMPos.y - Input.mousePosition.y;
@@ -71,11 +70,11 @@ public class TouchHandler : MonoBehaviour {
 		if (numberOfPoints == 0) {
 			initialMPos = Input.mousePosition;
 		} 
-
+*/
 	
-		*/
 
 
+		/*
 
 		//android
 		if (Input.touchCount > 0) 
@@ -110,7 +109,7 @@ public class TouchHandler : MonoBehaviour {
 				} 
 				else if (swipedSideways && deltaX <= 0 ) 
 				{//swiped right
-					if(distance < jdistance && distance > 50f)
+					if(distance < jdistance && distance > 10f)
 					{
 						Mswiped = true;
 						jdistance = distance;
@@ -138,6 +137,6 @@ public class TouchHandler : MonoBehaviour {
 			}
 		}
 		//andrroid
-	
+		*/
 	}
 }

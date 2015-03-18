@@ -37,10 +37,8 @@ public class Option : MonoBehaviour {
 				backMusic.Play();
 			}
 
-<<<<<<< HEAD
-=======
+
 			Debug.Log("Music_on_start");
->>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
 		}
 		else if(GameManager.bgm == false)
 		{
@@ -73,10 +71,7 @@ public class Option : MonoBehaviour {
 	}
 	
 	//setting function
-<<<<<<< HEAD
 
-=======
->>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
 	public void music_On()
 	{
 		if(GameManager.bgm == false)
@@ -96,12 +91,7 @@ public class Option : MonoBehaviour {
 			Debug.Log("Music_Off");	 
 		}
 	}
-<<<<<<< HEAD
 
-=======
->>>>>>> eed948c2d687f67bfb289bb45b43a35010ade418
-	////////////////////////////////////   
-	
 	
 	public void vib_On()
 	{
