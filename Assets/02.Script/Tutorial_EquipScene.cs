@@ -180,22 +180,17 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	}
 	
 	
-	////////////////////////////////////////////////////////////////   
-
+	/////SkipButton  
 	public void SkipButtonClicked()
 	{
 		Tut_Canvas.SetActive(false);
+		GameManager.Tutorial_EquipScene = false;
+		PlayerPrefsX.SetBool ("TutorialEquipScene", GameManager.Tutorial_EquipScene);
 
-		/*
-		Tut_bg;
-		Tut_help1;
-		Tut_help2;
-		Tut_help3;
-		Tut_help4;
-		Tut_help5;
-		Tut_help6;
-		Tut_help7;
-		*/
+		Debug.Log("PlayerPrefsX.GetBool(TutorialEquipScene)" + PlayerPrefsX.GetBool("TutorialEquipScene"));
+		Debug.Log ("SkipButtonClicked()함수 실행, Tutorial꺼짐");
+
+
 	}
 
 

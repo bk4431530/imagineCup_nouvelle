@@ -60,17 +60,18 @@ public class GameManager : MonoBehaviour {
 	public static string ZipL ="123";
 	public static string ZipR = "456";
 	public static string Addr = "Seoul, Donjack-gu, Soongsil university";
+
+	public static int[] postCard = {5,0,0,0,0,0,0,0,5,0};
+
 	
-	//Tutorial
+	//Tutorial_SelectScene//////////////////////////////
 	public static bool Tutorial_SelectScene = true;
 	public static bool Tutorial_SelectScene_PlayIntro = true;
 	public static bool Tutorial_SelectScene_Monday = true;
 	
-	
+	//Tutorial_EquipScene//////////////////////////////
 	public static bool Tutorial_EquipScene = true;
 
-	
-	public static int[] postCard = {5,0,0,0,0,0,0,0,5,0};
 	
 	
 	
@@ -127,15 +128,14 @@ public class GameManager : MonoBehaviour {
 
 
 		
-		//이거도 저장해야되나? /////////////////////////
+		//Tutorial_SelectScene /////////////////////////
 		PlayerPrefsX.SetBool ("TutorialSelectScene", true);
 		PlayerPrefsX.SetBool ("TutorialSelectScenePlayIntro", true);
 		PlayerPrefsX.SetBool ("TutorialSelectSceneMonday", true);
 
+		//Tutorial_EquipScene//////////////////////////////
 		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
 
-
-		////////////////////////////////
 
 		
 		/*
