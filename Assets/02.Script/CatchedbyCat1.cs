@@ -121,7 +121,7 @@ public class CatchedbyCat1 : MonoBehaviour{
 			//Debug.Log ("isDestroyed = true됨");
 			
 			
-			for(int index = 0 ; index < cat.gameObject.GetComponent<catSprite1>().catImages.Length; index++)
+			for(int index = 0 ; index < 11; index++)
 			{
 				cat.gameObject.GetComponent<catSprite1>().olFrameColliders[index].enabled = false;
 				//            Debug.Log ("disabled" + (index+1) );

@@ -19,7 +19,8 @@ public class Heart_Gauge_Select : MonoBehaviour {
 		//heart gauge
 		this_Ep = this.gameObject.name.ToString();
 		//for Test
-		HeartPer = PlayerPrefs.GetInt ("Heart_ep1")*0.01f;
+		HeartPer = (float)(GameManager.heart_ep1)*0.01f;
+
 		//Debug.Log("heart_ep" + this_Ep + " : " + HeartPer);
 	}
 	

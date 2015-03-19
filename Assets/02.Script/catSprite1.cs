@@ -21,7 +21,7 @@ public class catSprite1 : CatchedbyCat1 {
 	
 	private SpriteRenderer oSpriteRenderer;
 	
-	public float d_time = 0.085f;
+	public float d_time = 0.147f;
 	
 	
 	
@@ -103,11 +103,11 @@ public class catSprite1 : CatchedbyCat1 {
 	void ChangeSprite ()
 	{
 		//////////////////State 변경////////////////
-		if(CatchedbyCat1.clickCount == 3)
+		if(CatchedbyCat2.clickCount == 3)
 		{
 			catState = CatState.Normal;
 			
-			Debug.Log ("clickCount = " + CatchedbyCat1.clickCount);
+			Debug.Log ("clickCount = " + CatchedbyCat2.clickCount);
 			
 		}
 		
