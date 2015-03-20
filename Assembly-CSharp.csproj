@@ -59,6 +59,7 @@
      <Compile Include="Assets\02.Script\GameManager.cs" />
      <Compile Include="Assets\02.Script\Generate.cs" />
      <Compile Include="Assets\02.Script\Generate_Bubble.cs" />
+     <Compile Include="Assets\02.Script\Heart_Gauge_Select.cs" />
      <Compile Include="Assets\02.Script\IntroScene.cs" />
      <Compile Include="Assets\02.Script\Loading_Scene.cs" />
      <Compile Include="Assets\02.Script\Loading_anim.cs" />
@@ -86,8 +87,8 @@
      <Compile Include="Assets\02.Script\catSprite3.cs" />
      <Compile Include="Assets\02.Script\finishGame.cs" />
      <Compile Include="Assets\02.Script\heartGauge_finish.cs" />
+     <Compile Include="Assets\02.Script\icon_moving.cs" />
      <Compile Include="Assets\02.Script\pauseGame.cs" />
-     <Compile Include="Assets\Heart_Gauge_Select.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\ClickTouchScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\ABClickScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\AutoInitScript.cs" />
@@ -101,7 +102,6 @@
      <Compile Include="Assets\Level Menu 2D\SingletonPerfect\Singleton.cs" />
      <Compile Include="Assets\Level Menu 2D\SmoothCamera2D.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
-     <Compile Include="Assets\icon_moving.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
