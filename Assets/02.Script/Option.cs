@@ -167,10 +167,7 @@ public class Option : MonoBehaviour {
 
 
 
-	public void ContactMail()
-	{
 
-	}
 
 
 	public void ContactFacebook()
@@ -180,7 +177,8 @@ public class Option : MonoBehaviour {
 
 	public void ContactTwitter()
 	{
-		
+		Application.OpenURL ("https://twitter.com/team_nouvelle");
+
 	}
 
 
