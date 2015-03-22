@@ -163,6 +163,26 @@ public class Option : MonoBehaviour {
 		Debug.Log ("Init Data");
 
 	}
-	
+
+
+
+
+	public void ContactMail()
+	{
+
+	}
+
+
+	public void ContactFacebook()
+	{
+		Application.OpenURL ("https://www.facebook.com/nouvelle2015");
+	}
+
+	public void ContactTwitter()
+	{
+		
+	}
+
+
 	
 }
