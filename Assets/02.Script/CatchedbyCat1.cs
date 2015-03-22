@@ -137,7 +137,7 @@ public class CatchedbyCat1 : MonoBehaviour{
 			Debug.Log ("catTime = " + catTime + " 로 초기화됨");
 			
 			//cat에서 비행기 Free되고 나서(catState.Normal) catSprite1 2초 후에 다시 생성하기
-			Invoke ("init_Frames", 5.0f);
+			//Invoke ("init_Frames", 5.0f);
 		}//3count
 		
 		if (PS_cat == PlayerState_cat.CatchedByCat 
@@ -170,6 +170,8 @@ public class CatchedbyCat1 : MonoBehaviour{
 	{
 		if (other.gameObject.name == "cat1") 
 		{
+			this.GetComponent<Animator>().enabled = true;
+
 			CatSound();
 			
 			if(PS_cat == PlayerState_cat.Free)

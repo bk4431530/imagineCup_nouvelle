@@ -31,15 +31,17 @@ public class catSprite3 : CatchedbyCat3 {
 	// Awake()
 	void Awake()
 	{
+		Invoke ("SetColliders", 0.1f);
+	}
+	
+	void SetColliders(){
 		CreateSprite ();
 		
 		// Enable the collider associated with the current frame
 		
 		EnableCollider(true);
 		Debug.Log ("EnableCollider 됨");
-		
 	}
-	
 	
 	void CreateSprite()
 	{
@@ -147,6 +149,8 @@ public class catSprite3 : CatchedbyCat3 {
 	{
 		if (other.collider2D.name == "player")
 		{
+			curFrame = 10;
+			this.GetComponent<Animator>().enabled = true;
 			catState = CatState.Catch;
 			
 		}
