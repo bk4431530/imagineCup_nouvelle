@@ -292,6 +292,7 @@ public class Collection : MonoBehaviour {
 			popUp_txt.text = "You equip the\n" + card_NameTxt.text+".";	
 		}
 		equip_popUp.SetActive (true);
+		Invoke ("PopupExit",0.7f);
 		
 	}
 	

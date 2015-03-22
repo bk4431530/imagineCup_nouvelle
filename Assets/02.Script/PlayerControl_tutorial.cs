@@ -284,6 +284,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 			}
 			Time.timeScale = 0;
 			finish=true;
+			Application.LoadLevel("Monday_Tutorial");
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) && !isOut)//|| (life > 0 && PS == PlayerState.Collided)) 
 		{

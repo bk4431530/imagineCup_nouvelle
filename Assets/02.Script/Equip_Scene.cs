@@ -131,7 +131,6 @@ public class Equip_Scene : MonoBehaviour {
 		}
 
 
-		randomItem = GameObject.Find ("Popups/Popup_buyItem/Panel/randomItem");
 
 
 	}
@@ -344,7 +343,7 @@ public class Equip_Scene : MonoBehaviour {
 				break;
 		}
 		itemTxt.text ="You get " + RandomItem;
-		Invoke("clickClose",1.0f);
+		Invoke("clickClose",0.8f);
 
 	}
 
