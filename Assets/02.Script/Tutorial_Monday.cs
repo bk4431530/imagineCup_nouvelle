@@ -207,7 +207,6 @@ public class Tutorial_Monday : MonoBehaviour {
 		GameManager.Tutorial_Monday = false;
 		PlayerPrefsX.SetBool ("TutorialMonday", GameManager.Tutorial_Monday);
 
-		GameManager.currentLife = 5;
 		Application.LoadLevel ("Monday");
 	}
 	

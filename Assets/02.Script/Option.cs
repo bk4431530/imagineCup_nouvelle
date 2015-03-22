@@ -169,7 +169,6 @@ public class Option : MonoBehaviour {
 
 
 
-
 	public void ContactFacebook()
 	{
 		Application.OpenURL ("https://www.facebook.com/nouvelle2015");

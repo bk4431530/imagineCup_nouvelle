@@ -25,17 +25,8 @@ public class heartGauge_finish : MonoBehaviour {
 		PlayerPrefs.SetInt ("Heart_ep1",GameManager.heart_ep1);
 		PlayerPrefs.Save ();
 		
-		if(GameManager.heart_ep1 <= 20){
-			gaugeTxt.GetComponent<Text>().text = "try again";
-		}else if(GameManager.heart_ep1 >20 && GameManager.heart_ep1 <=40){
-			gaugeTxt.GetComponent<Text>().text = "try hard";
-		}else if(GameManager.heart_ep1 >40 && GameManager.heart_ep1 <=60){
-			gaugeTxt.GetComponent<Text>().text = "nice";
-		}else if(GameManager.heart_ep1 >60 && GameManager.heart_ep1 <=80){
-			gaugeTxt.GetComponent<Text>().text = "good job";
-		}else if(GameManager.heart_ep1 >80){
-			gaugeTxt.GetComponent<Text>().text = "perfect";
-		}
+		
+		
 	}
 	
 	// Update is called once per frame

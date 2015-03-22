@@ -9,10 +9,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	public GameObject Tut_help2;
 	public GameObject Tut_help3;
 	public GameObject Tut_help4;
-	public GameObject Tut_help5;
-	public GameObject Tut_help6;
-	public GameObject Tut_help7;
-	
+
 	
 	
 	// Use this for initialization
@@ -20,13 +17,11 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	{
 		Tut_Canvas = GameObject.Find ("TutorialCanvas");
 		Tut_bg = GameObject.Find ("/TutorialCanvas/Background");
-		Tut_help1 = GameObject.Find ("/TutorialCanvas/Background/Help1");
-		Tut_help2 = GameObject.Find ("/TutorialCanvas/Background/Help2");
-		Tut_help3 = GameObject.Find ("/TutorialCanvas/Background/Help3");
-		Tut_help4 = GameObject.Find ("/TutorialCanvas/Background/Help4");
-		Tut_help5 = GameObject.Find ("/TutorialCanvas/Background/Help5");
-		Tut_help6 = GameObject.Find ("/TutorialCanvas/Background/Help6");
-		Tut_help7 = GameObject.Find ("/TutorialCanvas/Background/Help7");
+		Tut_help1 = GameObject.Find ("/TutorialCanvas/Help1");
+		Tut_help2 = GameObject.Find ("/TutorialCanvas/Help2");
+		Tut_help3 = GameObject.Find ("/TutorialCanvas/Help3");
+		Tut_help4 = GameObject.Find ("/TutorialCanvas/Help4");
+
 		
 		DisableTutorialCanvas ();
 		
@@ -48,15 +43,14 @@ public class Tutorial_EquipScene : MonoBehaviour {
 	public void DisableTutorialCanvas()
 	{
 		
-		
+
 		Tut_help1.SetActive (false);
 		Tut_help2.SetActive (false);
 		Tut_help3.SetActive (false);
 		Tut_help4.SetActive (false);
-		Tut_help5.SetActive (false);
-		Tut_help6.SetActive (false);
-		Tut_help7.SetActive (false);
+
 		Tut_bg.SetActive (false);
+
 		Tut_Canvas.SetActive (false);
 		
 		//playTutorial = false;
@@ -136,48 +130,7 @@ public class Tutorial_EquipScene : MonoBehaviour {
 		
 	}
 	
-	//help5
-	public void EnableHelp5()
-	{
-		Tut_help5.SetActive (true);
-		Debug.Log ("EnableHelp5() 실행");
-	}
-	
-	public void DisableHelp5()
-	{
-		Tut_help5.SetActive (false);
-		Debug.Log ("DisableHelp5() 실행");
-		
-	}
-	
-	//help6
-	public void EnableHelp6()
-	{
-		Tut_help6.SetActive (true);
-		Debug.Log ("EnableHelp6() 실행");
-	}
-	
-	public void DisableHelp6()
-	{
-		Tut_help6.SetActive (false);
-		Debug.Log ("DisableHelp6() 실행");
-		
-	}
-	
-	//help6
-	public void EnableHelp7()
-	{
-		Tut_help7.SetActive (true);
-		Debug.Log ("EnableHelp7() 실행");
-	}
-	
-	public void DisableHelp7()
-	{
-		Tut_help7.SetActive (false);
-		GameManager.Tutorial_EquipScene = false;
-		Debug.Log ("DisableHelp7() 실행");
-		
-	}
+
 	
 	
 	/////SkipButton  
