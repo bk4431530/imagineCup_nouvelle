@@ -129,7 +129,7 @@ public class CatchedbyCat_tutorial : MonoBehaviour{
 			Debug.Log ("catTime = " + catTime + " 로 초기화됨");
 			
 			//cat에서 비행기 Free되고 나서(catState.Normal) catSprite1 2초 후에 다시 생성하기
-			Invoke ("init_Frames", 5.0f);
+			//Invoke ("init_Frames", 5.0f);
 		}//3count
 		
 		if (PS_cat == PlayerState_cat.CatchedByCat 
