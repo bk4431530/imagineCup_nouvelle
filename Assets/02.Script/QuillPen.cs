@@ -101,7 +101,7 @@ public class QuillPen : MonoBehaviour {
 		if(GameManager.sfx)
 		{
 			SFX_quillpen.Play();
-			Debug.Log(" QuillpenSound 함수실행");			
+//			Debug.Log(" QuillpenSound 함수실행");			
 		}
 		
 	}
