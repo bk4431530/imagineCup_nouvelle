@@ -22,6 +22,7 @@ public class Tutorial_Monday : MonoBehaviour {
 	public GameObject cat;
 
 	public GameObject loadingScreen;
+	AudioSource backmusic;
 
 	// Use this for initialization
 	void Start ()
@@ -39,6 +40,10 @@ public class Tutorial_Monday : MonoBehaviour {
 
 		loadingScreen = GameObject.Find ("Loading_Screen");
 
+		backmusic = GameManager.backMusic;
+		if (GameManager.bgm) {
+			backmusic.Play ();		
+		}
 		DisableTutorialCanvas ();
 
 		circle.SetActive (false);
