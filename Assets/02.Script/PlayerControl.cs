@@ -40,6 +40,9 @@ public class PlayerControl : MonoBehaviour {
 
 	Animator mAnimator;
 	Animator boyAnimator;
+
+	public GameObject mondayBgm;
+
 	
 	public static bool finish = false;
 	
@@ -101,6 +104,10 @@ public class PlayerControl : MonoBehaviour {
 	void Start()
 	{
 		//GameManager.magnet_equip = true;
+
+
+		//Monday Bgm
+		mondayBgm = GameObject.Find("BGM");
 
 		//sound effect
 	
@@ -203,8 +210,31 @@ public class PlayerControl : MonoBehaviour {
 			gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 			Invoke("clearGame",4.0f);
 			boyAnimator.SetTrigger ("ending");
+
+
+
+		/*	//fadeout sound
+
+				InvokeRepeating("FadeOutSound",8, 0.5f);
+
+				Debug.Log ("fading sound");
+	
+					//mondayBgm.audio.volume = 0;
+					//Debug.Log("mondayBgm.audio.volume => " + mondayBgm.audio.volume + " 로 바뀜");
+	
+	*/
 		}
-		
+
+		if(isClear)
+		{
+			//while(GameObject.Find ("BGM").audio.volume >0.0001)
+			//{
+				GameObject.Find("BGM").audio.volume = GameObject.Find("BGM").audio.volume * 0.6f;
+				Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+
+				//Invoke("FadeOutSound",0.5f);
+			//}
+		}
 		
 	}
 	
@@ -262,6 +292,51 @@ public class PlayerControl : MonoBehaviour {
 			diePos = transform.position;
 			Debug.Log("finish collided");
 			isClear = true;
+			Debug.Log ("isClear 바뀜 => " + isClear); 
+
+			//fadeout sound
+/*			for(int i=8; i > 0 ; i--)
+			{
+				InvokeRepeating("FadeOutSound(i)",8, 0.5f);
+				
+				Debug.Log ("fading sound - " + i);
+				if(i == 1)
+				{
+					mondayBgm.audio.volume = 0;
+					Debug.Log("mondayBgm.audio.volume => " + mondayBgm.audio.volume + " 로 바뀜");
+				}
+			}
+			*/
+
+
+			//fadeout sound
+			
+			//InvokeRepeating("FadeOutSound",8, 0.5f);
+	/*		Invoke ("FadeOutSound", 0.5f);
+			Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+
+			Invoke ("FadeOutSound", 0.5f);
+			Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+
+			Invoke ("FadeOutSound", 0.5f);
+			Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+
+			Invoke ("FadeOutSound", 0.5f);
+			Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+
+			Debug.Log ("fading sound");
+			*/
+
+		//	InvokeRepeating("FadeOutSound", 8, 0.5f);
+
+
+
+
+			//GameObject.Find("BGM").audio.volume = GameObject.Find("BGM").audio.volume * 0.5f;
+			//Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+
+
+
 		}
 	}
 
@@ -408,6 +483,27 @@ public class PlayerControl : MonoBehaviour {
 		
 	}
 
+	public void FadeOutSound()
+	{
+	
+		if (PlayerPrefsX.GetBool("BGM"))
+		{
+
+			GameObject.Find("BGM").audio.volume = GameObject.Find("BGM").audio.volume * 0.9f;
+			Debug.Log( GameObject.Find("BGM").audio.volume + " 로 바뀜");
+			Debug.Log ("FadeoutSound() 실행");
+			/* //안되는 부분 
+
+			GameObject.Find("BGM").audio.volume = 0.2F;//(double)GameObject.Find("BGM").audio.volume * 0.5f;
+				//mondayBgm.audio.volume = (float)mondayBgm.audio.volume-1;
+
+				Debug.Log ("Fading...");
+				*/
+
+		}
+	}
+
 }
+
 
 

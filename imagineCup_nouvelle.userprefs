@@ -1,36 +1,15 @@
 ﻿<Properties>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Equip_Scene.cs">
-    <Files>
-      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="375" Column="2" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\Equip_Scene.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl.cs">
     <Files>
-      <File FileName="Assets\02.Script\Equip_Scene.cs" Line="24" Column="18" />
->>>>>>> origin/master
-      <File FileName="Assets\02.Script\catSprite1.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\catSprite3.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\heartGauge_finish.cs" Line="1" Column="1" />
-=======
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-=======
->>>>>>> origin/master
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl_tutorial.cs">
-    <Files>
-      <File FileName="Assets\02.Script\Tutorial_Monday.cs" Line="61" Column="3" />
-      <File FileName="Assets\02.Script\PlayerControl_tutorial.cs" Line="117" Column="22" />
-      <File FileName="Assets\02.Script\CatchedbyCat_tutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\catSprite_tutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\cat_tutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\TouchHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Bird.cs" Line="1" Column="1" />
-      <File FileName="Assets\02.Script\Puzzle.cs" Line="1" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets\02.Script\finishGame.cs" Line="262" Column="1" />
+      <File FileName="Assets\02.Script\Tutorial_EquipScene.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\PlayerControl.cs" Line="235" Column="11" />
+      <File FileName="Assets\02.Script\Select_Scene.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\BGMControl.cs" Line="13" Column="2" />
+      <File FileName="Assets\02.Script\GameManager.cs" Line="250" Column="1" />
+      <File FileName="Assets\02.Script\heartGauge_finish.cs" Line="19" Column="1" />
+      <File FileName="Assets\02.Script\QuillPen.cs" Line="110" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

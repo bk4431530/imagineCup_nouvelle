@@ -118,7 +118,7 @@ public class finishGame : MonoBehaviour {
 					PopupSound();
 					isClear = false;
 				}
-				Debug.Log("clear");
+//				Debug.Log("clear");
 
 				failed.SetActive(false);
 				clear.SetActive(true);
