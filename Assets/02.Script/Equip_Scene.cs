@@ -17,8 +17,8 @@ public class Equip_Scene : MonoBehaviour {
 	
 	int items;
 	Text itemTxt;
-	int price;
-	
+	public GameObject randomItem;
+
 	Text booster_cnt;
 	Text magnet_cnt;
 	Text shield_cnt;
@@ -30,8 +30,10 @@ public class Equip_Scene : MonoBehaviour {
 	string selectedScene;
 	//GameObject thumbnail;
 	GameObject effect;
-	public Sprite[] thumbnail_Img;
+	//public Sprite[] thumbnail_Img;
 	public Sprite[] effect_Img;
+	public Sprite[] item_Img;
+
 
 	//bgm
 	string audio_name;
@@ -120,6 +122,7 @@ public class Equip_Scene : MonoBehaviour {
 		}
 
 
+		randomItem = GameObject.Find ("Popups/Popup_buyItem/Panel/randomItem");
 
 
 	}
@@ -309,22 +312,25 @@ public class Equip_Scene : MonoBehaviour {
 	void mysterybox()
 	{
 		string RandomItem ="";
-		int rand = (int)Random.Range(0,4);
+		int rand = (int)Random.Range(0,3);
 		switch (rand) {		
 			case 0:
 				RandomItem ="booster!";
+				randomItem.GetComponent<Image>().sprite = item_Img[0];
 				GameManager.booster++;	
 				break;
 			case 1:
 				RandomItem ="magnet!";
+				randomItem.GetComponent<Image>().sprite = item_Img[1];
 				GameManager.magnet++;
 				break;
 			case 2:
 				RandomItem ="shield!";
+				randomItem.GetComponent<Image>().sprite = item_Img[2];
 				GameManager.shield++;
 				break;
 		}
-		itemTxt.text ="you get " + RandomItem;
+		itemTxt.text ="You get " + RandomItem;
 		Invoke("clickClose",1.0f);
 
 	}
