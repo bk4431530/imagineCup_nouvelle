@@ -18,7 +18,7 @@ public class Puzzle : MonoBehaviour {
 		player = GameObject.Find ("player");
 	}
 
-	void Update(){
+	void FixedUpdate(){
 		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
 		if (player.transform.position.x > player_pos) {
 			if (this.transform.position.x > drop_pos) {

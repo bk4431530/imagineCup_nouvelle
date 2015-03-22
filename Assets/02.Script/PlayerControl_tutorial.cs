@@ -51,7 +51,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 	int shieldCount = 3;
 	public static bool MultipleFeather = false;
 
-	private bool isClear;
+	public static bool isClear;
 	private bool isOut;
 	private bool isRevival;
 	private bool isOver;
@@ -113,8 +113,6 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 		SFX_die = GameObject.Find ("/SFX/die").GetComponent<AudioSource> ();
 		SFX_die.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("GameOver");
-
-		Time.timeScale = 0;
 	}
 	
 	void Update ()
@@ -198,7 +196,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 		if (isClear && !finish) 
 		{
 			transform.position = diePos;
-			gameObject.GetComponent<SpriteRenderer>().enabled = false;
+			//gameObject.GetComponent<SpriteRenderer>().enabled = false;
 			gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 			Invoke("clearGame",4.0f);
 			//boyAnimator.SetTrigger ("ending");
