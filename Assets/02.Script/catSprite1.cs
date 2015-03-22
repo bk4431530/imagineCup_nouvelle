@@ -29,15 +29,17 @@ public class catSprite1 : CatchedbyCat1 {
 	// Awake()
 	void Awake()
 	{
+		Invoke ("SetColliders", 0.1f);
+	}
+
+	void SetColliders(){
 		CreateSprite ();
 		
 		// Enable the collider associated with the current frame
 		
 		EnableCollider(true);
 		Debug.Log ("EnableCollider 됨");
-		
 	}
-	
 	
 	void CreateSprite()
 	{
@@ -91,6 +93,7 @@ public class catSprite1 : CatchedbyCat1 {
 	
 	// Use this for initialization
 	void Start () {
+
 		InvokeRepeating("ChangeSprite", d_time, d_time);
 	}
 	
@@ -119,7 +122,6 @@ public class catSprite1 : CatchedbyCat1 {
 			{
 				// display the current sprite (frame)
 				oSpriteRenderer.sprite = catImages[curFrame];
-				
 				// enable the associated polygon collider
 				EnableCollider(true);
 				
@@ -145,6 +147,8 @@ public class catSprite1 : CatchedbyCat1 {
 	{
 		if (other.collider2D.name == "player")
 		{
+			curFrame = 10;
+			this.GetComponent<Animator>().enabled = true;
 			catState = CatState.Catch;
 			
 		}
