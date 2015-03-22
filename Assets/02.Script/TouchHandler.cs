@@ -74,8 +74,8 @@ public class TouchHandler : MonoBehaviour {
 	
 
 
-		/*
 
+		/*
 		//android
 		if (Input.touchCount > 0) 
 		{

@@ -4797,7 +4797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &246590573
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4808,7 +4808,7 @@ AudioSource:
   serializedVersion: 3
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: .400999993
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9112,7 +9112,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436908505}
   m_LocalRotation: {x: 0, y: 0, z: -.1305262, w: .991444886}
-  m_LocalPosition: {x: -7, y: .400000006, z: 6}
+  m_LocalPosition: {x: 312.299988, y: .400000006, z: 6}
   m_LocalScale: {x: 1.70000005, y: 1.70000005, z: 0}
   m_Children:
   - {fileID: 109879317}
@@ -9150,6 +9150,7 @@ MonoBehaviour:
   particle: {fileID: 1202278456}
   jumpForce: {x: 150, y: 300}
   run: {x: 5, y: 0}
+  mondayBgm: {fileID: 0}
   finish_popup: {fileID: 0}
   puzzleEffect: {fileID: 0}
 --- !u!50 &436908509
@@ -22490,7 +22491,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
-  m_Pitch: 2.8499999
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Priority: 128

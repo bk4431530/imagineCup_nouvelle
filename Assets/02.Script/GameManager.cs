@@ -9,7 +9,9 @@ public class GameManager : MonoBehaviour {
 	public static int stamp = 0;
 	
 	public static int episode = 0;
-	public static int paperPlaneState = 0;
+	public static int[] paperPlaneState = {0,0,0};
+
+
 	
 	public static int heart_ep1 = 0;
 	public static int heart_ep2 = 0;
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour {
 	public static string ZipR = "456";
 	public static string Addr = "Seoul, Donjack-gu, Soongsil university";
 
-	public static int[] postCard = {5,0,0,0,0,0,0,0,5,0};
+	public static int[] postCard = {5,0,0,0,0,0,5,0,5,0};
 
 	
 	//Tutorial_SelectScene//////////////////////////////
@@ -83,7 +85,9 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefs.SetInt ("Piece", 0);
 		PlayerPrefs.SetInt ("Stamp", 0);
 		
-		PlayerPrefs.SetInt ("PaperPlaneState", 0);
+		PlayerPrefs.SetInt ("PaperPlaneState1", 0);
+		PlayerPrefs.SetInt ("PaperPlaneState2", 0);
+		PlayerPrefs.SetInt ("PaperPlaneState3", 0);
 		PlayerPrefs.SetInt ("Episode", 0);
 		
 		PlayerPrefs.SetInt ("Heart_ep1", 0);
@@ -187,7 +191,11 @@ public class GameManager : MonoBehaviour {
 		stamp = PlayerPrefs.GetInt ("Stamp");
 		
 		episode = PlayerPrefs.GetInt ("Episode");
-		paperPlaneState = PlayerPrefs.GetInt ("PaperPlaneState");
+		paperPlaneState[0] = PlayerPrefs.GetInt ("PaperPlaneState1");
+		paperPlaneState[1] = PlayerPrefs.GetInt ("PaperPlaneState2");
+		paperPlaneState[2] = PlayerPrefs.GetInt ("PaperPlaneState3");
+
+
 		
 		heart_ep1 = PlayerPrefs.GetInt ("Heart_ep1");
 		heart_ep2 = PlayerPrefs.GetInt ("Heart_ep2");

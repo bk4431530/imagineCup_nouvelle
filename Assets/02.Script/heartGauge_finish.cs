@@ -7,6 +7,8 @@ public class heartGauge_finish : MonoBehaviour {
 	
 	public GameObject gauge;
 	public static float current_Score=0;
+
+	public GameObject gaugeTxt;
 	
 	public float HeartPer;//0~1
 	int heart;
