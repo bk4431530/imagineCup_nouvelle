@@ -28,7 +28,7 @@ public class Equip_Scene : MonoBehaviour {
 	
 	
 	string selectedScene;
-	GameObject thumbnail;
+	//GameObject thumbnail;
 	GameObject effect;
 	public Sprite[] thumbnail_Img;
 	public Sprite[] effect_Img;
@@ -50,8 +50,8 @@ public class Equip_Scene : MonoBehaviour {
 		mysteryBox = GameObject.Find ("MysteryBox");
 		buyItem_popup = GameObject.Find ("Popup_buyItem");
 		loading_screen = GameObject.Find ("Loading_Screen");
-		thumbnail = GameObject.Find ("Canvas/leftMenu/Image");
-		effect = GameObject.Find ("Canvas/leftMenu/effect");
+		//thumbnail = GameObject.Find ("Canvas/leftMenu/Image");
+		effect = GameObject.Find ("Canvas/leftMenu/effectsBar/mask1/effect1");
 
 		backMusic = GameManager.backMusic;
 		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
@@ -95,29 +95,33 @@ public class Equip_Scene : MonoBehaviour {
 		case 1:
 			Debug.Log("monday");
 			selectedScene = "Monday";
-			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
+			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
 			audio_name="BGM_Monday";
 			break;
 		case 2:
 			selectedScene = "Tuesday";
-			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[1];
+			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[1];
 			break;
 		case 3:
 			selectedScene = "Wednesday";
-			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[2];
+			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[2];
 			break;
 		case 4:
 			selectedScene = "Thursday";
-			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[3];
+			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[3];
 			break;
 		case 5:
 			selectedScene = "Friday";
-			thumbnail.GetComponent<Image>().sprite = thumbnail_Img[4];
+			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[4];
 			break;
 		default:
 			Debug.Log("selected Episode = null");
 			break;
 		}
+
+
+
+
 	}
 	
 	void Update(){
@@ -249,7 +253,7 @@ public class Equip_Scene : MonoBehaviour {
 	//item popup
 	public void clickedBuyItems(int i)
 	{
-		buyItem_popup.SetActive (true);
+		//buyItem_popup.SetActive (true);
 		items = i;
 		bool lack = false;
 		
@@ -258,73 +262,48 @@ public class Equip_Scene : MonoBehaviour {
 		case 0:
 			if(GameManager.quillPen > GameManager.booster_price)
 			{
-				itemTxt.text = "Do you want to buy a Booster?";
-				price = GameManager.booster_price;
+				GameManager.quillPen = GameManager.quillPen - GameManager.booster_price;
+				GameManager.booster++;
 			}else{
-				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		case 1:
 			if(GameManager.quillPen > GameManager.magnet_price)
 			{
-				itemTxt.text = "Do you want to buy a Magnet?";
-				price = GameManager.magnet_price;
-				
+				GameManager.quillPen = GameManager.quillPen - GameManager.magnet_price;
+				GameManager.magnet++;
+
 			}else{
-				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		case 2:
 			if(GameManager.quillPen > GameManager.shield_price)
 			{
-				itemTxt.text = "Do you want to buy a Shield?";
-				price = GameManager.shield_price;
+				GameManager.quillPen = GameManager.quillPen - GameManager.shield_price;
+				GameManager.shield++;
 				
 			}else{
-				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		case 3:
 			if(GameManager.quillPen > GameManager.mysteryBox_price)
 			{
-				itemTxt.text = "Do you want to buy a Mystery Box";
-				price = GameManager.mysteryBox_price;
-				
+				buyItem_popup.SetActive (true);
+				GameManager.quillPen = GameManager.quillPen - GameManager.mysteryBox_price;
+				mysterybox();
+
 			}else{
 				itemTxt.text ="You don't have enough Quilpens!!";
 			}
 			break;
 		}
+
+
 		
 		
 	}
 	
 	
-	public void clickYes()
-	{
-		GameManager.quillPen = GameManager.quillPen - price;
-		switch (items) {		
-		case 0:
-			GameManager.booster++;
-			buyItem_popup.SetActive (false);
-
-			break;
-		case 1:
-			GameManager.magnet++;
-			buyItem_popup.SetActive (false);
-
-			break;
-		case 2:
-			GameManager.shield++;
-			buyItem_popup.SetActive (false);
-
-			break;
-		case 3:
-			mysterybox();
-			break;
-		}
-
-	}
 
 
 	void mysterybox()
@@ -345,7 +324,7 @@ public class Equip_Scene : MonoBehaviour {
 				GameManager.shield++;
 				break;
 		}
-		itemTxt.text = RandomItem;
+		itemTxt.text ="you get " + RandomItem;
 		Invoke("clickClose",1.0f);
 
 	}

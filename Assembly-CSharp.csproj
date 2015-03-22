@@ -51,6 +51,7 @@
      <Compile Include="Assets\02.Script\CatchedbyCat1.cs" />
      <Compile Include="Assets\02.Script\CatchedbyCat2.cs" />
      <Compile Include="Assets\02.Script\CatchedbyCat3.cs" />
+     <Compile Include="Assets\02.Script\CatchedbyCat_tutorial.cs" />
      <Compile Include="Assets\02.Script\Collection.cs" />
      <Compile Include="Assets\02.Script\DestroyMySelf.cs" />
      <Compile Include="Assets\02.Script\Equip_Scene.cs" />
@@ -59,6 +60,7 @@
      <Compile Include="Assets\02.Script\GameManager.cs" />
      <Compile Include="Assets\02.Script\Generate.cs" />
      <Compile Include="Assets\02.Script\Generate_Bubble.cs" />
+     <Compile Include="Assets\02.Script\Heart_Gauge_Select.cs" />
      <Compile Include="Assets\02.Script\IntroScene.cs" />
      <Compile Include="Assets\02.Script\Loading_Scene.cs" />
      <Compile Include="Assets\02.Script\Loading_anim.cs" />
@@ -66,6 +68,7 @@
      <Compile Include="Assets\02.Script\Magnet.cs" />
      <Compile Include="Assets\02.Script\Option.cs" />
      <Compile Include="Assets\02.Script\PlayerControl.cs" />
+     <Compile Include="Assets\02.Script\PlayerControl_tutorial.cs" />
      <Compile Include="Assets\02.Script\PlayerPrefX.cs" />
      <Compile Include="Assets\02.Script\PostcardEffect.cs" />
      <Compile Include="Assets\02.Script\Puzzle.cs" />
@@ -77,6 +80,7 @@
      <Compile Include="Assets\02.Script\ToyFlight.cs" />
      <Compile Include="Assets\02.Script\Tree.cs" />
      <Compile Include="Assets\02.Script\Tutorial_EquipScene.cs" />
+     <Compile Include="Assets\02.Script\Tutorial_Monday.cs" />
      <Compile Include="Assets\02.Script\Tutorial_SelectScene.cs" />
      <Compile Include="Assets\02.Script\cat1.cs" />
      <Compile Include="Assets\02.Script\cat2.cs" />
@@ -84,10 +88,12 @@
      <Compile Include="Assets\02.Script\catSprite1.cs" />
      <Compile Include="Assets\02.Script\catSprite2.cs" />
      <Compile Include="Assets\02.Script\catSprite3.cs" />
+     <Compile Include="Assets\02.Script\catSprite_tutorial.cs" />
+     <Compile Include="Assets\02.Script\cat_tutorial.cs" />
      <Compile Include="Assets\02.Script\finishGame.cs" />
      <Compile Include="Assets\02.Script\heartGauge_finish.cs" />
+     <Compile Include="Assets\02.Script\icon_moving.cs" />
      <Compile Include="Assets\02.Script\pauseGame.cs" />
-     <Compile Include="Assets\Heart_Gauge_Select.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\ClickTouchScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\ABClickScript.cs" />
      <Compile Include="Assets\Level Menu 2D\Scripts\Demo Scripts\AutoInitScript.cs" />
@@ -101,7 +107,6 @@
      <Compile Include="Assets\Level Menu 2D\SingletonPerfect\Singleton.cs" />
      <Compile Include="Assets\Level Menu 2D\SmoothCamera2D.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
-     <Compile Include="Assets\icon_moving.cs" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
