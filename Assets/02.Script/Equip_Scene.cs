@@ -98,11 +98,17 @@ public class Equip_Scene : MonoBehaviour {
 
 		switch (GameManager.currentEpisode) {
 		case 1:
-			Debug.Log("monday");
-			selectedScene = "Monday";
-			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
-			audio_name="BGM_Monday";
-			break;
+			if(GameManager.Tutorial_Monday)
+			{
+				Debug.Log("monday_tutorial");
+				selectedScene = "Monday_Tutorial";
+			} else {
+				Debug.Log("monday");
+				selectedScene = "Monday";
+				//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[0];
+			}
+				audio_name="BGM_Monday";
+				break;
 		case 2:
 			selectedScene = "Tuesday";
 			//thumbnail.GetComponent<Image>().sprite = thumbnail_Img[1];

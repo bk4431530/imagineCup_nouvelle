@@ -19,3 +19,7 @@ EditorBuildSettings:
     path: Assets/01.Scene/Select_Scene.unity
   - enabled: 1
     path: Assets/01.Scene/Intro_Scene.unity
+  - enabled: 0
+    path: Assets/01.Scene/Loading_Scene.unity
+  - enabled: 1
+    path: Assets/01.Scene/Monday_Tutorial.unity

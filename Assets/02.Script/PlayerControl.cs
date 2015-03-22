@@ -224,7 +224,7 @@ public class PlayerControl : MonoBehaviour {
 	
 	*/
 		}
-
+		/*
 		if(isClear)
 		{
 			//while(GameObject.Find ("BGM").audio.volume >0.0001)
@@ -235,7 +235,7 @@ public class PlayerControl : MonoBehaviour {
 				//Invoke("FadeOutSound",0.5f);
 			//}
 		}
-		
+		*/
 	}
 	
 	
@@ -295,7 +295,8 @@ public class PlayerControl : MonoBehaviour {
 			Debug.Log ("isClear 바뀜 => " + isClear); 
 
 			//fadeout sound
-/*			for(int i=8; i > 0 ; i--)
+			/*
+			for(int i=8; i > 0 ; i--)
 			{
 				InvokeRepeating("FadeOutSound(i)",8, 0.5f);
 				
@@ -482,7 +483,7 @@ public class PlayerControl : MonoBehaviour {
 		}
 		
 	}
-
+	/*
 	public void FadeOutSound()
 	{
 	
@@ -498,11 +499,11 @@ public class PlayerControl : MonoBehaviour {
 				//mondayBgm.audio.volume = (float)mondayBgm.audio.volume-1;
 
 				Debug.Log ("Fading...");
-				*/
+
 
 		}
 	}
-
+	*/
 }
 
 

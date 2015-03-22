@@ -74,6 +74,8 @@ public class GameManager : MonoBehaviour {
 	//Tutorial_EquipScene//////////////////////////////
 	public static bool Tutorial_EquipScene = true;
 
+	//Tutorial_Game
+	public static bool Tutorial_Monday = true;
 	
 	
 	
@@ -140,7 +142,8 @@ public class GameManager : MonoBehaviour {
 		//Tutorial_EquipScene//////////////////////////////
 		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
 
-
+		//Tutorial_Monday
+		PlayerPrefsX.SetBool ("TutorialMonday", true);
 		
 		/*
       PlayerPrefs.SetInt ("Quilpen", quillPen);
@@ -236,7 +239,8 @@ public class GameManager : MonoBehaviour {
 		// tutoriail- equiscene 변수들
 		Tutorial_EquipScene = PlayerPrefsX.GetBool ("TutorialEquipScene");
 
-
+		// tutorial- Monday
+		Tutorial_Monday = PlayerPrefsX.GetBool ("TutorialMonday");
 
 		
 		

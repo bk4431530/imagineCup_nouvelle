@@ -132,7 +132,7 @@ public class CatchedbyCat2 : MonoBehaviour{
 			
 			//clickCount초기화
 			clickCount = 0;
-			Debug.Log ("clickCount = " + CatchedbyCat1.clickCount + "초기화됨");
+			Debug.Log ("clickCount = " + CatchedbyCat2.clickCount + "초기화됨");
 			
 			//catTime초기화 
 			//         catTime = Time.time;
@@ -157,7 +157,7 @@ public class CatchedbyCat2 : MonoBehaviour{
 			cat.gameObject.GetComponent<catSprite2>().catState= CatState.Normal;
 			this.GetComponent<PlayerControl>().whenDie ();
 			clickCount = 0;
-			Debug.Log ("clickCount = " + CatchedbyCat1.clickCount + "초기화됨");
+			Debug.Log ("clickCount = " + CatchedbyCat2.clickCount + "초기화됨");
 			
 		}
 		

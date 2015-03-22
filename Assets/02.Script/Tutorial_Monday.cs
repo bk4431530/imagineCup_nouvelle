@@ -193,11 +193,15 @@ public class Tutorial_Monday : MonoBehaviour {
 	public void SkipButtonClicked()
 	{
 		loadingScreen.SetActive (true);
-		Invoke ("GoToGame", 2.0f);
+		Invoke ("GoToGame", 4.0f);
 	}
 
 	public void GoToGame(){
 		Time.timeScale = 1;
+
+		GameManager.Tutorial_Monday = false;
+		PlayerPrefsX.SetBool ("TutorialMonday", GameManager.Tutorial_Monday);
+
 		Application.LoadLevel ("Monday");
 	}
 	
