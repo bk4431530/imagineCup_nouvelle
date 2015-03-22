@@ -96,7 +96,6 @@ public class CatchedbyCat_tutorial : MonoBehaviour{
 		{   
 			cat.gameObject.GetComponent<catSprite_tutorial>().oldFrame = cat.gameObject.GetComponent<catSprite_tutorial>().curFrame;
 			
-			PS_cat =  PlayerState_cat.Free;
 			cat.gameObject.GetComponent<catSprite_tutorial>().catState= CatState.Normal;
 			
 			Debug.Log("PlayerState : " + PS_cat + "/ CatState : " + cat.gameObject.GetComponent<catSprite_tutorial>().catState);
@@ -145,7 +144,7 @@ public class CatchedbyCat_tutorial : MonoBehaviour{
 			rigidbody2D.isKinematic = false;
 			PS_cat = PlayerState_cat.Free;
 			cat.gameObject.GetComponent<catSprite_tutorial>().catState= CatState.Normal;
-			this.GetComponent<PlayerControl>().whenDie ();
+			this.GetComponent<PlayerControl_tutorial>().whenDie ();
 			clickCount = 0;
 			Debug.Log ("clickCount = " + CatchedbyCat_tutorial.clickCount + "초기화됨");
 			
@@ -154,8 +153,10 @@ public class CatchedbyCat_tutorial : MonoBehaviour{
 	}//update
 	
 	void init_Frames(){
+		/*
 		cat.gameObject.GetComponent<catSprite_tutorial>().curFrame = 0;
 		cat.gameObject.GetComponent<catSprite_tutorial>().oldFrame = -1;
+		*/
 	}
 	
 	
