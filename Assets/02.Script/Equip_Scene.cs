@@ -29,7 +29,7 @@ public class Equip_Scene : MonoBehaviour {
 	
 	string selectedScene;
 	//GameObject thumbnail;
-	GameObject effect;
+	public GameObject[] effect;
 	//public Sprite[] thumbnail_Img;
 	public Sprite[] effect_Img;
 	public Sprite[] item_Img;
@@ -53,7 +53,10 @@ public class Equip_Scene : MonoBehaviour {
 		buyItem_popup = GameObject.Find ("Popup_buyItem");
 		loading_screen = GameObject.Find ("Loading_Screen");
 		//thumbnail = GameObject.Find ("Canvas/leftMenu/Image");
-		effect = GameObject.Find ("Canvas/leftMenu/effectsBar/mask1/effect1");
+		effect[0] = GameObject.Find ("Canvas/leftMenu/effectsBar/mask1/effect1");
+		effect[1] = GameObject.Find ("Canvas/leftMenu/effectsBar/mask2/effect2");
+		effect[2] = GameObject.Find ("Canvas/leftMenu/effectsBar/mask3/effect3");
+
 
 		backMusic = GameManager.backMusic;
 		itemTxt = GameObject.Find ("ItemTxt").GetComponent<Text> ();
@@ -136,35 +139,39 @@ public class Equip_Scene : MonoBehaviour {
 		mysteryBox_cnt.text = GameManager.mysteryBox.ToString(); 
 	
 
-		switch (GameManager.paperPlaneState) {
-		case 0: 
-			effect.GetComponent<Image>().sprite = effect_Img[0];
-			break;
-		case 1:
-			effect.GetComponent<Image>().sprite = effect_Img[1];
-			break;
-		case 2:
-			effect.GetComponent<Image>().sprite = effect_Img[2];
-			break;
-		case 3:
-			effect.GetComponent<Image>().sprite = effect_Img[3];
-			break;
-		case 4:
-			effect.GetComponent<Image>().sprite = effect_Img[4];
-			break;
-		case 5:
-			effect.GetComponent<Image>().sprite = effect_Img[5];
-			break;
-		case 6:
-			effect.GetComponent<Image>().sprite = effect_Img[6];
-			break;
-		case 7:
-			effect.GetComponent<Image>().sprite = effect_Img[7];
-			break;
-		case 8:
-			effect.GetComponent<Image>().sprite = effect_Img[8];
-			break;
-		}
+		for(int i =0; i<3; i++){
+			if(GameManager.paperPlaneState[i]!=0){
+			switch (GameManager.paperPlaneState[i]) {
+			case 0: 
+				effect[i].GetComponent<Image>().sprite = effect_Img[0];
+				break;
+			case 1:
+				effect[i].GetComponent<Image>().sprite = effect_Img[1];
+				break;
+			case 2:
+				effect[i].GetComponent<Image>().sprite = effect_Img[2];
+				break;
+			case 3:
+				effect[i].GetComponent<Image>().sprite = effect_Img[3];
+				break;
+			case 4:
+				effect[i].GetComponent<Image>().sprite = effect_Img[4];
+				break;
+			case 5:
+				effect[i].GetComponent<Image>().sprite = effect_Img[5];
+				break;
+			case 6:
+				effect[i].GetComponent<Image>().sprite = effect_Img[6];
+				break;
+			case 7:
+				effect[i].GetComponent<Image>().sprite = effect_Img[7];
+				break;
+			case 8:
+				effect[i].GetComponent<Image>().sprite = effect_Img[8];
+				break;
+			}//switch
+		}//if
+		}//for
 		
 	}
 	

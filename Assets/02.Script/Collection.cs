@@ -54,7 +54,7 @@ public class Collection : MonoBehaviour {
 	
 	public GameObject equip_popUp;
 	public Text popUp_txt;
-	
+
 	public GameObject equip;
 	
 	void Awake () { //원래 awake
@@ -91,7 +91,7 @@ public class Collection : MonoBehaviour {
 	
 	void Update()
 	{
-		equip.transform.position = black_all [GameManager.paperPlaneState].transform.position;
+		equip.transform.position = black_all [GameManager.paperPlaneState[0]].transform.position;
 		
 		for (int i =0; i<10; i++) 
 		{
@@ -269,12 +269,22 @@ public class Collection : MonoBehaviour {
 	//2.Detail
 	public void EquipBtn()
 	{
-		if (GameManager.paperPlaneState != card_equip)
+		if (GameManager.paperPlaneState[0] == 0)
 		{
-			GameManager.paperPlaneState = card_equip;
+			GameManager.paperPlaneState[0] = card_equip;
 		}
-		Debug.Log ("equip " +card_equip.ToString()+"th letter");
-		
+		else if(GameManager.paperPlaneState[1] == 0)
+		{
+			GameManager.paperPlaneState[1] = card_equip;
+		}
+		else if(GameManager.paperPlaneState[2] == 0)
+		{
+			GameManager.paperPlaneState[2] = card_equip;
+		}
+
+			Debug.Log ("equip " +card_equip.ToString()+"th letter");
+
+
 		if (GameManager.postCard [card_equip] < 5) {
 			popUp_txt.text = "You have to complete this postcard.";
 		} else 

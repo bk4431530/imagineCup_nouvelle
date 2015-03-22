@@ -96,8 +96,12 @@ public class finishGame : MonoBehaviour {
 	{
 		if (PlayerControl.finish) 
 		{
-			if(GameManager.paperPlaneState == 8){
-				PostcardEffect.flareLayer.enabled = false;
+			for(int i =0; i<3; i++){
+				if(GameManager.paperPlaneState[i] == 8){
+					PostcardEffect.flareLayer.enabled = false;
+				}else if(GameManager.paperPlaneState[i] == 6){
+					PostcardEffect.trailRenderer.SetActive(false);
+				}
 			}
 
 			finish_popup.SetActive(true);
