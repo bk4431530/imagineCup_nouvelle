@@ -118,7 +118,9 @@ public class CatchedbyCat_tutorial : MonoBehaviour{
 				cat.gameObject.GetComponent<catSprite_tutorial>().olFrameColliders[index].enabled = false;
 				//            Debug.Log ("disabled" + (index+1) );
 			}
-			
+
+			this.rigidbody2D.AddForce(new Vector2(150, 300));
+
 			//clickCount초기화
 			clickCount = 0;
 			Debug.Log ("clickCount = " + CatchedbyCat_tutorial.clickCount + "초기화됨");

@@ -21,7 +21,7 @@ public class heartGauge_finish : MonoBehaviour {
 		Debug.Log (current_Score);
 		
 		GameManager.heart_ep1 = GameManager.heart_ep1 + (int)current_Score;
-		HeartPer = (float)(GameManager.heart_ep1)*0.01f;
+		HeartPer = (float)(GameManager.heart_ep1)*0.03f;
 		PlayerPrefs.SetInt ("Heart_ep1",GameManager.heart_ep1);
 		PlayerPrefs.Save ();
 

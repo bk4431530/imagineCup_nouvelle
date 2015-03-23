@@ -22,7 +22,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
 	
-	public Vector2 jumpForce = new Vector2(4, 350);
+	public Vector2 jumpForce = new Vector2(150, 300);
 	public Vector2 run = new Vector2(4,0);
 	
 	private Vector3 diePos;
@@ -81,7 +81,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 		PS = PlayerState.Normal;
 		Debug.Log ("state : " + PS);
 
-		rigidbody2D.AddForce (new Vector2 (60, 300));
+		rigidbody2D.AddForce (jumpForce);
 		
 		mAnimator = gameObject.GetComponent<Animator> ();
 //		boyAnimator = GameObject.Find ("boy").GetComponent<Animator> ();
@@ -232,12 +232,15 @@ public class PlayerControl_tutorial: MonoBehaviour {
 				PS = PlayerState.Normal;
 			}
 			else{
+				Application.LoadLevel("Monday_Tutorial");
+				/*
 				PS = PlayerState.Collided;
 				diePos = transform.position;
 				this.GetComponent<PolygonCollider2D> ().enabled = false;
 				mAnimator.SetTrigger("collid");
 				Invoke("whenDie", 0.8f);
-			}
+				*/
+				}
 		}else{
 			PS = PlayerState.Normal;
 			this.renderer.material.color = Color.white;
@@ -278,22 +281,29 @@ public class PlayerControl_tutorial: MonoBehaviour {
 	{
 		if (GameManager.currentLife < 1) 
 		{
+			/*
 			if(!isOver){
 				DieSound();
 				isOver = true;
 			}
 			Time.timeScale = 0;
 			finish=true;
+			*/
 			Application.LoadLevel("Monday_Tutorial");
+			GameManager.currentLife = 5;
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) && !isOut)//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
-			PSpause =true;
+			Application.LoadLevel("Monday_Tutorial");
+			//Invoke("whenDie", 0.8f);
+			//PSpause =true;
+			/*
 			PS = PlayerState.Collided;
 			diePos = transform.position;
 			mAnimator.SetTrigger("collid");
 			Invoke("whenDie", 0.8f);
 			isOut = true;
+			*/
 		}
 	}
 
@@ -301,6 +311,8 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 	public void whenDie()
 	{
+		//Application.LoadLevel("Monday_Tutorial");
+		/*
 		isOut = false;
 		diePlanePos = transform.position;
 		PS = PlayerState.Normal;
@@ -309,7 +321,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 		stage.x = 12.8f * Stage_Num;
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
-		*/
+
 
 
 		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
@@ -328,7 +340,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 		isRevival = true;
 		Invoke ("Revival", 1.5f);
-
+		*/
 
 	}
 	

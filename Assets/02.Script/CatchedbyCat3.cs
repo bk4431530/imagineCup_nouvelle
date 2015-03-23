@@ -129,7 +129,7 @@ public class CatchedbyCat3 : MonoBehaviour{
 				//            Debug.Log ("disabled" + (index+1) );
 			}
 
-			this.rigidbody2D.AddForce(new Vector2(4, 350));
+			this.rigidbody2D.AddForce(new Vector2(150, 300));
 
 			//clickCount초기화
 			clickCount = 0;

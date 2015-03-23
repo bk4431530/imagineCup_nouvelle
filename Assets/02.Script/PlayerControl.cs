@@ -22,7 +22,7 @@ public class PlayerControl : MonoBehaviour {
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
 	
-	public Vector2 jumpForce = new Vector2(4, 350);
+	public Vector2 jumpForce = new Vector2(150, 300);
 	public Vector2 run = new Vector2(4,0);
 	
 	private Vector3 diePos;
@@ -84,7 +84,7 @@ public class PlayerControl : MonoBehaviour {
 		PS = PlayerState.Normal;
 		Debug.Log ("state : " + PS);
 
-		rigidbody2D.AddForce (new Vector2 (60, 300));
+		rigidbody2D.AddForce (jumpForce);
 		
 		mAnimator = gameObject.GetComponent<Animator> ();
 		boyAnimator = GameObject.Find ("boy").GetComponent<Animator> ();

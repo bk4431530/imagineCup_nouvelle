@@ -69,7 +69,14 @@ public class Tutorial_Monday : MonoBehaviour {
 			PlayerControl_tutorial.PSpause = true;
 			help2 = true;
 		}
-
+		/*
+		if (TouchHandler.Mswiped == true && help_num == 2) {
+			help_num = 0;
+			Invoke("DisableHelp2",1.0f);
+			//DisableHelp2 ();
+			PlayerControl_tutorial.PSpause = false;
+		}
+		*/
 		if (player.GetComponent<CatchedbyCat_tutorial> ().PS_cat == PlayerState_cat.CatchedByCat && help_num == 0 && !help3) {
 			EnableHelp3();
 			PlayerControl_tutorial.PSpause = true;
@@ -78,6 +85,7 @@ public class Tutorial_Monday : MonoBehaviour {
 
 		if (player.GetComponent<CatchedbyCat_tutorial> ().PS_cat == PlayerState_cat.Free && help_num == 3 && help3) {
 			DisableHelp3 ();
+			PlayerControl_tutorial.PSpause = false;
 		}
 
 		if (PlayerControl_tutorial.isClear && !help4) {
@@ -151,18 +159,19 @@ public class Tutorial_Monday : MonoBehaviour {
 	
 	public void DisableHelp2()
 	{
+		Time.timeScale = 1;
 		circle.SetActive (false);
 		Tut_help2.SetActive (false);
 		Debug.Log ("DisableHelp2() 실행");
-		help_num = 0;
-		Time.timeScale = 1;
 		PlayerControl_tutorial.PSpause = false;
+		player.rigidbody2D.AddForce (new Vector2(5, 300));
+		help_num = 0;
 	}
 	
 	//help3
 	public void EnableHelp3()
 	{
-		Timezero ();
+		Invoke ("Timezero", 0.5f);
 		Tut_help3.SetActive (true);
 		Debug.Log ("EnableHelp3() 실행");
 		help_num = 3;
@@ -190,7 +199,7 @@ public class Tutorial_Monday : MonoBehaviour {
 		Debug.Log ("DisableHelp4() 실행");
 		help_num = 0;
 		loadingScreen.SetActive (true);
-		Invoke ("GoToGame", 2.0f);
+		GoToGame ();
 	}
 
 	
@@ -198,7 +207,7 @@ public class Tutorial_Monday : MonoBehaviour {
 	public void SkipButtonClicked()
 	{
 		loadingScreen.SetActive (true);
-		Invoke ("GoToGame", 4.0f);
+		GoToGame ();
 	}
 
 	public void GoToGame(){
@@ -206,6 +215,8 @@ public class Tutorial_Monday : MonoBehaviour {
 
 		GameManager.Tutorial_Monday = false;
 		PlayerPrefsX.SetBool ("TutorialMonday", GameManager.Tutorial_Monday);
+
+		GameManager.currentLife = 5;
 
 		Application.LoadLevel ("Monday");
 	}
