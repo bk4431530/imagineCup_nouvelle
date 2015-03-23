@@ -289,21 +289,21 @@ public class PlayerControl_tutorial: MonoBehaviour {
 			Time.timeScale = 0;
 			finish=true;
 			*/
-			Application.LoadLevel("Monday_Tutorial");
-			GameManager.currentLife = 5;
+			//Application.LoadLevel("Monday_Tutorial");
+			//GameManager.currentLife = 5;
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) && !isOut)//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
-			Application.LoadLevel("Monday_Tutorial");
+			//Application.LoadLevel("Monday_Tutorial");
 			//Invoke("whenDie", 0.8f);
 			//PSpause =true;
-			/*
+
 			PS = PlayerState.Collided;
 			diePos = transform.position;
 			mAnimator.SetTrigger("collid");
 			Invoke("whenDie", 0.8f);
 			isOut = true;
-			*/
+
 		}
 	}
 
@@ -312,7 +312,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 	public void whenDie()
 	{
 		//Application.LoadLevel("Monday_Tutorial");
-		/*
+
 		isOut = false;
 		diePlanePos = transform.position;
 		PS = PlayerState.Normal;
@@ -321,12 +321,12 @@ public class PlayerControl_tutorial: MonoBehaviour {
 		stage.x = 12.8f * Stage_Num;
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
-
+		*/
 
 
 		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
 		this.transform.position = repos;
-		GameManager.currentLife--;
+		//GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
 
 	
@@ -340,7 +340,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 		isRevival = true;
 		Invoke ("Revival", 1.5f);
-		*/
+
 
 	}
 	

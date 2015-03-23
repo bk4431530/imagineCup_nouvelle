@@ -7,11 +7,13 @@ public class Tutorial_Monday : MonoBehaviour {
 	public GameObject Tut_Canvas;
 	public GameObject Tut_bg;
 	public GameObject Tut_help1;
+	public GameObject Tut_help1_2;
 	public GameObject Tut_help2;
 	public GameObject Tut_help3;
 	public GameObject Tut_help4;	
 
 	private int help_num = 0;
+	private bool help1_2 = false;
 	private bool help2 = false;
 	private bool help3 = false;
 	private bool help4 = false;
@@ -31,6 +33,7 @@ public class Tutorial_Monday : MonoBehaviour {
 		Tut_Canvas = GameObject.Find ("TutorialCanvas");
 		//Tut_bg = GameObject.Find ("/TutorialCanvas/Background");
 		Tut_help1 = GameObject.Find ("/TutorialCanvas/Help1");
+		Tut_help1_2 = GameObject.Find("/TutorialCanvas/Help1_2");
 		Tut_help2 = GameObject.Find ("/TutorialCanvas/Help2");
 		Tut_help3 = GameObject.Find ("/TutorialCanvas/Help3");
 		Tut_help4 = GameObject.Find ("/TutorialCanvas/Help4");
@@ -52,7 +55,8 @@ public class Tutorial_Monday : MonoBehaviour {
 		StartTutorial();
 		EnableHelp1 ();
 
-		Invoke ("Timezero", 1.0f);
+		//Invoke ("Timezero", 1.0f);
+		Timezero ();
 		PlayerControl_tutorial.PSpause = true;
 	}
 	
@@ -61,10 +65,23 @@ public class Tutorial_Monday : MonoBehaviour {
 		if(TouchHandler.Mswiped == true && help_num == 1)
 		{
 			DisableHelp1();
-			PlayerControl_tutorial.PSpause = false;
+			PauseFalse();
 		}
 
-		if (player.transform.position.x > 39 && player.transform.position.x < 40 && help_num == 0 && !help2) {
+		if(player.transform.position.x > 0 && help_num == 0 && !help1_2)
+		{
+			EnableHelp1_2();
+			PlayerControl_tutorial.PSpause = true;
+			help1_2 = true;
+		}
+
+		if(TouchHandler.Mswiped == true && help_num == 10 && help1_2)
+		{
+			DisableHelp1_2();
+			PauseFalse();
+		}
+
+		if (player.transform.position.x > 11.5 && player.transform.position.x < 12.5 && help_num == 0 && !help2) {
 			EnableHelp2();
 			PlayerControl_tutorial.PSpause = true;
 			help2 = true;
@@ -85,7 +102,7 @@ public class Tutorial_Monday : MonoBehaviour {
 
 		if (player.GetComponent<CatchedbyCat_tutorial> ().PS_cat == PlayerState_cat.Free && help_num == 3 && help3) {
 			DisableHelp3 ();
-			PlayerControl_tutorial.PSpause = false;
+			PauseFalse();
 		}
 
 		if (PlayerControl_tutorial.isClear && !help4) {
@@ -99,6 +116,12 @@ public class Tutorial_Monday : MonoBehaviour {
 		Time.timeScale = 0;
 	}
 
+	void PauseFalse(){
+		PlayerControl_tutorial.PSpause = false;
+		player.rigidbody2D.isKinematic = true;
+		player.rigidbody2D.isKinematic = false;
+	}
+
 	/////////////////////////////////
 	
 	public void DisableTutorialCanvas()
@@ -106,6 +129,7 @@ public class Tutorial_Monday : MonoBehaviour {
 		
 		
 		Tut_help1.SetActive (false);
+		Tut_help1_2.SetActive(false);
 		Tut_help2.SetActive (false);
 		Tut_help3.SetActive (false);
 		Tut_help4.SetActive (false);
@@ -146,6 +170,22 @@ public class Tutorial_Monday : MonoBehaviour {
 		Debug.Log ("DisableHelp1() 실행");
 		help_num = 0;
 	}
+
+	public void EnableHelp1_2()
+	{
+		Timezero ();
+		Tut_help1_2.SetActive (true);
+		Debug.Log ("EnableHelp1_2() 실행");
+		help_num = 10;
+	}
+
+	public void DisableHelp1_2()
+	{
+		Time.timeScale = 1;
+		Tut_help1_2.SetActive (false);
+		Debug.Log ("DisableHelp1_2() 실행");
+		help_num = 0;
+	}
 	
 	// help2
 	public void EnableHelp2()
@@ -163,8 +203,8 @@ public class Tutorial_Monday : MonoBehaviour {
 		circle.SetActive (false);
 		Tut_help2.SetActive (false);
 		Debug.Log ("DisableHelp2() 실행");
-		PlayerControl_tutorial.PSpause = false;
-		player.rigidbody2D.AddForce (new Vector2(5, 300));
+		PauseFalse ();
+		player.rigidbody2D.AddForce (new Vector2(5, 350));
 		help_num = 0;
 	}
 	
@@ -183,7 +223,7 @@ public class Tutorial_Monday : MonoBehaviour {
 		Debug.Log ("DisableHelp3() 실행");
 		help_num = 0;
 		Time.timeScale = 1;
-		PlayerControl_tutorial.PSpause = false;
+		PauseFalse ();
 	}
 	
 	//help4
