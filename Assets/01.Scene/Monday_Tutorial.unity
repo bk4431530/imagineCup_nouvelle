@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  player_pos: 16
+  player_pos: 15
 --- !u!4 &101099503
 Transform:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101099500}
   m_LocalRotation: {x: 0, y: 0, z: -.0704528987, w: .997515142}
-  m_LocalPosition: {x: 20.4899998, y: -1.38, z: 6}
+  m_LocalPosition: {x: 19.7399998, y: -1.62, z: 6}
   m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1}
   m_Children: []
   m_Father: {fileID: 542069937}
@@ -2085,7 +2085,7 @@ RectTransform:
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -261, y: -301}
+  m_AnchoredPosition: {x: -261, y: -251}
   m_SizeDelta: {x: 360, y: 380}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &237970768
@@ -5662,6 +5662,67 @@ Prefab:
   m_RootGameObject: {fileID: 734952896}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &655892772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 655892773}
+  - 222: {fileID: 655892775}
+  - 114: {fileID: 655892774}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &655892773
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655892772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1907381157}
+  m_RootOrder: 4
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -11, y: -220}
+  m_SizeDelta: {x: 163, y: 319}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &655892774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655892772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7aa6e903442f1304ea0440ac50ae0a01, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &655892775
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 655892772}
 --- !u!1001 &662140554
 Prefab:
   m_ObjectHideFlags: 0
@@ -5927,7 +5988,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -13.3999996, y: 77.5999985}
+  m_AnchoredPosition: {x: -14.1000004, y: 75.3000031}
   m_SizeDelta: {x: 514, y: 229.699997}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &684586288
@@ -5956,7 +6017,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1.20000005
   m_Text: "Swipe screen to fly the paper plane. \nAvoid obstacles and gather quill
-    pens while flying.\r \nObstacles have colors so be careful!"
+    pens while flying.\r "
 --- !u!222 &684586289
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7839,6 +7900,67 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 26496375422f0ce4e9a17db527cd3ced, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &896859034
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 896859035}
+  - 222: {fileID: 896859037}
+  - 114: {fileID: 896859036}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &896859035
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896859034}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1907381157}
+  m_RootOrder: 2
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -97, y: -235}
+  m_SizeDelta: {x: 169, y: 319}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &896859036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896859034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8b8e05a1571eb9d4091f9377162ce602, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &896859037
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 896859034}
 --- !u!1 &906145157
 GameObject:
   m_ObjectHideFlags: 0
@@ -9518,8 +9640,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -13.3999996, y: 77.5999985}
-  m_SizeDelta: {x: 514, y: 229.699997}
+  m_AnchoredPosition: {x: -5.4000001, y: 75.1999969}
+  m_SizeDelta: {x: 336.5, y: 135.300003}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1150486277
 MonoBehaviour:
@@ -9546,8 +9668,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.20000005
-  m_Text: "Swipe screen to fly the paper plane. \nAvoid obstacles and gather quill
-    pens while flying.\r \nObstacles have colors so be careful!"
+  m_Text: "Obstacles have colors \nso be careful!"
 --- !u!222 &1150486278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12277,7 +12398,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -185, y: -131}
+  m_AnchoredPosition: {x: -327, y: -141}
   m_SizeDelta: {x: 650, y: 200}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1303180478
@@ -13367,8 +13488,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -23, y: 77.5999985}
-  m_SizeDelta: {x: 556.799988, y: 341.5}
+  m_AnchoredPosition: {x: -12.1000004, y: 78.5}
+  m_SizeDelta: {x: 388.5, y: 224.5}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1420594368
 MonoBehaviour:
@@ -16099,8 +16220,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -23, y: 77.5999985}
-  m_SizeDelta: {x: 556.799988, y: 341.5}
+  m_AnchoredPosition: {x: -22.2999992, y: 83.5}
+  m_SizeDelta: {x: 556.799988, y: 288.100006}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1732082978
 MonoBehaviour:
@@ -17003,6 +17124,9 @@ RectTransform:
   m_Children:
   - {fileID: 1946268267}
   - {fileID: 1714495538}
+  - {fileID: 896859035}
+  - {fileID: 2132521087}
+  - {fileID: 655892773}
   m_Father: {fileID: 406954668}
   m_RootOrder: 3
   m_AnchorMin: {x: .5, y: .5}
@@ -17541,7 +17665,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1966680219}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26.9099998, y: .0599999987, z: -10}
+  m_LocalPosition: {x: 21.7999992, y: .0599999987, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18564,6 +18688,67 @@ SpriteRenderer:
   m_SortingOrder: -6
   m_Sprite: {fileID: 21300000, guid: 2a6206d3c27d0334faa52d41b3a3494d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &2132521086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 2132521087}
+  - 222: {fileID: 2132521089}
+  - 114: {fileID: 2132521088}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2132521087
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132521086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.20000005, y: 1.20000005, z: 0}
+  m_Children: []
+  m_Father: {fileID: 1907381157}
+  m_RootOrder: 3
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 85, y: -234}
+  m_SizeDelta: {x: 169, y: 319}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &2132521088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132521086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 8b8e05a1571eb9d4091f9377162ce602, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &2132521089
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2132521086}
 --- !u!1 &2134698548
 GameObject:
   m_ObjectHideFlags: 0

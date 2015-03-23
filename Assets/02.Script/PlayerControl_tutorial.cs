@@ -266,10 +266,10 @@ public class PlayerControl_tutorial: MonoBehaviour {
 	}
 
 
-	void Jump()
+	public void Jump()
 	{
-		rigidbody2D.velocity = Vector2.zero;
-		rigidbody2D.AddForce (jumpForce);
+		//rigidbody2D.velocity = Vector2.zero;
+		//rigidbody2D.AddForce (jumpForce);
 		
 		mAnimator.SetTrigger("up");
 
@@ -311,8 +311,11 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 	public void whenDie()
 	{
+		//Debug.Log ("When Die");
+		//rigidbody2D.velocity = Vector2.zero;
+		//rigidbody2D.AddForce (jumpForce);
 		//Application.LoadLevel("Monday_Tutorial");
-
+		/*
 		isOut = false;
 		diePlanePos = transform.position;
 		PS = PlayerState.Normal;
@@ -321,7 +324,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 		stage.x = 12.8f * Stage_Num;
 		if(Stage_Num == 0){ stage.x -= 5.5f; } else { stage.x -= 6.4f; }
 		stage.y = -0.35f;
-		*/
+
 
 
 		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
@@ -340,7 +343,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 		isRevival = true;
 		Invoke ("Revival", 1.5f);
-
+		*/
 
 	}
 	

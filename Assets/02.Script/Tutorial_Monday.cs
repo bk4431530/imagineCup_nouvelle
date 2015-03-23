@@ -66,6 +66,8 @@ public class Tutorial_Monday : MonoBehaviour {
 		{
 			DisableHelp1();
 			PauseFalse();
+			player.rigidbody2D.velocity = Vector2.zero;
+			player.rigidbody2D.AddForce (new Vector2(150, 300));
 		}
 
 		if(player.transform.position.x > 0 && help_num == 0 && !help1_2)
@@ -79,6 +81,8 @@ public class Tutorial_Monday : MonoBehaviour {
 		{
 			DisableHelp1_2();
 			PauseFalse();
+			player.rigidbody2D.velocity = Vector2.zero;
+			player.rigidbody2D.AddForce (new Vector2(150, 300));
 		}
 
 		if (player.transform.position.x > 11.5 && player.transform.position.x < 12.5 && help_num == 0 && !help2) {
@@ -102,7 +106,7 @@ public class Tutorial_Monday : MonoBehaviour {
 
 		if (player.GetComponent<CatchedbyCat_tutorial> ().PS_cat == PlayerState_cat.Free && help_num == 3 && help3) {
 			DisableHelp3 ();
-			PauseFalse();
+			//PauseFalse();
 		}
 
 		if (PlayerControl_tutorial.isClear && !help4) {
@@ -204,7 +208,7 @@ public class Tutorial_Monday : MonoBehaviour {
 		Tut_help2.SetActive (false);
 		Debug.Log ("DisableHelp2() 실행");
 		PauseFalse ();
-		player.rigidbody2D.AddForce (new Vector2(5, 350));
+		player.rigidbody2D.AddForce (new Vector2(10, 400));
 		help_num = 0;
 	}
 	
@@ -219,11 +223,12 @@ public class Tutorial_Monday : MonoBehaviour {
 	
 	public void DisableHelp3()
 	{
+		Time.timeScale = 1;
 		Tut_help3.SetActive (false);
 		Debug.Log ("DisableHelp3() 실행");
-		help_num = 0;
-		Time.timeScale = 1;
 		PauseFalse ();
+		player.rigidbody2D.AddForce (new Vector2(150, 300));
+		help_num = 0;
 	}
 	
 	//help4
