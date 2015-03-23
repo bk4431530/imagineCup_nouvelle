@@ -1,4 +1,5 @@
 ﻿<Properties>
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\IntroScene.cs">
     <Files>
@@ -12,6 +13,15 @@
       <File FileName="Assets\02.Script\QuillPen.cs" Line="1" Column="1" />
       <File FileName="Assets\02.Script\Equip_Scene.cs" Line="1" Column="1" />
       <File FileName="Assets\02.Script\IntroScene.cs" Line="29" Column="1" />
+=======
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\02.Script\PlayerControl_tutorial.cs">
+    <Files>
+      <File FileName="Assets\02.Script\PlayerControl_tutorial.cs" Line="13" Column="2" />
+      <File FileName="Assets\02.Script\CatchedbyCat_tutorial.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\Tutorial_Monday.cs" Line="1" Column="1" />
+      <File FileName="Assets\02.Script\TouchHandler.cs" Line="1" Column="1" />
+>>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

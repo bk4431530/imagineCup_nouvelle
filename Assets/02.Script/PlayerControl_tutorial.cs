@@ -266,10 +266,10 @@ public class PlayerControl_tutorial: MonoBehaviour {
 	}
 
 
-	void Jump()
+	public void Jump()
 	{
-		rigidbody2D.velocity = Vector2.zero;
-		rigidbody2D.AddForce (jumpForce);
+		//rigidbody2D.velocity = Vector2.zero;
+		//rigidbody2D.AddForce (jumpForce);
 		
 		mAnimator.SetTrigger("up");
 
@@ -289,21 +289,21 @@ public class PlayerControl_tutorial: MonoBehaviour {
 			Time.timeScale = 0;
 			finish=true;
 			*/
-			Application.LoadLevel("Monday_Tutorial");
-			GameManager.currentLife = 5;
+			//Application.LoadLevel("Monday_Tutorial");
+			//GameManager.currentLife = 5;
 		} 
 		else if ((GameManager.currentLife > 0 && screenPosition.y > Screen.height || screenPosition.y < 0) && !isOut)//|| (life > 0 && PS == PlayerState.Collided)) 
 		{
-			Application.LoadLevel("Monday_Tutorial");
+			//Application.LoadLevel("Monday_Tutorial");
 			//Invoke("whenDie", 0.8f);
 			//PSpause =true;
-			/*
+
 			PS = PlayerState.Collided;
 			diePos = transform.position;
 			mAnimator.SetTrigger("collid");
 			Invoke("whenDie", 0.8f);
 			isOut = true;
-			*/
+
 		}
 	}
 
@@ -311,6 +311,9 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 	public void whenDie()
 	{
+		//Debug.Log ("When Die");
+		//rigidbody2D.velocity = Vector2.zero;
+		//rigidbody2D.AddForce (jumpForce);
 		//Application.LoadLevel("Monday_Tutorial");
 		/*
 		isOut = false;
@@ -326,7 +329,7 @@ public class PlayerControl_tutorial: MonoBehaviour {
 
 		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
 		this.transform.position = repos;
-		GameManager.currentLife--;
+		//GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
 
 	

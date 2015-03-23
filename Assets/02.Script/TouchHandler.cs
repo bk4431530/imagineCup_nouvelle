@@ -38,7 +38,7 @@ public class TouchHandler : MonoBehaviour {
 
 	void Update()
 	{
-		/*
+
 		if(Input.GetMouseButton(0))
 		{
 			numberOfPoints++;
