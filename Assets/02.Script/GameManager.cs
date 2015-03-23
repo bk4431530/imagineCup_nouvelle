@@ -55,8 +55,14 @@ public class GameManager : MonoBehaviour {
 	public static AudioSource backMusic;
 	
 	//input
+	/* //English Version
 	public static string To_name = "nou";
-	public static string letter_txt ="Hi, I'm bell \n I think i love you...<3";
+	public static string letter_txt ="Hi, I'm bell \n I think i love you...<3"; */
+
+	//임시로 한글 버전 for 교내전시
+	public static string To_name = "제이크";
+	public static string letter_txt ="안녕, 나는 벨이라고 해. \n 너를 좋아해...♥♡";
+
 	public static string From_name ="bell";
 	
 	public static string ZipL ="123";
