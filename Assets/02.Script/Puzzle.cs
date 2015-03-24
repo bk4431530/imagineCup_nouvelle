@@ -13,16 +13,18 @@ public class Puzzle : MonoBehaviour {
 	public float drop_pos;
 
 	public GameObject particle;
-
+	public new Transform mytransform;
+	
 	void Start(){
+		mytransform = transform;
 		player = GameObject.Find ("player");
 	}
 
 	void FixedUpdate(){
-		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+		screenPosition = Camera.main.WorldToScreenPoint(mytransform.position);
 		if (player.transform.position.x > player_pos) {
-			if (this.transform.position.x > drop_pos) {
-				transform.Translate (new Vector3 (-0.12f, 0, 0));
+			if (mytransform.position.x > drop_pos) {
+				mytransform.Translate (new Vector3 (-0.12f, 0, 0));
 			}
 
 			else if(RB) {

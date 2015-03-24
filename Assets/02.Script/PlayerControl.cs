@@ -72,9 +72,14 @@ public class PlayerControl : MonoBehaviour {
 	public GameObject puzzleEffect;
 	
 	public static bool PSpause =false;
-	
+
+	//transform caching
+	public new Transform myTransform;
+
 	void Awake()
 	{
+		myTransform = transform;
+
 		M_Cam = GameObject.Find ("Main Camera");
 		
 		magnet = GameObject.Find ("magnet");
@@ -89,7 +94,7 @@ public class PlayerControl : MonoBehaviour {
 		mAnimator = gameObject.GetComponent<Animator> ();
 		boyAnimator = GameObject.Find ("boy").GetComponent<Animator> ();
 
-		startPos = this.transform.position;
+		startPos = myTransform.position;
 		
 		PS = PlayerState.Normal;
 		finishGame.pass =false;
@@ -154,11 +159,11 @@ public class PlayerControl : MonoBehaviour {
 		if (GameManager.booster_equip) 
 		{
 			
-			if(transform.position.x<30)
+			if(myTransform.position.x<30)
 			{
 				boosterShield =true;
 				boosterEndPos =  new Vector3(30,startPos.y,startPos.z);
-				transform.position = Vector3.Lerp(startPos,boosterEndPos,Time.timeSinceLevelLoad);
+				myTransform.position = Vector3.Lerp(startPos,boosterEndPos,Time.timeSinceLevelLoad);
 				this.renderer.material.color = Color.red;
 				
 			}else{
@@ -174,7 +179,7 @@ public class PlayerControl : MonoBehaviour {
 		
 		
 
-		screenPosition = Camera.main.WorldToScreenPoint(transform.position);
+		screenPosition = Camera.main.WorldToScreenPoint(myTransform.position);
 		
 		if(PS == PlayerState.Normal)
 		{
@@ -193,7 +198,7 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if(PS == PlayerState.Collided)
 		{
-			transform.position = diePos;
+			myTransform.position = diePos;
 		}
 
 
@@ -205,7 +210,7 @@ public class PlayerControl : MonoBehaviour {
 		//pass
 		if (isClear && !finish) 
 		{
-			transform.position = diePos;
+			myTransform.position = diePos;
 			gameObject.GetComponent<SpriteRenderer>().enabled = false;
 			gameObject.GetComponent<PolygonCollider2D>().enabled = false;
 			Invoke("clearGame",4.0f);
@@ -266,7 +271,7 @@ public class PlayerControl : MonoBehaviour {
 			}
 			else{
 				PS = PlayerState.Collided;
-				diePos = transform.position;
+				diePos = myTransform.position;
 				this.GetComponent<PolygonCollider2D> ().enabled = false;
 				mAnimator.SetTrigger("collid");
 				Invoke("whenDie", 0.8f);
@@ -289,7 +294,7 @@ public class PlayerControl : MonoBehaviour {
 
 		if (other.gameObject.name == "finish_collider") 
 		{
-			diePos = transform.position;
+			diePos = myTransform.position;
 			Debug.Log("finish collided");
 			isClear = true;
 			Debug.Log ("isClear 바뀜 => " + isClear); 
@@ -368,7 +373,7 @@ public class PlayerControl : MonoBehaviour {
 		{
 			PSpause =true;
 			PS = PlayerState.Collided;
-			diePos = transform.position;
+			diePos = myTransform.position;
 			mAnimator.SetTrigger("collid");
 			Invoke("whenDie", 0.8f);
 			isOut = true;
@@ -380,7 +385,7 @@ public class PlayerControl : MonoBehaviour {
 	public void whenDie()
 	{
 		isOut = false;
-		diePlanePos = transform.position;
+		diePlanePos = myTransform.position;
 		PS = PlayerState.Normal;
 		/*
 		stage = new Vector2 (0, 0);
@@ -391,7 +396,7 @@ public class PlayerControl : MonoBehaviour {
 
 
 		Vector3 repos = new Vector3 (diePlanePos.x,0.5f , 5);
-		this.transform.position = repos;
+		myTransform.position = repos;
 		GameManager.currentLife--;
 		this.renderer.material.color = Color.white;
 
