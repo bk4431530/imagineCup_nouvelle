@@ -21,7 +21,7 @@ public class cat3 : MonoBehaviour{
 	void Update () {
 		if (player.transform.position.x > player_pos) {
 			catAnimator.SetTrigger("start");
-			this.GetComponent<catSprite3>().enabled = true;
+			//this.GetComponent<catSprite3>().enabled = true;
 		}
 	}
 

@@ -21,7 +21,17 @@ public class cat1 : MonoBehaviour{
 	void Update () {
 		if (player.transform.position.x > player_pos) {
 			catAnimator.SetTrigger("start");
-			this.GetComponent<catSprite1>().enabled = true;
+			//this.GetComponent<catSprite1>().enabled = true;
+		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.collider2D.name == "player")
+		{
+			//this.GetComponent<Animator>().enabled = true;
+			//catState = CatState.Catch;
+			
 		}
 	}
 

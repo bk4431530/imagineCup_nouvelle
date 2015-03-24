@@ -14,7 +14,10 @@ public class CatchedbyCat1 : MonoBehaviour{
 	public GameObject cat;
 	public GameObject player;
 	public GameObject wind;
-	
+	public GameObject cat_col;
+
+	public Sprite endCat;
+
 	public PlayerState_cat PS_cat = PlayerState_cat.Free;
 	
 	
@@ -30,6 +33,7 @@ public class CatchedbyCat1 : MonoBehaviour{
 
 	//sound
 	public static AudioSource SFX_cat;
+
 	
 	void Awake()
 	{
@@ -40,6 +44,7 @@ public class CatchedbyCat1 : MonoBehaviour{
 	{
 		cat = GameObject.Find ("cat1");
 		player = GameObject.Find ("player");
+		cat_col = cat.transform.FindChild ("cat_collider").gameObject;
 		PS_cat = PlayerState_cat.Free;
 		
 		cat_Animator = cat.gameObject.GetComponent<Animator> ();
@@ -76,10 +81,10 @@ public class CatchedbyCat1 : MonoBehaviour{
       float h_len = 0; 
       aa.Raycast(ray, out h_len);
 */
-		
-		if ( hit.collider != null && cat.collider2D != null) 
+
+		if ( hit.collider != null && cat_col.collider2D != null) 
 		{
-			if (hit.collider.name == cat.collider2D.name
+			if (hit.collider.name == cat_col.collider2D.name
 			    && Input.GetMouseButtonDown(0) == true
 			    &&  PS_cat ==  PlayerState_cat.CatchedByCat)
 			{
@@ -101,12 +106,12 @@ public class CatchedbyCat1 : MonoBehaviour{
 		
 		if (clickCount == 3)
 		{   
-			cat.gameObject.GetComponent<catSprite1>().oldFrame = cat.gameObject.GetComponent<catSprite1>().curFrame;
+			//cat.gameObject.GetComponent<catSprite1>().oldFrame = cat.gameObject.GetComponent<catSprite1>().curFrame;
 			
 			PS_cat =  PlayerState_cat.Free;
-			cat.gameObject.GetComponent<catSprite1>().catState= CatState.Normal;
+			//cat.gameObject.GetComponent<catSprite1>().catState= CatState.Normal;
 			
-			Debug.Log("PlayerState : " + PS_cat + "/ CatState : " + cat.gameObject.GetComponent<catSprite1>().catState);
+			//Debug.Log("PlayerState : " + PS_cat + "/ CatState : " + cat.gameObject.GetComponent<catSprite1>().catState);
 			
 			cat_Animator.SetTrigger("free");
 			
@@ -120,12 +125,16 @@ public class CatchedbyCat1 : MonoBehaviour{
 			//isDestroyed = true;
 			//Debug.Log ("isDestroyed = true됨");
 			
-			
+			/*
 			for(int index = 0 ; index < 11; index++)
 			{
 				cat.gameObject.GetComponent<catSprite1>().olFrameColliders[index].enabled = false;
 				//            Debug.Log ("disabled" + (index+1) );
 			}
+			*/
+			cat_Animator.enabled = false;
+			cat_col.SetActive(false);
+			cat.GetComponent<SpriteRenderer>().sprite = endCat;
 
 			this.rigidbody2D.AddForce(new Vector2(150, 300));
 
@@ -153,7 +162,7 @@ public class CatchedbyCat1 : MonoBehaviour{
 		{
 			rigidbody2D.isKinematic = false;
 			PS_cat = PlayerState_cat.Free;
-			cat.gameObject.GetComponent<catSprite1>().catState= CatState.Normal;
+			//cat.gameObject.GetComponent<catSprite1>().catState= CatState.Normal;
 			this.GetComponent<PlayerControl>().whenDie ();
 			clickCount = 0;
 			Debug.Log ("clickCount = " + CatchedbyCat1.clickCount + "초기화됨");
@@ -163,15 +172,16 @@ public class CatchedbyCat1 : MonoBehaviour{
 	}//update
 	
 	void init_Frames(){
-		cat.gameObject.GetComponent<catSprite1>().curFrame = 0;
-		cat.gameObject.GetComponent<catSprite1>().oldFrame = -1;
+		//cat.gameObject.GetComponent<catSprite1>().curFrame = 0;
+		//cat.gameObject.GetComponent<catSprite1>().oldFrame = -1;
 	}
 	
 	
 	void OnTriggerEnter2D(Collider2D other) 
 	{
-		if (other.gameObject.name == "cat1") 
+		if (other.gameObject.tag == "cat1") 
 		{
+
 			this.GetComponent<Animator>().enabled = true;
 
 			CatSound();
@@ -181,7 +191,7 @@ public class CatchedbyCat1 : MonoBehaviour{
 				catTime = Time.time;// - startTime;
 				Debug.Log ("잡힌시간: catTime = " + catTime);
 			}
-			
+
 			PS_cat =  PlayerState_cat.CatchedByCat;
 		}
 		

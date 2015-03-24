@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72a2e1d50c26ed643b9b9f85d4230908, type: 3}
+    m_Font: {fileID: 12800000, guid: ee5ac47a91344f34a972cb1583a12783, type: 3}
     m_FontSize: 30
     m_FontStyle: 2
     m_BestFit: 0
@@ -1719,6 +1719,7 @@ MonoBehaviour:
   puzzle: {fileID: 1222066093}
   player_pos: -7
   drop_pos: 15
+  mytransform: {fileID: 0}
 --- !u!212 &194228992
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11849,6 +11850,7 @@ MonoBehaviour:
   player_pos: -7
   drop_pos: 15
   particle: {fileID: 1202278456}
+  mytransform: {fileID: 0}
 --- !u!60 &1222066097
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -12513,7 +12515,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72a2e1d50c26ed643b9b9f85d4230908, type: 3}
+    m_Font: {fileID: 12800000, guid: ee5ac47a91344f34a972cb1583a12783, type: 3}
     m_FontSize: 32
     m_FontStyle: 2
     m_BestFit: 0
@@ -13541,7 +13543,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72a2e1d50c26ed643b9b9f85d4230908, type: 3}
+    m_Font: {fileID: 12800000, guid: ee5ac47a91344f34a972cb1583a12783, type: 3}
     m_FontSize: 32
     m_FontStyle: 2
     m_BestFit: 0
@@ -17780,7 +17782,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72a2e1d50c26ed643b9b9f85d4230908, type: 3}
+    m_Font: {fileID: 12800000, guid: ee5ac47a91344f34a972cb1583a12783, type: 3}
     m_FontSize: 32
     m_FontStyle: 2
     m_BestFit: 0
@@ -17848,7 +17850,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 72a2e1d50c26ed643b9b9f85d4230908, type: 3}
+    m_Font: {fileID: 12800000, guid: ee5ac47a91344f34a972cb1583a12783, type: 3}
     m_FontSize: 32
     m_FontStyle: 2
     m_BestFit: 0

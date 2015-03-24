@@ -29,7 +29,7 @@ public class catSprite2 : CatchedbyCat2 {
 	// Awake()
 	void Awake()
 	{
-		Invoke ("SetColliders", 0.1f);
+		//Invoke ("SetColliders", 0.1f);
 	}
 	
 	void SetColliders(){

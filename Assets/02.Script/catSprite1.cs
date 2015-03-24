@@ -29,7 +29,7 @@ public class catSprite1 : CatchedbyCat1 {
 	// Awake()
 	void Awake()
 	{
-		Invoke ("SetColliders", 0.1f);
+		//Invoke ("SetColliders", 0.1f);
 	}
 
 	void SetColliders(){
@@ -148,7 +148,7 @@ public class catSprite1 : CatchedbyCat1 {
 		if (other.collider2D.name == "player")
 		{
 			curFrame = 10;
-			this.GetComponent<Animator>().enabled = true;
+			//this.GetComponent<Animator>().enabled = true;
 			catState = CatState.Catch;
 			
 		}

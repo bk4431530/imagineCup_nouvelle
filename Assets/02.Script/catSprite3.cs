@@ -31,7 +31,7 @@ public class catSprite3 : CatchedbyCat3 {
 	// Awake()
 	void Awake()
 	{
-		Invoke ("SetColliders", 0.1f);
+		//Invoke ("SetColliders", 0.1f);
 	}
 	
 	void SetColliders(){

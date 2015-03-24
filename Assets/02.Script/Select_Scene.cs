@@ -62,12 +62,16 @@ public class Select_Scene : MonoBehaviour {
 			guide_text.text = "Clear the episode 'Tuesday' to unlock 'Wednesday'.";
 			break;
 		case 3:
+			guide_text.text = "Clear the episode 'Wednesday' to unlock 'Thursday'.";
 			break;
 		case 4:
+			guide_text.text = "Clear the episode 'Thursday' to unlock 'Friday'.";
 			break;
 		case 5:
+			guide_text.text = "Clear the episode 'Wednesday' to watch the stroy 'The End'.";
 			break;
 		case 6:
+			guide_text.text = "";
 			break;
 		}
 	}
@@ -156,8 +160,8 @@ public class Select_Scene : MonoBehaviour {
 	public void ClickedNo(){
 		Debug.Log ("No button is clicked");
 		string currentEp = "Ep" + selectedEp.ToString ();
-		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (true);
-		locks.transform.FindChild(selectedEp.ToString()).gameObject.SetActive(false);
+		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
+		locks.transform.FindChild(selectedEp.ToString()).gameObject.SetActive(true);
 	}
 
 	public void ClickedYes(){
@@ -204,6 +208,7 @@ public class Select_Scene : MonoBehaviour {
 		openEp_popup.SetActive (false);
 		string currentEp = "Ep" + selectedEp.ToString ();
 		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
+		locks.transform.FindChild(selectedEp.ToString()).gameObject.SetActive(true);
 	}
 
 
@@ -213,6 +218,7 @@ public class Select_Scene : MonoBehaviour {
 		string currentEp = "Ep" + selectedEp.ToString ();
 		GameObject.Find (currentEp).transform.FindChild("Back").gameObject.SetActive (false);
 		caution_popup.SetActive (false);
+		locks.transform.FindChild(selectedEp.ToString()).gameObject.SetActive(true);
 	}
 
 	//SFX

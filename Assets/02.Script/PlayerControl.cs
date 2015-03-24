@@ -102,6 +102,8 @@ public class PlayerControl : MonoBehaviour {
 		isOut = false;
 		isRevival = false;
 		isOver = false;
+
+		GameManager.currentLife = 5;
 		//GameManager.booster_equip = true;
 		//GameManager.paperPlaneState = 0;
 	}

@@ -6,6 +6,9 @@ TagManager:
   - Obstacle
   - Puzzle
   - Quillpen
+  - cat1
+  - cat2
+  - cat3
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
