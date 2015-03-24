@@ -9072,7 +9072,8 @@ MonoBehaviour:
   test_PS: 0
   Stage_Num: 0
   particle: {fileID: 1202278456}
-  jumpForce: {x: 150, y: 300}
+  jumpForce: {x: 225, y: 200}
+  backForce: {x: -150, y: -100}
   run: {x: 5, y: 0}
   mondayBgm: {fileID: 0}
   finish_popup: {fileID: 0}
@@ -9084,8 +9085,8 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 436908505}
-  m_Mass: 1
-  m_LinearDrag: 0
+  m_Mass: .800000012
+  m_LinearDrag: .0500000007
   m_AngularDrag: .0500000007
   m_GravityScale: 1
   m_FixedAngle: 1

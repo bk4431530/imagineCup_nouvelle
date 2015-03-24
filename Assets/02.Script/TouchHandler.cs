@@ -10,14 +10,16 @@ public class TouchHandler : MonoBehaviour {
 	private int i = 0;
 	
 	//touch
-	public static bool swipe =false; 
-	public static bool swiped=false; 
+	
 	private Touch initialTouch = new Touch();
 	
 	
 	
 	public static bool Mswiped =false;
-
+	public static bool Bswiped =false;
+	
+	
+	public static int speedLevel =0;
 	
 	Vector3 initialMPos;
 	private int numberOfPoints = 0;
@@ -27,7 +29,9 @@ public class TouchHandler : MonoBehaviour {
 	float distance;
 	float jdistance;
 	bool swipedSideways;
-
+	
+	
+	
 	void Start()
 	{	
 		lineRenderer = GameObject.Find ("lineRenderer").GetComponent<LineRenderer> ();
@@ -35,10 +39,10 @@ public class TouchHandler : MonoBehaviour {
 		
 	}
 	
-
+	
 	void Update()
 	{
-		/*
+
 		if(Input.GetMouseButton(0))
 		{
 			numberOfPoints++;
@@ -48,34 +52,45 @@ public class TouchHandler : MonoBehaviour {
 			mousePos.z = 1.0f;
 			Vector3 worldPos = Camera.main.ScreenToWorldPoint(mousePos);
 			lineRenderer.SetPosition(numberOfPoints - 1, worldPos);
+
 			
 		}else if(Input.GetMouseButtonUp(0))
 		{
-			Mswiped=true;
+			Mswiped=false;
+			Bswiped=false;
+
+
 		}
 		else
 		{	
 			Mswiped =false;
+			Bswiped=false;
+
 			numberOfPoints = 0;
 			lineRenderer.SetVertexCount(0);
 		}
 
 
-		/*
-		 //PC swipe 
-		 deltaX = initialMPos.x - Input.mousePosition.x;
-		 deltaY = initialMPos.y - Input.mousePosition.y;
+		deltaX = initialMPos.x - Input.mousePosition.x;
+		deltaY = initialMPos.y - Input.mousePosition.y;
 		distance = Mathf.Sqrt((deltaX*deltaX) + (deltaY*deltaY));
+		swipedSideways = Mathf.Abs(deltaX) > Mathf.Abs(deltaY);
+
 
 		if (numberOfPoints == 0) {
 			initialMPos = Input.mousePosition;
 		} 
-*/
-	
+		else if (swipedSideways && deltaX <= 0  && deltaY <= 0) {
+			Mswiped =true;
+
+		}else if(swipedSideways && deltaX > 0 && deltaY > 0){
+			Bswiped=true;
+
+		}
 
 
-
-
+		
+		/*
 		//android
 		if (Input.touchCount > 0) 
 		{
@@ -84,9 +99,11 @@ public class TouchHandler : MonoBehaviour {
 			if (touch.phase == TouchPhase.Began) 
 			{
 				Mswiped = false;
+				Bswiped = false;
+				
 				jdistance =10000;
 				initialTouch = touch;
-
+				
 			} 
 			else if (touch.phase == TouchPhase.Moved) 
 			{
@@ -104,32 +121,32 @@ public class TouchHandler : MonoBehaviour {
 				
 				swipedSideways = Mathf.Abs(deltaX) > Mathf.Abs(deltaY);
 				
-				if (swipedSideways && deltaX > 0) 
-				{ //swiped left
-				} 
-				else if (swipedSideways && deltaX <= 0 ) 
-				{//swiped right
-					if(distance < jdistance && distance > 10f)
-					{
+				if(distance >100f){
+					if (swipedSideways && deltaX > 0) 
+					{ //swiped left
+						Bswiped = true;
+						
+					} 
+					else if (swipedSideways && deltaX <= 0 ) 
+					{//swiped right
 						Mswiped = true;
-						jdistance = distance;
-					}else if(distance > jdistance){
-						Mswiped = false;
+						
+					} 
+					else if (!swipedSideways && deltaY > 0) 
+					{//swiped down
+					} 
+					else if (!swipedSideways && deltaY <= 0) 
+					{//swiped up
 					}
-				} 
-				else if (!swipedSideways && deltaY > 0) 
-				{//swiped down
-				} 
-				else if (!swipedSideways && deltaY <= 0) 
-				{//swiped up
 				}
-				
 				
 			}
 			
-			if (touch.phase == TouchPhase.Ended) 
+			if (touch.phase == TouchPhase.Ended || touch.phase == TouchPhase.Stationary) 
 			{
 				Mswiped = false;
+				Bswiped = false;
+				
 				initialTouch = new Touch ();
 				lineRenderer.SetVertexCount (0);
 				i = 0;
@@ -137,6 +154,10 @@ public class TouchHandler : MonoBehaviour {
 			}
 		}
 		//andrroid
-
+		*/
 	}
 }
+
+
+
+

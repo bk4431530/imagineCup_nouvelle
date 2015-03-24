@@ -11,7 +11,7 @@ public class heartGauge_finish : MonoBehaviour {
 	public GameObject gaugeTxt;
 	
 	public float HeartPer;//0~1
-	int heart;
+	public float heart;
 	
 	// Use this for initialization
 	void Start () {
@@ -24,7 +24,7 @@ public class heartGauge_finish : MonoBehaviour {
 		HeartPer = (float)(GameManager.heart_ep1)*0.03f;
 		PlayerPrefs.SetInt ("Heart_ep1",GameManager.heart_ep1);
 		PlayerPrefs.Save ();
-
+		/*
 		if(GameManager.heart_ep1 <= 20){ 
 			gaugeTxt.GetComponent<Text>().text = "try again"; 
 		}else if(GameManager.heart_ep1 >20 && GameManager.heart_ep1 <=40){ 
@@ -35,14 +35,30 @@ public class heartGauge_finish : MonoBehaviour {
 			gaugeTxt.GetComponent<Text>().text = "good job"; 
 		}else if(GameManager.heart_ep1 >80){ 
 			gaugeTxt.GetComponent<Text>().text = "perfect !"; 
-		} 
+		} */
 
+		heart = GameManager.heart_ep1 * 3;
 		
+		if(heart <= 20){ 
+			gaugeTxt.GetComponent<Text>().text = "try again"; 
+		}else if(heart >20 && heart <=40){ 
+			gaugeTxt.GetComponent<Text>().text = "try hard"; 
+		}else if(heart >40 && heart <=60){ 
+			gaugeTxt.GetComponent<Text>().text = "nice"; 
+		}else if(heart >60 && heart <=80){ 
+			gaugeTxt.GetComponent<Text>().text = "good job"; 
+		}else if(heart >80){ 
+			gaugeTxt.GetComponent<Text>().text = "perfect !"; 
+		}
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		gauge.GetComponent<Image> ().fillAmount = HeartPer;
+
+		
+
+
 	}
 }

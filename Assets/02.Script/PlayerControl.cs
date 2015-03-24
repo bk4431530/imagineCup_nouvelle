@@ -22,8 +22,9 @@ public class PlayerControl : MonoBehaviour {
 	private bool stageIs3 = false;
 	private bool stageIs2 = false;
 	
-	public Vector2 jumpForce = new Vector2(150, 300);
-	public Vector2 run = new Vector2(4,0);
+	public Vector2 jumpForce = new Vector2(250, 150);
+	public Vector2 backForce = new Vector2(-150, -100);
+	public Vector2 run = new Vector2(5,0);
 	
 	private Vector3 diePos;
 	
@@ -132,10 +133,9 @@ public class PlayerControl : MonoBehaviour {
 
 	}
 	
-	void Update ()
+	void FixedUpdate ()
 	{
-		/******************************************************bokyung's fixing part************************************************/
-		
+
 		
 		
 		
@@ -187,11 +187,12 @@ public class PlayerControl : MonoBehaviour {
 		{
 			if(TouchHandler.Mswiped == true)
 			{
-				Jump();
+				Jump(jumpForce);
 			}
-			else if(PSpause)
+			else if(TouchHandler.Bswiped == true)
 			{
-				Debug.Log("player pauesd");
+				Jump(backForce);
+				
 			}
 			else 
 			{
@@ -200,7 +201,7 @@ public class PlayerControl : MonoBehaviour {
 		} 
 		else if(PS == PlayerState.Collided)
 		{
-			myTransform.position = diePos;
+			transform.position = diePos;
 		}
 
 
@@ -349,13 +350,12 @@ public class PlayerControl : MonoBehaviour {
 	}
 
 
-	void Jump()
+	void Jump(Vector2 force)
 	{
 		rigidbody2D.velocity = Vector2.zero;
-		rigidbody2D.AddForce (jumpForce);
-		
+		rigidbody2D.AddForce (force);
 		mAnimator.SetTrigger("up");
-
+		
 	}
 	
 
