@@ -1263,6 +1263,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   player_pos: 63
+  myTransform: {fileID: 0}
+  pTransform: {fileID: 0}
 --- !u!4 &101099503
 Transform:
   m_ObjectHideFlags: 0
@@ -42601,6 +42603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   player_pos: 213
+  myTransform: {fileID: 0}
+  pTransform: {fileID: 0}
 --- !u!114 &1703480847
 MonoBehaviour:
   m_ObjectHideFlags: 0
