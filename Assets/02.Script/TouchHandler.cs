@@ -42,7 +42,7 @@ public class TouchHandler : MonoBehaviour {
 	
 	void Update()
 	{
-
+		/*
 		if(Input.GetMouseButton(0))
 		{
 			numberOfPoints++;
@@ -89,8 +89,8 @@ public class TouchHandler : MonoBehaviour {
 		}
 
 
-		
-		/*
+		*/
+
 		//android
 		if (Input.touchCount > 0) 
 		{
@@ -154,7 +154,7 @@ public class TouchHandler : MonoBehaviour {
 			}
 		}
 		//andrroid
-		*/
+
 	}
 }
 
