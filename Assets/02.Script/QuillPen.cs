@@ -17,7 +17,7 @@ public class QuillPen : MonoBehaviour {
 	public GameObject particle;
 	private float distance;
 	bool hit;
-
+	GameObject clone;
 	private int kind;
 
 	//sound
@@ -36,8 +36,9 @@ public class QuillPen : MonoBehaviour {
 		
 		SFX_quillpen = GameObject.Find ("/SFX/quillpen").GetComponent<AudioSource> ();
 		SFX_quillpen.GetComponent<AudioSource> ().clip = (AudioClip)Resources.Load ("QuillpenGet");
-		
-		
+
+		clone= (GameObject)Instantiate (particle, this.transform.position, this.transform.rotation);
+		clone.SetActive (false);
 
 	}
 	
@@ -48,6 +49,7 @@ public class QuillPen : MonoBehaviour {
 			transform.position = Vector3.Lerp(transform.position, magnet.transform.position, 0.1f);
 			//Debug.Log ("magnet position" + magnet.transform.position);
 
+		
 			//Destroy(this.gameObject,0.07f);
 			//Invoke("whenHit",0.06f);
 		}
@@ -71,10 +73,16 @@ public class QuillPen : MonoBehaviour {
 				kind = 3;
 			}
 
-			GameObject clone= (GameObject)Instantiate (particle, this.transform.position, this.transform.rotation);
-			clone.AddComponent(typeof(DestroyMySelf));
-			Destroy(this.gameObject,0.07f);
-			Invoke("whenHit",0.06f);
+
+
+		
+
+			this.transform.position = new Vector3(999,999,999);
+
+			clone.SetActive(true);
+
+			Invoke("whenHit",0.6f);
+
 		}
 
 	}
@@ -93,6 +101,12 @@ public class QuillPen : MonoBehaviour {
 			GameManager.currentQuillPen+=5;
 			break;
 		}
+
+
+
+		clone.transform.position = new Vector3(999,999,999);
+
+
 	}
 
 	

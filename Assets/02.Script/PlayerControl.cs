@@ -291,6 +291,7 @@ public class PlayerControl : MonoBehaviour {
 			collidedPuzzle = other.gameObject;
 			Instantiate (particle, collidedPuzzle.transform.position, collidedPuzzle.transform.rotation);
 			//Destroy(particle,0.5f);
+			particle.transform.position = new Vector3(999,999,999);
 			collidedPuzzle.SetActive(false);
 			PieceSound();
 		}

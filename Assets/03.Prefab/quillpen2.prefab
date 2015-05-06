@@ -87,9 +87,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   magnet: {fileID: 0}
+  player: {fileID: 0}
   speed: 1
   startTime: 0
-  particle: {fileID: 0}
+  particle: {fileID: 133436, guid: e5a0bd7de71fb2648a91d3853060df21, type: 2}
   QS: 0
 --- !u!212 &21223480
 SpriteRenderer:
