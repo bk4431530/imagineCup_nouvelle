@@ -8,7 +8,7 @@ public class GoTo999 : MonoBehaviour {
 	private Vector3 playerPosition;
 
 	bool inCam;
-
+/*
 	Transform player;
 	// Use this for initialization
 	void Awake () {
@@ -35,4 +35,5 @@ public class GoTo999 : MonoBehaviour {
 			Debug.Log (this.gameObject.name + " out camera");
 		}
 	}
+	*/
 }
