@@ -67,7 +67,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: game.Nouvelle.ProductName
+  iPhoneBundleIdentifier: game.Nouvelle.TheLetter
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 8abfb7b438e99ad4884658c98a9a586e
@@ -250,6 +250,8 @@ PlayerSettings:
   tizenGPSPermissions: 0
   tizenMicrophonePermissions: 0
   stvDeviceAddress: 
+  wp8UnprocessedPlugins: []
+  intPropertyNames: []
   firstStreamedLevelWithResources: 0
   unityRebuildLibraryVersion: 9
   unityForwardCompatibleVersion: 39

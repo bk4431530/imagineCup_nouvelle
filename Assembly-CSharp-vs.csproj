@@ -109,6 +109,8 @@
      <Compile Include="Assets\Level Menu 2D\SingletonPerfect\Singleton.cs" />
      <Compile Include="Assets\Level Menu 2D\SmoothCamera2D.cs" />
      <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
+     <Compile Include="Assets\Share\Share.cs" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.2/UnityEngine.UI.dll</HintPath>
