@@ -10,7 +10,8 @@ public class ShareImg : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
 	public bool btnDown;
 
-	GameObject shareBtn;
+	 GameObject shareBtn;
+
 
 	void Start(){
 		shareBtn = GameObject.Find ("ShareBtn");

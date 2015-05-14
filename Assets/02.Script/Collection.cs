@@ -13,7 +13,8 @@ public class Collection : MonoBehaviour {
 	
 	public Image[] black_all = new Image[10];
 	
-	
+	string letterCombine="";
+
 	//1.All  
 	public Sprite[] cardImg = new Sprite[10];
 	int card_equip;
@@ -42,7 +43,11 @@ public class Collection : MonoBehaviour {
 	Text zipcodeL;
 	Text address;
 	Text send_preview;
-	
+
+
+	//capture
+	Text cap_preview;
+
 	
 	
 	//text view
@@ -54,8 +59,10 @@ public class Collection : MonoBehaviour {
 	
 	public GameObject equip_popUp;
 	public Text popUp_txt;
-
 	public GameObject equip;
+
+	public GameObject capture_popup;
+
 	
 	void Awake () { //원래 awake
 		
@@ -79,11 +86,16 @@ public class Collection : MonoBehaviour {
 		zipcodeL = GameObject.Find ("zipL_txt").GetComponent<Text> ();
 		address = GameObject.Find ("addr_txt").GetComponent<Text> ();
 		send_preview =GameObject.Find ("letterPre_txt").GetComponent<Text> ();
-		
+
+
+		//capture
+
+		cap_preview =GameObject.Find ("letterCap_txt").GetComponent<Text> ();
+
 		
 		textview.SetActive (false);
 		equip_popUp.SetActive (false);
-		
+		capture_popup.SetActive (false);
 		
 		
 	}
@@ -117,15 +129,16 @@ public class Collection : MonoBehaviour {
 		to.text = GameManager.To_name;
 		letter.text = GameManager.letter_txt;
 		from.text = GameManager.From_name;
-		
-		
+
 		
 		zipcodeL.text = GameManager.ZipL;
 		zipcodeR.text = GameManager.ZipR;
 		address.text = GameManager.Addr;
-		
-		send_preview.text = GameManager.letter_txt;
-		
+
+		letterCombine="To."+ GameManager.To_name+"\n\n"+GameManager.letter_txt+"\n\n"+"From."+GameManager.From_name;
+
+		send_preview.text = letterCombine;
+		cap_preview.text = letterCombine;
 		
 		if (inputF.isFocused) {
 			if(input_isfocused == false)
@@ -164,12 +177,13 @@ public class Collection : MonoBehaviour {
 				input_isfocused = false;
 			}
 		}
-		
+
+
 		
 	}
 	
 	
-	
+	/*
 	public void allClicked()
 	{
 		Debug.Log ("allclick");
@@ -200,7 +214,7 @@ public class Collection : MonoBehaviour {
 		Debug.Log ("Exit");
 	}
 	
-	
+	*/
 	
 	//1.All
 	public void letterClicked(int i)
@@ -334,6 +348,11 @@ public class Collection : MonoBehaviour {
 		Debug.Log ("send click");
 		
 	}
+
+	public void backBtn()
+	{
+		menuSelected = 2;
+	}	
 	
 	
 	
@@ -377,6 +396,12 @@ public class Collection : MonoBehaviour {
 		}
 		
 	}
-	
+
+
+	public void capturePopup()
+	{
+		capture_popup.SetActive (true);
+
+	}
 	
 }
