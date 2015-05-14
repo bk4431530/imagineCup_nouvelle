@@ -10,17 +10,21 @@ public class ShareImg : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 
 	public bool btnDown;
 
-	 GameObject shareBtn;
+	public Image shareBtn;
+	public Image exitBtn;
+
 
 
 	void Start(){
-		shareBtn = GameObject.Find ("ShareBtn");
+		//shareBtn = GameObject.Find ("ShareBtn");
 	}
 
 	public void OnPointerDown (PointerEventData eventData){ 
 		Debug.Log ("OnPointerDown");
 		btnDown = true;
-		shareBtn.GetComponent<Image> ().enabled = false;
+		shareBtn.enabled = false;
+		exitBtn.enabled = false;
+
 	}
 	
 	public void OnPointerUp (PointerEventData eventData){
@@ -81,6 +85,8 @@ public class ShareImg : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 			
 		}
 		isProcessing = false;
-		shareBtn.GetComponent<Image>().enabled = true;
+		shareBtn.enabled = true;
+		exitBtn.enabled = true;
+
 	}
 }

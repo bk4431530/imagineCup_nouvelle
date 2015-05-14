@@ -10,8 +10,11 @@ public class Collection : MonoBehaviour {
 	public GameObject[] buttons = new GameObject[4];
 	public Sprite[] on_Img = new Sprite[4];
 	public Sprite[] off_Img = new Sprite[4];
-	
+
+	public Sprite[] postcard;
+
 	public Image[] black_all = new Image[10];
+
 	
 	string letterCombine="";
 
@@ -47,7 +50,7 @@ public class Collection : MonoBehaviour {
 
 	//capture
 	Text cap_preview;
-
+	Image cap_postcard;
 	
 	
 	//text view
@@ -89,7 +92,7 @@ public class Collection : MonoBehaviour {
 
 
 		//capture
-
+		cap_postcard = GameObject.Find ("postcardCapture").GetComponent<Image> ();
 		cap_preview =GameObject.Find ("letterCap_txt").GetComponent<Text> ();
 
 		
@@ -183,7 +186,7 @@ public class Collection : MonoBehaviour {
 	}
 	
 	
-	/*
+
 	public void allClicked()
 	{
 		Debug.Log ("allclick");
@@ -214,7 +217,7 @@ public class Collection : MonoBehaviour {
 		Debug.Log ("Exit");
 	}
 	
-	*/
+
 	
 	//1.All
 	public void letterClicked(int i)
@@ -400,7 +403,26 @@ public class Collection : MonoBehaviour {
 
 	public void capturePopup()
 	{
+		if (card_equip == 0) 
+		{//basic
+			cap_postcard.sprite = postcard[0];
+		}else if (card_equip == 2) 
+		{//flower
+			cap_postcard.sprite = postcard[1];
+		}else if (card_equip == 5) 
+		{//rain
+			cap_postcard.sprite = postcard[2];
+		}else 
+		{//moon
+			cap_postcard.sprite = postcard[3];
+		}
+
 		capture_popup.SetActive (true);
+
+	}
+
+	public void captureExit(){
+		capture_popup.SetActive (false);
 
 	}
 	
