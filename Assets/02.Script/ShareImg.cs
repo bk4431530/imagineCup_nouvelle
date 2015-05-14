@@ -93,10 +93,9 @@ public class ShareImg : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 		byte[] dataToSave = screenTexture.EncodeToPNG();
 
 		string destination = Path.Combine(Application.persistentDataPath,System.DateTime.Now.ToString("yyyy-MM-dd-HHmmss") + ".png");
-
+				
 		File.WriteAllBytes(destination, dataToSave);
-		*/
-
+*/
 		string filename = "screenshot.png";
 		Application.CaptureScreenshot(filename);
 
