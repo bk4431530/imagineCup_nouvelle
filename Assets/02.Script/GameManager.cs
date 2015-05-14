@@ -75,13 +75,13 @@ public class GameManager : MonoBehaviour {
 	//Tutorial_SelectScene//////////////////////////////
 	public static bool Tutorial_SelectScene = true;
 	public static bool Tutorial_SelectScene_PlayIntro = true;
-	public static bool Tutorial_SelectScene_Monday = true;
+	public static bool Tutorial_SelectScene_Monday = false;
 	
 	//Tutorial_EquipScene//////////////////////////////
 	public static bool Tutorial_EquipScene = true;
 
 	//Tutorial_Game
-	public static bool Tutorial_Monday = true;
+	public static bool Tutorial_Monday = false;
 	
 	
 	
@@ -149,7 +149,7 @@ public class GameManager : MonoBehaviour {
 		PlayerPrefsX.SetBool ("TutorialEquipScene", true);
 
 		//Tutorial_Monday
-		PlayerPrefsX.SetBool ("TutorialMonday", true);
+		PlayerPrefsX.SetBool ("TutorialMonday", false);
 		
 		/*
       PlayerPrefs.SetInt ("Quilpen", quillPen);

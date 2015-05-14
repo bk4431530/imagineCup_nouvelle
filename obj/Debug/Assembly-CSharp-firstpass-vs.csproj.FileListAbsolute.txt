@@ -1,0 +1,11 @@
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\UnityEditor.dll
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\UnityEngine.dll
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\Mono.Cecil.dll
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\nunit.framework.dll
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\Unity.DataContract.dll
+C:\Unity_Study\imagineCup_nouvelle\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Unity_Study\imagineCup_nouvelle\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Unity_Study\imagineCup_nouvelle\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Unity_Study\imagineCup_nouvelle\obj\Debug\Assembly-CSharp-firstpass.pdb

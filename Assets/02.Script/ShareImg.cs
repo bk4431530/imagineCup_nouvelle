@@ -66,7 +66,7 @@ public class ShareImg : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
 			//intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), "testo");
 			//intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_SUBJECT"), "SUBJECT");
 			intentObject.Call<AndroidJavaObject>("setType", "image/jpeg");
-	s		AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
+			AndroidJavaClass unity = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject currentActivity = unity.GetStatic<AndroidJavaObject>("currentActivity");
 			
 			// option one WITHOUT chooser:
